@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 70" width="320" height="70" fill="none">
+  <defs>
+    <linearGradient id="sphereGrad" x1="10%" y1="10%" x2="90%" y2="90%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="45%" stop-color="#0072ff" />
+      <stop offset="85%" stop-color="#081b4b" />
+      <stop offset="100%" stop-color="#020817" />
+    </linearGradient>
+    <linearGradient id="glowRing" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#4facfe" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#0072ff" stop-opacity="0.9"/>
+    </linearGradient>
+    <filter id="sphereBlur" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" />
+    </filter>
+  </defs>
+
+  <!-- Glowing background aura -->
+  <circle cx="36" cy="35" r="28" fill="#00d2ff" opacity="0.25" filter="url(#softGlow)" />
+  
+  <!-- Outer Orbit Rings -->
+  <ellipse cx="36" cy="35" rx="30" ry="14" stroke="url(#glowRing)" stroke-width="1.8" transform="rotate(-25 36 35)" stroke-dasharray="80 12" opacity="0.85" />
+  <ellipse cx="36" cy="35" rx="30" ry="11" stroke="#38bdf8" stroke-width="1.2" transform="rotate(35 36 35)" stroke-opacity="0.6" stroke-dasharray="50 10" />
+
+  <!-- 3D Digital Sphere -->
+  <circle cx="36" cy="35" r="24" fill="url(#sphereGrad)" filter="url(#sphereBlur)" />
+  
+  <!-- Sphere Highlight specular reflection -->
+  <ellipse cx="28" cy="25" rx="10" ry="5" fill="#ffffff" opacity="0.35" transform="rotate(-30 28 25)" />
+  <circle cx="26" cy="23" r="3" fill="#ffffff" opacity="0.75" />
+
+  <!-- Medical Digital Cross / Waveform in Sphere -->
+  <g transform="translate(24, 23) scale(0.65)">
+    <!-- Stylized Clinical Cross with pulse -->
+    <path d="M 14 6 L 22 6 L 22 14 L 30 14 L 30 22 L 22 22 L 22 30 L 14 30 L 14 22 L 6 22 L 6 14 L 14 14 Z" 
+          fill="#ffffff" opacity="0.95" />
+    <!-- Pulse wave cutout -->
+    <path d="M 4 18 L 11 18 L 14 11 L 18 25 L 22 15 L 25 18 L 32 18" 
+          stroke="#00f2fe" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+  </g>
+
+  <!-- Brand Typography -->
+  <g transform="translate(76, 42)">
+    <text font-family="'Plus Jakarta Sans', 'Outfit', 'Segoe UI', sans-serif" font-size="24" font-weight="800" fill="#ffffff" letter-spacing="-0.5">
+      DigiSpher<tspan fill="#38bdf8" font-weight="800">EMR</tspan>
+    </text>
+    <text x="180" y="-7" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="700" fill="#00f2fe" letter-spacing="0.5">
+      v2.0
+    </text>
+  </g>
+  <text x="77" y="56" font-family="'Plus Jakarta Sans', sans-serif" font-size="9.5" font-weight="600" fill="#94a3b8" letter-spacing="1.8">
+    PRACTICE MANAGEMENT &amp; CLINICAL SUITE
+  </text>
+</svg>
