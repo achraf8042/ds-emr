@@ -1,5 +1,5 @@
 /**
- * DigiSpher EMR 2.0 - Landing Page Interactivity
+ * DigiSpherEMR V2 - Landing Page Interactivity
  * Features:
  *  - Cinema Video Player with easy user URL swapping
  *  - Practice ROI / Cloud Cost Savings Calculator
@@ -65,7 +65,7 @@ function initVideoPlayer() {
     videoContainer.innerHTML = `
       <iframe 
         src="${targetUrl}" 
-        title="DigiSpher EMR 2.0 Product Tour" 
+        title="DigiSpherEMR V2 Product Tour"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
         allowfullscreen
         style="width: 100%; height: 100%; border: none; position: absolute; inset: 0;"
@@ -91,7 +91,7 @@ function initRoiCalculator() {
 
   if (!feeSlider || !savedDisplay) return;
 
-  const DIGISPHER_LIFETIME_PRICE = 598; // 50% OFF regular $1,197 launch offer
+  const DIGISPHER_LIFETIME_PRICE = 899; // Lifetime license price shown on the landing page
 
   function calculateSavings() {
     const monthlyFee = parseInt(feeSlider.value, 10) || 180;
@@ -145,7 +145,7 @@ function initScreenshotModal() {
     trigger.addEventListener('click', (e) => {
       e.preventDefault();
       const imgSrc = trigger.getAttribute('data-zoom-screen');
-      const title = trigger.getAttribute('data-zoom-title') || 'DigiSpher EMR Module';
+      const title = trigger.getAttribute('data-zoom-title') || 'DigiSpherEMR Module';
       const desc = trigger.getAttribute('data-zoom-desc') || '';
 
       modalImg.src = imgSrc;
