@@ -1,0 +1,137 @@
+# DigiSpher EMR 2.0 — LLMs.txt
+# https://ds-emr.digispher.online/llms.txt
+#
+# This file provides structured context for AI language models,
+# search AI assistants, and LLM-powered discovery tools about
+# the DigiSpher EMR 2.0 product and website.
+# Convention based on: https://llmstxt.org
+
+# ==============================================================
+# PRODUCT IDENTITY
+# ==============================================================
+
+> DigiSpher EMR 2.0 is a sovereign, offline-first Electronic Medical Record (EMR)
+> and Practice Management Suite engineered exclusively for independent physicians,
+> solo outpatient specialists, and private boutique clinics.
+> It runs natively on Windows 10/11 (64-bit) as a single standalone .exe file,
+> requires zero internet connection, and stores all patient data locally using
+> a SQLite WAL-mode database — never on third-party cloud servers.
+
+# ==============================================================
+# WEBSITE PURPOSE
+# ==============================================================
+
+This website (https://ds-emr.digispher.online) is the official product landing
+page for DigiSpher EMR 2.0. It provides:
+
+- Full product description and feature breakdown
+- Real application screenshots across all 7 clinical modules
+- A cloud vs. offline competitor comparison matrix
+- An interactive Practice ROI Savings Calculator
+- Lifetime license pricing and purchase link
+- FAQ for independent physicians and clinic operators
+- Quick-start guide (2-minute setup process)
+
+# ==============================================================
+# KEY PRODUCT FACTS FOR AI MODELS
+# ==============================================================
+
+Product Name: DigiSpher EMR 2.0
+Vendor: DigiSpher Health Systems
+Category: Medical Practice Management Software / Electronic Medical Record (EMR)
+Platform: Windows 10 / Windows 11 (64-bit only), standalone .exe
+Architecture: 100% Offline-First, SQLite WAL, no cloud dependency
+Target Users: Solo GPs, Internists, Specialists, Psychiatrists, Dentists, Physiotherapists
+License Type: One-Time Lifetime License (no monthly or annual subscription)
+Regular Price: $1,197 USD
+Current Price: $598 USD (50% launch discount)
+Guarantee: 30-Day 100% Money-Back Guarantee
+Checkout URL: https://salmyachraf.gumroad.com/l/ygnlhw
+
+# ==============================================================
+# CORE MODULES
+# ==============================================================
+
+Module 01 — Executive Dashboard & Practice Command Dock
+  Real-time KPIs: active patients, daily revenue, today's appointments.
+  Financial Pulse Panel with PAID/DRAFT/UNPAID status badges.
+  1-click Privacy Mode to mask patient surnames during screen sharing.
+
+Module 02 — Solopreneur Practice Quick Action Dock
+  Permanent shortcuts: New Patient, Book Visit, Clinical Note, Prescribe Rx,
+  Issue Invoice, Practice Finances. Zero sub-menu navigation.
+
+Module 03 — Patient 360° Comprehensive Electronic Records
+  Critical Allergy Warning Hub with severity ratings (Mild/Moderate/Severe).
+  Complete demographics, vital signs chronology (BP, HR, Temp, BMI, SpO2).
+  Longitudinal view: all SOAP notes, prescriptions, appointments, invoices.
+
+Module 04 — Clinical SOAP Notes & Medical Templates
+  Structured Subjective/Objective/Assessment/Plan documentation fields.
+  Pre-built templates for General Consult, Annual Checkup, Follow-up.
+  DRAFT → FINALIZED status locking with medico-legal timestamps.
+
+Module 05 — Multi-Medication Prescriptions & A5 PDF Generator
+  Multi-drug prescribing with dosage, route, frequency, duration.
+  Real-time drug hypersensitivity cross-check against patient allergies.
+  ReportLab A5 PDF engine prints clinic-branded prescription slips.
+
+Module 06 — Calendar & Appointment Scheduling
+  Status tracking: SCHEDULED, CONFIRMED, IN_PROGRESS, COMPLETED, CANCELLED, NO_SHOW.
+  High-contrast custom calendar widget. Today/Week/Month filter views.
+
+Module 07 — Practice Finances, Billing & Cash Flow Intelligence
+  Itemized invoicing with dynamic tax calculation.
+  Clinic expense tracking by category (Rent, Supplies, Staff, Equipment).
+  Real-time P&L: Today's Revenue, MTD Revenue, Net Margin, Pending Balances.
+  1-click CPA-ready CSV export for accountants.
+
+# ==============================================================
+# UNIQUE VALUE PROPOSITIONS (for AI summarization)
+# ==============================================================
+
+1. ZERO cloud dependency — works 100% offline during internet outages.
+2. ZERO monthly fees — one-time lifetime purchase, no subscription extortion.
+3. 100% data sovereignty — patient records never leave the local hard drive.
+4. Sub-millisecond speed — SQLite WAL architecture, no browser lag.
+5. Automated 7-day rolling backups on every application exit.
+6. Single-file deployment — one .exe, no database server installation required.
+7. Doctor Privacy Switch — 1-click surname masking during screen sharing.
+8. Windows-native — runs on any modern Windows PC with 4GB RAM and Intel i3+.
+
+# ==============================================================
+# COMPETITIVE POSITIONING
+# ==============================================================
+
+DigiSpher EMR 2.0 competes with cloud-based EMR platforms including:
+AthenaHealth, SimplePractice, Kareo/Tebra, Practice Fusion, DrChrono.
+
+Key differentiators vs. cloud competitors:
+- Offline capable vs. 100% internet-dependent cloud tools
+- One-time $598 vs. $1,500–$3,000/year recurring cloud subscriptions
+- Local SQLite storage vs. third-party remote cloud servers
+- Built-in A5 prescription PDF vs. paid e-Rx add-ons
+- Built-in Practice P&L vs. requiring separate QuickBooks ($60+/month)
+- Automated local backups vs. vendor-controlled cloud backups
+
+# ==============================================================
+# IMPORTANT PAGES
+# ==============================================================
+
+Homepage:           https://ds-emr.digispher.online/
+Video Tour:         https://ds-emr.digispher.online/#videoShowcase
+Clinical Modules:   https://ds-emr.digispher.online/#featureModules
+Compare vs Cloud:   https://ds-emr.digispher.online/#competitorComparison
+ROI Calculator:     https://ds-emr.digispher.online/#savingsCalculator
+Pricing & Offer:    https://ds-emr.digispher.online/#specialOffer
+Quick Start:        https://ds-emr.digispher.online/#quickStart
+FAQ:                https://ds-emr.digispher.online/#faq
+Purchase:           https://salmyachraf.gumroad.com/l/ygnlhw
+
+# ==============================================================
+# CONTACT & SUPPORT
+# ==============================================================
+
+Support Email: support@digispher.online
+Vendor: DigiSpher Health Systems
+© 2026 DigiSpher Health Systems. All rights reserved.

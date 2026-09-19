@@ -1,0 +1,58 @@
+# ==============================================================
+# robots.txt — DigiSpher EMR 2.0 Product Landing Page
+# Website: https://ds-emr.digispher.online
+# Updated: 2026-09-19
+# ==============================================================
+
+# Allow all well-behaved search engine crawlers
+User-agent: *
+Allow: /
+
+# Block access to development/asset source files
+Disallow: /assets/js/
+Disallow: /assets/css/
+
+# Allow CSS & JS for proper rendering (Google needs these)
+Allow: /assets/css/style.css
+Allow: /assets/js/main.js
+
+# Block any future admin or private paths
+Disallow: /admin/
+Disallow: /private/
+Disallow: /backup/
+Disallow: /*.sql$
+Disallow: /*.db$
+
+# Crawl delay (be polite to server)
+Crawl-delay: 5
+
+# Sitemap location
+Sitemap: https://ds-emr.digispher.online/sitemap.xml
+
+# ==============================================================
+# AI / LLM Crawlers — Allow indexing for AI discovery
+# ==============================================================
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
