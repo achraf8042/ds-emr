@@ -1426,3 +1426,171 @@ p.text-secondary {
 .footer-sphere img {
   filter: drop-shadow(0 0 10px rgba(0,180,255,0.3));
 }
+
+/* --------------------------------------------------------------------------
+   Request a Quote Form Styling (Cyber-Clinical Deep Blue Theme)
+   -------------------------------------------------------------------------- */
+.quote-section {
+  position: relative;
+  z-index: 2;
+}
+
+.input-group-sphere {
+  background: rgba(4, 13, 33, 0.7);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  border-radius: var(--radius-sm);
+  transition: var(--transition-smooth);
+  overflow: hidden;
+  align-items: stretch;
+}
+
+.input-group-sphere:focus-within {
+  border-color: var(--sphere-cyan-neon);
+  box-shadow: 0 0 20px rgba(0, 210, 255, 0.3);
+}
+
+.input-group-sphere .input-group-text {
+  background: transparent;
+  border: none;
+  color: var(--sphere-cyan-neon);
+  font-size: 1.15rem;
+  padding-left: 1.1rem;
+  padding-right: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.input-group-sphere:has(textarea) .input-group-text {
+  align-items: flex-start;
+  padding-top: 0.85rem;
+}
+
+.form-control-sphere {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  padding: 0.75rem 1rem;
+}
+
+.form-control-sphere:focus {
+  background: transparent;
+  color: #ffffff;
+  box-shadow: none;
+  outline: none;
+}
+
+select.form-control-sphere {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%3c38bdf8' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.85rem center;
+  background-size: 14px 12px;
+  cursor: pointer;
+}
+
+select.form-control-sphere option {
+  background-color: #050d22;
+  color: #ffffff;
+  padding: 10px;
+}
+
+select.form-control-sphere option:disabled {
+  color: #64748b;
+}
+
+/* Searchable Datalist Picker Indicator Tint */
+input.form-control-sphere::-webkit-calendar-picker-indicator {
+  filter: invert(0.7) sepia(1) saturate(5) hue-rotate(170deg);
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.form-control-sphere::placeholder {
+  color: #64748b;
+  opacity: 0.85;
+}
+
+textarea.form-control-sphere {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.alert-sphere-success {
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  color: #ffffff;
+  border-radius: var(--radius-md);
+  padding: 1.75rem;
+  backdrop-filter: blur(10px);
+}
+
+.custom-checkbox-sphere {
+  background: rgba(4, 13, 33, 0.55);
+  border: 1px solid rgba(56, 189, 248, 0.15);
+  transition: var(--transition-smooth);
+  min-height: 48px;
+}
+
+.custom-checkbox-sphere:hover {
+  border-color: rgba(56, 189, 248, 0.45);
+  background: rgba(14, 34, 77, 0.5);
+}
+
+.custom-checkbox-sphere .form-check-input {
+  background-color: rgba(6, 18, 50, 0.8);
+  border-color: rgba(56, 189, 248, 0.4);
+  cursor: pointer;
+  width: 1.15em;
+  height: 1.15em;
+}
+
+.custom-checkbox-sphere .form-check-input:checked {
+  background-color: var(--sphere-cyan-neon);
+  border-color: var(--sphere-cyan-neon);
+  box-shadow: 0 0 10px rgba(0, 210, 255, 0.4);
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/* Custom Searchable Select Dropdown Menu */
+.custom-select-menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+  z-index: 1060;
+  background: rgba(6, 18, 50, 0.98);
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  border-radius: var(--radius-sm);
+  backdrop-filter: blur(18px);
+  max-height: 280px;
+  overflow: hidden;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.85);
+}
+
+.custom-select-list {
+  max-height: 215px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--sphere-cyan-neon) rgba(4, 13, 33, 0.8);
+}
+
+.custom-option-item {
+  padding: 0.65rem 1rem;
+  color: #cbd5e1;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.custom-option-item:hover,
+.custom-option-item.selected {
+  background: rgba(30, 96, 242, 0.4);
+  color: #ffffff;
+  padding-left: 1.25rem;
+}
+

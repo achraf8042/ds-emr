@@ -15,6 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initScreenshotModal();
   initAnimatedCounters();
   initScrollReveal();
+  initQuoteForm();
+  initCustomCountrySelect();
 });
 
 /* --------------------------------------------------------------------------
@@ -226,4 +228,110 @@ function initScrollReveal() {
   }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 
   revealElements.forEach(el => observer.observe(el));
+}
+
+/* --------------------------------------------------------------------------
+   7. Netlify Quote Form Submission Handling
+   -------------------------------------------------------------------------- */
+function initQuoteForm() {
+  const quoteForm = document.getElementById('quoteForm');
+  const successAlert = document.getElementById('quoteFormSuccess');
+
+  if (!quoteForm) return;
+
+  quoteForm.addEventListener('submit', (e) => {
+    // When live on Netlify, attempt AJAX submission for smooth UX
+    if (window.location.protocol.startsWith('http')) {
+      e.preventDefault();
+      const formData = new FormData(quoteForm);
+
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData).toString()
+      })
+      .then((response) => {
+        if (response.ok) {
+          quoteForm.reset();
+          quoteForm.classList.add('d-none');
+          if (successAlert) successAlert.classList.remove('d-none');
+        } else {
+          // Native browser submission fallback
+          quoteForm.submit();
+        }
+      })
+      .catch(() => {
+        quoteForm.submit();
+      });
+    }
+  });
+}
+
+/* --------------------------------------------------------------------------
+   8. Custom Searchable Country Dropdown Menu Logic
+   -------------------------------------------------------------------------- */
+function initCustomCountrySelect() {
+  const trigger = document.getElementById('countrySelectTrigger');
+  const menu = document.getElementById('countrySelectMenu');
+  const filterInput = document.getElementById('countrySearchFilter');
+  const mainInput = document.getElementById('countryCountyInput');
+  const options = document.querySelectorAll('.custom-option-item');
+  const chevron = document.getElementById('countrySelectChevron');
+
+  if (!trigger || !menu || !mainInput) return;
+
+  const toggleMenu = (open) => {
+    const shouldOpen = open !== undefined ? open : menu.classList.contains('d-none');
+    if (shouldOpen) {
+      menu.classList.remove('d-none');
+      if (chevron) chevron.className = 'bi bi-chevron-up text-info small';
+      if (filterInput) {
+        filterInput.value = '';
+        filterOptions('');
+        setTimeout(() => filterInput.focus(), 50);
+      }
+    } else {
+      menu.classList.add('d-none');
+      if (chevron) chevron.className = 'bi bi-chevron-down text-info small';
+    }
+  };
+
+  const filterOptions = (term) => {
+    const query = term.toLowerCase().trim();
+    options.forEach(opt => {
+      const text = opt.textContent.toLowerCase();
+      if (text.includes(query)) {
+        opt.style.display = 'block';
+      } else {
+        opt.style.display = 'none';
+      }
+    });
+  };
+
+  trigger.addEventListener('click', (e) => {
+    e.stopPropagation();
+    toggleMenu();
+  });
+
+  if (filterInput) {
+    filterInput.addEventListener('input', (e) => {
+      filterOptions(e.target.value);
+    });
+    filterInput.addEventListener('click', (e) => e.stopPropagation());
+  }
+
+  options.forEach(opt => {
+    opt.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const val = opt.getAttribute('data-value') || opt.textContent.trim();
+      mainInput.value = val;
+      toggleMenu(false);
+    });
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!trigger.contains(e.target) && !menu.contains(e.target)) {
+      toggleMenu(false);
+    }
+  });
 }
