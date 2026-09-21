@@ -135,6 +135,7 @@
             <li class="nav-item"><a class="nav-link nav-link-sphere" href="#offlineBenefits">Why DigiSpher</a></li>
             <li class="nav-item"><a class="nav-link nav-link-sphere" href="#featureModules">Features</a></li>
             <li class="nav-item"><a class="nav-link nav-link-sphere" href="#specialOffer">Pricing</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-sphere" href="#requestQuote">Request Quote</a></li>
             <li class="nav-item"><a class="nav-link nav-link-sphere" href="#quickStart">Getting Started</a></li>
             <li class="nav-item"><a class="nav-link nav-link-sphere" href="#faq">FAQ</a></li>
           </ul>
@@ -898,10 +899,13 @@
                 <div class="col-sm-6"><div class="d-flex align-items-center gap-2 text-white small"><i class="bi bi-check-circle-fill text-info fs-5"></i><span>PDF generation and backups</span></div></div>
               </div>
 
-              <div class="mb-3">
+              <div class="mb-3 d-flex flex-column flex-sm-row justify-content-center gap-3 align-items-center">
                 <a href="https://salmyachraf.gumroad.com/l/ygnlhw?wanted=true" target="_blank" rel="noopener noreferrer"
                   class="btn btn-sphere-primary btn-sphere-gold py-3 px-5 fs-5">
                   <i class="bi bi-bag-check-fill"></i> Get DigiSpherEMR
+                </a>
+                <a href="#requestQuote" class="btn btn-sphere-secondary py-3 px-4 fs-5">
+                  <i class="bi bi-file-earmark-text text-info"></i> Request Custom Quote
                 </a>
               </div>
 
@@ -911,6 +915,293 @@
                   <div class="fw-bold text-white">Offline-First Workflow</div>
                   <div class="small text-secondary">No monthly software subscription is required for the purchased lifetime license.</div>
                 </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REQUEST A QUOTE SECTION -->
+    <section class="quote-section py-5" id="requestQuote" aria-labelledby="quoteHeading">
+      <div class="container-xl">
+        <div class="text-center mb-5">
+          <span class="badge-sphere mb-2"><i class="bi bi-file-earmark-text-fill"></i> Customization & Special Pricing</span>
+          <h2 id="quoteHeading" class="section-title">Request a Custom Quote</h2>
+          <p class="section-subtitle">
+            Need practice-specific modifications, custom feature integrations, or volume licensing for your clinic? Submit your details below for a tailored quote.
+          </p>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-10 col-xl-8">
+            <div class="glass-card reveal-on-scroll p-4 p-md-5">
+
+              <form name="quote-request" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="needs-validation" id="quoteForm">
+                <!-- Hidden netlify form-name field -->
+                <input type="hidden" name="form-name" value="quote-request" />
+
+                <!-- Netlify Honeypot Field -->
+                <p class="d-none" aria-hidden="true">
+                  <label>Don’t fill this out if you’re human: <input name="bot-field" tabindex="-1" /></label>
+                </p>
+
+                <div class="row g-4">
+                  <!-- Doctor Name -->
+                  <div class="col-md-6">
+                    <label for="doctorName" class="form-label text-white fw-semibold small">Doctor Name <span class="text-danger">*</span></label>
+                    <div class="input-group input-group-sphere">
+                      <span class="input-group-text"><i class="bi bi-person-badge text-info"></i></span>
+                      <input type="text" class="form-control form-control-sphere" id="doctorName" name="doctor_name" placeholder="Dr. Alex Morgan" required>
+                    </div>
+                  </div>
+
+                  <!-- Email Address -->
+                  <div class="col-md-6">
+                    <label for="quoteEmail" class="form-label text-white fw-semibold small">Email Address <span class="text-danger">*</span></label>
+                    <div class="input-group input-group-sphere">
+                      <span class="input-group-text"><i class="bi bi-envelope-at text-info"></i></span>
+                      <input type="email" class="form-control form-control-sphere" id="quoteEmail" name="email" placeholder="doctor@clinic.com" required>
+                    </div>
+                  </div>
+
+                  <!-- Clinic Name -->
+                  <div class="col-md-6">
+                    <label for="clinicName" class="form-label text-white fw-semibold small">Clinic / Practice Name <span class="text-danger">*</span></label>
+                    <div class="input-group input-group-sphere">
+                      <span class="input-group-text"><i class="bi bi-building text-info"></i></span>
+                      <input type="text" class="form-control form-control-sphere" id="clinicName" name="clinic_name" placeholder="Apex Medical Center" required>
+                    </div>
+                  </div>
+
+                  <!-- Medical Specialty Dropdown -->
+                  <div class="col-md-6">
+                    <label for="medicalSpecialty" class="form-label text-white fw-semibold small">Medical Specialty <span class="text-danger">*</span></label>
+                    <div class="input-group input-group-sphere">
+                      <span class="input-group-text"><i class="bi bi-heart-pulse text-info"></i></span>
+                      <select class="form-select form-control-sphere" id="medicalSpecialty" name="medical_specialty" required>
+                        <option value="" selected disabled>Select Medical Specialty...</option>
+                        <option value="General Practice / Family Medicine">General Practice / Family Medicine</option>
+                        <option value="Pediatrics">Pediatrics</option>
+                        <option value="Internal Medicine">Internal Medicine</option>
+                        <option value="Cardiology">Cardiology</option>
+                        <option value="Obstetrics & Gynecology">Obstetrics & Gynecology (OB-GYN)</option>
+                        <option value="Dermatology">Dermatology</option>
+                        <option value="Orthopedics">Orthopedics</option>
+                        <option value="Ophthalmology">Ophthalmology</option>
+                        <option value="ENT (Otolaryngology)">ENT (Otolaryngology)</option>
+                        <option value="Neurology">Neurology</option>
+                        <option value="Psychiatry / Behavioral Health">Psychiatry / Behavioral Health</option>
+                        <option value="General Surgery">General Surgery</option>
+                        <option value="Urology">Urology</option>
+                        <option value="Dental / Oral Surgery">Dental / Oral Surgery</option>
+                        <option value="Multi-Specialty Clinic">Multi-Specialty Clinic</option>
+                        <option value="Other / Custom Specialty">Other / Custom Specialty</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <!-- Custom Searchable Country Dropdown Component -->
+                  <div class="col-md-6">
+                    <label for="countryCountyInput" class="form-label text-white fw-semibold small">Country / Region <span class="text-danger">*</span></label>
+                    <div class="custom-select-wrapper position-relative" id="countrySelectWrapper">
+                      <div class="input-group input-group-sphere cursor-pointer" id="countrySelectTrigger">
+                        <span class="input-group-text"><i class="bi bi-geo-alt text-info"></i></span>
+                        <input type="text" class="form-control form-control-sphere cursor-pointer" id="countryCountyInput" name="country_county" placeholder="Select or search country..." required readonly autocomplete="off">
+                        <span class="input-group-text pe-3"><i class="bi bi-chevron-down text-info small" id="countrySelectChevron"></i></span>
+                      </div>
+
+                      <!-- Searchable Dropdown Popup Panel -->
+                      <div class="custom-select-menu p-2 shadow-lg d-none" id="countrySelectMenu">
+                        <div class="input-group input-group-sm mb-2">
+                          <span class="input-group-text bg-dark border-secondary text-info"><i class="bi bi-search"></i></span>
+                          <input type="text" class="form-control bg-dark text-white border-secondary small" id="countrySearchFilter" placeholder="Type to search country..." autocomplete="off">
+                        </div>
+                        <ul class="list-unstyled mb-0 custom-select-list" id="countryOptionsList">
+                          <li class="custom-option-item" data-value="United States"><i class="bi bi-geo-alt-fill me-2 text-info"></i>United States</li>
+                          <li class="custom-option-item" data-value="United Kingdom"><i class="bi bi-geo-alt-fill me-2 text-info"></i>United Kingdom</li>
+                          <li class="custom-option-item" data-value="Canada"><i class="bi bi-geo-alt-fill me-2 text-info"></i>Canada</li>
+                          <li class="custom-option-item" data-value="Australia"><i class="bi bi-geo-alt-fill me-2 text-info"></i>Australia</li>
+                          <li class="custom-option-item" data-value="Afghanistan">Afghanistan</li>
+                          <li class="custom-option-item" data-value="Albania">Albania</li>
+                          <li class="custom-option-item" data-value="Algeria">Algeria</li>
+                          <li class="custom-option-item" data-value="Argentina">Argentina</li>
+                          <li class="custom-option-item" data-value="Austria">Austria</li>
+                          <li class="custom-option-item" data-value="Bahrain">Bahrain</li>
+                          <li class="custom-option-item" data-value="Bangladesh">Bangladesh</li>
+                          <li class="custom-option-item" data-value="Belgium">Belgium</li>
+                          <li class="custom-option-item" data-value="Bolivia">Bolivia</li>
+                          <li class="custom-option-item" data-value="Brazil">Brazil</li>
+                          <li class="custom-option-item" data-value="Bulgaria">Bulgaria</li>
+                          <li class="custom-option-item" data-value="Cameroon">Cameroon</li>
+                          <li class="custom-option-item" data-value="Chile">Chile</li>
+                          <li class="custom-option-item" data-value="China">China</li>
+                          <li class="custom-option-item" data-value="Colombia">Colombia</li>
+                          <li class="custom-option-item" data-value="Costa Rica">Costa Rica</li>
+                          <li class="custom-option-item" data-value="Croatia">Croatia</li>
+                          <li class="custom-option-item" data-value="Cyprus">Cyprus</li>
+                          <li class="custom-option-item" data-value="Czech Republic">Czech Republic</li>
+                          <li class="custom-option-item" data-value="Denmark">Denmark</li>
+                          <li class="custom-option-item" data-value="Dominican Republic">Dominican Republic</li>
+                          <li class="custom-option-item" data-value="Ecuador">Ecuador</li>
+                          <li class="custom-option-item" data-value="Egypt">Egypt</li>
+                          <li class="custom-option-item" data-value="Estonia">Estonia</li>
+                          <li class="custom-option-item" data-value="Ethiopia">Ethiopia</li>
+                          <li class="custom-option-item" data-value="Finland">Finland</li>
+                          <li class="custom-option-item" data-value="France">France</li>
+                          <li class="custom-option-item" data-value="Germany">Germany</li>
+                          <li class="custom-option-item" data-value="Ghana">Ghana</li>
+                          <li class="custom-option-item" data-value="Greece">Greece</li>
+                          <li class="custom-option-item" data-value="Guatemala">Guatemala</li>
+                          <li class="custom-option-item" data-value="Hong Kong">Hong Kong</li>
+                          <li class="custom-option-item" data-value="Hungary">Hungary</li>
+                          <li class="custom-option-item" data-value="Iceland">Iceland</li>
+                          <li class="custom-option-item" data-value="India">India</li>
+                          <li class="custom-option-item" data-value="Indonesia">Indonesia</li>
+                          <li class="custom-option-item" data-value="Iran">Iran</li>
+                          <li class="custom-option-item" data-value="Iraq">Iraq</li>
+                          <li class="custom-option-item" data-value="Ireland">Ireland</li>
+                          <li class="custom-option-item" data-value="Israel">Israel</li>
+                          <li class="custom-option-item" data-value="Italy">Italy</li>
+                          <li class="custom-option-item" data-value="Ivory Coast">Ivory Coast</li>
+                          <li class="custom-option-item" data-value="Jamaica">Jamaica</li>
+                          <li class="custom-option-item" data-value="Japan">Japan</li>
+                          <li class="custom-option-item" data-value="Jordan">Jordan</li>
+                          <li class="custom-option-item" data-value="Kazakhstan">Kazakhstan</li>
+                          <li class="custom-option-item" data-value="Kenya">Kenya</li>
+                          <li class="custom-option-item" data-value="Kuwait">Kuwait</li>
+                          <li class="custom-option-item" data-value="Lebanon">Lebanon</li>
+                          <li class="custom-option-item" data-value="Libya">Libya</li>
+                          <li class="custom-option-item" data-value="Luxembourg">Luxembourg</li>
+                          <li class="custom-option-item" data-value="Malaysia">Malaysia</li>
+                          <li class="custom-option-item" data-value="Malta">Malta</li>
+                          <li class="custom-option-item" data-value="Mexico">Mexico</li>
+                          <li class="custom-option-item" data-value="Morocco">Morocco</li>
+                          <li class="custom-option-item" data-value="Netherlands">Netherlands</li>
+                          <li class="custom-option-item" data-value="New Zealand">New Zealand</li>
+                          <li class="custom-option-item" data-value="Nigeria">Nigeria</li>
+                          <li class="custom-option-item" data-value="Norway">Norway</li>
+                          <li class="custom-option-item" data-value="Oman">Oman</li>
+                          <li class="custom-option-item" data-value="Pakistan">Pakistan</li>
+                          <li class="custom-option-item" data-value="Palestine">Palestine</li>
+                          <li class="custom-option-item" data-value="Panama">Panama</li>
+                          <li class="custom-option-item" data-value="Peru">Peru</li>
+                          <li class="custom-option-item" data-value="Philippines">Philippines</li>
+                          <li class="custom-option-item" data-value="Poland">Poland</li>
+                          <li class="custom-option-item" data-value="Portugal">Portugal</li>
+                          <li class="custom-option-item" data-value="Qatar">Qatar</li>
+                          <li class="custom-option-item" data-value="Romania">Romania</li>
+                          <li class="custom-option-item" data-value="Saudi Arabia">Saudi Arabia</li>
+                          <li class="custom-option-item" data-value="Senegal">Senegal</li>
+                          <li class="custom-option-item" data-value="Serbia">Serbia</li>
+                          <li class="custom-option-item" data-value="Singapore">Singapore</li>
+                          <li class="custom-option-item" data-value="Slovakia">Slovakia</li>
+                          <li class="custom-option-item" data-value="South Africa">South Africa</li>
+                          <li class="custom-option-item" data-value="South Korea">South Korea</li>
+                          <li class="custom-option-item" data-value="Spain">Spain</li>
+                          <li class="custom-option-item" data-value="Sri Lanka">Sri Lanka</li>
+                          <li class="custom-option-item" data-value="Sudan">Sudan</li>
+                          <li class="custom-option-item" data-value="Sweden">Sweden</li>
+                          <li class="custom-option-item" data-value="Switzerland">Switzerland</li>
+                          <li class="custom-option-item" data-value="Taiwan">Taiwan</li>
+                          <li class="custom-option-item" data-value="Tanzania">Tanzania</li>
+                          <li class="custom-option-item" data-value="Thailand">Thailand</li>
+                          <li class="custom-option-item" data-value="Tunisia">Tunisia</li>
+                          <li class="custom-option-item" data-value="Turkey">Turkey</li>
+                          <li class="custom-option-item" data-value="Uganda">Uganda</li>
+                          <li class="custom-option-item" data-value="Ukraine">Ukraine</li>
+                          <li class="custom-option-item" data-value="United Arab Emirates">United Arab Emirates</li>
+                          <li class="custom-option-item" data-value="Uruguay">Uruguay</li>
+                          <li class="custom-option-item" data-value="Uzbekistan">Uzbekistan</li>
+                          <li class="custom-option-item" data-value="Venezuela">Venezuela</li>
+                          <li class="custom-option-item" data-value="Vietnam">Vietnam</li>
+                          <li class="custom-option-item" data-value="Zambia">Zambia</li>
+                          <li class="custom-option-item" data-value="Zimbabwe">Zimbabwe</li>
+                          <li class="custom-option-item" data-value="Other / Country Not Listed">Other / Country Not Listed</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Preferred Interface Language -->
+                  <div class="col-md-6">
+                    <label for="preferredLanguage" class="form-label text-white fw-semibold small">Preferred Language / Localization</label>
+                    <div class="input-group input-group-sphere">
+                      <span class="input-group-text"><i class="bi bi-translate text-info"></i></span>
+                      <input type="text" class="form-control form-control-sphere" id="preferredLanguage" name="preferred_language" placeholder="English, French, Arabic, Spanish, etc.">
+                    </div>
+                  </div>
+
+                  <!-- Customization Categories (Checkboxes) -->
+                  <div class="col-12">
+                    <label class="form-label text-white fw-semibold small d-block mb-2">Customization Types Needed (Select all that apply)</label>
+                    <div class="row g-3">
+                      <div class="col-sm-6 col-md-4">
+                        <div class="custom-checkbox-sphere p-2.5 px-3 rounded d-flex align-items-center h-100">
+                          <input class="form-check-input flex-shrink-0 me-2 mt-0 cursor-pointer" type="checkbox" name="customization_types[]" value="Language Translation" id="customLang">
+                          <label class="form-check-label text-secondary small cursor-pointer mb-0 lh-sm" for="customLang"><i class="bi bi-translate text-info me-1"></i> Language Translation</label>
+                        </div>
+                      </div>
+                      <div class="col-sm-6 col-md-4">
+                        <div class="custom-checkbox-sphere p-2.5 px-3 rounded d-flex align-items-center h-100">
+                          <input class="form-check-input flex-shrink-0 me-2 mt-0 cursor-pointer" type="checkbox" name="customization_types[]" value="Custom Prescription / Invoice" id="customPdf">
+                          <label class="form-check-label text-secondary small cursor-pointer mb-0 lh-sm" for="customPdf"><i class="bi bi-file-earmark-pdf text-info me-1"></i> Custom PDF Templates</label>
+                        </div>
+                      </div>
+                      <div class="col-sm-6 col-md-4">
+                        <div class="custom-checkbox-sphere p-2.5 px-3 rounded d-flex align-items-center h-100">
+                          <input class="form-check-input flex-shrink-0 me-2 mt-0 cursor-pointer" type="checkbox" name="customization_types[]" value="Branding & Logo" id="customBrand">
+                          <label class="form-check-label text-secondary small cursor-pointer mb-0 lh-sm" for="customBrand"><i class="bi bi-palette text-info me-1"></i> Branding & Clinic Logo</label>
+                        </div>
+                      </div>
+                      <div class="col-sm-6 col-md-4">
+                        <div class="custom-checkbox-sphere p-2.5 px-3 rounded d-flex align-items-center h-100">
+                          <input class="form-check-input flex-shrink-0 me-2 mt-0 cursor-pointer" type="checkbox" name="customization_types[]" value="Regional Currency & Tax" id="customCurrency">
+                          <label class="form-check-label text-secondary small cursor-pointer mb-0 lh-sm" for="customCurrency"><i class="bi bi-cash-coin text-info me-1"></i> Regional Currency & Tax</label>
+                        </div>
+                      </div>
+                      <div class="col-sm-6 col-md-4">
+                        <div class="custom-checkbox-sphere p-2.5 px-3 rounded d-flex align-items-center h-100">
+                          <input class="form-check-input flex-shrink-0 me-2 mt-0 cursor-pointer" type="checkbox" name="customization_types[]" value="Custom Workflow / Fields" id="customWorkflow">
+                          <label class="form-check-label text-secondary small cursor-pointer mb-0 lh-sm" for="customWorkflow"><i class="bi bi-gear-wide-connected text-info me-1"></i> Custom Workflow / Fields</label>
+                        </div>
+                      </div>
+                      <div class="col-sm-6 col-md-4">
+                        <div class="custom-checkbox-sphere p-2.5 px-3 rounded d-flex align-items-center h-100">
+                          <input class="form-check-input flex-shrink-0 me-2 mt-0 cursor-pointer" type="checkbox" name="customization_types[]" value="Multi-Clinic Licensing" id="customMulti">
+                          <label class="form-check-label text-secondary small cursor-pointer mb-0 lh-sm" for="customMulti"><i class="bi bi-buildings text-info me-1"></i> Multi-Clinic Licensing</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Quote Details & Requested Changes -->
+                  <div class="col-12">
+                    <label for="quoteDetails" class="form-label text-white fw-semibold small">Quote Details & Specific Customization Requirements <span class="text-danger">*</span></label>
+                    <div class="input-group input-group-sphere">
+                      <span class="input-group-text align-items-start pt-3"><i class="bi bi-pencil-square text-info"></i></span>
+                      <textarea class="form-control form-control-sphere" id="quoteDetails" name="requested_changes" rows="4" placeholder="Specify your exact customization needs (e.g. Translate interface to French/Arabic, add custom header logo to A5 prescriptions, configure local VAT tax rules, add custom specialty examination fields, or volume license discount)..." required></textarea>
+                    </div>
+                  </div>
+
+                  <!-- Submission Button -->
+                  <div class="col-12 text-center mt-4">
+                    <button type="submit" class="btn btn-sphere-primary btn-sphere-gold py-3 px-5 fs-5 w-100 w-sm-auto">
+                      <i class="bi bi-send-fill me-2"></i> Submit Quote Request
+                    </button>
+                    <div class="small text-muted mt-3">
+                      <i class="bi bi-shield-check text-success"></i> Your contact information is kept strictly private.
+                    </div>
+                  </div>
+                </div>
+              </form>
+
+              <!-- Form Submission Success Alert Container -->
+              <div id="quoteFormSuccess" class="alert alert-sphere-success text-center mt-4 d-none" role="alert">
+                <i class="bi bi-check-circle-fill text-success fs-2 d-block mb-2"></i>
+                <h4 class="h5 text-white fw-bold mb-1">Quote Request Submitted!</h4>
+                <p class="mb-0 text-secondary small">Thank you, Doctor. We have received your custom quote request and will get back to you shortly.</p>
               </div>
 
             </div>
@@ -1279,8 +1570,8 @@
           <ul class="list-unstyled small">
             <li class="mb-2"><a href="#faq" class="footer-link">FAQ</a></li>
             <li class="mb-2"><a href="#specialOffer" class="footer-link">Pricing</a></li>
+            <li class="mb-2"><a href="#requestQuote" class="footer-link">Request Quote</a></li>
             <li class="mb-2"><a href="mailto:support@digispheremr.com" class="footer-link">Technical Support</a></li>
-
           </ul>
         </div>
 
