@@ -1526,11 +1526,13 @@
           <p class="text-secondary small pe-lg-4">
             DigiSpherEMR V2 is a simple offline-first practice management application for doctors who want patients, consultations, prescriptions, appointments, billing, expenses, revenue, and profit in one place.
           </p>
-          <div class="d-flex align-items-center gap-3 text-info fs-5">
-            <span class="text-secondary" aria-label="Windows Native"><i class="bi bi-windows"></i></span>
+          <div class="d-flex align-items-center gap-3 text-info fs-5 mt-2">
+            <a href="mailto:digispher25@gmail.com" class="text-secondary text-decoration-none" aria-label="Email Support" title="digispher25@gmail.com"><i class="bi bi-envelope-fill text-info"></i></a>
+            <a href="https://wa.me/21623400174" target="_blank" rel="noopener noreferrer" class="text-secondary text-decoration-none" aria-label="WhatsApp Support" title="WhatsApp: +216 23 400 174"><i class="bi bi-whatsapp text-success"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61579736908309" target="_blank" rel="noopener noreferrer" class="text-secondary text-decoration-none" aria-label="Facebook Page" title="Facebook: Digi Spher"><i class="bi bi-facebook text-primary"></i></a>
+            <a href="https://linkedin.com/company/digispher" target="_blank" rel="noopener noreferrer" class="text-secondary text-decoration-none" aria-label="LinkedIn Company" title="LinkedIn: DigiSpher"><i class="bi bi-linkedin text-info"></i></a>
+            <span class="text-secondary ms-2" aria-label="Windows Native"><i class="bi bi-windows"></i></span>
             <span class="text-secondary" aria-label="Local SQLite Database"><i class="bi bi-database-check"></i></span>
-            <span class="text-secondary" aria-label="Offline Capable"><i class="bi bi-wifi-off"></i></span>
-            <span class="text-secondary" aria-label="Privacy Controls"><i class="bi bi-shield-shaded"></i></span>
           </div>
         </div>
 
@@ -1566,12 +1568,16 @@
         </div>
 
         <div class="col-6 col-lg-2">
-          <h5 class="text-white fw-bold mb-3 small text-uppercase">Support</h5>
+          <h5 class="text-white fw-bold mb-3 small text-uppercase">Support & Legal</h5>
           <ul class="list-unstyled small">
             <li class="mb-2"><a href="#faq" class="footer-link">FAQ</a></li>
             <li class="mb-2"><a href="#specialOffer" class="footer-link">Pricing</a></li>
             <li class="mb-2"><a href="#requestQuote" class="footer-link">Request Quote</a></li>
-            <li class="mb-2"><a href="mailto:support@digispheremr.com" class="footer-link">Technical Support</a></li>
+            <li class="mb-2"><a href="#" data-bs-toggle="modal" data-bs-target="#helpCenterModal" class="footer-link">Help Center</a></li>
+            <li class="mb-2"><a href="#" data-bs-toggle="modal" data-bs-target="#termsModal" class="footer-link">Terms of Service</a></li>
+            <li class="mb-2"><a href="#" data-bs-toggle="modal" data-bs-target="#privacyModal" class="footer-link">Privacy Policy</a></li>
+            <li class="mb-2"><a href="mailto:digispher25@gmail.com" class="footer-link"><i class="bi bi-envelope me-1 text-info"></i> digispher25@gmail.com</a></li>
+            <li class="mb-2"><a href="https://wa.me/21623400174" target="_blank" rel="noopener noreferrer" class="footer-link"><i class="bi bi-whatsapp me-1 text-success"></i> +216 23 400 174</a></li>
           </ul>
         </div>
 
@@ -1583,15 +1589,125 @@
           &copy; 2026 DigiSpher Health Systems. All rights reserved. DigiSpherEMR V2.
         </p>
         <div class="d-flex flex-wrap gap-3 justify-content-center">
-          <span>Offline-First Practice Software</span>
+          <a href="#" data-bs-toggle="modal" data-bs-target="#termsModal" class="text-secondary text-decoration-none hover-white">Terms of Service</a>
           <span>&bull;</span>
-          <span>Local Patient Data</span>
+          <a href="#" data-bs-toggle="modal" data-bs-target="#privacyModal" class="text-secondary text-decoration-none hover-white">Privacy Policy</a>
           <span>&bull;</span>
-          <span>No Recurring Subscription</span>
+          <a href="#" data-bs-toggle="modal" data-bs-target="#helpCenterModal" class="text-secondary text-decoration-none hover-white">Help Center</a>
+          <span>&bull;</span>
+          <span>100% Offline Data Sovereignty</span>
         </div>
       </div>
     </div>
   </footer>
+
+  <!-- HELP CENTER MODAL -->
+  <div class="modal fade" id="helpCenterModal" tabindex="-1" aria-labelledby="helpCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content border border-info border-opacity-25" style="background: #06122d; color: #cbd5e1;">
+        <div class="modal-header border-bottom border-secondary border-opacity-25">
+          <h4 class="modal-title text-white fw-bold h5" id="helpCenterTitle">
+            <i class="bi bi-question-square-fill text-info me-2"></i> DigiSpherEMR Help Center & Resources
+          </h4>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <div class="row g-4">
+            <div class="col-md-6">
+              <div class="p-3 rounded bg-dark bg-opacity-50 border border-secondary border-opacity-25 h-100">
+                <h5 class="text-white fw-bold h6 mb-2"><i class="bi bi-rocket-takeoff text-info me-1"></i> Quick Start & Setup</h5>
+                <p class="small text-secondary mb-0">Download the standalone Windows executable, launch `DigiSpherEMR.exe`, and complete the 2-minute clinic profile setup.</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="p-3 rounded bg-dark bg-opacity-50 border border-secondary border-opacity-25 h-100">
+                <h5 class="text-white fw-bold h6 mb-2"><i class="bi bi-printer text-info me-1"></i> Prescription & A5 Printing</h5>
+                <p class="small text-secondary mb-0">Configure A5 prescription paper dimensions, add doctor signature images, and customize header details in Settings.</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="p-3 rounded bg-dark bg-opacity-50 border border-secondary border-opacity-25 h-100">
+                <h5 class="text-white fw-bold h6 mb-2"><i class="bi bi-database-check text-info me-1"></i> Backup & Data Migration</h5>
+                <p class="small text-secondary mb-0">DigiSpherEMR creates automatic 7-day rolling backups in your local application folder upon exit. Use Settings to restore anytime.</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="p-3 rounded bg-dark bg-opacity-50 border border-secondary border-opacity-25 h-100">
+                <h5 class="text-white fw-bold h6 mb-2"><i class="bi bi-headset text-info me-1"></i> Priority Support Desk</h5>
+                <p class="small text-secondary mb-0">Need technical assistance? Email us at <a href="mailto:digispher25@gmail.com" class="text-info fw-bold">digispher25@gmail.com</a> or WhatsApp <a href="https://wa.me/21623400174" target="_blank" rel="noopener noreferrer" class="text-success fw-bold">+216 23 400 174</a> for fast response.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer border-top border-secondary border-opacity-25 justify-content-between">
+          <small class="text-muted"><i class="bi bi-shield-check text-success"></i> Standalone Windows Support Desk</small>
+          <button type="button" class="btn btn-sphere-secondary btn-sm px-4" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TERMS OF SERVICE MODAL -->
+  <div class="modal fade" id="termsModal" tabindex="-1" aria-labelledby="termsTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content border border-info border-opacity-25" style="background: #06122d; color: #cbd5e1;">
+        <div class="modal-header border-bottom border-secondary border-opacity-25">
+          <h4 class="modal-title text-white fw-bold h5" id="termsTitle">
+            <i class="bi bi-file-earmark-text-fill text-info me-2"></i> Terms of Service
+          </h4>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4 small">
+          <h5 class="text-white fw-bold h6 mb-2">1. License Grant & Software Ownership</h5>
+          <p class="mb-3">Upon purchase of DigiSpherEMR V2, DigiSpher Health Systems grants the licensee a perpetual, non-exclusive, non-transferable lifetime license to install and operate the software for private practice management on modern Windows PCs.</p>
+
+          <h5 class="text-white fw-bold h6 mb-2">2. Local Data Sovereignty & Responsibility</h5>
+          <p class="mb-3">DigiSpherEMR operates as a 100% offline application storing data locally in a SQLite database. The licensee maintains full, unencumbered ownership of all patient records and is responsible for maintaining local security, hardware backups, and access credentials.</p>
+
+          <h5 class="text-white fw-bold h6 mb-2">3. Medical Practice & Clinical Liability Disclaimer</h5>
+          <p class="mb-3">DigiSpherEMR is designed exclusively as an administrative workflow, record-keeping, and billing tool. The software does not provide medical diagnoses, treatment decisions, or autonomous clinical evaluations. All medical judgments remain solely the professional responsibility of the licensed physician.</p>
+
+          <h5 class="text-white fw-bold h6 mb-2">4. Payment Terms & Guarantee</h5>
+          <p class="mb-0">The lifetime license is a one-time purchase with zero mandatory recurring subscription fees. All purchases are backed by our 30-Day Money-Back Guarantee.</p>
+        </div>
+        <div class="modal-footer border-top border-secondary border-opacity-25 justify-content-between">
+          <small class="text-muted"><i class="bi bi-check-circle-fill text-success"></i> DigiSpher Health Systems License Agreement</small>
+          <button type="button" class="btn btn-sphere-secondary btn-sm px-4" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRIVACY POLICY MODAL -->
+  <div class="modal fade" id="privacyModal" tabindex="-1" aria-labelledby="privacyTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content border border-info border-opacity-25" style="background: #06122d; color: #cbd5e1;">
+        <div class="modal-header border-bottom border-secondary border-opacity-25">
+          <h4 class="modal-title text-white fw-bold h5" id="privacyTitle">
+            <i class="bi bi-shield-lock-fill text-info me-2"></i> Privacy Policy & Data Security
+          </h4>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4 small">
+          <h5 class="text-white fw-bold h6 mb-2">1. Zero Cloud Data Transmission</h5>
+          <p class="mb-3">DigiSpherEMR is engineered on a strict offline-first architecture. All patient health information (PHI), clinical SOAP notes, prescriptions, appointments, and practice financial records remain on your local hard drive and are never uploaded to cloud servers.</p>
+
+          <h5 class="text-white fw-bold h6 mb-2">2. No Telemetry or Usage Tracking</h5>
+          <p class="mb-3">We do not track, collect, sell, or analyze your clinical data, patient counts, financial revenue, or application usage. Your practice operations remain completely confidential and sovereign.</p>
+
+          <h5 class="text-white fw-bold h6 mb-2">3. Doctor Privacy Switch</h5>
+          <p class="mb-3">DigiSpherEMR includes a built-in 1-click Privacy Switch that instantly masks patient surnames and identifying details during screen sharing or patient-facing consultations.</p>
+
+          <h5 class="text-white fw-bold h6 mb-2">4. Support Communications</h5>
+          <p class="mb-0">When contacting technical support via email, any provided diagnostic information is used strictly to resolve your issue and is never shared with third parties.</p>
+        </div>
+        <div class="modal-footer border-top border-secondary border-opacity-25 justify-content-between">
+          <small class="text-muted"><i class="bi bi-shield-shaded text-success"></i> 100% Sovereign Data Guarantee</small>
+          <button type="button" class="btn btn-sphere-secondary btn-sm px-4" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- SCREENSHOT LIGHTBOX -->
   <div class="modal fade screenshot-modal" id="screenshotModal" tabindex="-1" aria-labelledby="modalScreenshotTitle"

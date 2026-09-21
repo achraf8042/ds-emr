@@ -46,7 +46,7 @@ License Type: One-Time Lifetime License (no monthly or annual subscription)
 Regular Price: $1,197 USD
 Current Price: $598 USD (50% launch discount)
 Guarantee: 30-Day 100% Money-Back Guarantee
-Checkout URL: https://salmyachraf.gumroad.com/l/ygnlhw
+Checkout URL: https://digispher.lemonsqueezy.com/checkout/buy/ea88e483-a889-4620-937e-963874151f57?discount=0
 
 # ==============================================================
 # CORE MODULES
@@ -115,7 +115,7 @@ Key differentiators vs. cloud competitors:
 - Automated local backups vs. vendor-controlled cloud backups
 
 # ==============================================================
-# IMPORTANT PAGES
+# IMPORTANT PAGES & RESOURCES
 # ==============================================================
 
 Homepage:           https://ds-emr.digispher.online/
@@ -124,14 +124,38 @@ Clinical Modules:   https://ds-emr.digispher.online/#featureModules
 Compare vs Cloud:   https://ds-emr.digispher.online/#competitorComparison
 ROI Calculator:     https://ds-emr.digispher.online/#savingsCalculator
 Pricing & Offer:    https://ds-emr.digispher.online/#specialOffer
+Request Quote:      https://ds-emr.digispher.online/#requestQuote
 Quick Start:        https://ds-emr.digispher.online/#quickStart
 FAQ:                https://ds-emr.digispher.online/#faq
-Purchase:           https://salmyachraf.gumroad.com/l/ygnlhw
+Checkout URL:       https://digispher.lemonsqueezy.com/checkout/buy/ea88e483-a889-4620-937e-963874151f57?discount=0
 
 # ==============================================================
-# CONTACT & SUPPORT
+# TERMS OF SERVICE, PRIVACY & HELP CENTER
 # ==============================================================
 
-Support Email: support@digispher.online
+Terms of Service Summary:
+- Software License: Perpetual, non-exclusive lifetime license for private medical practice management on Windows PCs.
+- Data Ownership: 100% physician ownership of all local clinical records, patient databases, and financial data.
+- Zero Monthly Fees: One-time payment model with no forced monthly subscription mandates.
+- Clinical Disclaimer: Practice management tool only; does not replace physician medical judgment.
+
+Privacy Policy Summary:
+- 100% Offline Data Sovereignty: All PHI, SOAP notes, prescriptions, and financial data remain on local storage.
+- Zero Cloud Transmission: No remote data uploads, telemetry tracking, analytics, or third-party data selling.
+- Doctor Privacy Switch: Built-in 1-click patient surname masking for screen sharing during consultations.
+
+Help Center & Resources:
+- 2-Minute Quick Start: Launch standalone `DigiSpherEMR.exe` on Windows 10/11 with zero database installation.
+- A5 Prescription Setup: Customizable printing templates, signature upload, and header branding.
+- Automatic Rolling Backups: 7-day rolling local database backup engine on application exit.
+
+# ==============================================================
+# CONTACT, SOCIAL & SUPPORT
+# ==============================================================
+
+Support Email: digispher25@gmail.com
+WhatsApp Support: +21623400174 (https://wa.me/21623400174)
+Facebook Page: Digi Spher (https://facebook.com/DigiSpher)
+LinkedIn Company: DigiSpher (https://linkedin.com/company/digispher)
 Vendor: DigiSpher Health Systems
 © 2026 DigiSpher Health Systems. All rights reserved.
