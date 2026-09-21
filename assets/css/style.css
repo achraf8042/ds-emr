@@ -1217,6 +1217,59 @@ p.text-secondary {
    Responsive Utilities
    -------------------------------------------------------------------------- */
 @media (max-width: 991.98px) {
+  /* Disable heavy 3D GPU floating blur orbs on mobile */
+  .sphere-orb {
+    display: none !important;
+  }
+
+  .sphere-canvas-bg {
+    background: radial-gradient(circle at 50% 10%, rgba(14, 43, 105, 0.95) 0%, #050d22 70%);
+  }
+
+  /* Disable GPU backdrop-filter blurs on mobile for fast, smooth 60fps scrolling */
+  .navbar-sphere,
+  .badge-sphere,
+  .card-sphere,
+  .glass-box,
+  .glass-card,
+  .calc-card,
+  .matrix-table-wrap,
+  .modal-content,
+  .custom-select-menu,
+  .alert-sphere-success {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  /* Lightweight semi-transparent card background fallbacks */
+  .navbar-sphere.scrolled {
+    background: rgba(5, 13, 34, 0.98) !important;
+  }
+
+  .card-sphere,
+  .glass-card,
+  .calc-card,
+  .glass-box {
+    background: rgba(10, 25, 59, 0.95) !important;
+  }
+
+  /* Instant element visibility on mobile to eliminate scroll paint jank */
+  .reveal-init {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  /* Browser rendering optimization for off-screen mobile sections */
+  #specialOffer,
+  #requestQuote,
+  #quickStart,
+  #faq,
+  footer {
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 600px;
+  }
+
   .navbar-brand img {
     height: 48px;
   }
@@ -1244,6 +1297,23 @@ p.text-secondary {
   }
   .calc-card {
     padding: 2rem 1.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sphere-orb {
+    animation: none !important;
+  }
+  .reveal-init {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
 

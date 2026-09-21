@@ -26,11 +26,18 @@ function initNavbarScroll() {
   const navbar = document.querySelector('.navbar-sphere');
   if (!navbar) return;
 
+  let ticking = false;
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 40) {
-      navbar.classList.add('scrolled');
-    } else {
-      navbar.classList.remove('scrolled');
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        if (window.scrollY > 40) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+        ticking = false;
+      });
+      ticking = true;
     }
   }, { passive: true });
 }
@@ -215,7 +222,13 @@ function initScrollReveal() {
   const revealElements = document.querySelectorAll('.reveal-on-scroll');
   if (!revealElements.length) return;
 
-  // Add initial class
+  const isMobile = window.innerWidth < 992 || window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (isMobile) {
+    revealElements.forEach(el => el.classList.add('reveal-visible'));
+    return;
+  }
+
+  // Desktop smooth reveal observer
   revealElements.forEach(el => el.classList.add('reveal-init'));
 
   const observer = new IntersectionObserver((entries, obs) => {
