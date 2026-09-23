@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DigiSpher EMR | Blog Library</title>
+
+  <meta name="description"
+    content="Explore DigiSpher EMR blog articles on clinic workflow, digital records, billing efficiency, and healthcare operations." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+    rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css" />
+
+  <style>
+    :root {
+      --blog-bg: rgba(9, 17, 35, 0.72);
+      --blog-panel: rgba(15, 28, 55, 0.88);
+      --blog-border: rgba(148, 163, 184, 0.16);
+      --blog-muted: #a7b7d3;
+      --blog-accent: #38bdf8;
+      --blog-accent-strong: #1e60f2;
+      --blog-shadow: 0 25px 60px rgba(4, 12, 24, 0.55);
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: linear-gradient(180deg, #040916 0%, #06112b 40%, #040b1d 100%);
+      color: #e2e8f0;
+    }
+
+    .blog-shell {
+      position: relative;
+      z-index: 1;
+      padding-bottom: 5rem;
+    }
+
+    .navbar-sphere {
+      background: rgba(3, 10, 22, 0.5);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+
+    .navbar-wordmark {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #f8fbff;
+    }
+
+    .nav-link-sphere {
+      color: rgba(226, 232, 240, 0.9);
+      font-size: 0.96rem;
+      font-weight: 600;
+      padding: 0.7rem 1rem !important;
+      transition: all 0.2s ease;
+    }
+
+    .nav-link-sphere:hover,
+    .nav-link-sphere:focus {
+      color: #7dd3fc;
+    }
+
+    .btn-sphere-primary {
+      background: linear-gradient(135deg, #1e60f2 0%, #38bdf8 100%);
+      color: #fff;
+      border: none;
+      border-radius: 999px;
+      font-weight: 700;
+      padding: 0.85rem 1.5rem;
+      box-shadow: 0 18px 30px rgba(30, 96, 242, 0.35);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .btn-sphere-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 22px 34px rgba(30, 96, 242, 0.4);
+      color: #fff;
+    }
+
+    .btn-sphere-secondary {
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      color: #dfe9ff;
+      border-radius: 999px;
+      padding: 0.85rem 1.5rem;
+      font-weight: 700;
+    }
+
+    .page-hero {
+      padding-top: 4rem;
+      padding-bottom: 2rem;
+    }
+
+    .hero-highlight {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.65rem;
+      padding: 0.6rem 1.1rem;
+      border-radius: 999px;
+      background: rgba(30, 96, 242, 0.14);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      color: #7dd3fc;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .display-hero-title {
+      font-size: clamp(2.8rem, 6vw, 5rem);
+      line-height: 1.04;
+      letter-spacing: -0.06em;
+      margin-top: 1.2rem;
+      margin-bottom: 1rem;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 800;
+    }
+
+    .lead-hero {
+      font-size: clamp(1.12rem, 2vw, 1.35rem);
+      line-height: 1.7;
+      color: rgba(203, 213, 225, 0.9);
+      max-width: 760px;
+    }
+
+    .hero-stat-box {
+      background: linear-gradient(180deg, rgba(15, 23, 42, 0.88), rgba(10, 17, 35, 0.82));
+      border: 1px solid var(--blog-border);
+      border-radius: 24px;
+      box-shadow: var(--blog-shadow);
+      padding: 2rem 1.5rem;
+    }
+
+    .stat-number {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(2rem, 3vw, 3rem);
+      font-weight: 800;
+      color: #ffffff;
+      letter-spacing: -0.04em;
+      display: block;
+    }
+
+    .stat-label {
+      color: var(--blog-muted);
+      font-size: 0.9rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-top: 0.35rem;
+    }
+
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin: 2rem 0 2.5rem;
+    }
+
+    .filter-pill {
+      border: 1px solid rgba(148, 163, 184, 0.2);
+      background: rgba(15, 23, 42, 0.6);
+      color: #dfe9ff;
+      border-radius: 999px;
+      padding: 0.7rem 1.1rem;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: all 0.2s ease;
+    }
+
+    .filter-pill.active,
+    .filter-pill:hover {
+      background: linear-gradient(135deg, rgba(30, 96, 242, 0.24), rgba(56, 189, 248, 0.2));
+      border-color: rgba(56, 189, 248, 0.45);
+      color: #7dd3fc;
+    }
+
+    .blog-card {
+      background: rgba(13, 22, 43, 0.86);
+      border: 1px solid var(--blog-border);
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(8, 13, 25, 0.35);
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+      height: 100%;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(56, 189, 248, 0.42);
+      box-shadow: 0 25px 48px rgba(30, 96, 242, 0.14);
+    }
+
+    .blog-cover {
+      position: relative;
+      height: 220px;
+      background: linear-gradient(135deg, rgba(30, 96, 242, 0.88), rgba(0, 210, 255, 0.3), rgba(15, 23, 42, 0.9));
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+      padding: 1.25rem;
+    }
+
+    .blog-cover::before,
+    .blog-cover::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(18px);
+      opacity: 0.7;
+    }
+
+    .blog-cover::before {
+      width: 180px;
+      height: 180px;
+      background: rgba(125, 211, 252, 0.28);
+      top: -35px;
+      right: -28px;
+    }
+
+    .blog-cover::after {
+      width: 140px;
+      height: 140px;
+      background: rgba(30, 96, 242, 0.3);
+      bottom: -30px;
+      left: -18px;
+    }
+
+    .blog-cover img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      z-index: 0;
+    }
+
+    .cover-label {
+      position: relative;
+      z-index: 1;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.5rem 0.8rem;
+      border-radius: 999px;
+      background: rgba(3, 10, 22, 0.32);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      backdrop-filter: blur(10px);
+      color: #ebf8ff;
+      font-size: 0.76rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 700;
+    }
+
+    .blog-body {
+      padding: 1.5rem 1.35rem 1.6rem;
+    }
+
+    .blog-meta {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      color: #9fb3ce;
+      font-size: 0.8rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .blog-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(1.65rem, 2.5vw, 2.2rem);
+      line-height: 1.14;
+      letter-spacing: -0.04em;
+      margin-bottom: 0.8rem;
+      color: #f8fbff;
+      font-weight: 700;
+    }
+
+    .blog-summary {
+      color: rgba(203, 213, 225, 0.9);
+      font-size: 1rem;
+      line-height: 1.7;
+      margin-bottom: 1.4rem;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.45rem 0.7rem;
+      border-radius: 999px;
+      background: rgba(148, 163, 184, 0.08);
+      border: 1px solid rgba(148, 163, 184, 0.15);
+      color: #dfe9ff;
+      font-size: 0.76rem;
+      font-weight: 600;
+    }
+
+    .read-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #7dd3fc;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .read-link:hover {
+      color: #dff6ff;
+    }
+
+    .cta-panel {
+      margin-top: 3.5rem;
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.88), rgba(30, 96, 242, 0.1));
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      border-radius: 28px;
+      padding: 2rem 1.5rem;
+      box-shadow: var(--blog-shadow);
+    }
+
+    .cta-panel h3 {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(2rem, 3vw, 3rem);
+      letter-spacing: -0.04em;
+      color: #ffffff;
+      margin-bottom: 0.75rem;
+    }
+
+    @media (max-width: 991.98px) {
+      .page-hero {
+        padding-top: 3rem;
+      }
+
+      .hero-stat-box {
+        margin-top: 2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="sphere-canvas-bg" aria-hidden="true">
+    <div class="sphere-orb sphere-orb-1"></div>
+    <div class="sphere-orb sphere-orb-2"></div>
+    <div class="sphere-orb sphere-orb-3"></div>
+    <div class="sphere-grid-overlay"></div>
+  </div>
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-sphere">
+      <div class="container-xl">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html" aria-label="DigiSpherEMR Home">
+          <img src="../assets/images/logo_user.png" alt="DigiSpherEMR Logo" height="52" style="object-fit: contain;" />
+          <span class="navbar-wordmark">DS EMR</span>
+        </a>
+
+        <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="collapse"
+          data-bs-target="#blogNavbar" aria-controls="blogNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="bi bi-list fs-2 text-info"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="blogNavbar">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-1">
+            <li class="nav-item"><a class="nav-link nav-link-sphere" href="../index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-sphere" href="#">Features</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-sphere" href="#">Workflow</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-sphere" href="#">Pricing</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-sphere" href="#">Blog</a></li>
+          </ul>
+
+          <div class="d-flex align-items-center gap-3 mt-3 mt-lg-0">
+            <a href="../index.html#specialOffer" class="btn btn-sphere-primary btn-sm px-4 py-2">
+              <i class="bi bi-bag-check-fill"></i> Get DigiSpherEMR
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="blog-shell">
+    <section class="page-hero">
+      <div class="container-xl">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-8">
+            <span class="hero-highlight"><i class="bi bi-journal-richtext"></i> DigiSpher EMR Insights</span>
+            <h1 class="display-hero-title">Smart ideas for solo doctors and small clinic growth.</h1>
+            <p class="lead-hero">
+              Learn how simple EMR software, offline-first records, and clean practice management systems help independent clinicians save time and improve patient care.
+            </p>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="hero-stat-box">
+              <div class="mb-3">
+                <span class="stat-number">6</span>
+                <div class="stat-label">SEO-focused guides</div>
+              </div>
+              <div class="mb-3">
+                <span class="stat-number">Solo-first</span>
+                <div class="stat-label">Practice advice</div>
+              </div>
+              <div>
+                <span class="stat-number">Offline-ready</span>
+                <div class="stat-label">Digital workflow</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container-xl pb-5">
+      <div class="filter-bar">
+        <button class="filter-pill active" type="button">All</button>
+        <button class="filter-pill" type="button">Offline EMR</button>
+        <button class="filter-pill" type="button">Solo Practice</button>
+        <button class="filter-pill" type="button">Billing</button>
+        <button class="filter-pill" type="button">Workflow</button>
+        <button class="filter-pill" type="button">Operations</button>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-xl-4">
+          <article class="blog-card">
+            <div class="blog-cover">
+              <img src="../assets/images/screen_dashboard_kpi.png" alt="DigiSpher EMR dashboard screenshot" />
+              <span class="cover-label"><i class="bi bi-heart-pulse"></i> Offline EMR</span>
+            </div>
+            <div class="blog-body">
+              <div class="blog-meta">
+                <span>SEO Guide</span>
+                <span>5 min read</span>
+              </div>
+              <h2 class="blog-title">Best offline EMR for solo doctors in 2026</h2>
+              <p class="blog-summary">
+                Compare the essentials of a reliable offline EMR and learn why solo practitioners need a system that works without internet dependency.
+              </p>
+              <div class="tag-list">
+                <span class="tag">EMR</span>
+                <span class="tag">Solo Doctors</span>
+              </div>
+              <a href="best-offline-emr-for-solo-doctors.html" class="read-link">Read article <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-6 col-xl-4">
+          <article class="blog-card">
+            <div class="blog-cover">
+              <img src="../assets/images/screen_dashboard_dock.png" alt="Practice quick actions interface" />
+              <span class="cover-label"><i class="bi bi-currency-dollar"></i> Simple EMR</span>
+            </div>
+            <div class="blog-body">
+              <div class="blog-meta">
+                <span>Small Practice</span>
+                <span>4 min read</span>
+              </div>
+              <h2 class="blog-title">Simple EMR software for private clinics that want less admin</h2>
+              <p class="blog-summary">
+                A simpler EMR reduces duplication and helps clinicians focus on patients instead of navigating complicated systems.
+              </p>
+              <div class="tag-list">
+                <span class="tag">Simplicity</span>
+                <span class="tag">Private Clinic</span>
+              </div>
+              <a href="simple-emr-software-for-private-clinics.html" class="read-link">Read article <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-6 col-xl-4">
+          <article class="blog-card">
+            <div class="blog-cover">
+              <img src="../assets/images/screen_patient360_soap.png" alt="SOAP patient record screen" />
+              <span class="cover-label"><i class="bi bi-clipboard-data"></i> Practice Management</span>
+            </div>
+            <div class="blog-body">
+              <div class="blog-meta">
+                <span>Growth</span>
+                <span>6 min read</span>
+              </div>
+              <h2 class="blog-title">Practice management software for solo practitioners</h2>
+              <p class="blog-summary">
+                Discover what solo practitioners need from modern practice management: records, appointments, billing, and a single workflow.
+              </p>
+              <div class="tag-list">
+                <span class="tag">Operations</span>
+                <span class="tag">Solo Practice</span>
+              </div>
+              <a href="practice-management-software-for-solo-practitioners.html" class="read-link">Read article <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-6 col-xl-4">
+          <article class="blog-card">
+            <div class="blog-cover">
+              <img src="../assets/images/screen_appointment_calendar.png" alt="Appointment calendar screenshot" />
+              <span class="cover-label"><i class="bi bi-calendar2-week"></i> Scheduling</span>
+            </div>
+            <div class="blog-body">
+              <div class="blog-meta">
+                <span>Workflow</span>
+                <span>4 min read</span>
+              </div>
+              <h2 class="blog-title">EMR with billing and appointment management for busy clinics</h2>
+              <p class="blog-summary">
+                Learn how integrated billing and scheduling reduce error, improve follow-up, and help a practice run more smoothly.
+              </p>
+              <div class="tag-list">
+                <span class="tag">Appointments</span>
+                <span class="tag">Billing</span>
+              </div>
+              <a href="emr-with-billing-and-appointment-management.html" class="read-link">Read article <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-6 col-xl-4">
+          <article class="blog-card">
+            <div class="blog-cover">
+              <img src="../assets/images/screen_patient_directory.png" alt="Patient directory and records" />
+              <span class="cover-label"><i class="bi bi-laptop"></i> Cost</span>
+            </div>
+            <div class="blog-body">
+              <div class="blog-meta">
+                <span>Budget</span>
+                <span>5 min read</span>
+              </div>
+              <h2 class="blog-title">Affordable EMR without monthly fees for doctors</h2>
+              <p class="blog-summary">
+                A lifetime licensing model can be more practical for clinicians looking for value without recurring subscription pressure.
+              </p>
+              <div class="tag-list">
+                <span class="tag">Pricing</span>
+                <span class="tag">Value</span>
+              </div>
+              <a href="affordable-emr-without-monthly-fees.html" class="read-link">Read article <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-6 col-xl-4">
+          <article class="blog-card">
+            <div class="blog-cover">
+              <img src="../assets/images/screen_dashboard_dock.png" alt="Clinic workflow overview" />
+              <span class="cover-label"><i class="bi bi-shield-check"></i> Planning</span>
+            </div>
+            <div class="blog-body">
+              <div class="blog-meta">
+                <span>Checklist</span>
+                <span>6 min read</span>
+              </div>
+              <h2 class="blog-title">EMR checklist for new clinic setup and digital growth</h2>
+              <p class="blog-summary">
+                Use a clinic-first checklist to choose the right digital system for notes, prescriptions, finances, and everyday clinical flow.
+              </p>
+              <div class="tag-list">
+                <span class="tag">Checklist</span>
+                <span class="tag">Clinic Setup</span>
+              </div>
+              <a href="emr-checklist-for-new-clinic-setup.html" class="read-link">Read article <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="cta-panel text-center">
+        <span class="hero-highlight mb-3 d-inline-flex"><i class="bi bi-lightning-charge"></i> Built for real clinics</span>
+        <h3>Choose a simpler workflow for your practice.</h3>
+        <p class="lead-hero mx-auto mb-4">
+          DigiSpher EMR v2 brings patient care, appointments, billing, expenses, and profit into one practical offline-first system.
+        </p>
+        <a href="../index.html#specialOffer" class="btn btn-sphere-primary px-4 py-3">Explore DigiSpher EMR</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-sphere">
+    <div class="container-xl">
+      <div class="row g-4 mb-5">
+        <div class="col-lg-4">
+          <img src="../assets/images/logo_user.png" alt="DigiSpherEMR V2" height="56" class="mb-3" style="object-fit:contain;" decoding="async" loading="lazy">
+          <p class="text-secondary small pe-lg-4">
+            DigiSpherEMR V2 is a simple offline-first practice management application for doctors who want patient records, consultations, prescriptions, appointments, billing, expenses, and profit in one place.
+          </p>
+          <a href="https://www.producthunt.com/products/digicareemr?embed=true&amp;utm_source=badge-featured&amp;utm_medium=badge&amp;utm_campaign=badge-digispheremr-v2" target="_blank" rel="noopener noreferrer"><img alt="DigiSpherEMR V2 - Fast, Effortless Practice Management. Zero Complexity.. | Product Hunt" width="250" height="54" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1258502&amp;theme=dark&amp;t=1790103758184"></a>
+          <br>
+          <a href="https://launchstag.com/p/digispheremr-v2" target="_blank" rel="noopener noreferrer">
+            <img src="https://launchstag.com/badge-dark.svg" alt="Featured on Launchstag" width="198" height="62" />
+          </a>
+          <div class="d-flex align-items-center gap-3 text-info fs-5 mt-2">
+            <a href="mailto:digispher25@gmail.com" class="text-secondary text-decoration-none" aria-label="Email Support" title="digispher25@gmail.com"><i class="bi bi-envelope-fill text-info"></i></a>
+            <a href="https://wa.me/21623400174" target="_blank" rel="noopener noreferrer" class="text-secondary text-decoration-none" aria-label="WhatsApp Support" title="WhatsApp: +216 23 400 174"><i class="bi bi-whatsapp text-success"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61579736908309" target="_blank" rel="noopener noreferrer" class="text-secondary text-decoration-none" aria-label="Facebook Page" title="Facebook: Digi Spher"><i class="bi bi-facebook text-primary"></i></a>
+            <a href="https://linkedin.com/company/digispher" target="_blank" rel="noopener noreferrer" class="text-secondary text-decoration-none" aria-label="LinkedIn Company" title="LinkedIn: DigiSpher"><i class="bi bi-linkedin text-info"></i></a>
+            <span class="text-secondary ms-2" aria-label="Windows Native"><i class="bi bi-windows"></i></span>
+            <span class="text-secondary" aria-label="Local SQLite Database"><i class="bi bi-database-check"></i></span>
+          </div>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <h5 class="text-white fw-bold mb-3 small text-uppercase">Product</h5>
+          <ul class="list-unstyled small">
+            <li class="mb-2"><a href="../index.html#featureModules" class="footer-link">Features</a></li>
+            <li class="mb-2"><a href="../index.html#offlineBenefits" class="footer-link">Offline Advantage</a></li>
+            <li class="mb-2"><a href="../index.html#targetAudience" class="footer-link">Who It's For</a></li>
+            <li class="mb-2"><a href="../index.html#techSpecs" class="footer-link">System Requirements</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <h5 class="text-white fw-bold mb-3 small text-uppercase">Workflow</h5>
+          <ul class="list-unstyled small">
+            <li class="mb-2"><a href="../index.html#featureModules" class="footer-link">Patient Records</a></li>
+            <li class="mb-2"><a href="../index.html#featureModules" class="footer-link">SOAP Notes</a></li>
+            <li class="mb-2"><a href="../index.html#featureModules" class="footer-link">Prescriptions</a></li>
+            <li class="mb-2"><a href="../index.html#featureModules" class="footer-link">Appointments</a></li>
+            <li class="mb-2"><a href="../index.html#featureModules" class="footer-link">Billing &amp; Finances</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <h5 class="text-white fw-bold mb-3 small text-uppercase">Data</h5>
+          <ul class="list-unstyled small">
+            <li class="mb-2"><a href="../index.html#offlineBenefits" class="footer-link">Local Database</a></li>
+            <li class="mb-2"><a href="../index.html#offlineBenefits" class="footer-link">Rolling Backups</a></li>
+            <li class="mb-2"><a href="../index.html#faq" class="footer-link">Data FAQ</a></li>
+            <li class="mb-2"><a href="../index.html#quickStart" class="footer-link">Getting Started</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <h5 class="text-white fw-bold mb-3 small text-uppercase">Support</h5>
+          <ul class="list-unstyled small">
+            <li class="mb-2"><a href="../index.html#faq" class="footer-link">FAQ</a></li>
+            <li class="mb-2"><a href="../index.html#specialOffer" class="footer-link">Pricing</a></li>
+            <li class="mb-2"><a href="../index.html#requestQuote" class="footer-link">Request Quote</a></li>
+            <li class="mb-2"><a href="mailto:digispher25@gmail.com" class="footer-link"><i class="bi bi-envelope me-1 text-info"></i> digispher25@gmail.com</a></li>
+            <li class="mb-2"><a href="https://wa.me/21623400174" target="_blank" rel="noopener noreferrer" class="footer-link"><i class="bi bi-whatsapp me-1 text-success"></i> +216 23 400 174</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-top border-secondary border-opacity-25 pt-4 d-flex flex-column flex-md-row justify-content-between align-items-center text-muted small">
+        <p class="mb-2 mb-md-0">&copy; 2026 DigiSpher Health Systems. All rights reserved. DigiSpherEMR V2.</p>
+        <div class="d-flex flex-wrap gap-3 justify-content-center">
+          <a href="../index.html#specialOffer" class="text-secondary text-decoration-none hover-white">Pricing</a>
+          <span>&bull;</span>
+          <a href="../index.html#requestQuote" class="text-secondary text-decoration-none hover-white">Request Quote</a>
+          <span>&bull;</span>
+          <a href="mailto:digispher25@gmail.com" class="text-secondary text-decoration-none hover-white">Support</a>
+          <span>&bull;</span>
+          <span>100% Offline Data Sovereignty</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
