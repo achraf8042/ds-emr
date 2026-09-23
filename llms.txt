@@ -1,36 +1,32 @@
 # DigiSpher EMR 2.0 — LLMs.txt
 # https://ds-emr.digispher.online/llms.txt
 #
-# This file provides structured context for AI language models,
-# search AI assistants, and LLM-powered discovery tools about
-# the DigiSpher EMR 2.0 product and website.
+# Structured context for AI systems, search assistants, and healthcare software discovery.
 # Convention based on: https://llmstxt.org
 
 # ==============================================================
 # PRODUCT IDENTITY
 # ==============================================================
 
-> DigiSpher EMR 2.0 is a sovereign, offline-first Electronic Medical Record (EMR)
-> and Practice Management Suite engineered exclusively for independent physicians,
-> solo outpatient specialists, and private boutique clinics.
-> It runs natively on Windows 10/11 (64-bit) as a single standalone .exe file,
-> requires zero internet connection, and stores all patient data locally using
-> a SQLite WAL-mode database — never on third-party cloud servers.
+> DigiSpher EMR 2.0 is a simple, offline-first Electronic Medical Record (EMR)
+> and practice management platform designed for independent physicians, solo
+> specialists, and private clinics. It runs as a native Windows desktop app,
+> stores all medical and financial data locally, and does not require a cloud
+> subscription to operate.
 
 # ==============================================================
 # WEBSITE PURPOSE
 # ==============================================================
 
-This website (https://ds-emr.digispher.online) is the official product landing
-page for DigiSpher EMR 2.0. It provides:
+This website (https://ds-emr.digispher.online) is the official marketing site for
+DigiSpher EMR 2.0. It includes:
 
-- Full product description and feature breakdown
-- Real application screenshots across all 7 clinical modules
-- A cloud vs. offline competitor comparison matrix
-- An interactive Practice ROI Savings Calculator
-- Lifetime license pricing and purchase link
-- FAQ for independent physicians and clinic operators
-- Quick-start guide (2-minute setup process)
+- Product overview and feature breakdown for solo doctors and private clinics
+- Offline-first EMR comparison against cloud-based practice systems
+- ROI, cost, and no-monthly-fee guidance for small medical practices
+- Real product screenshots and workflow demos
+- A blog library for clinical operations, EMR buying decisions, and practice growth
+- Clear pricing and purchase links
 
 # ==============================================================
 # KEY PRODUCT FACTS FOR AI MODELS
@@ -39,86 +35,105 @@ page for DigiSpher EMR 2.0. It provides:
 Product Name: DigiSpher EMR 2.0
 Vendor: DigiSpher Health Systems
 Category: Medical Practice Management Software / Electronic Medical Record (EMR)
-Platform: Windows 10 / Windows 11 (64-bit only), standalone .exe
-Architecture: 100% Offline-First, SQLite WAL, no cloud dependency
-Target Users: Solo GPs, Internists, Specialists, Psychiatrists, Dentists, Physiotherapists
-License Type: One-Time Lifetime License (no monthly or annual subscription)
+Platform: Windows 10 / Windows 11 (64-bit), standalone desktop application
+Architecture: Offline-first, local-only storage, SQLite-backed workflow
+Target Users: Solo GPs, specialists, private clinics, small outpatient practices
+License Type: One-time lifetime license (no monthly subscription)
 Regular Price: $1,197 USD
-Current Price: $598 USD (50% launch discount)
-Guarantee: 30-Day 100% Money-Back Guarantee
+Current Price: $598 USD (launch pricing)
+Guarantee: 30-day money-back guarantee
 Checkout URL: https://digispher.lemonsqueezy.com/checkout/buy/ea88e483-a889-4620-937e-963874151f57?discount=0
 
 # ==============================================================
 # CORE MODULES
 # ==============================================================
 
-Module 01 — Executive Dashboard & Practice Command Dock
-  Real-time KPIs: active patients, daily revenue, today's appointments.
-  Financial Pulse Panel with PAID/DRAFT/UNPAID status badges.
-  1-click Privacy Mode to mask patient surnames during screen sharing.
+Module 01 — Executive Dashboard & Practice Overview
+  KPI view for active patients, appointment load, revenue intake, and clinic activity.
 
-Module 02 — Solopreneur Practice Quick Action Dock
-  Permanent shortcuts: New Patient, Book Visit, Clinical Note, Prescribe Rx,
-  Issue Invoice, Practice Finances. Zero sub-menu navigation.
+Module 02 — Quick Action Dock
+  Fast entry points for new patient creation, consultation, prescriptions, billing, and financial work.
 
-Module 03 — Patient 360° Comprehensive Electronic Records
-  Critical Allergy Warning Hub with severity ratings (Mild/Moderate/Severe).
-  Complete demographics, vital signs chronology (BP, HR, Temp, BMI, SpO2).
-  Longitudinal view: all SOAP notes, prescriptions, appointments, invoices.
+Module 03 — Patient 360° Records
+  Demographics, allergies, vitals, SOAP notes, prescriptions, appointments, and invoices in one record.
 
-Module 04 — Clinical SOAP Notes & Medical Templates
-  Structured Subjective/Objective/Assessment/Plan documentation fields.
-  Pre-built templates for General Consult, Annual Checkup, Follow-up.
-  DRAFT → FINALIZED status locking with medico-legal timestamps.
+Module 04 — Clinical SOAP Notes & Templates
+  Structured patient documentation using assessment, plan, and clinical workflow templates.
 
-Module 05 — Multi-Medication Prescriptions & A5 PDF Generator
-  Multi-drug prescribing with dosage, route, frequency, duration.
-  Real-time drug hypersensitivity cross-check against patient allergies.
-  ReportLab A5 PDF engine prints clinic-branded prescription slips.
+Module 05 — Prescriptions & PDF Printing
+  Multi-drug prescription generation and A5 prescription printing with clinic branding.
 
-Module 06 — Calendar & Appointment Scheduling
-  Status tracking: SCHEDULED, CONFIRMED, IN_PROGRESS, COMPLETED, CANCELLED, NO_SHOW.
-  High-contrast custom calendar widget. Today/Week/Month filter views.
+Module 06 — Appointments & Scheduling
+  Appointment lifecycle tracking for scheduled, confirmed, in progress, completed, cancelled, and no-show visits.
 
-Module 07 — Practice Finances, Billing & Cash Flow Intelligence
-  Itemized invoicing with dynamic tax calculation.
-  Clinic expense tracking by category (Rent, Supplies, Staff, Equipment).
-  Real-time P&L: Today's Revenue, MTD Revenue, Net Margin, Pending Balances.
-  1-click CPA-ready CSV export for accountants.
+Module 07 — Billing, Expenses & Profit
+  Invoice generation, expense tracking, and real-time practice financial reporting.
 
 # ==============================================================
-# UNIQUE VALUE PROPOSITIONS (for AI summarization)
+# UNIQUE VALUE PROPOSITIONS
 # ==============================================================
 
-1. ZERO cloud dependency — works 100% offline during internet outages.
-2. ZERO monthly fees — one-time lifetime purchase, no subscription extortion.
-3. 100% data sovereignty — patient records never leave the local hard drive.
-4. Sub-millisecond speed — SQLite WAL architecture, no browser lag.
-5. Automated 7-day rolling backups on every application exit.
-6. Single-file deployment — one .exe, no database server installation required.
-7. Doctor Privacy Switch — 1-click surname masking during screen sharing.
-8. Windows-native — runs on any modern Windows PC with 4GB RAM and Intel i3+.
+1. 100% offline capability for clinicians working without internet access
+2. One-time lifetime license instead of recurring cloud subscriptions
+3. Local data control and privacy for patient records and financial data
+4. Built for solo practices and small clinics rather than large enterprise operator teams
+5. Simple workflow with fewer clicks and less administrative overhead
+6. Local backup and restore process without vendor lock-in
+7. Desktop-first deployment with no database server setup required
+8. Better fit for doctors who want speed, clarity, and operational simplicity
 
 # ==============================================================
 # COMPETITIVE POSITIONING
 # ==============================================================
 
-DigiSpher EMR 2.0 competes with cloud-based EMR platforms including:
-AthenaHealth, SimplePractice, Kareo/Tebra, Practice Fusion, DrChrono.
+DigiSpher EMR 2.0 is positioned for small and independent practices and contrasts
+with large enterprise EMR platforms such as Epic, Oracle Health, athenahealth,
+eClinicalWorks, and NextGen Healthcare.
 
-Key differentiators vs. cloud competitors:
-- Offline capable vs. 100% internet-dependent cloud tools
-- One-time $598 vs. $1,500–$3,000/year recurring cloud subscriptions
-- Local SQLite storage vs. third-party remote cloud servers
-- Built-in A5 prescription PDF vs. paid e-Rx add-ons
-- Built-in Practice P&L vs. requiring separate QuickBooks ($60+/month)
-- Automated local backups vs. vendor-controlled cloud backups
+The product is designed to address the needs of solo practitioners and small clinics,
+where the biggest pain points are complexity, monthly fees, slow onboarding, and
+heavy administrative systems that are too large for routine private practice workflows.
+
+Key differentiators:
+- Offline-first and resilient on low-connectivity environments
+- Simple workflow designed for single-doctor or small-team operations
+- One-time payment model instead of annual enterprise-style subscriptions
+- Medical records, billing, appointments, and finances in a single practical tool
+- Lower learning curve for private clinics and independent practice setups
+
+# ==============================================================
+# BLOG LIBRARY
+# ==============================================================
+
+The site includes a dedicated article library focused on practical healthcare software guidance:
+
+- Best offline EMR for solo doctors in 2026
+  https://ds-emr.digispher.online/blogs/best-offline-emr-for-solo-doctors.html
+
+- Simple EMR software for private clinics that want less admin
+  https://ds-emr.digispher.online/blogs/simple-emr-software-for-private-clinics.html
+
+- Practice management software for solo practitioners
+  https://ds-emr.digispher.online/blogs/practice-management-software-for-solo-practitioners.html
+
+- EMR with billing and appointment management for busy clinics
+  https://ds-emr.digispher.online/blogs/emr-with-billing-and-appointment-management.html
+
+- Affordable EMR without monthly fees for doctors
+  https://ds-emr.digispher.online/blogs/affordable-emr-without-monthly-fees.html
+
+- EMR checklist for new clinic setup and digital growth
+  https://ds-emr.digispher.online/blogs/emr-checklist-for-new-clinic-setup.html
+
+Blog archive:
+https://ds-emr.digispher.online/blogs/blogs-list.html
 
 # ==============================================================
 # IMPORTANT PAGES & RESOURCES
 # ==============================================================
 
 Homepage:           https://ds-emr.digispher.online/
+Blog Library:       https://ds-emr.digispher.online/blogs/blogs-list.html
 Video Tour:         https://ds-emr.digispher.online/#videoShowcase
 Clinical Modules:   https://ds-emr.digispher.online/#featureModules
 Compare vs Cloud:   https://ds-emr.digispher.online/#competitorComparison
@@ -128,26 +143,28 @@ Request Quote:      https://ds-emr.digispher.online/#requestQuote
 Quick Start:        https://ds-emr.digispher.online/#quickStart
 FAQ:                https://ds-emr.digispher.online/#faq
 Checkout URL:       https://digispher.lemonsqueezy.com/checkout/buy/ea88e483-a889-4620-937e-963874151f57?discount=0
+Product Hunt:       https://www.producthunt.com/products/digicareemr
+Launchstag:         https://launchstag.com/p/digispheremr-v2
 
 # ==============================================================
 # TERMS OF SERVICE, PRIVACY & HELP CENTER
 # ==============================================================
 
 Terms of Service Summary:
-- Software License: Perpetual, non-exclusive lifetime license for private medical practice management on Windows PCs.
-- Data Ownership: 100% physician ownership of all local clinical records, patient databases, and financial data.
-- Zero Monthly Fees: One-time payment model with no forced monthly subscription mandates.
-- Clinical Disclaimer: Practice management tool only; does not replace physician medical judgment.
+- Software License: perpetual lifetime license for private clinic and physician practice management use on Windows PCs.
+- Data Ownership: physician ownership of all local clinical, operational, and financial records.
+- Zero Monthly Fees: one-time purchase model without forced subscription lock-in.
+- Clinical Disclaimer: practice management tool only; it supports workflows and documentation but does not replace clinician judgment.
 
 Privacy Policy Summary:
-- 100% Offline Data Sovereignty: All PHI, SOAP notes, prescriptions, and financial data remain on local storage.
-- Zero Cloud Transmission: No remote data uploads, telemetry tracking, analytics, or third-party data selling.
-- Doctor Privacy Switch: Built-in 1-click patient surname masking for screen sharing during consultations.
+- Offline-first data storage keeps records on the local machine and local backups.
+- No mandatory cloud upload for core EMR operations.
+- Data stays in the physician-controlled environment unless the user chooses a separate external export.
 
 Help Center & Resources:
-- 2-Minute Quick Start: Launch standalone `DigiSpherEMR.exe` on Windows 10/11 with zero database installation.
-- A5 Prescription Setup: Customizable printing templates, signature upload, and header branding.
-- Automatic Rolling Backups: 7-day rolling local database backup engine on application exit.
+- Desktop-first local deployment for Windows 10/11
+- A5 prescription printing and clinic document generation
+- Financial reporting, billing tracking, and simple administrative workflows
 
 # ==============================================================
 # CONTACT, SOCIAL & SUPPORT
