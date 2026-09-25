@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SOAP Note Template: Example and Writing Guide for Clinicians | DigiSpher</title>
+  <meta name="description" content="Use this practical SOAP note template and fictional example to structure clinical documentation, separate patient report from findings, and write a clear follow-up plan." />
+  <link rel="canonical" href="https://ds-emr.digispher.online/blogs/soap-note-template-example.html" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="author" content="DigiSpher Health Systems" />
+  <meta name="theme-color" content="#040916" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="DigiSpher EMR" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:title" content="SOAP Note Template: Example and Writing Guide for Clinicians" />
+  <meta property="og:description" content="A practical SOAP note template with a fictional example, section-by-section guidance, and documentation checks for clinicians." />
+  <meta property="og:url" content="https://ds-emr.digispher.online/blogs/soap-note-template-example.html" />
+  <meta property="og:image" content="https://ds-emr.digispher.online/assets/images/screen_patient360_soap.png" />
+  <meta property="og:image:alt" content="Patient record interface showing SOAP notes and clinical history" />
+  <meta property="article:published_time" content="2026-09-25" />
+  <meta property="article:modified_time" content="2026-09-25" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="SOAP Note Template: Example and Writing Guide" />
+  <meta name="twitter:description" content="A usable SOAP note structure with a fictional example and practical documentation tips for clinicians." />
+  <meta name="twitter:image" content="https://ds-emr.digispher.online/assets/images/screen_patient360_soap.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <style>
+    :root { --panel:rgba(9,17,35,.82); --line:rgba(148,163,184,.18); --text:#e2e8f0; --muted:#a7b7d3; --accent:#7dd3fc; }
+    * { box-sizing:border-box; }
+    body { margin:0; color:var(--text); background:linear-gradient(180deg,#040916 0%,#06112b 48%,#040b1d 100%); font:16px/1.75 'Plus Jakarta Sans',sans-serif; }
+    h1,h2,h3 { color:#fff; font-family:'Outfit',sans-serif; line-height:1.15; }
+    a { color:var(--accent); }
+    .navbar-sphere { position:sticky;top:0;z-index:5;background:rgba(3,10,22,.92);border-bottom:1px solid var(--line); }
+    .navbar-wordmark { color:#fff;font:800 1.15rem 'Outfit',sans-serif;letter-spacing:.14em; }
+    .nav-link-sphere { color:#e2e8f0;font-weight:600; }
+    .nav-link-sphere:hover,.nav-link-sphere:focus { color:#7dd3fc; }
+    .article-shell { padding:3rem 0 5rem; }
+    .article-wrap { max-width:1020px;margin:auto;background:var(--panel);border:1px solid var(--line);border-radius:18px;overflow:hidden; }
+    .article-hero { height:340px;background:#020814; }
+    .article-hero img { width:100%;height:100%;object-fit:cover;object-position:center 30%; }
+    .article-body { padding:clamp(1.25rem,4vw,3rem); }
+    .eyebrow { color:var(--accent);font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em; }
+    .article-header h1 { max-width:850px;margin:.8rem 0 1rem;font-size:clamp(2.35rem,5vw,4rem); }
+    .article-meta { display:flex;gap:1rem;flex-wrap:wrap;color:var(--muted);font-size:.82rem;text-transform:uppercase; }
+    .article-content h2 { margin:2.4rem 0 .8rem;font-size:clamp(1.65rem,3vw,2.25rem); }
+    .article-content h3 { margin:1.5rem 0 .5rem;font-size:1.35rem; }
+    .article-content p,.article-content li { color:rgba(226,232,240,.92); }
+    .article-content li { margin:.45rem 0; }
+    .info-panel,.template-box,.cta-box { margin:1.5rem 0;padding:1.2rem 1.35rem;border:1px solid var(--line);border-radius:8px;background:rgba(15,23,42,.72); }
+    .template-box { overflow-wrap:anywhere; }
+    .cta-box { border-color:rgba(56,189,248,.32); }
+    .btn-sphere-primary { display:inline-block;padding:.8rem 1.15rem;border-radius:6px;background:#1769e0;color:#fff;text-decoration:none;font-weight:700; }
+    footer { padding:2rem 0;color:var(--muted);border-top:1px solid var(--line); }
+    @media(max-width:767px) { .article-hero { height:220px; } }
+  </style>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BlogPosting","headline":"SOAP Note Template: Example and Writing Guide for Clinicians","description":"A practical SOAP note template with a fictional example and clinical documentation guidance.","datePublished":"2026-09-25","dateModified":"2026-09-25","author":{"@type":"Organization","name":"DigiSpher Health Systems"},"publisher":{"@type":"Organization","name":"DigiSpher EMR"},"mainEntityOfPage":"https://ds-emr.digispher.online/blogs/soap-note-template-example.html","image":"https://ds-emr.digispher.online/assets/images/screen_patient360_soap.png"}
+  </script>
+  <link rel="stylesheet" href="blog-post-themes.css" />
+</head>
+<body>
+  <header><nav class="navbar navbar-expand-lg navbar-sphere"><div class="container-xl">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html" aria-label="DigiSpher EMR home"><img src="../assets/images/logo_user.png" alt="DigiSpher EMR" height="48" /><span class="navbar-wordmark">DS EMR</span></a>
+    <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#articleNav" aria-controls="articleNav" aria-expanded="false" aria-label="Toggle navigation"><i class="bi bi-list fs-2 text-info"></i></button>
+    <div class="collapse navbar-collapse" id="articleNav"><ul class="navbar-nav mx-auto"><li class="nav-item"><a class="nav-link nav-link-sphere" href="../index.html">Home</a></li><li class="nav-item"><a class="nav-link nav-link-sphere" href="blogs-list.html">Blog</a></li><li class="nav-item"><a class="nav-link nav-link-sphere" href="lead-magnet-toolkit.html">Free toolkit</a></li></ul><a href="../index.html#featureModules" class="btn-sphere-primary">Explore DigiSpher EMR</a></div>
+  </div></nav></header>
+  <main class="article-shell"><article class="article-wrap">
+    <div class="article-hero"><img src="../assets/images/screen_patient360_soap.png" alt="Patient record interface with SOAP notes and history" /></div>
+    <div class="article-body"><header class="article-header"><span class="eyebrow"><i class="bi bi-journal-medical me-1"></i> Clinical documentation</span><h1>SOAP Note Template: A Practical Example and Writing Guide</h1><div class="article-meta"><span>8 min read</span><span>SOAP notes</span><span>Clinical workflow</span></div></header>
+      <div class="article-content">
+        <p>A SOAP note gives a clinician a repeatable way to organize information from an encounter: what the patient reports, what the clinician observes or measures, how the findings are interpreted, and what happens next. A clear note helps the next person reading the chart understand the clinical story without hunting through unrelated text.</p>
+        <p>The structure is a framework, not a substitute for clinical judgment or local documentation requirements. Below is a copyable starting template, followed by a fictional example and practical checks for adapting it to your specialty.</p>
+
+        <h2>What does SOAP stand for?</h2>
+        <ul>
+          <li><strong>S — Subjective:</strong> the patient’s account, concerns, relevant history, and reported changes.</li>
+          <li><strong>O — Objective:</strong> clinician-observed findings, measurements, examination results, and available test results.</li>
+          <li><strong>A — Assessment:</strong> the clinician’s interpretation of the information and the problem list or working diagnoses.</li>
+          <li><strong>P — Plan:</strong> next steps for each problem, including investigation, treatment, counseling, referral, monitoring, and follow-up as clinically appropriate.</li>
+        </ul>
+        <p>The <a href="https://www.ncbi.nlm.nih.gov/books/NBK482263/" target="_blank" rel="noopener noreferrer">StatPearls review of SOAP notes</a> describes these four sections as a widely used documentation method. Their exact contents vary by specialty, setting, and purpose.</p>
+
+        <h2>Copyable SOAP note template</h2>
+        <div class="template-box"><strong>Patient:</strong> [name or record identifier]<br /><strong>Date and time:</strong> [encounter date/time]<br /><strong>Clinician:</strong> [name and role]<br /><br /><strong>Subjective</strong><br />Chief concern: [reason for visit in the patient’s words where useful]<br />History of present concern: [relevant onset, course, context, and associated information]<br />Relevant history / medications / allergies: [include what matters to this encounter]<br />Patient-reported changes since last visit: [if applicable]<br /><br /><strong>Objective</strong><br />Vitals: [values, units, and date/time if relevant]<br />Examination / observations: [findings actually assessed]<br />Results reviewed: [test, date, and relevant result]<br /><br /><strong>Assessment</strong><br />1. [Problem or diagnosis] — [brief clinical reasoning and status]<br />2. [Additional problem, if relevant]<br /><br /><strong>Plan</strong><br />For each problem: [investigation or treatment] / [counseling] / [referral or coordination] / [monitoring and follow-up timeframe]<br /><br /><strong>Authentication:</strong> [clinician signature, role, and timestamp according to local rules]</div>
+        <p>Use the fields that fit the visit. Remove irrelevant prompts rather than leaving blank auto-generated sections that make the note harder to read. Make sure the template leaves room for the clinician to explain meaningful findings and reasoning.</p>
+
+        <h2>Fictional SOAP note example</h2>
+        <div class="info-panel"><strong>Illustrative format only:</strong> fictional patient and facts; not medical advice or a treatment recommendation.<br /><br /><strong>S:</strong> A fictional adult returns for review of a previously discussed concern. The patient reports that the symptom has changed since the prior visit and asks to discuss next steps. Relevant interval history and current medications reviewed.<br /><br /><strong>O:</strong> Record only measurements, examination findings, and results actually obtained and reviewed during this encounter. No example measurements are supplied here; enter the real, verified findings.<br /><br /><strong>A:</strong> Clinician documents the current problem status and the reasoning supported by this encounter’s subjective and objective information.<br /><br /><strong>P:</strong> Record the agreed next steps, any discussion or referral, who is responsible for each action, and the follow-up interval determined by the clinician.</div>
+        <p>This deliberately avoids prescribing a diagnosis or treatment from a made-up scenario. In a real chart, the assessment and plan must reflect the individual encounter, professional judgment, and applicable clinical standards.</p>
+
+        <h2>How to write each section clearly</h2>
+        <h3>Subjective: preserve the patient’s report</h3>
+        <p>Separate what the patient says from what the clinician observes. Capture the relevant context and changes without copying an entire history into every note. Use direct quotations when the wording itself matters, and attribute information from a caregiver or another source.</p>
+        <h3>Objective: document what was observed or measured</h3>
+        <p>Include the relevant examination findings, measurements, and results actually available for the visit. Avoid turning patient-reported symptoms into objective findings. Include units and context where needed so that another clinician can interpret the values correctly.</p>
+        <h3>Assessment: show the clinical synthesis</h3>
+        <p>State the problem being addressed and its status, then briefly connect the relevant findings to the clinician’s assessment. If there are multiple problems, keep their assessment and plan easy to match. Do not add a diagnosis simply because a template suggests one.</p>
+        <h3>Plan: make next steps actionable</h3>
+        <p>For each problem, record the actions and follow-up that were actually decided: testing, treatment, counseling, referrals, monitoring, or return instructions as appropriate. Make timing and responsibility clear. If an action depends on a result or another provider, document how the result or handoff will be followed.</p>
+
+        <h2>Common SOAP note problems and how to avoid them</h2>
+        <ul>
+          <li><strong>Copy-forward without review:</strong> verify old history, medications, allergies, and findings before reusing them.</li>
+          <li><strong>Unclear attribution:</strong> identify what the patient reported, what another source reported, and what you observed.</li>
+          <li><strong>Assessment repeated as a plan:</strong> connect each problem to a specific next step instead of duplicating generic language.</li>
+          <li><strong>Template clutter:</strong> remove empty or irrelevant prompts and ensure the template permits meaningful narrative.</li>
+          <li><strong>Late, incomplete notes:</strong> establish a realistic close-of-visit routine and follow local rules for amendments and late entries.</li>
+          <li><strong>Billing-driven overdocumentation:</strong> document the care and reasoning accurately; do not add volume or unsupported detail to justify a higher code.</li>
+        </ul>
+        <p>CMS says medical records should be complete and legible, support the care provided, and be documented during or soon after the encounter when feasible. Its <a href="https://www.cms.gov/outreach-and-education/medicare-learning-network-mln/mlnproducts/downloads/eval-mgmt-serv-guide-icn006764.pdf" target="_blank" rel="noopener noreferrer">Evaluation and Management Services booklet</a> also cautions that note volume should not drive the level billed. This is US Medicare guidance; clinicians should follow the rules that apply to their jurisdiction and payer.</p>
+
+        <h2>Adapt the template to the specialty and workflow</h2>
+        <p>A useful template reflects what the clinician needs to assess and communicate. A follow-up in rehabilitation, a medication review, and a behavioral health session may need different prompts. Involve the people who will write and read the notes, trial the template with realistic cases, and remove fields that encourage irrelevant copy-forward.</p>
+        <p>CMS specifically notes that templates should allow complete documentation and that limited check-box formats can fail to capture enough detail for some services. Read the <a href="https://www.cms.gov/sites/default/files/2024-10/r12897pi.pdf" target="_blank" rel="noopener noreferrer">CMS guidance on progress-note templates</a> alongside applicable local standards.</p>
+
+        <h2>Use an EMR to keep notes connected to care</h2>
+        <p>A template is most useful when the note stays linked to the right patient, visit, medication list, and follow-up workflow. When evaluating an EMR, check whether it can create a note quickly, preserve edits and authorship, make prior notes easy to review, and keep the next appointment or follow-up visible.</p>
+        <p>DigiSpherEMR includes SOAP-style consultation notes within its patient record workflow, alongside prescriptions, appointments, and invoices. The Windows application is designed for offline-first use, with local practice data. Review the <a href="best-offline-emr-for-solo-doctors.html">offline EMR guide</a> and <a href="simple-emr-software-for-private-clinics.html">simple EMR guide for private clinics</a>, then watch the <a href="../index.html#videoShowcase">DigiSpherEMR demo</a> to see whether the documentation flow fits your clinic.</p>
+        <div class="cta-box"><h3>See SOAP notes in the patient workflow</h3><p>Review how consultation notes sit alongside patient history, prescriptions, appointments, and invoices. Confirm the product's documentation and data handling against your clinical and local requirements.</p><a href="../index.html#videoShowcase" class="btn-sphere-primary">Watch the product demo</a></div>
+        <h2>Sources and further reading</h2>
+        <ul><li><a href="https://www.ncbi.nlm.nih.gov/books/NBK482263/" target="_blank" rel="noopener noreferrer">NCBI Bookshelf: SOAP Notes</a></li><li><a href="https://www.cms.gov/outreach-and-education/medicare-learning-network-mln/mlnproducts/downloads/eval-mgmt-serv-guide-icn006764.pdf" target="_blank" rel="noopener noreferrer">CMS: Evaluation and Management Services</a></li><li><a href="https://www.cms.gov/sites/default/files/2024-10/r12897pi.pdf" target="_blank" rel="noopener noreferrer">CMS: Guidance on progress-note templates</a></li><li><a href="https://health.maryland.gov/bacc/Pages/Professional-Documentation-%28SOAP-Notes%29.aspx" target="_blank" rel="noopener noreferrer">Maryland Board of Acupuncture: Professional Documentation Standard</a></li></ul>
+        <p><a href="blogs-list.html">Browse more guides for independent practices</a></p>
+      </div>
+    </div>
+  </article></main>
+  <footer><div class="container-xl d-flex flex-wrap justify-content-between gap-2"><span>&copy; 2026 DigiSpher Health Systems</span><a href="../index.html">DigiSpher EMR</a><a href="blogs-list.html">Blog library</a></div></footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrY0t7lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
