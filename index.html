@@ -12,9 +12,9 @@
   </title>
   <meta name="title" content="DigiSpherEMR V2 | Simple Offline-First Practice Management for Doctors">
   <meta name="description"
-    content="DigiSpherEMR V2 brings patients, consultations, prescriptions, appointments, billing, expenses, revenue, and profit together in one simple offline-first Windows application for doctors.">
+    content="DigiSpherEMR V2 brings patients, consultations, prescriptions, appointments, billing, expenses, revenue, and profit together in one simple offline-first Windows application for doctors and private practices.">
   <meta name="keywords"
-    content="DigiSpher EMR, offline EMR software, practice management software for solo doctors, windows medical record system, SOAP notes software, offline prescription generator, medical billing software, doctor dashboard">
+    content="DigiSpher EMR, offline EMR software, practice management software for solo doctors, windows medical record system, SOAP notes software, offline prescription generator, medical billing software, doctor practice management software, offline-first EMR">
   <meta name="author" content="DigiSpher Health Systems">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://ds-emr.digispher.online/">
@@ -73,7 +73,7 @@
     "operatingSystem": "Windows 10, Windows 11 (64-bit)",
     "applicationCategory": "MedicalBusinessApplication",
     "softwareVersion": "2.0",
-    "description": "Simple offline-first practice management application for doctors, combining patients, consultations, prescriptions, appointments, billing, expenses, revenue, and profit tracking.",
+    "description": "Simple offline-first practice management application for doctors, combining patients, consultations, prescriptions, appointments, billing, expenses, revenue, and profit tracking into one easy workflow.",
     "offers": {
       "@type": "Offer",
       "price": "899.00",
@@ -186,9 +186,12 @@
               </a>
             </div>
 
-            <div class="d-flex justify-content-center mt-4">
+            <div class="d-flex justify-content-center align-items-center gap-3 mt-4 flex-wrap">
               <a href="https://tools.cafe" target="_blank" rel="noopener" aria-label="Featured on tools.cafe">
                 <img src="https://tools.cafe/b/dark.svg" alt="Featured on tools.cafe" width="256" height="80" />
+              </a>
+              <a href="https://www.producthunt.com/products/digicareemr/reviews/new?utm_source=badge-product_review&utm_medium=badge&utm_source=badge-digicareemr" target="_blank" rel="noopener noreferrer" aria-label="DigiSpherEMR on Product Hunt">
+                <img src="https://api.producthunt.com/widgets/embed-image/v1/product_review.svg?product_id=1134877&theme=light" alt="DigiSpher EMR - Streamline solo-practice management with an Easy EMR | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" />
               </a>
             </div>
 
@@ -998,20 +1001,8 @@
                     <label for="doctorName" class="form-label text-white fw-semibold small">Doctor Name <span
                         class="text-danger">*</span></label>
                     <div class="input-group input-group-sphere">
-                      <span class="input-group-text"><i class="bi bi-person-badge text-info"></i></span>
-                      <input type="text" class="form-control form-control-sphere" id="doctorName" name="doctor_name"
-                        placeholder="Dr. Alex Morgan" required>
-                    </div>
-                  </div>
-
-                  <!-- Email -->
-                  <div class="col-md-6">
-                    <label for="doctorEmail" class="form-label text-white fw-semibold small">Email Address <span
-                        class="text-danger">*</span></label>
-                    <div class="input-group input-group-sphere">
-                      <span class="input-group-text"><i class="bi bi-envelope-fill text-info"></i></span>
-                      <input type="email" class="form-control form-control-sphere" id="doctorEmail" name="doctor_email"
-                        placeholder="doctor@example.com" required>
+                      <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
+                      <input type="text" class="form-control" id="doctorName" name="doctorName" required>
                     </div>
                   </div>
 
@@ -1019,61 +1010,71 @@
                   <div class="col-md-6">
                     <label for="clinicName" class="form-label text-white fw-semibold small">Clinic Name</label>
                     <div class="input-group input-group-sphere">
-                      <span class="input-group-text"><i class="bi bi-building-fill text-info"></i></span>
-                      <input type="text" class="form-control form-control-sphere" id="clinicName" name="clinic_name"
-                        placeholder="Northside Medical Clinic">
+                      <span class="input-group-text"><i class="bi bi-hospital"></i></span>
+                      <input type="text" class="form-control" id="clinicName" name="clinicName">
                     </div>
                   </div>
 
-                  <!-- Expertise -->
+                  <!-- Email -->
                   <div class="col-md-6">
-                    <label for="specialty" class="form-label text-white fw-semibold small">Specialty</label>
+                    <label for="email" class="form-label text-white fw-semibold small">Email Address <span
+                        class="text-danger">*</span></label>
                     <div class="input-group input-group-sphere">
-                      <span class="input-group-text"><i class="bi bi-stethoscope text-info"></i></span>
-                      <input type="text" class="form-control form-control-sphere" id="specialty" name="specialty"
-                        placeholder="General Practice">
+                      <span class="input-group-text"><i class="bi bi-envelope-fill"></i></span>
+                      <input type="email" class="form-control" id="email" name="email" required>
                     </div>
                   </div>
 
-                  <!-- Countries -->
+                  <!-- Phone -->
+                  <div class="col-md-6">
+                    <label for="phone" class="form-label text-white fw-semibold small">Phone Number</label>
+                    <div class="input-group input-group-sphere">
+                      <span class="input-group-text"><i class="bi bi-telephone-fill"></i></span>
+                      <input type="tel" class="form-control" id="phone" name="phone">
+                    </div>
+                  </div>
+
+                  <!-- Country -->
                   <div class="col-md-6">
                     <label for="country" class="form-label text-white fw-semibold small">Country</label>
                     <div class="input-group input-group-sphere">
-                      <span class="input-group-text"><i class="bi bi-geo-alt-fill text-info"></i></span>
-                      <input type="text" class="form-control form-control-sphere" id="country" name="country"
-                        placeholder="Kenya">
+                      <span class="input-group-text"><i class="bi bi-geo-alt-fill"></i></span>
+                      <input type="text" class="form-control" id="country" name="country">
                     </div>
                   </div>
 
-                  <!-- Practice Size -->
+                  <!-- Number of Doctors -->
                   <div class="col-md-6">
-                    <label for="practiceSize" class="form-label text-white fw-semibold small">Approx. Patient Volume</label>
+                    <label for="doctorCount" class="form-label text-white fw-semibold small">Number of Doctors</label>
                     <div class="input-group input-group-sphere">
-                      <span class="input-group-text"><i class="bi bi-people-fill text-info"></i></span>
-                      <select class="form-select form-control-sphere" id="practiceSize" name="practice_size">
-                        <option value="">Select range</option>
-                        <option value="1-500">1-500 patients</option>
-                        <option value="501-1500">501-1,500 patients</option>
-                        <option value="1501-5000">1,501-5,000 patients</option>
-                        <option value="5000+">5,000+ patients</option>
-                      </select>
+                      <span class="input-group-text"><i class="bi bi-people-fill"></i></span>
+                      <input type="number" class="form-control" id="doctorCount" name="doctorCount" min="1" value="1">
                     </div>
+                  </div>
+
+                  <!-- Interest -->
+                  <div class="col-12">
+                    <label for="interest" class="form-label text-white fw-semibold small">What are you interested in?</label>
+                    <select class="form-select input-group-sphere" id="interest" name="interest">
+                      <option value="">Select an option</option>
+                      <option>New Practice Setup</option>
+                      <option>Custom Feature Development</option>
+                      <option>Volume Licensing</option>
+                      <option>Need a Demo</option>
+                      <option>Other</option>
+                    </select>
                   </div>
 
                   <!-- Message -->
                   <div class="col-12">
-                    <label for="quoteNotes" class="form-label text-white fw-semibold small">Project Details</label>
-                    <div class="input-group input-group-sphere align-items-start">
-                      <span class="input-group-text align-self-start"><i class="bi bi-chat-left-text text-info"></i></span>
-                      <textarea class="form-control form-control-sphere" id="quoteNotes" name="notes" rows="5"
-                        placeholder="Tell us about your clinic, requirements, or any custom workflow you need."></textarea>
-                    </div>
+                    <label for="message" class="form-label text-white fw-semibold small">Tell us more about your needs</label>
+                    <textarea class="form-control input-group-sphere" id="message" name="message" rows="5"></textarea>
                   </div>
 
                   <!-- Submit -->
                   <div class="col-12 text-center mt-2">
-                    <button type="submit" class="btn btn-sphere-primary btn-lg px-5 py-3">
-                      <i class="bi bi-send-fill"></i> Send Quote Request
+                    <button type="submit" class="btn btn-sphere-primary px-5 py-3">
+                      <i class="bi bi-send-fill"></i> Send Request
                     </button>
                   </div>
                 </div>
@@ -1085,115 +1086,31 @@
       </div>
     </section>
 
-    <!-- FAQ -->
-    <section class="faq-section py-5" id="faq" aria-labelledby="faqHeading">
-      <div class="container-xl">
-        <div class="text-center mb-5">
-          <span class="badge-sphere mb-2"><i class="bi bi-question-circle-fill"></i> Common Questions</span>
-          <h2 id="faqHeading" class="section-title">Frequently Asked Questions</h2>
-        </div>
-
-        <div class="accordion accordion-sphere" id="faqAccordion">
-          <div class="accordion-item">
-            <h3 class="accordion-header" id="faqOneHeading">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqOne"
-                aria-expanded="true" aria-controls="faqOne">
-                Is DigiSpherEMR offline-first?
-              </button>
-            </h3>
-            <div id="faqOne" class="accordion-collapse collapse show" aria-labelledby="faqOneHeading">
-              <div class="accordion-body">
-                Yes. DigiSpherEMR is built as an offline-first Windows application, so operational work can continue even
-                when the internet is unavailable.
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <h3 class="accordion-header" id="faqTwoHeading">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqTwo"
-                aria-expanded="false" aria-controls="faqTwo">
-                Does it include billing and revenue tracking?
-              </button>
-            </h3>
-            <div id="faqTwo" class="accordion-collapse collapse" aria-labelledby="faqTwoHeading">
-              <div class="accordion-body">
-                Yes. The workflow includes patient billing, invoices, expenses, revenue, and practice profit tracking.
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <h3 class="accordion-header" id="faqThreeHeading">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqThree"
-                aria-expanded="false" aria-controls="faqThree">
-                Is there a subscription?
-              </button>
-            </h3>
-            <div id="faqThree" class="accordion-collapse collapse" aria-labelledby="faqThreeHeading">
-              <div class="accordion-body">
-                The product is offered as a lifetime license with a one-time payment, rather than a recurring monthly
-                software subscription.
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <h3 class="accordion-header" id="faqFourHeading">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqFour"
-                aria-expanded="false" aria-controls="faqFour">
-                Can the system be customized?
-              </button>
-            </h3>
-            <div id="faqFour" class="accordion-collapse collapse" aria-labelledby="faqFourHeading">
-              <div class="accordion-body">
-                Yes. Custom requirements, clinic-specific features, and tailored workflows can be discussed through the
-                custom quote request form.
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
   </main>
 
-  <footer class="site-footer">
-    <div class="container-xl">
-      <div class="row align-items-center gy-3">
-        <div class="col-md-6 text-center text-md-start">
-          <div class="d-flex align-items-center justify-content-center justify-content-md-start gap-3">
-            <img src="assets/images/logo_user.png" alt="DigiSpherEMR Logo" height="40" style="object-fit:contain;">
-            <div>
-              <div class="fw-bold text-white">DigiSpherEMR</div>
-              <div class="small text-secondary">Simple practice management for independent doctors</div>
-            </div>
+  <footer class="footer-sphere">
+    <div class="container-xl py-4">
+      <div class="row g-3 align-items-center justify-content-between">
+        <div class="col-md-6">
+          <div class="d-flex align-items-center gap-2 text-white fw-bold">
+            <img src="assets/images/logo_user.png" alt="DigiSpherEMR" height="28">
+            <span>DigiSpherEMR V2</span>
           </div>
         </div>
-        <div class="col-md-6 text-center text-md-end">
-          <div class="small text-secondary">
-            <a href="#hero" class="text-info text-decoration-none me-3">Home</a>
-            <a href="#featureModules" class="text-info text-decoration-none me-3">Features</a>
-            <a href="#specialOffer" class="text-info text-decoration-none">Pricing</a>
-          </div>
-        </div>
-      </div>
-      <div class="footer-divider"></div>
-      <div class="row">
-        <div class="col-12 text-center small text-secondary">
-          &copy; <span id="currentYear"></span> DigiSpher Health Systems. All rights reserved.
+        <div class="col-md-6 text-md-end text-secondary small">
+          &copy; 2025 DigiSpher Health Systems. All rights reserved.
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- Bootstrap JS Bundle with Popper -->
+  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
 
   <!-- Custom JS -->
   <script src="assets/js/main.js"></script>
-
 </body>
 
 </html>
