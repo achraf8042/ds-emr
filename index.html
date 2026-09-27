@@ -14,7 +14,7 @@
   <meta name="description"
     content="DigiSpherEMR V2 brings patients, consultations, prescriptions, appointments, billing, expenses, revenue, and profit together in one simple offline-first Windows application for doctors.">
   <meta name="keywords"
-    content="DigiSpher EMR, offline EMR software, practice management software for solo doctors, windows medical record system, SOAP notes software, offline prescription generator, medical billing software, private clinic EMR, medical data sovereignty, no monthly fee EMR">
+    content="DigiSpher EMR, offline EMR software, practice management software for solo doctors, windows medical record system, SOAP notes software, offline prescription generator, medical billing software, doctor dashboard">
   <meta name="author" content="DigiSpher Health Systems">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://ds-emr.digispher.online/">
@@ -73,7 +73,7 @@
     "operatingSystem": "Windows 10, Windows 11 (64-bit)",
     "applicationCategory": "MedicalBusinessApplication",
     "softwareVersion": "2.0",
-    "description": "Simple offline-first practice management application for doctors, combining patients, consultations, prescriptions, appointments, billing, expenses, revenue, and profit tracking in one Windows workflow.",
+    "description": "Simple offline-first practice management application for doctors, combining patients, consultations, prescriptions, appointments, billing, expenses, revenue, and profit tracking.",
     "offers": {
       "@type": "Offer",
       "price": "899.00",
@@ -183,6 +183,12 @@
               </a>
               <a href="#videoShowcase" class="btn btn-sphere-secondary">
                 <i class="bi bi-play-circle-fill fs-5 text-info"></i> Watch Demo
+              </a>
+            </div>
+
+            <div class="d-flex justify-content-center mt-4">
+              <a href="https://tools.cafe" target="_blank" rel="noopener" aria-label="Featured on tools.cafe">
+                <img src="https://tools.cafe/b/dark.svg" alt="Featured on tools.cafe" width="256" height="80" />
               </a>
             </div>
 
@@ -998,602 +1004,153 @@
                     </div>
                   </div>
 
-                  <!-- Email Address -->
+                  <!-- Email -->
                   <div class="col-md-6">
-                    <label for="quoteEmail" class="form-label text-white fw-semibold small">Email Address <span
+                    <label for="doctorEmail" class="form-label text-white fw-semibold small">Email Address <span
                         class="text-danger">*</span></label>
                     <div class="input-group input-group-sphere">
-                      <span class="input-group-text"><i class="bi bi-envelope-at text-info"></i></span>
-                      <input type="email" class="form-control form-control-sphere" id="quoteEmail" name="email"
-                        placeholder="doctor@clinic.com" required>
+                      <span class="input-group-text"><i class="bi bi-envelope-fill text-info"></i></span>
+                      <input type="email" class="form-control form-control-sphere" id="doctorEmail" name="doctor_email"
+                        placeholder="doctor@example.com" required>
                     </div>
                   </div>
 
                   <!-- Clinic Name -->
                   <div class="col-md-6">
-                    <label for="clinicName" class="form-label text-white fw-semibold small">Clinic / Practice Name <span
-                        class="text-danger">*</span></label>
+                    <label for="clinicName" class="form-label text-white fw-semibold small">Clinic Name</label>
                     <div class="input-group input-group-sphere">
-                      <span class="input-group-text"><i class="bi bi-building text-info"></i></span>
+                      <span class="input-group-text"><i class="bi bi-building-fill text-info"></i></span>
                       <input type="text" class="form-control form-control-sphere" id="clinicName" name="clinic_name"
-                        placeholder="Apex Medical Center" required>
+                        placeholder="Northside Medical Clinic">
                     </div>
                   </div>
 
-                  <!-- Medical Specialty Dropdown -->
+                  <!-- Expertise -->
                   <div class="col-md-6">
-                    <label for="medicalSpecialty" class="form-label text-white fw-semibold small">Medical Specialty
-                      <span class="text-danger">*</span></label>
+                    <label for="specialty" class="form-label text-white fw-semibold small">Specialty</label>
                     <div class="input-group input-group-sphere">
-                      <span class="input-group-text"><i class="bi bi-heart-pulse text-info"></i></span>
-                      <select class="form-select form-control-sphere" id="medicalSpecialty" name="medical_specialty"
-                        required>
-                        <option value="" selected disabled>Select Medical Specialty...</option>
-                        <option value="General Practice / Family Medicine">General Practice / Family Medicine</option>
-                        <option value="Pediatrics">Pediatrics</option>
-                        <option value="Internal Medicine">Internal Medicine</option>
-                        <option value="Cardiology">Cardiology</option>
-                        <option value="Obstetrics & Gynecology">Obstetrics & Gynecology (OB-GYN)</option>
-                        <option value="Dermatology">Dermatology</option>
-                        <option value="Orthopedics">Orthopedics</option>
-                        <option value="Ophthalmology">Ophthalmology</option>
-                        <option value="ENT (Otolaryngology)">ENT (Otolaryngology)</option>
-                        <option value="Neurology">Neurology</option>
-                        <option value="Psychiatry / Behavioral Health">Psychiatry / Behavioral Health</option>
-                        <option value="General Surgery">General Surgery</option>
-                        <option value="Urology">Urology</option>
-                        <option value="Dental / Oral Surgery">Dental / Oral Surgery</option>
-                        <option value="Multi-Specialty Clinic">Multi-Specialty Clinic</option>
-                        <option value="Other / Custom Specialty">Other / Custom Specialty</option>
+                      <span class="input-group-text"><i class="bi bi-stethoscope text-info"></i></span>
+                      <input type="text" class="form-control form-control-sphere" id="specialty" name="specialty"
+                        placeholder="General Practice">
+                    </div>
+                  </div>
+
+                  <!-- Countries -->
+                  <div class="col-md-6">
+                    <label for="country" class="form-label text-white fw-semibold small">Country</label>
+                    <div class="input-group input-group-sphere">
+                      <span class="input-group-text"><i class="bi bi-geo-alt-fill text-info"></i></span>
+                      <input type="text" class="form-control form-control-sphere" id="country" name="country"
+                        placeholder="Kenya">
+                    </div>
+                  </div>
+
+                  <!-- Practice Size -->
+                  <div class="col-md-6">
+                    <label for="practiceSize" class="form-label text-white fw-semibold small">Approx. Patient Volume</label>
+                    <div class="input-group input-group-sphere">
+                      <span class="input-group-text"><i class="bi bi-people-fill text-info"></i></span>
+                      <select class="form-select form-control-sphere" id="practiceSize" name="practice_size">
+                        <option value="">Select range</option>
+                        <option value="1-500">1-500 patients</option>
+                        <option value="501-1500">501-1,500 patients</option>
+                        <option value="1501-5000">1,501-5,000 patients</option>
+                        <option value="5000+">5,000+ patients</option>
                       </select>
                     </div>
                   </div>
 
-                  <!-- Custom Searchable Country Dropdown Component -->
-                  <div class="col-md-6">
-                    <label for="countryCountyInput" class="form-label text-white fw-semibold small">Country / Region
-                      <span class="text-danger">*</span></label>
-                    <div class="custom-select-wrapper position-relative" id="countrySelectWrapper">
-                      <div class="input-group input-group-sphere cursor-pointer" id="countrySelectTrigger">
-                        <span class="input-group-text"><i class="bi bi-geo-alt text-info"></i></span>
-                        <input type="text" class="form-control form-control-sphere cursor-pointer"
-                          id="countryCountyInput" name="country_county" placeholder="Select or search country..."
-                          required readonly autocomplete="off">
-                        <span class="input-group-text pe-3"><i class="bi bi-chevron-down text-info small"
-                            id="countrySelectChevron"></i></span>
-                      </div>
-
-                      <!-- Searchable Dropdown Popup Panel -->
-                      <div class="custom-select-menu p-2 shadow-lg d-none" id="countrySelectMenu">
-                        <div class="input-group input-group-sm mb-2">
-                          <span class="input-group-text bg-dark border-secondary text-info"><i
-                              class="bi bi-search"></i></span>
-                          <input type="text" class="form-control bg-dark text-white border-secondary small"
-                            id="countrySearchFilter" placeholder="Type to search country..." autocomplete="off">
-                        </div>
-                        <ul class="list-unstyled mb-0 custom-select-list" id="countryOptionsList">
-                          <li class="custom-option-item" data-value="United States"><i
-                              class="bi bi-geo-alt-fill me-2 text-info"></i>United States</li>
-                          <li class="custom-option-item" data-value="United Kingdom"><i
-                              class="bi bi-geo-alt-fill me-2 text-info"></i>United Kingdom</li>
-                          <li class="custom-option-item" data-value="Canada"><i
-                              class="bi bi-geo-alt-fill me-2 text-info"></i>Canada</li>
-                          <li class="custom-option-item" data-value="Australia"><i
-                              class="bi bi-geo-alt-fill me-2 text-info"></i>Australia</li>
-                          <li class="custom-option-item" data-value="Afghanistan">Afghanistan</li>
-                          <li class="custom-option-item" data-value="Albania">Albania</li>
-                          <li class="custom-option-item" data-value="Algeria">Algeria</li>
-                          <li class="custom-option-item" data-value="Argentina">Argentina</li>
-                          <li class="custom-option-item" data-value="Austria">Austria</li>
-                          <li class="custom-option-item" data-value="Bahrain">Bahrain</li>
-                          <li class="custom-option-item" data-value="Bangladesh">Bangladesh</li>
-                          <li class="custom-option-item" data-value="Belgium">Belgium</li>
-                          <li class="custom-option-item" data-value="Bolivia">Bolivia</li>
-                          <li class="custom-option-item" data-value="Brazil">Brazil</li>
-                          <li class="custom-option-item" data-value="Bulgaria">Bulgaria</li>
-                          <li class="custom-option-item" data-value="Cameroon">Cameroon</li>
-                          <li class="custom-option-item" data-value="Chile">Chile</li>
-                          <li class="custom-option-item" data-value="China">China</li>
-                          <li class="custom-option-item" data-value="Colombia">Colombia</li>
-                          <li class="custom-option-item" data-value="Costa Rica">Costa Rica</li>
-                          <li class="custom-option-item" data-value="Croatia">Croatia</li>
-                          <li class="custom-option-item" data-value="Cyprus">Cyprus</li>
-                          <li class="custom-option-item" data-value="Czech Republic">Czech Republic</li>
-                          <li class="custom-option-item" data-value="Denmark">Denmark</li>
-                          <li class="custom-option-item" data-value="Dominican Republic">Dominican Republic</li>
-                          <li class="custom-option-item" data-value="Ecuador">Ecuador</li>
-                          <li class="custom-option-item" data-value="Egypt">Egypt</li>
-                          <li class="custom-option-item" data-value="Estonia">Estonia</li>
-                          <li class="custom-option-item" data-value="Ethiopia">Ethiopia</li>
-                          <li class="custom-option-item" data-value="Finland">Finland</li>
-                          <li class="custom-option-item" data-value="France">France</li>
-                          <li class="custom-option-item" data-value="Germany">Germany</li>
-                          <li class="custom-option-item" data-value="Ghana">Ghana</li>
-                          <li class="custom-option-item" data-value="Greece">Greece</li>
-                          <li class="custom-option-item" data-value="Guatemala">Guatemala</li>
-                          <li class="custom-option-item" data-value="Hong Kong">Hong Kong</li>
-                          <li class="custom-option-item" data-value="Hungary">Hungary</li>
-                          <li class="custom-option-item" data-value="Iceland">Iceland</li>
-                          <li class="custom-option-item" data-value="India">India</li>
-                          <li class="custom-option-item" data-value="Indonesia">Indonesia</li>
-                          <li class="custom-option-item" data-value="Iran">Iran</li>
-                          <li class="custom-option-item" data-value="Iraq">Iraq</li>
-                          <li class="custom-option-item" data-value="Ireland">Ireland</li>
-                          <li class="custom-option-item" data-value="Israel">Israel</li>
-                          <li class="custom-option-item" data-value="Italy">Italy</li>
-                          <li class="custom-option-item" data-value="Ivory Coast">Ivory Coast</li>
-                          <li class="custom-option-item" data-value="Jamaica">Jamaica</li>
-                          <li class="custom-option-item" data-value="Japan">Japan</li>
-                          <li class="custom-option-item" data-value="Jordan">Jordan</li>
-                          <li class="custom-option-item" data-value="Kazakhstan">Kazakhstan</li>
-                          <li class="custom-option-item" data-value="Kenya">Kenya</li>
-                          <li class="custom-option-item" data-value="Kuwait">Kuwait</li>
-                          <li class="custom-option-item" data-value="Lebanon">Lebanon</li>
-                          <li class="custom-option-item" data-value="Libya">Libya</li>
-                          <li class="custom-option-item" data-value="Luxembourg">Luxembourg</li>
-                          <li class="custom-option-item" data-value="Malaysia">Malaysia</li>
-                          <li class="custom-option-item" data-value="Malta">Malta</li>
-                          <li class="custom-option-item" data-value="Mexico">Mexico</li>
-                          <li class="custom-option-item" data-value="Morocco">Morocco</li>
-                          <li class="custom-option-item" data-value="Netherlands">Netherlands</li>
-                          <li class="custom-option-item" data-value="New Zealand">New Zealand</li>
-                          <li class="custom-option-item" data-value="Nigeria">Nigeria</li>
-                          <li class="custom-option-item" data-value="Norway">Norway</li>
-                          <li class="custom-option-item" data-value="Oman">Oman</li>
-                          <li class="custom-option-item" data-value="Pakistan">Pakistan</li>
-                          <li class="custom-option-item" data-value="Palestine">Palestine</li>
-                          <li class="custom-option-item" data-value="Panama">Panama</li>
-                          <li class="custom-option-item" data-value="Peru">Peru</li>
-                          <li class="custom-option-item" data-value="Philippines">Philippines</li>
-                          <li class="custom-option-item" data-value="Poland">Poland</li>
-                          <li class="custom-option-item" data-value="Portugal">Portugal</li>
-                          <li class="custom-option-item" data-value="Qatar">Qatar</li>
-                          <li class="custom-option-item" data-value="Romania">Romania</li>
-                          <li class="custom-option-item" data-value="Saudi Arabia">Saudi Arabia</li>
-                          <li class="custom-option-item" data-value="Senegal">Senegal</li>
-                          <li class="custom-option-item" data-value="Serbia">Serbia</li>
-                          <li class="custom-option-item" data-value="Singapore">Singapore</li>
-                          <li class="custom-option-item" data-value="Slovakia">Slovakia</li>
-                          <li class="custom-option-item" data-value="South Africa">South Africa</li>
-                          <li class="custom-option-item" data-value="South Korea">South Korea</li>
-                          <li class="custom-option-item" data-value="Spain">Spain</li>
-                          <li class="custom-option-item" data-value="Sri Lanka">Sri Lanka</li>
-                          <li class="custom-option-item" data-value="Sudan">Sudan</li>
-                          <li class="custom-option-item" data-value="Sweden">Sweden</li>
-                          <li class="custom-option-item" data-value="Switzerland">Switzerland</li>
-                          <li class="custom-option-item" data-value="Taiwan">Taiwan</li>
-                          <li class="custom-option-item" data-value="Tanzania">Tanzania</li>
-                          <li class="custom-option-item" data-value="Thailand">Thailand</li>
-                          <li class="custom-option-item" data-value="Tunisia">Tunisia</li>
-                          <li class="custom-option-item" data-value="Turkey">Turkey</li>
-                          <li class="custom-option-item" data-value="Uganda">Uganda</li>
-                          <li class="custom-option-item" data-value="Ukraine">Ukraine</li>
-                          <li class="custom-option-item" data-value="United Arab Emirates">United Arab Emirates</li>
-                          <li class="custom-option-item" data-value="Uruguay">Uruguay</li>
-                          <li class="custom-option-item" data-value="Uzbekistan">Uzbekistan</li>
-                          <li class="custom-option-item" data-value="Venezuela">Venezuela</li>
-                          <li class="custom-option-item" data-value="Vietnam">Vietnam</li>
-                          <li class="custom-option-item" data-value="Zambia">Zambia</li>
-                          <li class="custom-option-item" data-value="Zimbabwe">Zimbabwe</li>
-                          <li class="custom-option-item" data-value="Other / Country Not Listed">Other / Country Not
-                            Listed</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Preferred Interface Language -->
-                  <div class="col-md-6">
-                    <label for="preferredLanguage" class="form-label text-white fw-semibold small">Preferred Language /
-                      Localization</label>
-                    <div class="input-group input-group-sphere">
-                      <span class="input-group-text"><i class="bi bi-translate text-info"></i></span>
-                      <input type="text" class="form-control form-control-sphere" id="preferredLanguage"
-                        name="preferred_language" placeholder="English, French, Arabic, Spanish, etc.">
-                    </div>
-                  </div>
-
-                  <!-- Customization Categories (Checkboxes) -->
+                  <!-- Message -->
                   <div class="col-12">
-                    <label class="form-label text-white fw-semibold small d-block mb-2">Customization Types Needed
-                      (Select all that apply)</label>
-                    <div class="row g-3">
-                      <div class="col-sm-6 col-md-4">
-                        <div class="custom-checkbox-sphere p-2.5 px-3 rounded d-flex align-items-center h-100">
-                          <input class="form-check-input flex-shrink-0 me-2 mt-0 cursor-pointer" type="checkbox"
-                            name="customization_types[]" value="Language Translation" id="customLang">
-                          <label class="form-check-label text-secondary small cursor-pointer mb-0 lh-sm"
-                            for="customLang"><i class="bi bi-translate text-info me-1"></i> Language Translation</label>
-                        </div>
-                      </div>
-                      <div class="col-sm-6 col-md-4">
-                        <div class="custom-checkbox-sphere p-2.5 px-3 rounded d-flex align-items-center h-100">
-                          <input class="form-check-input flex-shrink-0 me-2 mt-0 cursor-pointer" type="checkbox"
-                            name="customization_types[]" value="Custom Prescription / Invoice" id="customPdf">
-                          <label class="form-check-label text-secondary small cursor-pointer mb-0 lh-sm"
-                            for="customPdf"><i class="bi bi-file-earmark-pdf text-info me-1"></i> Custom PDF
-                            Templates</label>
-                        </div>
-                      </div>
-                      <div class="col-sm-6 col-md-4">
-                        <div class="custom-checkbox-sphere p-2.5 px-3 rounded d-flex align-items-center h-100">
-                          <input class="form-check-input flex-shrink-0 me-2 mt-0 cursor-pointer" type="checkbox"
-                            name="customization_types[]" value="Branding & Logo" id="customBrand">
-                          <label class="form-check-label text-secondary small cursor-pointer mb-0 lh-sm"
-                            for="customBrand"><i class="bi bi-palette text-info me-1"></i> Branding & Clinic
-                            Logo</label>
-                        </div>
-                      </div>
-                      <div class="col-sm-6 col-md-4">
-                        <div class="custom-checkbox-sphere p-2.5 px-3 rounded d-flex align-items-center h-100">
-                          <input class="form-check-input flex-shrink-0 me-2 mt-0 cursor-pointer" type="checkbox"
-                            name="customization_types[]" value="Regional Currency & Tax" id="customCurrency">
-                          <label class="form-check-label text-secondary small cursor-pointer mb-0 lh-sm"
-                            for="customCurrency"><i class="bi bi-cash-coin text-info me-1"></i> Regional Currency &
-                            Tax</label>
-                        </div>
-                      </div>
-                      <div class="col-sm-6 col-md-4">
-                        <div class="custom-checkbox-sphere p-2.5 px-3 rounded d-flex align-items-center h-100">
-                          <input class="form-check-input flex-shrink-0 me-2 mt-0 cursor-pointer" type="checkbox"
-                            name="customization_types[]" value="Custom Workflow / Fields" id="customWorkflow">
-                          <label class="form-check-label text-secondary small cursor-pointer mb-0 lh-sm"
-                            for="customWorkflow"><i class="bi bi-gear-wide-connected text-info me-1"></i> Custom
-                            Workflow / Fields</label>
-                        </div>
-                      </div>
-                      <div class="col-sm-6 col-md-4">
-                        <div class="custom-checkbox-sphere p-2.5 px-3 rounded d-flex align-items-center h-100">
-                          <input class="form-check-input flex-shrink-0 me-2 mt-0 cursor-pointer" type="checkbox"
-                            name="customization_types[]" value="Multi-Clinic Licensing" id="customMulti">
-                          <label class="form-check-label text-secondary small cursor-pointer mb-0 lh-sm"
-                            for="customMulti"><i class="bi bi-buildings text-info me-1"></i> Multi-Clinic
-                            Licensing</label>
-                        </div>
-                      </div>
+                    <label for="quoteNotes" class="form-label text-white fw-semibold small">Project Details</label>
+                    <div class="input-group input-group-sphere align-items-start">
+                      <span class="input-group-text align-self-start"><i class="bi bi-chat-left-text text-info"></i></span>
+                      <textarea class="form-control form-control-sphere" id="quoteNotes" name="notes" rows="5"
+                        placeholder="Tell us about your clinic, requirements, or any custom workflow you need."></textarea>
                     </div>
                   </div>
 
-                  <!-- Quote Details & Requested Changes -->
-                  <div class="col-12">
-                    <label for="quoteDetails" class="form-label text-white fw-semibold small">Quote Details & Specific
-                      Customization Requirements <span class="text-danger">*</span></label>
-                    <div class="input-group input-group-sphere">
-                      <span class="input-group-text align-items-start pt-3"><i
-                          class="bi bi-pencil-square text-info"></i></span>
-                      <textarea class="form-control form-control-sphere" id="quoteDetails" name="requested_changes"
-                        rows="4"
-                        placeholder="Specify your exact customization needs (e.g. Translate interface to French/Arabic, add custom header logo to A5 prescriptions, configure local VAT tax rules, add custom specialty examination fields, or volume license discount)..."
-                        required></textarea>
-                    </div>
-                  </div>
-
-                  <!-- Submission Button -->
-                  <div class="col-12 text-center mt-4">
-                    <button type="submit" class="btn btn-sphere-primary btn-sphere-gold py-3 px-5 fs-5 w-100 w-sm-auto">
-                      <i class="bi bi-send-fill me-2"></i> Submit Quote Request
+                  <!-- Submit -->
+                  <div class="col-12 text-center mt-2">
+                    <button type="submit" class="btn btn-sphere-primary btn-lg px-5 py-3">
+                      <i class="bi bi-send-fill"></i> Send Quote Request
                     </button>
-                    <div class="small text-muted mt-3">
-                      <i class="bi bi-shield-check text-success"></i> Your contact information is kept strictly private.
-                    </div>
                   </div>
                 </div>
               </form>
 
-              <!-- Form Submission Success Alert Container -->
-              <div id="quoteFormSuccess" class="alert alert-sphere-success text-center mt-4 d-none" role="alert">
-                <i class="bi bi-check-circle-fill text-success fs-2 d-block mb-2"></i>
-                <h4 class="h5 text-white fw-bold mb-1">Quote Request Submitted!</h4>
-                <p class="mb-0 text-secondary small">Thank you, Doctor. We have received your custom quote request and
-                  will get back to you shortly.</p>
-              </div>
-
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- QUICK START -->
-    <section class="quickstart-section" id="quickStart" aria-labelledby="quickStartHeading">
-      <div class="container-xl">
-        <div class="text-center mb-5">
-          <span class="badge-sphere mb-2"><i class="bi bi-lightning-charge-fill"></i> One Workflow. Fewer Clicks.</span>
-          <h2 id="quickStartHeading" class="section-title">Simple Enough to Learn Quickly</h2>
-          <p class="section-subtitle">
-            You should not need to become an IT specialist to manage your practice. DigiSpherEMR keeps the important
-            actions easy to find and the screens focused on the task.
-          </p>
-        </div>
-
-        <div class="row g-4">
-
-          <div class="col-md-6 col-lg">
-            <div class="step-card reveal-on-scroll">
-              <div class="step-number-bubble">1</div>
-              <h4 class="h5 text-white fw-bold mb-2">Find Patient</h4>
-              <p class="text-secondary small mb-0">Search the name and open the patient record.</p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg">
-            <div class="step-card reveal-on-scroll">
-              <div class="step-number-bubble">2</div>
-              <h4 class="h5 text-white fw-bold mb-2">Start Visit</h4>
-              <p class="text-secondary small mb-0">Review the history and start the consultation quickly.</p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg">
-            <div class="step-card reveal-on-scroll">
-              <div class="step-number-bubble">3</div>
-              <h4 class="h5 text-white fw-bold mb-2">Write Prescription</h4>
-              <p class="text-secondary small mb-0">Add medications and generate the prescription.</p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg">
-            <div class="step-card reveal-on-scroll">
-              <div class="step-number-bubble">4</div>
-              <h4 class="h5 text-white fw-bold mb-2">Create Invoice</h4>
-              <p class="text-secondary small mb-0">Record the visit financially before moving on.</p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg">
-            <div class="step-card reveal-on-scroll">
-              <div class="step-number-bubble">5</div>
-              <h4 class="h5 text-white fw-bold mb-2">Next Patient</h4>
-              <p class="text-secondary small mb-0">Simple, fast, and repeatable for everyday practice.</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- SYSTEM REQUIREMENTS -->
-    <section class="py-5" id="techSpecs" aria-labelledby="specsHeading">
-      <div class="container-xl">
-        <div class="glass-card reveal-on-scroll p-4 p-lg-5">
-          <div class="row align-items-center g-4">
-
-            <div class="col-lg-4">
-              <span class="badge-sphere mb-2"><i class="bi bi-motherboard-fill"></i> Windows Workspace</span>
-              <h3 id="specsHeading" class="h2 text-white fw-bold mb-3">Work Locally on a Modern Windows PC</h3>
-              <p class="text-secondary mb-0">
-                DigiSpherEMR is designed as a standalone Windows application for doctors who want a practical local
-                workflow without a required cloud subscription.
-              </p>
-            </div>
-
-            <div class="col-lg-8">
-              <div class="specs-badge-grid">
-                <div class="spec-box">
-                  <div class="spec-label"><i class="bi bi-windows text-info"></i> Operating System</div>
-                  <div class="spec-val">Windows 10 / 11 (64-bit)</div>
-                </div>
-                <div class="spec-box">
-                  <div class="spec-label"><i class="bi bi-wifi-off text-info"></i> Workflow</div>
-                  <div class="spec-val">Offline-first core use</div>
-                </div>
-                <div class="spec-box">
-                  <div class="spec-label"><i class="bi bi-hdd text-info"></i> Data</div>
-                  <div class="spec-val">Local practice database</div>
-                </div>
-                <div class="spec-box">
-                  <div class="spec-label"><i class="bi bi-arrow-repeat text-info"></i> Backup</div>
-                  <div class="spec-val">Backup and restore support</div>
-                </div>
-                <div class="spec-box">
-                  <div class="spec-label"><i class="bi bi-printer text-info"></i> Documents</div>
-                  <div class="spec-val">PDF and A5 prescription printing</div>
-                </div>
-                <div class="spec-box">
-                  <div class="spec-label"><i class="bi bi-credit-card text-info"></i> License</div>
-                  <div class="spec-val">One-time lifetime license</div>
-                </div>
-              </div>
-            </div>
-
           </div>
         </div>
       </div>
     </section>
 
     <!-- FAQ -->
-    <section class="faq-section" id="faq" aria-labelledby="faqHeading">
+    <section class="faq-section py-5" id="faq" aria-labelledby="faqHeading">
       <div class="container-xl">
-
         <div class="text-center mb-5">
-          <span class="badge-sphere mb-2"><i class="bi bi-question-circle-fill"></i> Frequently Asked Questions</span>
-          <h2 id="faqHeading" class="section-title">Clear Answers Before You Start</h2>
-          <p class="section-subtitle">
-            Practical answers about what DigiSpherEMR does, how it works offline, and who it is designed for.
-          </p>
+          <span class="badge-sphere mb-2"><i class="bi bi-question-circle-fill"></i> Common Questions</span>
+          <h2 id="faqHeading" class="section-title">Frequently Asked Questions</h2>
         </div>
 
-        <div class="row justify-content-center">
-          <div class="col-lg-9">
-
-            <div class="accordion accordion-sphere" id="faqAccordion">
-
-              <div class="accordion-item">
-                <h3 class="accordion-header" id="headingOne">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                    aria-expanded="true" aria-controls="collapseOne">
-                    What is DigiSpherEMR?
-                  </button>
-                </h3>
-                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-                  data-bs-parent="#faqAccordion">
-                  <div class="accordion-body">
-                    DigiSpherEMR is a practice management application that combines medical records and everyday
-                    practice
-                    management in one system.
-                  </div>
-                </div>
+        <div class="accordion accordion-sphere" id="faqAccordion">
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="faqOneHeading">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqOne"
+                aria-expanded="true" aria-controls="faqOne">
+                Is DigiSpherEMR offline-first?
+              </button>
+            </h3>
+            <div id="faqOne" class="accordion-collapse collapse show" aria-labelledby="faqOneHeading">
+              <div class="accordion-body">
+                Yes. DigiSpherEMR is built as an offline-first Windows application, so operational work can continue even
+                when the internet is unavailable.
               </div>
-
-              <div class="accordion-item">
-                <h3 class="accordion-header" id="headingTwo">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    Is it only an EMR?
-                  </button>
-                </h3>
-                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                  data-bs-parent="#faqAccordion">
-                  <div class="accordion-body">
-                    No. DigiSpherEMR combines clinical management with practice management, including appointments,
-                    billing, expenses, revenue, and profit tracking.
-                  </div>
-                </div>
-              </div>
-
-              <div class="accordion-item">
-                <h3 class="accordion-header" id="headingThree">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    Does it require an internet connection?
-                  </button>
-                </h3>
-                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                  data-bs-parent="#faqAccordion">
-                  <div class="accordion-body">
-                    The core application is designed with an offline-first workflow, so everyday practice management
-                    does
-                    not depend on an internet connection.
-                  </div>
-                </div>
-              </div>
-
-              <div class="accordion-item">
-                <h3 class="accordion-header" id="headingFour">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                    Is there a monthly subscription?
-                  </button>
-                </h3>
-                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
-                  data-bs-parent="#faqAccordion">
-                  <div class="accordion-body">
-                    No. The lifetime license is a one-time purchase. The current price shown on this page is
-                    <strong>$899</strong>.
-                  </div>
-                </div>
-              </div>
-
-              <div class="accordion-item">
-                <h3 class="accordion-header" id="headingFive">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                    Can I manage expenses and see profit?
-                  </button>
-                </h3>
-                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
-                  data-bs-parent="#faqAccordion">
-                  <div class="accordion-body">
-                    Yes. You can record practice expenses and use revenue and expense information to understand practice
-                    profit without building a separate spreadsheet yourself.
-                  </div>
-                </div>
-              </div>
-
-              <div class="accordion-item">
-                <h3 class="accordion-header" id="headingSix">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                    Can I print prescriptions?
-                  </button>
-                </h3>
-                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
-                  data-bs-parent="#faqAccordion">
-                  <div class="accordion-body">
-                    Yes. DigiSpherEMR generates professional A5 prescription PDFs suitable for printing.
-                  </div>
-                </div>
-              </div>
-
-              <div class="accordion-item">
-                <h3 class="accordion-header" id="headingSeven">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                    Can I create invoices?
-                  </button>
-                </h3>
-                <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
-                  data-bs-parent="#faqAccordion">
-                  <div class="accordion-body">
-                    Yes. Billing and invoice management are included so the visit can be recorded financially.
-                  </div>
-                </div>
-              </div>
-
-              <div class="accordion-item">
-                <h3 class="accordion-header" id="headingEight">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-                    Can I backup my data?
-                  </button>
-                </h3>
-                <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight"
-                  data-bs-parent="#faqAccordion">
-                  <div class="accordion-body">
-                    Yes. DigiSpherEMR includes backup and restore functionality for your local practice data.
-                  </div>
-                </div>
-              </div>
-
-              <div class="accordion-item">
-                <h3 class="accordion-header" id="headingNine">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
-                    Who is DigiSpherEMR designed for?
-                  </button>
-                </h3>
-                <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine"
-                  data-bs-parent="#faqAccordion">
-                  <div class="accordion-body">
-                    It is designed primarily for independent doctors, private practices, and small clinics looking for a
-                    simple practice management solution.
-                  </div>
-                </div>
-              </div>
-
             </div>
-
           </div>
-        </div>
 
-      </div>
-    </section>
-
-    <!-- FINAL CTA -->
-    <section class="py-5">
-      <div class="container-xl">
-        <div class="pillar-banner-card text-center reveal-on-scroll">
-          <span class="badge-sphere badge-offer-hot mb-3">DigiSpherEMR V2</span>
-          <h2 class="display-hero-title mb-3">
-            Everything You Need to Run Your Practice. Nothing You Do Not.
-          </h2>
-          <p class="lead-hero mx-auto mb-4 text-secondary">
-            Simple. Fast. Focused. Manage patients, run your practice, and understand your numbers from one
-            offline-first Windows application.
-          </p>
-          <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
-            <a href="https://digispher.lemonsqueezy.com/checkout/buy/ea88e483-a889-4620-937e-963874151f57?discount=0"
-              target="_blank" rel="noopener noreferrer" class="btn btn-sphere-primary btn-sphere-gold fs-5 px-5 py-3">
-              <i class="bi bi-bag-check-fill"></i> Get DigiSpherEMR - $899
-            </a>
-            <a href="#videoShowcase" class="btn btn-sphere-secondary fs-5 px-4 py-3">
-              <i class="bi bi-play-circle text-info"></i> Watch Demo
-            </a>
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="faqTwoHeading">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqTwo"
+                aria-expanded="false" aria-controls="faqTwo">
+                Does it include billing and revenue tracking?
+              </button>
+            </h3>
+            <div id="faqTwo" class="accordion-collapse collapse" aria-labelledby="faqTwoHeading">
+              <div class="accordion-body">
+                Yes. The workflow includes patient billing, invoices, expenses, revenue, and practice profit tracking.
+              </div>
+            </div>
           </div>
-          <div class="mt-4 text-muted small">
-            <i class="bi bi-wifi-off text-info"></i> Offline-first &nbsp;&bull;&nbsp;
-            <i class="bi bi-credit-card text-info"></i> One payment &nbsp;&bull;&nbsp;
-            <i class="bi bi-graph-up-arrow text-success"></i> Revenue, expenses, and profit
+
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="faqThreeHeading">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqThree"
+                aria-expanded="false" aria-controls="faqThree">
+                Is there a subscription?
+              </button>
+            </h3>
+            <div id="faqThree" class="accordion-collapse collapse" aria-labelledby="faqThreeHeading">
+              <div class="accordion-body">
+                The product is offered as a lifetime license with a one-time payment, rather than a recurring monthly
+                software subscription.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="faqFourHeading">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqFour"
+                aria-expanded="false" aria-controls="faqFour">
+                Can the system be customized?
+              </button>
+            </h3>
+            <div id="faqFour" class="accordion-collapse collapse" aria-labelledby="faqFourHeading">
+              <div class="accordion-body">
+                Yes. Custom requirements, clinic-specific features, and tailored workflows can be discussed through the
+                custom quote request form.
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1601,285 +1158,40 @@
 
   </main>
 
-  <!-- FOOTER -->
-  <footer class="footer-sphere">
+  <footer class="site-footer">
     <div class="container-xl">
-      <div class="row g-4 mb-5">
-
-        <div class="col-lg-4">
-          <img src="assets/images/logo_user.png" alt="DigiSpherEMR V2" height="56" class="mb-3"
-            style="object-fit:contain;" decoding="async" loading="lazy">
-          <p class="text-secondary small pe-lg-4">
-            DigiSpherEMR V2 is a simple offline-first practice management application for doctors who want patients,
-            consultations, prescriptions, appointments, billing, expenses, revenue, and profit in one place.
-          </p>
-          <a href="https://www.producthunt.com/products/digicareemr?embed=true&amp;utm_source=badge-featured&amp;utm_medium=badge&amp;utm_campaign=badge-digispheremr-v2"
-            target="_blank" rel="noopener noreferrer"><img
-              alt="DigiSpherEMR V2 - Fast, Effortless Practice Management. Zero Complexity.. | Product Hunt" width="250"
-              height="54"
-              src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1258502&amp;theme=dark&amp;t=1790103758184"></a>
-          <br>
-          <a href="https://launchstag.com/p/digispheremr-v2" target="_blank" rel="noopener">
-            <img src="https://launchstag.com/badge-dark.svg" alt="Featured on Launchstag" width="198" height="62" />
-          </a>
-          <div class="d-flex align-items-center gap-3 text-info fs-5 mt-2">
-            <a href="mailto:digispher25@gmail.com" class="text-secondary text-decoration-none"
-              aria-label="Email Support" title="digispher25@gmail.com"><i class="bi bi-envelope-fill text-info"></i></a>
-            <a href="https://wa.me/21623400174" target="_blank" rel="noopener noreferrer"
-              class="text-secondary text-decoration-none" aria-label="WhatsApp Support"
-              title="WhatsApp: +216 23 400 174"><i class="bi bi-whatsapp text-success"></i></a>
-            <a href="https://www.facebook.com/profile.php?id=61579736908309" target="_blank" rel="noopener noreferrer"
-              class="text-secondary text-decoration-none" aria-label="Facebook Page" title="Facebook: Digi Spher"><i
-                class="bi bi-facebook text-primary"></i></a>
-            <a href="https://linkedin.com/company/digispher" target="_blank" rel="noopener noreferrer"
-              class="text-secondary text-decoration-none" aria-label="LinkedIn Company" title="LinkedIn: DigiSpher"><i
-                class="bi bi-linkedin text-info"></i></a>
-            <span class="text-secondary ms-2" aria-label="Windows Native"><i class="bi bi-windows"></i></span>
-            <span class="text-secondary" aria-label="Local SQLite Database"><i class="bi bi-database-check"></i></span>
+      <div class="row align-items-center gy-3">
+        <div class="col-md-6 text-center text-md-start">
+          <div class="d-flex align-items-center justify-content-center justify-content-md-start gap-3">
+            <img src="assets/images/logo_user.png" alt="DigiSpherEMR Logo" height="40" style="object-fit:contain;">
+            <div>
+              <div class="fw-bold text-white">DigiSpherEMR</div>
+              <div class="small text-secondary">Simple practice management for independent doctors</div>
+            </div>
           </div>
         </div>
-
-        <div class="col-6 col-lg-2">
-          <h5 class="text-white fw-bold mb-3 small text-uppercase">Product</h5>
-          <ul class="list-unstyled small">
-            <li class="mb-2"><a href="#featureModules" class="footer-link">Features</a></li>
-            <li class="mb-2"><a href="#offlineBenefits" class="footer-link">Offline Advantage</a></li>
-            <li class="mb-2"><a href="#targetAudience" class="footer-link">Who It's For</a></li>
-            <li class="mb-2"><a href="#techSpecs" class="footer-link">System Requirements</a></li>
-          </ul>
+        <div class="col-md-6 text-center text-md-end">
+          <div class="small text-secondary">
+            <a href="#hero" class="text-info text-decoration-none me-3">Home</a>
+            <a href="#featureModules" class="text-info text-decoration-none me-3">Features</a>
+            <a href="#specialOffer" class="text-info text-decoration-none">Pricing</a>
+          </div>
         </div>
-
-        <div class="col-6 col-lg-2">
-          <h5 class="text-white fw-bold mb-3 small text-uppercase">Workflow</h5>
-          <ul class="list-unstyled small">
-            <li class="mb-2"><a href="#featureModules" class="footer-link">Patient Records</a></li>
-            <li class="mb-2"><a href="#featureModules" class="footer-link">SOAP Notes</a></li>
-            <li class="mb-2"><a href="#featureModules" class="footer-link">Prescriptions</a></li>
-            <li class="mb-2"><a href="#featureModules" class="footer-link">Appointments</a></li>
-            <li class="mb-2"><a href="#featureModules" class="footer-link">Billing &amp; Finances</a></li>
-          </ul>
-        </div>
-
-        <div class="col-6 col-lg-2">
-          <h5 class="text-white fw-bold mb-3 small text-uppercase">Data</h5>
-          <ul class="list-unstyled small">
-            <li class="mb-2"><a href="#offlineBenefits" class="footer-link">Local Database</a></li>
-            <li class="mb-2"><a href="#offlineBenefits" class="footer-link">Rolling Backups</a></li>
-            <li class="mb-2"><a href="#faq" class="footer-link">Data FAQ</a></li>
-            <li class="mb-2"><a href="#quickStart" class="footer-link">Getting Started</a></li>
-          </ul>
-        </div>
-
-        <div class="col-6 col-lg-2">
-          <h5 class="text-white fw-bold mb-3 small text-uppercase">Support & Legal</h5>
-          <ul class="list-unstyled small">
-            <li class="mb-2"><a href="#faq" class="footer-link">FAQ</a></li>
-            <li class="mb-2"><a href="#specialOffer" class="footer-link">Pricing</a></li>
-            <li class="mb-2"><a href="#requestQuote" class="footer-link">Request Quote</a></li>
-            <li class="mb-2"><a href="#" data-bs-toggle="modal" data-bs-target="#helpCenterModal"
-                class="footer-link">Help Center</a></li>
-            <li class="mb-2"><a href="#" data-bs-toggle="modal" data-bs-target="#termsModal" class="footer-link">Terms
-                of Service</a></li>
-            <li class="mb-2"><a href="#" data-bs-toggle="modal" data-bs-target="#privacyModal"
-                class="footer-link">Privacy Policy</a></li>
-            <li class="mb-2"><a href="mailto:digispher25@gmail.com" class="footer-link"><i
-                  class="bi bi-envelope me-1 text-info"></i> digispher25@gmail.com</a></li>
-            <li class="mb-2"><a href="https://wa.me/21623400174" target="_blank" rel="noopener noreferrer"
-                class="footer-link"><i class="bi bi-whatsapp me-1 text-success"></i> +216 23 400 174</a></li>
-          </ul>
-        </div>
-
       </div>
-
-      <div
-        class="border-top border-secondary border-opacity-25 pt-4 d-flex flex-column flex-md-row justify-content-between align-items-center text-muted small">
-        <p class="mb-2 mb-md-0">
-          &copy; 2026 DigiSpher Health Systems. All rights reserved. DigiSpherEMR V2.
-        </p>
-        <div class="d-flex flex-wrap gap-3 justify-content-center">
-          <a href="#" data-bs-toggle="modal" data-bs-target="#termsModal"
-            class="text-secondary text-decoration-none hover-white">Terms of Service</a>
-          <span>&bull;</span>
-          <a href="#" data-bs-toggle="modal" data-bs-target="#privacyModal"
-            class="text-secondary text-decoration-none hover-white">Privacy Policy</a>
-          <span>&bull;</span>
-          <a href="#" data-bs-toggle="modal" data-bs-target="#helpCenterModal"
-            class="text-secondary text-decoration-none hover-white">Help Center</a>
-          <span>&bull;</span>
-          <span>100% Offline Data Sovereignty</span>
+      <div class="footer-divider"></div>
+      <div class="row">
+        <div class="col-12 text-center small text-secondary">
+          &copy; <span id="currentYear"></span> DigiSpher Health Systems. All rights reserved.
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- HELP CENTER MODAL -->
-  <div class="modal fade" id="helpCenterModal" tabindex="-1" aria-labelledby="helpCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
-      <div class="modal-content border border-info border-opacity-25" style="background: #06122d; color: #cbd5e1;">
-        <div class="modal-header border-bottom border-secondary border-opacity-25">
-          <h4 class="modal-title text-white fw-bold h5" id="helpCenterTitle">
-            <i class="bi bi-question-square-fill text-info me-2"></i> DigiSpherEMR Help Center & Resources
-          </h4>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body p-4">
-          <div class="row g-4">
-            <div class="col-md-6">
-              <div class="p-3 rounded bg-dark bg-opacity-50 border border-secondary border-opacity-25 h-100">
-                <h5 class="text-white fw-bold h6 mb-2"><i class="bi bi-rocket-takeoff text-info me-1"></i> Quick Start &
-                  Setup</h5>
-                <p class="small text-secondary mb-0">Download the standalone Windows executable, launch
-                  `DigiSpherEMR.exe`, and complete the 2-minute clinic profile setup.</p>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="p-3 rounded bg-dark bg-opacity-50 border border-secondary border-opacity-25 h-100">
-                <h5 class="text-white fw-bold h6 mb-2"><i class="bi bi-printer text-info me-1"></i> Prescription & A5
-                  Printing</h5>
-                <p class="small text-secondary mb-0">Configure A5 prescription paper dimensions, add doctor signature
-                  images, and customize header details in Settings.</p>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="p-3 rounded bg-dark bg-opacity-50 border border-secondary border-opacity-25 h-100">
-                <h5 class="text-white fw-bold h6 mb-2"><i class="bi bi-database-check text-info me-1"></i> Backup & Data
-                  Migration</h5>
-                <p class="small text-secondary mb-0">DigiSpherEMR creates automatic 7-day rolling backups in your local
-                  application folder upon exit. Use Settings to restore anytime.</p>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="p-3 rounded bg-dark bg-opacity-50 border border-secondary border-opacity-25 h-100">
-                <h5 class="text-white fw-bold h6 mb-2"><i class="bi bi-headset text-info me-1"></i> Priority Support
-                  Desk</h5>
-                <p class="small text-secondary mb-0">Need technical assistance? Email us at <a
-                    href="mailto:digispher25@gmail.com" class="text-info fw-bold">digispher25@gmail.com</a> or WhatsApp
-                  <a href="https://wa.me/21623400174" target="_blank" rel="noopener noreferrer"
-                    class="text-success fw-bold">+216 23 400 174</a> for fast response.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="modal-footer border-top border-secondary border-opacity-25 justify-content-between">
-          <small class="text-muted"><i class="bi bi-shield-check text-success"></i> Standalone Windows Support
-            Desk</small>
-          <button type="button" class="btn btn-sphere-secondary btn-sm px-4" data-bs-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- TERMS OF SERVICE MODAL -->
-  <div class="modal fade" id="termsModal" tabindex="-1" aria-labelledby="termsTitle" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
-      <div class="modal-content border border-info border-opacity-25" style="background: #06122d; color: #cbd5e1;">
-        <div class="modal-header border-bottom border-secondary border-opacity-25">
-          <h4 class="modal-title text-white fw-bold h5" id="termsTitle">
-            <i class="bi bi-file-earmark-text-fill text-info me-2"></i> Terms of Service
-          </h4>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body p-4 small">
-          <h5 class="text-white fw-bold h6 mb-2">1. License Grant & Software Ownership</h5>
-          <p class="mb-3">Upon purchase of DigiSpherEMR V2, DigiSpher Health Systems grants the licensee a perpetual,
-            non-exclusive, non-transferable lifetime license to install and operate the software for private practice
-            management on modern Windows PCs.</p>
-
-          <h5 class="text-white fw-bold h6 mb-2">2. Local Data Sovereignty & Responsibility</h5>
-          <p class="mb-3">DigiSpherEMR operates as a 100% offline application storing data locally in a SQLite database.
-            The licensee maintains full, unencumbered ownership of all patient records and is responsible for
-            maintaining local security, hardware backups, and access credentials.</p>
-
-          <h5 class="text-white fw-bold h6 mb-2">3. Medical Practice & Clinical Liability Disclaimer</h5>
-          <p class="mb-3">DigiSpherEMR is designed exclusively as an administrative workflow, record-keeping, and
-            billing tool. The software does not provide medical diagnoses, treatment decisions, or autonomous clinical
-            evaluations. All medical judgments remain solely the professional responsibility of the licensed physician.
-          </p>
-
-          <h5 class="text-white fw-bold h6 mb-2">4. Payment Terms & Guarantee</h5>
-          <p class="mb-0">The lifetime license is a one-time purchase with zero mandatory recurring subscription fees.
-            All purchases are backed by our 30-Day Money-Back Guarantee.</p>
-        </div>
-        <div class="modal-footer border-top border-secondary border-opacity-25 justify-content-between">
-          <small class="text-muted"><i class="bi bi-check-circle-fill text-success"></i> DigiSpher Health Systems
-            License Agreement</small>
-          <button type="button" class="btn btn-sphere-secondary btn-sm px-4" data-bs-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- PRIVACY POLICY MODAL -->
-  <div class="modal fade" id="privacyModal" tabindex="-1" aria-labelledby="privacyTitle" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
-      <div class="modal-content border border-info border-opacity-25" style="background: #06122d; color: #cbd5e1;">
-        <div class="modal-header border-bottom border-secondary border-opacity-25">
-          <h4 class="modal-title text-white fw-bold h5" id="privacyTitle">
-            <i class="bi bi-shield-lock-fill text-info me-2"></i> Privacy Policy & Data Security
-          </h4>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body p-4 small">
-          <h5 class="text-white fw-bold h6 mb-2">1. Zero Cloud Data Transmission</h5>
-          <p class="mb-3">DigiSpherEMR is engineered on a strict offline-first architecture. All patient health
-            information (PHI), clinical SOAP notes, prescriptions, appointments, and practice financial records remain
-            on your local hard drive and are never uploaded to cloud servers.</p>
-
-          <h5 class="text-white fw-bold h6 mb-2">2. No Telemetry or Usage Tracking</h5>
-          <p class="mb-3">We do not track, collect, sell, or analyze your clinical data, patient counts, financial
-            revenue, or application usage. Your practice operations remain completely confidential and sovereign.</p>
-
-          <h5 class="text-white fw-bold h6 mb-2">3. Doctor Privacy Switch</h5>
-          <p class="mb-3">DigiSpherEMR includes a built-in 1-click Privacy Switch that instantly masks patient surnames
-            and identifying details during screen sharing or patient-facing consultations.</p>
-
-          <h5 class="text-white fw-bold h6 mb-2">4. Support Communications</h5>
-          <p class="mb-0">When contacting technical support via email, any provided diagnostic information is used
-            strictly to resolve your issue and is never shared with third parties.</p>
-        </div>
-        <div class="modal-footer border-top border-secondary border-opacity-25 justify-content-between">
-          <small class="text-muted"><i class="bi bi-shield-shaded text-success"></i> 100% Sovereign Data
-            Guarantee</small>
-          <button type="button" class="btn btn-sphere-secondary btn-sm px-4" data-bs-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- SCREENSHOT LIGHTBOX -->
-  <div class="modal fade screenshot-modal" id="screenshotModal" tabindex="-1" aria-labelledby="modalScreenshotTitle"
-    aria-hidden="true">
-    <div class="modal-dialog modal-xl modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header d-flex justify-content-between align-items-center">
-          <div>
-            <h4 class="modal-title text-white fw-bold h5 mb-1" id="modalScreenshotTitle">DigiSpherEMR Screen Preview
-            </h4>
-            <div class="small text-info" id="modalScreenshotDesc">High-resolution native interface preview</div>
-          </div>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body p-2 p-md-3 text-center bg-black">
-          <img id="modalScreenshotImg" src="" alt="High resolution DigiSpherEMR screenshot"
-            class="img-fluid rounded-2 shadow-lg" style="max-height: 82vh; width: auto;">
-        </div>
-        <div class="modal-footer justify-content-between border-top border-info border-opacity-25 py-2 px-3">
-          <small class="text-muted"><i class="bi bi-info-circle text-info"></i> Genuine screenshot from DigiSpherEMR V2
-            on Windows</small>
-          <button type="button" class="btn btn-sm btn-sphere-secondary py-1 px-3" data-bs-dismiss="modal">Close
-            Preview</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Bootstrap 5.3.3 Bundle with Popper -->
+  <!-- Bootstrap JS Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
-  <!-- Custom DigiSphere Application Logic -->
+  <!-- Custom JS -->
   <script src="assets/js/main.js"></script>
 
 </body>
