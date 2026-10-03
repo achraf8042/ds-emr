@@ -100,7 +100,7 @@ function initRoiCalculator() {
 
   if (!feeSlider || !savedDisplay) return;
 
-  const DIGISPHER_LIFETIME_PRICE = 899; // Lifetime license price shown on the landing page
+  const DIGISPHER_LIFETIME_PRICE = 799; // One PC lifetime license price shown on the landing page
 
   function calculateSavings() {
     const monthlyFee = parseInt(feeSlider.value, 10) || 180;

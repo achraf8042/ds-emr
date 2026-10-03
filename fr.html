@@ -1,0 +1,1662 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<!-- Character Encoding & Mobile Viewport -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+<!-- SEO Primary Meta Tags -->
+<title>DigiSpherEMR V2 | Gestion de cabinet simple et utilisable hors ligne pour les médecins
+  </title>
+<meta content="DigiSpherEMR V2 | Gestion de cabinet simple et utilisable hors ligne pour les médecins" name="title"/>
+<meta content="DigiSpherEMR V2 réunit dossiers patients, rendez-vous, ordonnances, facturation et finances dans une application Windows utilisable hors ligne. La licence deux postes ajoute la gestion des stocks." name="description"/>
+<meta content="DigiSpher EMR, logiciel de dossier médical hors ligne, gestion de cabinet médical, gestion des stocks médicaux, suivi des fournitures, logiciel médical Windows, notes SOAP, ordonnances, facturation médicale, cabinet privé, données médicales locales, licence à vie" name="keywords"/>
+<meta content="DigiSpher Health Systems" name="author"/>
+<meta content="index, follow" name="robots"/>
+<link href="https://ds-emr.digispher.online/fr.html" rel="canonical"/>
+<meta content="#050d22" name="theme-color"/>
+<!-- Open Graph / Facebook / LinkedIn Meta Tags -->
+<meta content="website" property="og:type"/>
+<meta content="https://ds-emr.digispher.online/fr.html" property="og:url"/>
+<meta content="DigiSpherEMR V2 — Gérez votre cabinet simplement." property="og:title"/>
+<meta content="Dossiers patients, rendez-vous, facturation et finances dans une application utilisable hors ligne. La licence deux postes comprend aussi la gestion des stocks." property="og:description"/>
+<meta content="assets/images/screen_dashboard_kpi.png" property="og:image"/>
+<!-- Twitter Meta Tags -->
+<meta content="summary_large_image" property="twitter:card"/>
+<meta content="https://ds-emr.digispher.online/fr.html" property="twitter:url"/>
+<meta content="DigiSpherEMR V2 — Gestion de cabinet simplifiée" property="twitter:title"/>
+<meta content="Gérez dossiers patients et facturation dans une application Windows utilisable hors ligne. La licence deux postes comprend aussi les stocks." property="twitter:description"/>
+<meta content="assets/images/screen_dashboard_kpi.png" property="twitter:image"/>
+<!-- Favicon — all sizes using DS EMR logo -->
+<link href="assets/images/logo_user.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="assets/images/logo_user.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="assets/images/logo_user.png" rel="icon" type="image/png"/>
+<link href="assets/images/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="assets/images/logo_user.png" rel="shortcut icon"/>
+<meta content="assets/images/logo_user.png" name="msapplication-TileImage"/>
+<meta content="#050d22" name="msapplication-TileColor"/>
+<!-- LLMs.txt for AI discovery -->
+<link href="https://ds-emr.digispher.online/llms.txt" rel="llms" type="text/plain"/>
+<!-- Google Fonts: Plus Jakarta Sans & Outfit for Big, Modern Display Typography -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&amp;family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&amp;display=swap" rel="stylesheet"/>
+<!-- Bootstrap 5.3.3 CSS -->
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" rel="stylesheet"/>
+<!-- Bootstrap Icons 1.11.3 -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"/>
+<!-- Custom DigiSphere Stylesheet -->
+<link href="assets/css/style.css" rel="stylesheet"/>
+<!-- Schema.org JSON-LD Structured Data for SEO -->
+<script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "DigiSpherEMR",
+  "operatingSystem": "Windows 10, Windows 11 (64-bit)",
+  "applicationCategory": "MedicalBusinessApplication",
+  "softwareVersion": "2.0",
+  "description": "Application Windows de gestion de cabinet utilisable hors ligne : dossiers patients, rendez-vous, facturation et finances. La licence deux postes comprend aussi la gestion des stocks.",
+  "offers": [
+    {
+      "@type": "Offer",
+      "name": "Licence à vie pour un poste",
+      "description": "Gestion clinique et administrative pour un poste ; module de gestion des stocks non inclus.",
+      "price": "799.00",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "url": "https://digispher.lemonsqueezy.com/checkout/buy/ea88e483-a889-4620-937e-963874151f57?discount=0",
+      "priceValidUntil": "2027-12-31"
+    },
+    {
+      "@type": "Offer",
+      "name": "Licence à vie pour deux postes",
+      "description": "Gestion de cabinet pour deux postes, avec module de gestion des stocks.",
+      "price": "1198.00",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "url": "https://digispher.lemonsqueezy.com/checkout/buy/ac033608-9cff-414c-8169-d2197bc35cad?media=0&desc=0&quantity=2",
+      "priceValidUntil": "2027-12-31"
+    }
+  ],
+  "featureList": [
+    "Gestion des patients",
+    "Consultations",
+    "Dossiers médicaux",
+    "Ordonnances et impression A5",
+    "Rendez-vous",
+    "Facturation et suivi des recettes",
+    "Facturation multidevise",
+    "Gestion des assurances",
+    "Suivi des dépenses",
+    "Gestion des stocks et des mouvements (licence deux postes)",
+    "Suivi du bénéfice et rapports financiers",
+    "Génération de PDF",
+    "Sauvegarde et restauration",
+    "Utilisation hors ligne",
+    "Aucun abonnement logiciel mensuel"
+  ],
+  "author": {
+    "@type": "Organization",
+    "name": "DigiSpher Health Systems"
+  },
+  "inLanguage": "fr"
+}
+  </script>
+<meta content="fr_FR" property="og:locale"/></head>
+<body>
+<div aria-hidden="true" class="sphere-canvas-bg">
+<div class="sphere-orb sphere-orb-1"></div>
+<div class="sphere-orb sphere-orb-2"></div>
+<div class="sphere-orb sphere-orb-3"></div>
+<div class="sphere-grid-overlay"></div>
+</div>
+<header>
+<nav class="navbar navbar-expand-lg navbar-sphere" id="mainNavbar">
+<div class="container-xl">
+<a aria-label="Accueil DigiSpherEMR" class="navbar-brand d-flex align-items-center gap-2" href="#hero">
+<img alt="Logo DigiSpherEMR V2" decoding="async" fetchpriority="high" height="56" src="assets/images/logo_user.png" style="object-fit:contain;"/>
+<span class="navbar-wordmark">DS EMR</span>
+</a>
+<button aria-controls="navbarContent" aria-expanded="false" aria-label="Afficher le menu" class="navbar-toggler border-0 text-white" data-bs-target="#navbarContent" data-bs-toggle="collapse" type="button">
+<i class="bi bi-list fs-2 text-info"></i>
+</button>
+<div class="collapse navbar-collapse" id="navbarContent">
+<ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-1">
+<li class="nav-item"><a class="nav-link nav-link-sphere" href="#videoShowcase">Démo</a></li>
+<li class="nav-item"><a class="nav-link nav-link-sphere" href="#offlineBenefits">Pourquoi DigiSpher</a></li>
+<li class="nav-item"><a class="nav-link nav-link-sphere" href="#featureModules">Fonctionnalités</a></li>
+<li class="nav-item"><a class="nav-link nav-link-sphere" href="#inventory">Stocks</a></li>
+<li class="nav-item"><a class="nav-link nav-link-sphere" href="#specialOffer">Tarifs</a></li>
+<li class="nav-item"><a class="nav-link nav-link-sphere" href="#requestQuote">Demander un devis</a></li>
+<li class="nav-item"><a class="nav-link nav-link-sphere" href="blogs/blogs-list.html">Blog</a></li>
+<li class="nav-item"><a class="nav-link nav-link-sphere" href="#faq">Questions fréquentes</a></li>
+</ul>
+<div class="d-flex align-items-center gap-3 mt-3 mt-lg-0">
+<a class="btn btn-sphere-primary btn-sm px-4 py-2" href="#specialOffer">
+<i class="bi bi-bag-check-fill"></i> Choisir une licence
+            </a>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<main>
+<!-- HERO -->
+<section class="hero-section" id="hero">
+<div class="container-xl">
+<div class="row justify-content-center text-center">
+<div class="col-lg-10 col-xl-9">
+<h1 class="display-hero-title">
+              Gérez votre cabinet rapidement et facilement, sans complexité.
+            </h1>
+<p class="lead lead-hero mx-auto mb-4 text-secondary">
+<strong class="text-white">DigiSpherEMR réunit le dossier médical et la gestion du cabinet</strong> dans une seule application simple et rapide. Gérez vos patients, consultations, ordonnances, rendez-vous, factures, dépenses, recettes et bénéfices sans multiplier les outils. La licence deux postes ajoute la gestion des stocks. <strong class="text-white">Moins de complexité. Moins d'administration. Plus de temps pour les patients.</strong>
+</p>
+<div class="d-flex flex-column align-items-center gap-2 mb-4">
+<div class="h2 text-white fw-bold mb-0">À partir de 799 $ — Licence à vie pour un ou deux postes</div>
+<span class="badge-sphere">
+<i class="bi bi-check2-circle"></i> Dossier médical + gestion du cabinet · Stocks avec la licence deux postes · Aucun abonnement mensuel
+              </span>
+</div>
+<div class="d-flex flex-column flex-sm-row justify-content-center align-items-center gap-3">
+<a class="btn btn-sphere-primary" href="#specialOffer">
+<i class="bi bi-bag-check-fill fs-5"></i> Comparer les licences
+              </a>
+<a class="btn btn-sphere-secondary" href="#videoShowcase">
+<i class="bi bi-play-circle-fill fs-5 text-info"></i> Voir la démo
+              </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- WORKFLOW -->
+<section aria-labelledby="workflowHeading" class="py-5">
+<div class="container-xl">
+<div class="text-center mb-4">
+<span class="badge-sphere mb-2"><i class="bi bi-diagram-3-fill"></i> Un parcours de soins intégré</span>
+<h2 class="section-title" id="workflowHeading">Du patient au bénéfice : un seul parcours.</h2>
+<p class="section-subtitle">
+            Patient → Consultation → Ordonnance → Facture → Dépenses → Bénéfice
+          </p>
+</div>
+<div class="row g-3 justify-content-center">
+<div class="col-6 col-md-4 col-lg">
+<div class="step-card h-100 reveal-on-scroll">
+<div class="step-number-bubble">1</div>
+<h4 class="h5 text-white fw-bold mb-2">Patient</h4>
+<p class="text-secondary small mb-0">Trouvez le dossier et consultez les antécédents.</p>
+</div>
+</div>
+<div class="col-6 col-md-4 col-lg">
+<div class="step-card h-100 reveal-on-scroll">
+<div class="step-number-bubble">2</div>
+<h4 class="h5 text-white fw-bold mb-2">Consultation</h4>
+<p class="text-secondary small mb-0">Consignez les notes, les constantes, les allergies et les autres informations.</p>
+</div>
+</div>
+<div class="col-6 col-md-4 col-lg">
+<div class="step-card h-100 reveal-on-scroll">
+<div class="step-number-bubble">3</div>
+<h4 class="h5 text-white fw-bold mb-2">Ordonnance</h4>
+<p class="text-secondary small mb-0">Créez rapidement une ordonnance professionnelle.</p>
+</div>
+</div>
+<div class="col-6 col-md-4 col-lg">
+<div class="step-card h-100 reveal-on-scroll">
+<div class="step-number-bubble">4</div>
+<h4 class="h5 text-white fw-bold mb-2">Facture</h4>
+<p class="text-secondary small mb-0">Reliez la facturation à la consultation.</p>
+</div>
+</div>
+<div class="col-6 col-md-4 col-lg">
+<div class="step-card h-100 reveal-on-scroll">
+<div class="step-number-bubble">5</div>
+<h4 class="h5 text-white fw-bold mb-2">Bénéfice</h4>
+<p class="text-secondary small mb-0">Visualisez clairement les recettes, les dépenses et le bénéfice.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- VIDEO -->
+<section aria-labelledby="videoSectionTitle" class="video-showcase-section" id="videoShowcase">
+<div class="container-xl">
+<div class="text-center mb-4">
+<span class="badge-sphere mb-2"><i class="bi bi-camera-video-fill"></i> Présentation du produit</span>
+<h2 class="section-title" id="videoSectionTitle">Découvrez le parcours complet avant d'acheter</h2>
+<p class="section-subtitle">
+            Suivez le déroulement habituel du cabinet, du dossier patient et de la consultation à l'ordonnance, aux rendez-vous, à la facturation et aux finances.
+          </p>
+</div>
+<div class="video-cinema-frame reveal-on-scroll">
+<div class="video-cinema-header">
+<div class="video-window-dots">
+<span></span><span></span><span></span>
+</div>
+<div class="d-flex align-items-center gap-2">
+<i class="bi bi-record-circle-fill text-danger fs-6"></i>
+<span class="text-white fw-bold small">DigiSpherEMR V2 — Présentation du produit</span>
+</div>
+<div class="video-placeholder-hint">
+<i class="bi bi-play-circle-fill text-info"></i> Voir la démo
+            </div>
+</div>
+<div class="video-aspect-container" data-video-url="https://www.youtube.com/embed/v8MsU-AODOk?autoplay=1&amp;rel=0" id="videoContainer">
+<div class="video-poster-overlay" id="videoPosterOverlay">
+<button aria-label="Lire la démonstration de DigiSpherEMR" class="video-play-orb border-0" id="playVideoBtn" type="button">
+<i class="bi bi-play-fill"></i>
+</button>
+<h3 class="h4 text-white fw-bold mb-1">Voir la démo de DigiSpherEMR V2</h3>
+<p class="text-info small mb-0"><i class="bi bi-clock-history"></i> Découvrez les fonctions essentielles en action</p>
+</div>
+</div>
+<div class="p-3 px-4 d-flex flex-wrap align-items-center justify-content-between bg-dark bg-opacity-75 border-top border-info border-opacity-25 small text-secondary">
+<div class="d-flex align-items-center gap-3">
+<span><i class="bi bi-check2-circle text-info"></i> Un véritable parcours dans l'application</span>
+<span><i class="bi bi-volume-up text-info"></i> Présentation commentée</span>
+</div>
+<div class="text-info small">
+<i class="bi bi-youtube text-danger"></i> Présentation officielle de DigiSpherEMR
+            </div>
+</div>
+</div>
+</div>
+</section>
+<!-- CORE BENEFITS -->
+<section aria-labelledby="offlineHeading" class="offline-section" id="offlineBenefits">
+<div class="container-xl">
+<div class="text-center mb-5">
+<span class="badge-sphere badge-offline mb-2">
+<i class="bi bi-shield-check"></i> Une gestion de cabinet simplifiée
+          </span>
+<h2 class="section-title" id="offlineHeading">Tout ce dont votre cabinet a besoin, sans complexité.</h2>
+<p class="section-subtitle">
+            Vous avez déjà beaucoup à gérer. DigiSpherEMR réunit les tâches cliniques et administratives dans un parcours clair, sans multiplier les applications, les tableurs et les systèmes isolés.
+          </p>
+</div>
+<div class="row g-4 mb-5">
+<div class="col-md-6 col-lg-4">
+<div class="glass-card reveal-on-scroll">
+<div class="feature-icon-orb"><i class="bi bi-people-fill"></i></div>
+<h3 class="h4 text-white fw-bold mb-3">Tous les patients au même endroit</h3>
+<p class="text-secondary">
+                Trouvez le patient, ouvrez son dossier, consultez ses antécédents et poursuivez la visite sans navigation inutile.
+              </p>
+<div class="d-flex align-items-center gap-2 text-info small fw-bold mt-3">
+<i class="bi bi-check2"></i> Moins de recherches entre les tâches
+              </div>
+</div>
+</div>
+<div class="col-md-6 col-lg-4">
+<div class="glass-card reveal-on-scroll">
+<div class="feature-icon-orb"><i class="bi bi-clipboard2-pulse-fill"></i></div>
+<h3 class="h4 text-white fw-bold mb-3">Des consultations liées au dossier</h3>
+<p class="text-secondary">
+                Consignez les notes, les constantes, les allergies, les antécédents médicaux et les détails de la consultation dans le même espace que le dossier patient.
+              </p>
+<div class="d-flex align-items-center gap-2 text-info small fw-bold mt-3">
+<i class="bi bi-check2"></i> Du patient à la consultation
+              </div>
+</div>
+</div>
+<div class="col-md-6 col-lg-4">
+<div class="glass-card reveal-on-scroll">
+<div class="feature-icon-orb"><i class="bi bi-prescription2"></i></div>
+<h3 class="h4 text-white fw-bold mb-3">Des ordonnances sans complications</h3>
+<p class="text-secondary">
+                Ajoutez les médicaments et les posologies, puis générez une ordonnance professionnelle sans parcourir de menus complexes.
+              </p>
+<div class="d-flex align-items-center gap-2 text-info small fw-bold mt-3">
+<i class="bi bi-check2"></i> Ordonnances prêtes à imprimer
+              </div>
+</div>
+</div>
+<div class="col-md-6 col-lg-4">
+<div class="glass-card reveal-on-scroll">
+<div class="feature-icon-orb"><i class="bi bi-receipt-cutoff"></i></div>
+<h3 class="h4 text-white fw-bold mb-3">Une facturation liée à la visite</h3>
+<p class="text-secondary">
+                Créez la facture et associez le suivi financier aux soins dispensés, sans gérer la facturation ailleurs.
+              </p>
+<div class="d-flex align-items-center gap-2 text-info small fw-bold mt-3">
+<i class="bi bi-check2"></i> Soins et facturation réunis
+              </div>
+</div>
+</div>
+<div class="col-md-6 col-lg-4">
+<div class="glass-card reveal-on-scroll">
+<div class="feature-icon-orb"><i class="bi bi-wallet2"></i></div>
+<h3 class="h4 text-white fw-bold mb-3">Des dépenses visibles</h3>
+<p class="text-secondary">
+                Enregistrez les dépenses du cabinet et sachez où va votre argent sans tenir un tableur distinct pour chaque coût.
+              </p>
+<div class="d-flex align-items-center gap-2 text-info small fw-bold mt-3">
+<i class="bi bi-check2"></i> Les coûts et les recettes au même endroit
+              </div>
+</div>
+</div>
+<div class="col-md-6 col-lg-4">
+<div class="glass-card reveal-on-scroll">
+<div class="feature-icon-orb"><i class="bi bi-graph-up-arrow"></i></div>
+<h3 class="h4 text-white fw-bold mb-3">Un bénéfice lisible</h3>
+<p class="text-secondary">
+                Suivez les recettes, les dépenses et le bénéfice avec des rapports simples qui vous aident à comprendre la santé financière de votre cabinet.
+              </p>
+<div class="d-flex align-items-center gap-2 text-info small fw-bold mt-3">
+<i class="bi bi-check2"></i> Recettes moins dépenses
+              </div>
+</div>
+</div>
+</div>
+<div class="pillar-banner-card reveal-on-scroll">
+<div class="row align-items-center">
+<div class="col-lg-8">
+<span class="badge-sphere badge-offline mb-2">L'idée essentielle</span>
+<h3 class="h2 text-white fw-bold mb-3">Une application. Un parcours. Un seul endroit pour gérer votre cabinet.
+              </h3>
+<p class="text-secondary mb-0">
+                DigiSpherEMR relie les soins aux patients, les rendez-vous, la facturation, les dépenses, les recettes et le bénéfice pour réunir toutes les activités du cabinet.
+              </p>
+</div>
+<div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+<a class="btn btn-sphere-primary" href="#specialOffer">
+<i class="bi bi-bag-check"></i> Obtenir DigiSpherEMR
+              </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FEATURES -->
+<section aria-labelledby="featuresHeading" class="feature-showcase-section" id="featureModules">
+<div class="container-xl">
+<div class="text-center mb-5">
+<span class="badge-sphere mb-2"><i class="bi bi-grid-1x2-fill"></i> Une suite complète pour votre cabinet</span>
+<h2 class="section-title" id="featuresHeading">Tout le nécessaire pour vos activités quotidiennes</h2>
+<p class="section-subtitle">
+            Le produit est conçu autour des tâches quotidiennes des praticiens indépendants, en réunissant le parcours clinique et administratif dans une seule application.
+          </p>
+</div>
+<div class="row align-items-center g-5 mb-5 pb-4">
+<div class="col-lg-6 order-lg-2">
+<div class="app-screen-frame" data-zoom-desc="Tableau de bord présentant les informations cliniques, les rendez-vous et les finances." data-zoom-screen="assets/images/screen_dashboard_kpi.png" data-zoom-title="Tableau de bord DigiSpher EMR">
+<img alt="Tableau de bord du cabinet DigiSpher EMR" class="app-screen-img" decoding="async" loading="lazy" src="assets/images/screen_dashboard_kpi.png"/>
+<div class="screen-zoom-hint"><i class="bi bi-arrows-fullscreen"></i> Cliquez pour agrandir la capture</div>
+</div>
+</div>
+<div class="col-lg-6 order-lg-1 reveal-on-scroll">
+<span class="badge-sphere mb-2"><i class="bi bi-speedometer"></i> Tableau de bord</span>
+<h3 class="h2 text-white fw-bold mb-3">Votre cabinet en un coup d'œil</h3>
+<p class="text-secondary">
+              Commencez la journée avec une vue pratique des informations essentielles.
+            </p>
+<ul class="feature-check-list">
+<li><strong>Indicateurs du cabinet :</strong> Patients actifs, notes du jour, recettes encaissées, rendez-vous et planning hebdomadaire.</li>
+<li><strong>Activité clinique :</strong> Consultations récentes, ordonnances et accès rapide aux dossiers.</li>
+<li><strong>Situation financière :</strong> État de la facturation en un coup d'œil : factures réglées, brouillons et impayés.</li>
+<li><strong>Mode confidentialité :</strong> Masquez rapidement les noms de famille des patients lorsque cela est nécessaire.</li>
+</ul>
+</div>
+</div>
+<div class="row align-items-center g-5 mb-5 pb-4">
+<div class="col-lg-6">
+<div class="app-screen-frame" data-zoom-desc="Actions rapides pour les patients, les visites, les notes cliniques, les ordonnances, les factures et les finances." data-zoom-screen="assets/images/screen_dashboard_dock.png" data-zoom-title="Actions rapides du cabinet">
+<img alt="Actions rapides dans DigiSpher EMR" class="app-screen-img" decoding="async" loading="lazy" src="assets/images/screen_dashboard_dock.png"/>
+<div class="screen-zoom-hint"><i class="bi bi-arrows-fullscreen"></i> Cliquez pour agrandir la capture</div>
+</div>
+</div>
+<div class="col-lg-6 reveal-on-scroll">
+<span class="badge-sphere mb-2"><i class="bi bi-lightning-fill"></i> Actions rapides</span>
+<h3 class="h2 text-white fw-bold mb-3">Vos tâches fréquentes à portée de clic</h3>
+<p class="text-secondary">
+              Le panneau de commandes garde les actions cliniques et administratives courantes à portée de main.
+            </p>
+<ul class="feature-check-list">
+<li><strong>Nouveau patient :</strong> Créez rapidement un dossier et saisissez les informations du patient.</li>
+<li><strong>Planifier une visite :</strong> Programmez un rendez-vous avec son motif et son statut.</li>
+<li><strong>Note clinique :</strong> Ouvrez rapidement une consultation structurée selon la méthode SOAP.</li>
+<li><strong>Rédiger une ordonnance :</strong> Créez des ordonnances comprenant plusieurs médicaments avec accès aux informations sur les allergies.</li>
+<li><strong>Émettre une facture :</strong> Créez des factures patient détaillées.</li>
+<li><strong>Finances du cabinet :</strong> Accédez aux rapports financiers.</li>
+</ul>
+</div>
+</div>
+<div class="row align-items-center g-5 mb-5 pb-4">
+<div class="col-lg-6 order-lg-2">
+<div class="app-screen-frame" data-zoom-desc="Dossier patient comprenant les allergies, les constantes, les consultations et les antécédents." data-zoom-screen="assets/images/screen_patient360_soap.png" data-zoom-title="Dossier patient complet">
+<img alt="Dossier médical du patient dans DigiSpher EMR" class="app-screen-img" decoding="async" loading="lazy" src="assets/images/screen_patient360_soap.png"/>
+<div class="screen-zoom-hint"><i class="bi bi-arrows-fullscreen"></i> Cliquez pour agrandir la capture</div>
+</div>
+</div>
+<div class="col-lg-6 order-lg-1 reveal-on-scroll">
+<span class="badge-sphere mb-2"><i class="bi bi-person-lines-fill"></i> Dossiers patients</span>
+<h3 class="h2 text-white fw-bold mb-3">Toute l'histoire du patient au même endroit</h3>
+<p class="text-secondary">
+              Retrouvez les informations nécessaires à une consultation dans une vue unique du patient.
+            </p>
+<ul class="feature-check-list">
+<li><strong>Profil du patient :</strong> Identité, coordonnées et personne à contacter en cas d'urgence.
+              </li>
+<li><strong>Informations sur les allergies :</strong> Alertes d'allergie bien visibles, avec niveaux de gravité.</li>
+<li><strong>Historique des constantes :</strong> Tension artérielle, fréquence cardiaque, température, poids, taille, SpO2, fréquence respiratoire et IMC.</li>
+<li><strong>Vue longitudinale :</strong> Consultations, ordonnances, rendez-vous et factures associés au patient.</li>
+</ul>
+</div>
+</div>
+<div class="row align-items-center g-5 mb-5 pb-4">
+<div class="col-lg-6">
+<div class="app-screen-frame" data-zoom-desc="Répertoire consultable pour retrouver rapidement les dossiers patients." data-zoom-screen="assets/images/screen_patient_directory.png" data-zoom-title="Répertoire des patients">
+<img alt="Répertoire des patients dans DigiSpher EMR" class="app-screen-img" decoding="async" loading="lazy" src="assets/images/screen_patient_directory.png"/>
+<div class="screen-zoom-hint"><i class="bi bi-arrows-fullscreen"></i> Cliquez pour agrandir la capture</div>
+</div>
+</div>
+<div class="col-lg-6 reveal-on-scroll">
+<span class="badge-sphere mb-2"><i class="bi bi-file-medical-fill"></i> Documentation clinique</span>
+<h3 class="h2 text-white fw-bold mb-3">Des notes SOAP structurées, sans complexité superflue</h3>
+<p class="text-secondary">
+              Documentez les consultations selon une structure clinique familière et retrouvez facilement les notes précédentes.
+            </p>
+<ul class="feature-check-list">
+<li><strong>Méthode SOAP :</strong> Champs Subjectif, Objectif, Évaluation et Plan.</li>
+<li><strong>Modèles cliniques :</strong> Consultations générales, examens annuels, suivis et évaluations courantes.</li>
+<li><strong>Brouillons et notes finalisées :</strong> Rédigez un brouillon, puis finalisez les notes avec horodatage.</li>
+<li><strong>Recherche :</strong> Retrouvez rapidement les dossiers patients et les notes cliniques précédentes.</li>
+</ul>
+</div>
+</div>
+<div class="row align-items-center g-5 mb-5 pb-4">
+<div class="col-lg-6 order-lg-2">
+<div class="glass-card p-4 border-info border-opacity-50 reveal-on-scroll">
+<div class="d-flex align-items-center justify-content-between pb-3 border-bottom border-secondary border-opacity-25 mb-3">
+<div class="d-flex align-items-center gap-2">
+<i class="bi bi-file-earmark-pdf-fill text-danger fs-3"></i>
+<div>
+<div class="fw-bold text-white">Générateur d'ordonnances A5</div>
+<div class="small text-muted">PDF prêt à imprimer</div>
+</div>
+</div>
+<span class="badge bg-success px-3 py-2">PDF et impression</span>
+</div>
+<div class="p-3 rounded-3 bg-white text-dark shadow-sm">
+<div class="d-flex justify-content-between border-bottom pb-2 mb-2">
+<div>
+<h6 class="fw-bold mb-0">Clinique DigiSpher</h6>
+<small class="text-muted">Informations sur le médecin et la clinique</small>
+</div>
+<div class="text-end">
+<small class="fw-bold text-uppercase text-secondary">Ordonnance</small>
+</div>
+</div>
+<div class="py-2 border-bottom small">
+<strong>Patient :</strong> Nom du patient  |  <strong>Date :</strong> Date de visite
+                </div>
+<div class="table-responsive my-2">
+<table class="table table-sm table-borderless small mb-0">
+<thead>
+<tr class="border-bottom text-muted">
+<th>Médicament</th>
+<th>Posologie</th>
+<th>Fréquence</th>
+<th>Durée</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="fw-bold">Médicament</td>
+<td>Posologie</td>
+<td>Fréquence</td>
+<td>Durée</td>
+</tr>
+<tr>
+<td class="fw-bold">Médicament</td>
+<td>Posologie</td>
+<td>Fréquence</td>
+<td>Durée</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="border-top pt-2 d-flex justify-content-between align-items-end">
+<small class="text-muted fst-italic">Généré par DigiSpher EMR</small>
+<div class="text-center" style="width: 120px; border-top: 1px solid #94a3b8;">
+<small class="text-muted">Signature du médecin</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-6 order-lg-1 reveal-on-scroll">
+<span class="badge-sphere mb-2"><i class="bi bi-prescription2"></i> Ordonnances</span>
+<h3 class="h2 text-white fw-bold mb-3">Créez des ordonnances A5 professionnelles en quelques secondes</h3>
+<p class="text-secondary">
+              Rédigez les ordonnances dans le parcours clinique et générez des documents A5 clairs, prêts à imprimer.
+            </p>
+<ul class="feature-check-list">
+<li><strong>Plusieurs médicaments :</strong> Ajoutez le médicament, la posologie, la voie d'administration, la fréquence et la durée.</li>
+<li><strong>Informations sur les allergies :</strong> Consultez les allergies connues du patient pendant la prescription.</li>
+<li><strong>Identité visuelle de la clinique :</strong> Configurez les informations de la clinique et du médecin pour les documents générés.
+              </li>
+<li><strong>PDF et impression :</strong> Générez des ordonnances PDF A5 et imprimez-les depuis Windows.</li>
+</ul>
+</div>
+</div>
+<div class="row align-items-center g-5 mb-5 pb-4">
+<div class="col-lg-6">
+<div class="app-screen-frame" data-zoom-desc="Calendrier des rendez-vous avec détails et statuts des visites." data-zoom-screen="assets/images/screen_appointment_calendar.png" data-zoom-title="Calendrier des rendez-vous">
+<img alt="Calendrier des rendez-vous dans DigiSpher EMR" class="app-screen-img" decoding="async" loading="lazy" src="assets/images/screen_appointment_calendar.png"/>
+<div class="screen-zoom-hint"><i class="bi bi-arrows-fullscreen"></i> Cliquez pour agrandir la capture</div>
+</div>
+</div>
+<div class="col-lg-6 reveal-on-scroll">
+<span class="badge-sphere mb-2"><i class="bi bi-calendar3"></i> Planification</span>
+<h3 class="h2 text-white fw-bold mb-3">Gardez vos rendez-vous organisés</h3>
+<p class="text-secondary">
+              Gérez les visites programmées dans la même application que vos dossiers patients.
+            </p>
+<ul class="feature-check-list">
+<li><strong>Détails de la visite :</strong> Patient, date, heure, médecin et motif.</li>
+<li><strong>Suivi du statut :</strong> Programmé, confirmé, en cours, terminé, annulé ou patient absent.</li>
+<li><strong>Vues chronologiques :</strong> Consultez les rendez-vous du jour, le planning hebdomadaire ou l'activité mensuelle.</li>
+</ul>
+</div>
+</div>
+<div class="row align-items-center g-5">
+<div class="col-lg-6 order-lg-2">
+<div class="glass-card p-4 border-info border-opacity-50 reveal-on-scroll">
+<div class="d-flex align-items-center justify-content-between pb-3 border-bottom border-secondary border-opacity-25 mb-4">
+<div class="d-flex align-items-center gap-2">
+<i class="bi bi-cash-stack text-success fs-3"></i>
+<div>
+<div class="fw-bold text-white">Finances du cabinet</div>
+<div class="small text-muted">Recettes, dépenses et facturation</div>
+</div>
+</div>
+<span class="badge bg-primary px-3 py-2"><i class="bi bi-filetype-csv"></i> Export CSV</span>
+</div>
+<div class="row g-3 mb-4 text-center">
+<div class="col-4">
+<div class="p-2 rounded-3 bg-dark bg-opacity-75 border border-success border-opacity-25">
+<div class="small text-muted">Recettes</div>
+<div class="fw-bold text-success fs-5">$580</div>
+</div>
+</div>
+<div class="col-4">
+<div class="p-2 rounded-3 bg-dark bg-opacity-75 border border-danger border-opacity-25">
+<div class="small text-muted">Dépenses</div>
+<div class="fw-bold text-danger fs-5">$120</div>
+</div>
+</div>
+<div class="col-4">
+<div class="p-2 rounded-3 bg-dark bg-opacity-75 border border-info border-opacity-25">
+<div class="small text-muted">Solde net</div>
+<div class="fw-bold text-info fs-5">+$460</div>
+</div>
+</div>
+</div>
+<div class="p-3 rounded-3 bg-dark bg-opacity-50 border border-secondary border-opacity-25 small text-secondary">
+<div class="d-flex justify-content-between mb-2">
+<span><i class="bi bi-receipt text-info"></i> Facturation des patients</span>
+<span class="text-white fw-bold">Inclus</span>
+</div>
+<div class="d-flex justify-content-between mb-2">
+<span><i class="bi bi-tags text-warning"></i> Suivi des dépenses</span>
+<span class="text-white fw-bold">Inclus</span>
+</div>
+<div class="d-flex justify-content-between">
+<span><i class="bi bi-download text-success"></i> Export CSV pour votre comptable</span>
+<span class="text-white fw-bold">1 clic</span>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-6 order-lg-1 reveal-on-scroll">
+<span class="badge-sphere mb-2"><i class="bi bi-graph-up-arrow"></i> Facturation et finances</span>
+<h3 class="h2 text-white fw-bold mb-3">Comprenez les finances de votre cabinet</h3>
+<p class="text-secondary">
+              Gérez la facturation des patients, les dépenses, les recettes et les rapports du cabinet dans le même parcours que les soins.
+            </p>
+<ul class="feature-check-list">
+<li><strong>Factures des patients :</strong> Créez des factures détaillées et des reçus.</li>
+<li><strong>Prise en charge multidevise :</strong> Gérez la facturation dans plusieurs devises.</li>
+<li><strong>Gestion des assurances :</strong> Conservez les informations d'assurance dans le parcours de facturation.</li>
+<li><strong>Suivi des dépenses :</strong> Enregistrez les frais du cabinet : loyer, fournitures, services, équipements, personnel et logiciels.</li>
+<li><strong>Rapports financiers :</strong> Consultez les recettes, les dépenses, les montants en attente et le bénéfice.</li>
+<li><strong>Export CSV :</strong> Exportez des données financières organisées pour vos tableurs et votre comptable.
+              </li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- STOCKS -->
+<section class="feature-showcase-section" id="inventory" aria-labelledby="inventoryHeading">
+<div class="container-xl">
+<div class="text-center mb-5">
+<span class="badge-sphere mb-2"><i class="bi bi-box-seam-fill"></i> Gestion des stocks</span>
+<h2 id="inventoryHeading" class="section-title">Sachez ce qui est disponible, ce qui manque et ce qui a été utilisé</h2>
+<p class="section-subtitle">Avec la licence deux postes, suivez les fournitures médicales et les médicaments, de la réception des lots à chaque mouvement de stock.</p>
+</div>
+<div class="row align-items-center g-5 mb-5 pb-4">
+<div class="col-lg-6 order-lg-2">
+<div class="app-screen-frame" data-zoom-screen="assets/images/screen_inventory_items.png" data-zoom-title="Articles en stock" data-zoom-desc="Consultez les articles, les quantités, les seuils minimums et les alertes de stock faible.">
+<img src="assets/images/screen_inventory_items.png" alt="Articles en stock dans DigiSpherEMR, avec totaux et alertes de stock faible" class="app-screen-img" loading="lazy" decoding="async">
+<div class="screen-zoom-hint"><i class="bi bi-arrows-fullscreen"></i> Cliquez pour agrandir la capture</div>
+</div>
+</div>
+<div class="col-lg-6 order-lg-1 reveal-on-scroll">
+<span class="badge-sphere mb-2"><i class="bi bi-boxes"></i> Articles et niveaux de stock</span>
+<h3 class="h2 text-white fw-bold mb-3">Repérez les ruptures avant qu'elles ne gênent les soins</h3>
+<p class="text-secondary">Consultez le nombre d'articles, les stocks faibles et les produits proches de leur date de péremption dans un seul espace.</p>
+<ul class="feature-check-list">
+<li><strong>Vue claire des stocks :</strong> Consultez les quantités, les catégories, les seuils minimums et les statuts.</li>
+<li><strong>Actions quotidiennes :</strong> Réceptionnez, ajustez, retirez, délivrez et utilisez les articles depuis leur fiche.</li>
+<li><strong>Réapprovisionnement :</strong> Repérez les articles à surveiller sans tableur séparé.</li>
+</ul>
+</div>
+</div>
+<div class="row align-items-center g-5 mb-5 pb-4">
+<div class="col-lg-6">
+<div class="app-screen-frame" data-zoom-screen="assets/images/screen_inventory_batches.png" data-zoom-title="Lots en stock" data-zoom-desc="Consultez les lots, les quantités, les dates de péremption, les fournisseurs et les dates de réception.">
+<img src="assets/images/screen_inventory_batches.png" alt="Lots dans DigiSpherEMR avec quantités, dates de péremption et fournisseurs" class="app-screen-img" loading="lazy" decoding="async">
+<div class="screen-zoom-hint"><i class="bi bi-arrows-fullscreen"></i> Cliquez pour agrandir la capture</div>
+</div>
+</div>
+<div class="col-lg-6 reveal-on-scroll">
+<span class="badge-sphere mb-2"><i class="bi bi-calendar-check"></i> Lots et péremption</span>
+<h3 class="h2 text-white fw-bold mb-3">Gardez les détails de chaque lot à portée de main</h3>
+<p class="text-secondary">Suivez les lots de chaque article pour consulter ensemble les quantités, les dates de péremption, les fournisseurs et les dates de réception.</p>
+<ul class="feature-check-list">
+<li><strong>Fiches de lot :</strong> Consultez la quantité et la date de péremption de chaque lot.</li>
+<li><strong>Informations fournisseur :</strong> Conservez le fournisseur et la date de réception avec le stock.</li>
+<li><strong>Filtrage rapide :</strong> Limitez la liste aux lots de l'article recherché.</li>
+</ul>
+</div>
+</div>
+<div class="row align-items-center g-5">
+<div class="col-lg-6 order-lg-2">
+<div class="app-screen-frame" data-zoom-screen="assets/images/screen_inventory_movements.png" data-zoom-title="Mouvements de stock" data-zoom-desc="Suivez les entrées et les sorties avec les quantités, références, utilisateurs et notes.">
+<img src="assets/images/screen_inventory_movements.png" alt="Historique des mouvements de stock entrants et sortants dans DigiSpherEMR" class="app-screen-img" loading="lazy" decoding="async">
+<div class="screen-zoom-hint"><i class="bi bi-arrows-fullscreen"></i> Cliquez pour agrandir la capture</div>
+</div>
+</div>
+<div class="col-lg-6 order-lg-1 reveal-on-scroll">
+<span class="badge-sphere mb-2"><i class="bi bi-arrow-left-right"></i> Historique des mouvements</span>
+<h3 class="h2 text-white fw-bold mb-3">Retrouvez l'origine de chaque changement de stock</h3>
+<p class="text-secondary">Consultez les entrées et les sorties avec les anciennes et nouvelles quantités, les références, les utilisateurs et les notes.</p>
+<ul class="feature-check-list">
+<li><strong>Changements traçables :</strong> Suivez les réceptions, les délivrances et les ajustements dans un seul historique.</li>
+<li><strong>Filtres utiles :</strong> Recherchez les mouvements par type, date ou article.</li>
+<li><strong>Meilleur passage de relais :</strong> Partagez une vue des mouvements récents avec votre équipe.</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- DATA / BACKUP -->
+<section aria-labelledby="dataControlHeading" class="py-5">
+<div class="container-xl">
+<div class="pillar-banner-card reveal-on-scroll">
+<div class="row align-items-center g-5">
+<div class="col-lg-6">
+<span class="badge-sphere badge-offline mb-2"><i class="bi bi-wifi-off"></i> Gestion de cabinet utilisable hors ligne</span>
+<h2 class="section-title mb-3" id="dataControlHeading">Vos données. Votre cabinet. Votre contrôle.</h2>
+<p class="text-secondary">
+                DigiSpherEMR est conçu pour que les activités essentielles de votre cabinet ne dépendent pas d'une connexion Internet. Travaillez localement et gardez le contrôle de vos données au quotidien.
+              </p>
+<p class="text-secondary mb-0">
+                Les données médicales et financières exigent une attention particulière. Le travail en local conserve vos dossiers patients et les données du cabinet dans votre environnement, sans dépendre d'un service distant pour l'usage quotidien.
+              </p>
+</div>
+<div class="col-lg-6">
+<div class="row g-3">
+<div class="col-sm-6">
+<div class="command-dock-card h-100">
+<div class="fw-bold text-white mb-1"><i class="bi bi-wifi-off text-info"></i> Travaillez hors ligne</div>
+<div class="card-desc">Vos activités quotidiennes ne nécessitent pas de connexion Internet permanente.</div>
+</div>
+</div>
+<div class="col-sm-6">
+<div class="command-dock-card h-100">
+<div class="fw-bold text-white mb-1"><i class="bi bi-hdd text-success"></i> Conservez vos données en local</div>
+<div class="card-desc">Les données du cabinet sont stockées localement sur votre ordinateur.</div>
+</div>
+</div>
+<div class="col-sm-6">
+<div class="command-dock-card h-100">
+<div class="fw-bold text-white mb-1"><i class="bi bi-arrow-repeat text-warning"></i> Sauvegarde et restauration</div>
+<div class="card-desc">Créez des sauvegardes et restaurez les données du cabinet si nécessaire.</div>
+</div>
+</div>
+<div class="col-sm-6">
+<div class="command-dock-card h-100">
+<div class="fw-bold text-white mb-1"><i class="bi bi-credit-card text-primary"></i> Aucuns frais de cloud imposés</div>
+<div class="card-desc">Votre cabinet doit continuer à fonctionner même sans Internet.</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- AUDIENCE -->
+<section aria-labelledby="audienceHeading" class="py-5" id="targetAudience">
+<div class="container-xl">
+<div class="text-center mb-5">
+<span class="badge-sphere mb-2"><i class="bi bi-people-fill"></i> Conçu pour les médecins indépendants</span>
+<h2 class="section-title" id="audienceHeading">Un logiciel pratique pour les cabinets privés</h2>
+<p class="section-subtitle">
+            DigiSpherEMR s'adresse aux médecins qui souhaitent un système utile sans la complexité des logiciels hospitaliers.
+          </p>
+</div>
+<div class="row g-4">
+<div class="col-md-6 col-lg-3 d-flex">
+<div class="audience-card w-100 reveal-on-scroll">
+<div class="d-flex align-items-center gap-3 mb-3">
+<div class="audience-icon-orb flex-shrink-0"><i class="bi bi-person-badge-fill"></i></div>
+<div>
+<h4 class="h5 text-white fw-bold mb-0">Médecins indépendants</h4>
+<span class="badge-audience-spec">Un parcours quotidien complet</span>
+</div>
+</div>
+<div class="audience-card-body">
+<p class="audience-desc">Gérez les patients, les visites, les ordonnances, les rendez-vous, la facturation et les finances dans une seule application.</p>
+</div>
+</div>
+</div>
+<div class="col-md-6 col-lg-3 d-flex">
+<div class="audience-card w-100 reveal-on-scroll">
+<div class="d-flex align-items-center gap-3 mb-3">
+<div class="audience-icon-orb flex-shrink-0"><i class="bi bi-hospital-fill"></i></div>
+<div>
+<h4 class="h5 text-white fw-bold mb-0">Cabinets privés</h4>
+<span class="badge-audience-spec">Clinique et finances réunies</span>
+</div>
+</div>
+<div class="audience-card-body">
+<p class="audience-desc">Gardez les dossiers médicaux et les finances du cabinet au même endroit.</p>
+</div>
+</div>
+</div>
+<div class="col-md-6 col-lg-3 d-flex">
+<div class="audience-card w-100 reveal-on-scroll">
+<div class="d-flex align-items-center gap-3 mb-3">
+<div class="audience-icon-orb flex-shrink-0"><i class="bi bi-building-fill-check"></i></div>
+<div>
+<h4 class="h5 text-white fw-bold mb-0">Petites cliniques</h4>
+<span class="badge-audience-spec">Une administration simplifiée</span>
+</div>
+</div>
+<div class="audience-card-body">
+<p class="audience-desc">Organisez clairement les patients, les consultations, les rendez-vous, la facturation, les dépenses et les rapports.</p>
+</div>
+</div>
+</div>
+<div class="col-md-6 col-lg-3 d-flex">
+<div class="audience-card w-100 reveal-on-scroll">
+<div class="d-flex align-items-center gap-3 mb-3">
+<div class="audience-icon-orb flex-shrink-0"><i class="bi bi-journal-medical"></i></div>
+<div>
+<h4 class="h5 text-white fw-bold mb-0">Passage du papier au numérique</h4>
+<span class="badge-audience-spec">Une transition numérique facile</span>
+</div>
+</div>
+<div class="audience-card-body">
+<p class="audience-desc">Commencez à gérer votre cabinet sur ordinateur sans adopter un système d'entreprise écrasant.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="text-center mt-5">
+<p class="text-secondary small mb-2">
+<i class="bi bi-info-circle text-info"></i>
+            Plus de fonctionnalités ne signifie pas toujours mieux. DigiSpherEMR facilite l'essentiel.
+          </p>
+</div>
+</div>
+</section>
+<!-- PRICING -->
+<section aria-labelledby="offerHeading" class="offers-section" id="specialOffer">
+<div class="container-xl">
+<div class="text-center mb-5">
+<span class="badge-sphere mb-2"><i class="bi bi-credit-card-2-front-fill"></i> Aucun abonnement mensuel</span>
+<h2 class="section-title" id="offerHeading">Un paiement. Votre système de gestion de cabinet.</h2>
+<p class="section-subtitle">Choisissez un poste si vous exercez seul, ou deux postes avec gestion des stocks si vous travaillez avec un secrétariat. Les deux licences à vie se paient une seule fois.</p>
+</div>
+<div class="row g-4 justify-content-center align-items-stretch">
+<div class="col-lg-6">
+<div class="offer-card-master reveal-on-scroll text-center h-100">
+<div class="offer-floating-tag">
+<i class="bi bi-person-fill"></i> Médecin seul
+              </div>
+<span class="badge-sphere mb-2">
+<i class="bi bi-award-fill"></i> DigiSpherEMR V2
+              </span>
+<h3 class="h1 text-white fw-bold mb-2">Licence pour un poste</h3>
+<p class="text-secondary">Les fonctions cliniques et de gestion essentielles pour un médecin qui travaille sur un ordinateur.</p>
+<div class="offer-price-stack">
+<span class="offer-price-current">799 $</span>
+<span class="offer-price-period">Paiement unique</span>
+</div>
+<p class="text-success fw-bold small mb-4">
+<i class="bi bi-check-circle-fill"></i> Un poste sous licence. Aucun abonnement logiciel mensuel.
+              </p>
+<ul class="offer-feature-list text-start mb-4">
+<li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Gestion des patients</li>
+<li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Consultations</li>
+<li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Dossiers médicaux</li>
+<li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Ordonnances et impression A5</li>
+<li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Rendez-vous</li>
+<li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Factures et suivi des recettes</li>
+<li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Prise en charge multidevise</li>
+<li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Gestion des assurances</li>
+<li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Suivi des dépenses et du bénéfice</li>
+<li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Génération de PDF et sauvegardes</li>
+</ul>
+<p class="text-secondary small mb-4"><i class="bi bi-info-circle" aria-hidden="true"></i> Le module de gestion des stocks n'est pas inclus dans la licence un poste.</p>
+<div class="mb-3 d-flex flex-column flex-sm-row justify-content-center gap-3 align-items-center">
+<a class="btn btn-sphere-primary btn-sphere-gold py-3 px-5 fs-5" href="https://digispher.lemonsqueezy.com/checkout/buy/ea88e483-a889-4620-937e-963874151f57?discount=0" rel="noopener noreferrer" target="_blank">
+<i class="bi bi-bag-check-fill"></i> Acheter la licence un poste
+                </a>
+</div>
+<div class="guarantee-badge-box">
+<i class="bi bi-wifi-off text-success fs-2"></i>
+<div class="text-start">
+<div class="fw-bold text-white">Utilisation hors ligne</div>
+<div class="small text-secondary">La licence à vie achetée ne nécessite aucun abonnement logiciel mensuel.</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-6">
+<div class="offer-card-master reveal-on-scroll text-center h-100">
+<div class="offer-floating-tag"><i class="bi bi-people-fill"></i> Médecin et secrétariat</div>
+<span class="badge-sphere mb-2"><i class="bi bi-pc-display-horizontal"></i> DigiSpherEMR V2</span>
+<h3 class="h1 text-white fw-bold mb-2">Licence pour deux postes</h3>
+<p class="text-secondary">Un ordinateur sous licence pour le médecin et un pour le secrétariat, avec la gestion des stocks incluse.</p>
+<div class="offer-price-stack">
+<span class="offer-price-current">1 198 $</span>
+<span class="offer-price-period">Paiement unique</span>
+</div>
+<p class="text-success fw-bold small mb-4"><i class="bi bi-check-circle-fill"></i> Deux postes sous licence. Un même parcours de travail.</p>
+<ul class="offer-feature-list text-start mb-4">
+<li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Gestion des patients</li>
+<li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Consultations</li>
+<li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Dossiers médicaux</li>
+<li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Ordonnances et impression A5</li>
+<li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Rendez-vous</li>
+<li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Factures et suivi des recettes</li>
+<li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Prise en charge multidevise</li>
+<li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Gestion des assurances</li>
+<li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Suivi des dépenses et du bénéfice</li>
+<li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Génération de PDF et sauvegardes</li>
+<li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Stocks, lots et mouvements</li>
+</ul>
+<div class="mb-3 d-flex justify-content-center">
+<a href="https://digispher.lemonsqueezy.com/checkout/buy/ac033608-9cff-414c-8169-d2197bc35cad?media=0&amp;desc=0&amp;quantity=2" target="_blank" rel="noopener noreferrer" class="btn btn-sphere-primary btn-sphere-gold py-3 px-5 fs-5">
+<i class="bi bi-bag-check-fill"></i> Acheter la licence deux postes
+</a>
+</div>
+<div class="guarantee-badge-box">
+<i class="bi bi-wifi-off text-success fs-2"></i>
+<div class="text-start">
+<div class="fw-bold text-white">Aucun abonnement logiciel mensuel</div>
+<div class="small text-secondary">Choisissez le nombre de postes sous licence adapté à votre équipe.</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p class="text-center text-secondary small mt-4 mb-0">Besoin de plus de deux postes ou d'une adaptation ? <a href="#requestQuote" class="text-info">Demandez un devis personnalisé</a>.</p>
+</div>
+</section>
+<!-- REQUEST A QUOTE SECTION -->
+<section aria-labelledby="quoteHeading" class="quote-section py-5" id="requestQuote">
+<div class="container-xl">
+<div class="text-center mb-5">
+<span class="badge-sphere mb-2"><i class="bi bi-file-earmark-text-fill"></i> Personnalisation et tarifs spéciaux</span>
+<h2 class="section-title" id="quoteHeading">Demander un devis personnalisé</h2>
+<p class="section-subtitle">
+            Vous avez besoin d'adaptations pour votre cabinet, d'intégrations personnalisées ou de licences pour plusieurs postes ? Indiquez vos besoins ci-dessous pour recevoir un devis adapté.
+          </p>
+</div>
+<div class="row justify-content-center">
+<div class="col-lg-10 col-xl-8">
+<div class="glass-card reveal-on-scroll p-4 p-md-5">
+<form class="needs-validation" data-netlify="true" id="quoteForm" method="POST" name="quote-request" netlify-honeypot="bot-field">
+<!-- Hidden netlify form-name field -->
+<input name="form-name" type="hidden" value="quote-request"/>
+<!-- Netlify Honeypot Field -->
+<p aria-hidden="true" class="d-none">
+<label>Ne remplissez pas ce champ si vous êtes humain : <input name="bot-field" tabindex="-1"/></label>
+</p>
+<div class="row g-4">
+<!-- Doctor Name -->
+<div class="col-md-6">
+<label class="form-label text-white fw-semibold small" for="doctorName">Nom du médecin <span class="text-danger">*</span></label>
+<div class="input-group input-group-sphere">
+<span class="input-group-text"><i class="bi bi-person-badge text-info"></i></span>
+<input class="form-control form-control-sphere" id="doctorName" name="doctor_name" placeholder="Dr. Alex Morgan" required="" type="text"/>
+</div>
+</div>
+<!-- Email Address -->
+<div class="col-md-6">
+<label class="form-label text-white fw-semibold small" for="quoteEmail">Adresse e-mail <span class="text-danger">*</span></label>
+<div class="input-group input-group-sphere">
+<span class="input-group-text"><i class="bi bi-envelope-at text-info"></i></span>
+<input class="form-control form-control-sphere" id="quoteEmail" name="email" placeholder="doctor@clinic.com" required="" type="email"/>
+</div>
+</div>
+<!-- Clinic Name -->
+<div class="col-md-6">
+<label class="form-label text-white fw-semibold small" for="clinicName">Nom de la clinique ou du cabinet <span class="text-danger">*</span></label>
+<div class="input-group input-group-sphere">
+<span class="input-group-text"><i class="bi bi-building text-info"></i></span>
+<input class="form-control form-control-sphere" id="clinicName" name="clinic_name" placeholder="Apex Medical Center" required="" type="text"/>
+</div>
+</div>
+<!-- Medical Specialty Dropdown -->
+<div class="col-md-6">
+<label class="form-label text-white fw-semibold small" for="medicalSpecialty">Spécialité médicale
+                      <span class="text-danger">*</span></label>
+<div class="input-group input-group-sphere">
+<span class="input-group-text"><i class="bi bi-heart-pulse text-info"></i></span>
+<select class="form-select form-control-sphere" id="medicalSpecialty" name="medical_specialty" required="">
+<option disabled="" selected="" value="">Sélectionnez une spécialité médicale…</option>
+<option value="General Practice / Family Medicine">Médecine générale / Médecine de famille</option>
+<option value="Pediatrics">Pédiatrie</option>
+<option value="Internal Medicine">Médecine interne</option>
+<option value="Cardiology">Cardiologie</option>
+<option value="Obstetrics &amp; Gynecology">Obstétrique et gynécologie</option>
+<option value="Dermatology">Dermatologie</option>
+<option value="Orthopedics">Orthopédie</option>
+<option value="Ophthalmology">Ophtalmologie</option>
+<option value="ENT (Otolaryngology)">ORL (oto-rhino-laryngologie)</option>
+<option value="Neurology">Neurologie</option>
+<option value="Psychiatry / Behavioral Health">Psychiatrie / Santé mentale</option>
+<option value="General Surgery">Chirurgie générale</option>
+<option value="Urology">Urologie</option>
+<option value="Dental / Oral Surgery">Dentisterie / Chirurgie buccale</option>
+<option value="Multi-Specialty Clinic">Clinique pluridisciplinaire</option>
+<option value="Other / Custom Specialty">Autre spécialité / Spécialité personnalisée</option>
+</select>
+</div>
+</div>
+<!-- Custom Searchable Country Dropdown Component -->
+<div class="col-md-6">
+<label class="form-label text-white fw-semibold small" for="countryCountyInput">Pays / Région
+                      <span class="text-danger">*</span></label>
+<div class="custom-select-wrapper position-relative" id="countrySelectWrapper">
+<div class="input-group input-group-sphere cursor-pointer" id="countrySelectTrigger">
+<span class="input-group-text"><i class="bi bi-geo-alt text-info"></i></span>
+<input autocomplete="off" class="form-control form-control-sphere cursor-pointer" id="countryCountyInput" name="country_county" placeholder="Sélectionnez ou recherchez un pays…" readonly="" required="" type="text"/>
+<span class="input-group-text pe-3"><i class="bi bi-chevron-down text-info small" id="countrySelectChevron"></i></span>
+</div>
+<!-- Searchable Dropdown Popup Panel -->
+<div class="custom-select-menu p-2 shadow-lg d-none" id="countrySelectMenu">
+<div class="input-group input-group-sm mb-2">
+<span class="input-group-text bg-dark border-secondary text-info"><i class="bi bi-search"></i></span>
+<input autocomplete="off" class="form-control bg-dark text-white border-secondary small" id="countrySearchFilter" placeholder="Saisissez un pays à rechercher…" type="text"/>
+</div>
+<ul class="list-unstyled mb-0 custom-select-list" id="countryOptionsList">
+<li class="custom-option-item" data-value="United States"><i class="bi bi-geo-alt-fill me-2 text-info"></i>États-Unis</li>
+<li class="custom-option-item" data-value="United Kingdom"><i class="bi bi-geo-alt-fill me-2 text-info"></i>Royaume-Uni</li>
+<li class="custom-option-item" data-value="Canada"><i class="bi bi-geo-alt-fill me-2 text-info"></i>Canada</li>
+<li class="custom-option-item" data-value="Australia"><i class="bi bi-geo-alt-fill me-2 text-info"></i>Australie</li>
+<li class="custom-option-item" data-value="Afghanistan">Afghanistan</li>
+<li class="custom-option-item" data-value="Albania">Albanie</li>
+<li class="custom-option-item" data-value="Algeria">Algérie</li>
+<li class="custom-option-item" data-value="Argentina">Argentine</li>
+<li class="custom-option-item" data-value="Austria">Autriche</li>
+<li class="custom-option-item" data-value="Bahrain">Bahreïn</li>
+<li class="custom-option-item" data-value="Bangladesh">Bangladesh</li>
+<li class="custom-option-item" data-value="Belgium">Belgique</li>
+<li class="custom-option-item" data-value="Bolivia">Bolivie</li>
+<li class="custom-option-item" data-value="Brazil">Brésil</li>
+<li class="custom-option-item" data-value="Bulgaria">Bulgarie</li>
+<li class="custom-option-item" data-value="Cameroon">Cameroun</li>
+<li class="custom-option-item" data-value="Chile">Chili</li>
+<li class="custom-option-item" data-value="China">Chine</li>
+<li class="custom-option-item" data-value="Colombia">Colombie</li>
+<li class="custom-option-item" data-value="Costa Rica">Costa Rica</li>
+<li class="custom-option-item" data-value="Croatia">Croatie</li>
+<li class="custom-option-item" data-value="Cyprus">Chypre</li>
+<li class="custom-option-item" data-value="Czech Republic">République tchèque</li>
+<li class="custom-option-item" data-value="Denmark">Danemark</li>
+<li class="custom-option-item" data-value="Dominican Republic">République dominicaine</li>
+<li class="custom-option-item" data-value="Ecuador">Équateur</li>
+<li class="custom-option-item" data-value="Egypt">Égypte</li>
+<li class="custom-option-item" data-value="Estonia">Estonie</li>
+<li class="custom-option-item" data-value="Ethiopia">Éthiopie</li>
+<li class="custom-option-item" data-value="Finland">Finlande</li>
+<li class="custom-option-item" data-value="France">France</li>
+<li class="custom-option-item" data-value="Germany">Allemagne</li>
+<li class="custom-option-item" data-value="Ghana">Ghana</li>
+<li class="custom-option-item" data-value="Greece">Grèce</li>
+<li class="custom-option-item" data-value="Guatemala">Guatemala</li>
+<li class="custom-option-item" data-value="Hong Kong">Hong Kong</li>
+<li class="custom-option-item" data-value="Hungary">Hongrie</li>
+<li class="custom-option-item" data-value="Iceland">Islande</li>
+<li class="custom-option-item" data-value="India">Inde</li>
+<li class="custom-option-item" data-value="Indonesia">Indonésie</li>
+<li class="custom-option-item" data-value="Iran">Iran</li>
+<li class="custom-option-item" data-value="Iraq">Irak</li>
+<li class="custom-option-item" data-value="Ireland">Irlande</li>
+<li class="custom-option-item" data-value="Israel">Israël</li>
+<li class="custom-option-item" data-value="Italy">Italie</li>
+<li class="custom-option-item" data-value="Ivory Coast">Côte d'Ivoire</li>
+<li class="custom-option-item" data-value="Jamaica">Jamaïque</li>
+<li class="custom-option-item" data-value="Japan">Japon</li>
+<li class="custom-option-item" data-value="Jordan">Jordanie</li>
+<li class="custom-option-item" data-value="Kazakhstan">Kazakhstan</li>
+<li class="custom-option-item" data-value="Kenya">Kenya</li>
+<li class="custom-option-item" data-value="Kuwait">Koweït</li>
+<li class="custom-option-item" data-value="Lebanon">Liban</li>
+<li class="custom-option-item" data-value="Libya">Libye</li>
+<li class="custom-option-item" data-value="Luxembourg">Luxembourg</li>
+<li class="custom-option-item" data-value="Malaysia">Malaisie</li>
+<li class="custom-option-item" data-value="Malta">Malte</li>
+<li class="custom-option-item" data-value="Mexico">Mexique</li>
+<li class="custom-option-item" data-value="Morocco">Maroc</li>
+<li class="custom-option-item" data-value="Netherlands">Pays-Bas</li>
+<li class="custom-option-item" data-value="New Zealand">Nouvelle-Zélande</li>
+<li class="custom-option-item" data-value="Nigeria">Nigeria</li>
+<li class="custom-option-item" data-value="Norway">Norvège</li>
+<li class="custom-option-item" data-value="Oman">Oman</li>
+<li class="custom-option-item" data-value="Pakistan">Pakistan</li>
+<li class="custom-option-item" data-value="Palestine">Palestine</li>
+<li class="custom-option-item" data-value="Panama">Panama</li>
+<li class="custom-option-item" data-value="Peru">Pérou</li>
+<li class="custom-option-item" data-value="Philippines">Philippines</li>
+<li class="custom-option-item" data-value="Poland">Pologne</li>
+<li class="custom-option-item" data-value="Portugal">Portugal</li>
+<li class="custom-option-item" data-value="Qatar">Qatar</li>
+<li class="custom-option-item" data-value="Romania">Roumanie</li>
+<li class="custom-option-item" data-value="Saudi Arabia">Arabie saoudite</li>
+<li class="custom-option-item" data-value="Senegal">Sénégal</li>
+<li class="custom-option-item" data-value="Serbia">Serbie</li>
+<li class="custom-option-item" data-value="Singapore">Singapour</li>
+<li class="custom-option-item" data-value="Slovakia">Slovaquie</li>
+<li class="custom-option-item" data-value="South Africa">Afrique du Sud</li>
+<li class="custom-option-item" data-value="South Korea">Corée du Sud</li>
+<li class="custom-option-item" data-value="Spain">Espagne</li>
+<li class="custom-option-item" data-value="Sri Lanka">Sri Lanka</li>
+<li class="custom-option-item" data-value="Sudan">Soudan</li>
+<li class="custom-option-item" data-value="Sweden">Suède</li>
+<li class="custom-option-item" data-value="Switzerland">Suisse</li>
+<li class="custom-option-item" data-value="Taiwan">Taïwan</li>
+<li class="custom-option-item" data-value="Tanzania">Tanzanie</li>
+<li class="custom-option-item" data-value="Thailand">Thaïlande</li>
+<li class="custom-option-item" data-value="Tunisia">Tunisie</li>
+<li class="custom-option-item" data-value="Turkey">Turquie</li>
+<li class="custom-option-item" data-value="Uganda">Ouganda</li>
+<li class="custom-option-item" data-value="Ukraine">Ukraine</li>
+<li class="custom-option-item" data-value="United Arab Emirates">Émirats arabes unis</li>
+<li class="custom-option-item" data-value="Uruguay">Uruguay</li>
+<li class="custom-option-item" data-value="Uzbekistan">Ouzbékistan</li>
+<li class="custom-option-item" data-value="Venezuela">Venezuela</li>
+<li class="custom-option-item" data-value="Vietnam">Viêt Nam</li>
+<li class="custom-option-item" data-value="Zambia">Zambie</li>
+<li class="custom-option-item" data-value="Zimbabwe">Zimbabwe</li>
+<li class="custom-option-item" data-value="Other / Country Not Listed">Autre / Pays absent de la liste</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Preferred Interface Language -->
+<div class="col-md-6">
+<label class="form-label text-white fw-semibold small" for="preferredLanguage">Langue préférée / Localisation</label>
+<div class="input-group input-group-sphere">
+<span class="input-group-text"><i class="bi bi-translate text-info"></i></span>
+<input class="form-control form-control-sphere" id="preferredLanguage" name="preferred_language" placeholder="Français, anglais, arabe, espagnol, etc." type="text"/>
+</div>
+</div>
+<!-- Customization Categories (Checkboxes) -->
+<div class="col-12">
+<label class="form-label text-white fw-semibold small d-block mb-2">Personnalisations souhaitées (plusieurs choix possibles)</label>
+<div class="row g-3">
+<div class="col-sm-6 col-md-4">
+<div class="custom-checkbox-sphere p-2.5 px-3 rounded d-flex align-items-center h-100">
+<input class="form-check-input flex-shrink-0 me-2 mt-0 cursor-pointer" id="customLang" name="customization_types[]" type="checkbox" value="Language Translation"/>
+<label class="form-check-label text-secondary small cursor-pointer mb-0 lh-sm" for="customLang"><i class="bi bi-translate text-info me-1"></i> Traduction de l'interface</label>
+</div>
+</div>
+<div class="col-sm-6 col-md-4">
+<div class="custom-checkbox-sphere p-2.5 px-3 rounded d-flex align-items-center h-100">
+<input class="form-check-input flex-shrink-0 me-2 mt-0 cursor-pointer" id="customPdf" name="customization_types[]" type="checkbox" value="Custom Prescription / Invoice"/>
+<label class="form-check-label text-secondary small cursor-pointer mb-0 lh-sm" for="customPdf"><i class="bi bi-file-earmark-pdf text-info me-1"></i> Modèles PDF personnalisés</label>
+</div>
+</div>
+<div class="col-sm-6 col-md-4">
+<div class="custom-checkbox-sphere p-2.5 px-3 rounded d-flex align-items-center h-100">
+<input class="form-check-input flex-shrink-0 me-2 mt-0 cursor-pointer" id="customBrand" name="customization_types[]" type="checkbox" value="Branding &amp; Logo"/>
+<label class="form-check-label text-secondary small cursor-pointer mb-0 lh-sm" for="customBrand"><i class="bi bi-palette text-info me-1"></i> Identité visuelle et logo de la clinique</label>
+</div>
+</div>
+<div class="col-sm-6 col-md-4">
+<div class="custom-checkbox-sphere p-2.5 px-3 rounded d-flex align-items-center h-100">
+<input class="form-check-input flex-shrink-0 me-2 mt-0 cursor-pointer" id="customCurrency" name="customization_types[]" type="checkbox" value="Regional Currency &amp; Tax"/>
+<label class="form-check-label text-secondary small cursor-pointer mb-0 lh-sm" for="customCurrency"><i class="bi bi-cash-coin text-info me-1"></i> Devise et taxes locales</label>
+</div>
+</div>
+<div class="col-sm-6 col-md-4">
+<div class="custom-checkbox-sphere p-2.5 px-3 rounded d-flex align-items-center h-100">
+<input class="form-check-input flex-shrink-0 me-2 mt-0 cursor-pointer" id="customWorkflow" name="customization_types[]" type="checkbox" value="Custom Workflow / Fields"/>
+<label class="form-check-label text-secondary small cursor-pointer mb-0 lh-sm" for="customWorkflow"><i class="bi bi-gear-wide-connected text-info me-1"></i> Parcours ou champs personnalisés</label>
+</div>
+</div>
+<div class="col-sm-6 col-md-4">
+<div class="custom-checkbox-sphere p-2.5 px-3 rounded d-flex align-items-center h-100">
+<input class="form-check-input flex-shrink-0 me-2 mt-0 cursor-pointer" id="customMulti" name="customization_types[]" type="checkbox" value="Multi-Clinic Licensing"/>
+<label class="form-check-label text-secondary small cursor-pointer mb-0 lh-sm" for="customMulti"><i class="bi bi-buildings text-info me-1"></i> Licences pour plusieurs cliniques</label>
+</div>
+</div>
+</div>
+</div>
+<!-- Quote Details & Requested Changes -->
+<div class="col-12">
+<label class="form-label text-white fw-semibold small" for="quoteDetails">Détails du devis et besoins de personnalisation <span class="text-danger">*</span></label>
+<div class="input-group input-group-sphere">
+<span class="input-group-text align-items-start pt-3"><i class="bi bi-pencil-square text-info"></i></span>
+<textarea class="form-control form-control-sphere" id="quoteDetails" name="requested_changes" placeholder="Précisez vos besoins (p. ex. traduction de l’interface, logo sur les ordonnances A5, taxes locales, champs propres à votre spécialité ou remise pour plusieurs licences)…" required="" rows="4"></textarea>
+</div>
+</div>
+<!-- Submission Button -->
+<div class="col-12 text-center mt-4">
+<button class="btn btn-sphere-primary btn-sphere-gold py-3 px-5 fs-5 w-100 w-sm-auto" type="submit">
+<i class="bi bi-send-fill me-2"></i> Envoyer la demande de devis
+                    </button>
+<div class="small text-muted mt-3">
+<i class="bi bi-shield-check text-success"></i> Vos coordonnées restent strictement confidentielles.
+                    </div>
+</div>
+</div>
+</form>
+<!-- Form Submission Success Alert Container -->
+<div class="alert alert-sphere-success text-center mt-4 d-none" id="quoteFormSuccess" role="alert">
+<i class="bi bi-check-circle-fill text-success fs-2 d-block mb-2"></i>
+<h4 class="h5 text-white fw-bold mb-1">Demande de devis envoyée !</h4>
+<p class="mb-0 text-secondary small">Merci, Docteur. Nous avons reçu votre demande de devis personnalisé et vous répondrons prochainement.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- QUICK START -->
+<section aria-labelledby="quickStartHeading" class="quickstart-section" id="quickStart">
+<div class="container-xl">
+<div class="text-center mb-5">
+<span class="badge-sphere mb-2"><i class="bi bi-lightning-charge-fill"></i> Un seul parcours. Moins de clics.</span>
+<h2 class="section-title" id="quickStartHeading">Assez simple pour une prise en main rapide</h2>
+<p class="section-subtitle">
+            Vous ne devriez pas avoir à devenir spécialiste informatique pour gérer votre cabinet. DigiSpherEMR facilite l'accès aux actions essentielles et garde chaque écran centré sur sa tâche.
+          </p>
+</div>
+<div class="row g-4">
+<div class="col-md-6 col-lg">
+<div class="step-card reveal-on-scroll">
+<div class="step-number-bubble">1</div>
+<h4 class="h5 text-white fw-bold mb-2">Trouver un patient</h4>
+<p class="text-secondary small mb-0">Recherchez son nom et ouvrez son dossier.</p>
+</div>
+</div>
+<div class="col-md-6 col-lg">
+<div class="step-card reveal-on-scroll">
+<div class="step-number-bubble">2</div>
+<h4 class="h5 text-white fw-bold mb-2">Commencer la visite</h4>
+<p class="text-secondary small mb-0">Consultez ses antécédents et commencez rapidement la consultation.</p>
+</div>
+</div>
+<div class="col-md-6 col-lg">
+<div class="step-card reveal-on-scroll">
+<div class="step-number-bubble">3</div>
+<h4 class="h5 text-white fw-bold mb-2">Rédiger une ordonnance</h4>
+<p class="text-secondary small mb-0">Ajoutez les médicaments et générez l'ordonnance.</p>
+</div>
+</div>
+<div class="col-md-6 col-lg">
+<div class="step-card reveal-on-scroll">
+<div class="step-number-bubble">4</div>
+<h4 class="h5 text-white fw-bold mb-2">Créer une facture</h4>
+<p class="text-secondary small mb-0">Enregistrez l'aspect financier de la visite avant de passer à la suite.</p>
+</div>
+</div>
+<div class="col-md-6 col-lg">
+<div class="step-card reveal-on-scroll">
+<div class="step-number-bubble">5</div>
+<h4 class="h5 text-white fw-bold mb-2">Patient suivant</h4>
+<p class="text-secondary small mb-0">Un parcours simple, rapide et reproductible au quotidien.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SYSTEM REQUIREMENTS -->
+<section aria-labelledby="specsHeading" class="py-5" id="techSpecs">
+<div class="container-xl">
+<div class="glass-card reveal-on-scroll p-4 p-lg-5">
+<div class="row align-items-center g-4">
+<div class="col-lg-4">
+<span class="badge-sphere mb-2"><i class="bi bi-motherboard-fill"></i> Environnement Windows</span>
+<h3 class="h2 text-white fw-bold mb-3" id="specsHeading">Travaillez en local sur un PC Windows récent</h3>
+<p class="text-secondary mb-0">
+                DigiSpherEMR est une application Windows autonome conçue pour les médecins qui souhaitent un parcours local pratique sans abonnement cloud obligatoire.
+              </p>
+</div>
+<div class="col-lg-8">
+<div class="specs-badge-grid">
+<div class="spec-box">
+<div class="spec-label"><i class="bi bi-windows text-info"></i> Système d'exploitation</div>
+<div class="spec-val">Windows 10 / 11 (64-bit)</div>
+</div>
+<div class="spec-box">
+<div class="spec-label"><i class="bi bi-wifi-off text-info"></i> Utilisation</div>
+<div class="spec-val">Fonctions essentielles utilisables hors ligne</div>
+</div>
+<div class="spec-box">
+<div class="spec-label"><i class="bi bi-hdd text-info"></i> Données</div>
+<div class="spec-val">Base de données locale du cabinet</div>
+</div>
+<div class="spec-box">
+<div class="spec-label"><i class="bi bi-arrow-repeat text-info"></i> Sauvegarde</div>
+<div class="spec-val">Sauvegarde et restauration disponibles</div>
+</div>
+<div class="spec-box">
+<div class="spec-label"><i class="bi bi-printer text-info"></i> Documents</div>
+<div class="spec-val">Impression de PDF et d'ordonnances A5</div>
+</div>
+<div class="spec-box">
+<div class="spec-label"><i class="bi bi-credit-card text-info"></i> Licence</div>
+<div class="spec-val">Licence à vie pour un ou deux postes ; paiement unique</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ -->
+<section aria-labelledby="faqHeading" class="faq-section" id="faq">
+<div class="container-xl">
+<div class="text-center mb-5">
+<span class="badge-sphere mb-2"><i class="bi bi-question-circle-fill"></i> Questions fréquentes</span>
+<h2 class="section-title" id="faqHeading">Des réponses claires avant de commencer</h2>
+<p class="section-subtitle">
+            Des réponses pratiques sur les fonctions de DigiSpherEMR, son utilisation hors ligne et les professionnels auxquels il s'adresse.
+          </p>
+</div>
+<div class="row justify-content-center">
+<div class="col-lg-9">
+<div class="accordion accordion-sphere" id="faqAccordion">
+<div class="accordion-item">
+<h3 class="accordion-header" id="headingOne">
+<button aria-controls="collapseOne" aria-expanded="true" class="accordion-button" data-bs-target="#collapseOne" data-bs-toggle="collapse" type="button">
+                    Qu'est-ce que DigiSpherEMR ?
+                  </button>
+</h3>
+<div aria-labelledby="headingOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion" id="collapseOne">
+<div class="accordion-body">
+                    DigiSpherEMR est une application de gestion de cabinet qui réunit dossiers médicaux et gestion quotidienne dans un seul système.
+                  </div>
+</div>
+</div>
+<div class="accordion-item">
+<h3 class="accordion-header" id="headingTwo">
+<button aria-controls="collapseTwo" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#collapseTwo" data-bs-toggle="collapse" type="button">
+                    S'agit-il seulement d'un logiciel de dossier médical ?
+                  </button>
+</h3>
+<div aria-labelledby="headingTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion" id="collapseTwo">
+<div class="accordion-body">
+                    Non. DigiSpherEMR associe la gestion clinique à la gestion du cabinet : rendez-vous, facturation, dépenses, recettes et suivi du bénéfice.
+                  </div>
+</div>
+</div>
+<div class="accordion-item">
+<h3 class="accordion-header" id="headingThree">
+<button aria-controls="collapseThree" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#collapseThree" data-bs-toggle="collapse" type="button">
+                    Une connexion Internet est-elle nécessaire ?
+                  </button>
+</h3>
+<div aria-labelledby="headingThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion" id="collapseThree">
+<div class="accordion-body">
+                    Les fonctions essentielles de l'application sont conçues pour fonctionner hors ligne. La gestion quotidienne du cabinet ne dépend donc pas d'une connexion Internet.
+                  </div>
+</div>
+</div>
+<div class="accordion-item">
+<h3 class="accordion-header" id="headingFour">
+<button aria-controls="collapseFour" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#collapseFour" data-bs-toggle="collapse" type="button">
+                    Y a-t-il un abonnement mensuel ?
+                  </button>
+</h3>
+<div aria-labelledby="headingFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion" id="collapseFour">
+<div class="accordion-body">
+                    Non. Chaque licence à vie s'achète en un seul paiement. Un poste coûte <strong>799 $</strong> ; deux postes coûtent <strong>1 198 $</strong>.
+                  </div>
+</div>
+</div>
+<div class="accordion-item">
+<h3 class="accordion-header" id="headingFive">
+<button aria-controls="collapseFive" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#collapseFive" data-bs-toggle="collapse" type="button">
+                    Puis-je gérer les dépenses et voir le bénéfice ?
+                  </button>
+</h3>
+<div aria-labelledby="headingFive" class="accordion-collapse collapse" data-bs-parent="#faqAccordion" id="collapseFive">
+<div class="accordion-body">
+                    Oui. Vous pouvez enregistrer les dépenses du cabinet et utiliser les données de recettes et de dépenses pour comprendre le bénéfice, sans créer vous-même un tableur distinct.
+                  </div>
+</div>
+</div>
+<div class="accordion-item">
+<h3 class="accordion-header" id="headingSix">
+<button aria-controls="collapseSix" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#collapseSix" data-bs-toggle="collapse" type="button">
+                    Puis-je imprimer des ordonnances ?
+                  </button>
+</h3>
+<div aria-labelledby="headingSix" class="accordion-collapse collapse" data-bs-parent="#faqAccordion" id="collapseSix">
+<div class="accordion-body">
+                    Oui. DigiSpherEMR génère des ordonnances professionnelles au format PDF A5, prêtes à imprimer.
+                  </div>
+</div>
+</div>
+<div class="accordion-item">
+<h3 class="accordion-header" id="headingSeven">
+<button aria-controls="collapseSeven" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#collapseSeven" data-bs-toggle="collapse" type="button">
+                    Puis-je créer des factures ?
+                  </button>
+</h3>
+<div aria-labelledby="headingSeven" class="accordion-collapse collapse" data-bs-parent="#faqAccordion" id="collapseSeven">
+<div class="accordion-body">
+                    Oui. La facturation et la gestion des factures sont incluses pour suivre aussi l'aspect financier de chaque visite.
+                  </div>
+</div>
+</div>
+<div class="accordion-item">
+<h3 class="accordion-header" id="headingEight">
+<button aria-controls="collapseEight" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#collapseEight" data-bs-toggle="collapse" type="button">
+                    Puis-je sauvegarder mes données ?
+                  </button>
+</h3>
+<div aria-labelledby="headingEight" class="accordion-collapse collapse" data-bs-parent="#faqAccordion" id="collapseEight">
+<div class="accordion-body">
+                    Oui. DigiSpherEMR permet de sauvegarder et restaurer les données locales de votre cabinet.
+                  </div>
+</div>
+</div>
+<div class="accordion-item">
+<h3 class="accordion-header" id="headingNine">
+<button aria-controls="collapseNine" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#collapseNine" data-bs-toggle="collapse" type="button">
+                    À qui s'adresse DigiSpherEMR ?
+                  </button>
+</h3>
+<div aria-labelledby="headingNine" class="accordion-collapse collapse" data-bs-parent="#faqAccordion" id="collapseNine">
+<div class="accordion-body">
+                    Il s'adresse principalement aux médecins indépendants, aux cabinets privés et aux petites cliniques qui recherchent une solution simple de gestion de cabinet.
+                  </div>
+</div>
+</div>
+<div class="accordion-item">
+<h3 class="accordion-header" id="headingTen">
+<button aria-controls="collapseTen" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#collapseTen" data-bs-toggle="collapse" type="button">
+                    Quelle licence choisir ?
+                  </button>
+</h3>
+<div aria-labelledby="headingTen" class="accordion-collapse collapse" data-bs-parent="#faqAccordion" id="collapseTen">
+<div class="accordion-body">
+                    Choisissez la licence un poste si vous travaillez seul sur un ordinateur et n'avez pas besoin des stocks. Choisissez la licence deux postes si vous et votre secrétaire avez besoin de deux ordinateurs et de la gestion des stocks. Le module de stock est réservé à la licence deux postes.
+                  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FINAL CTA -->
+<section class="py-5">
+<div class="container-xl">
+<div class="pillar-banner-card text-center reveal-on-scroll">
+<span class="badge-sphere badge-offer-hot mb-3">DigiSpherEMR V2</span>
+<h2 class="display-hero-title mb-3">
+            Tout le nécessaire pour gérer votre cabinet. Rien de superflu.
+          </h2>
+<p class="lead-hero mx-auto mb-4 text-secondary">
+            Simple. Rapide. Ciblé. Gérez les patients et votre cabinet, et suivez vos finances depuis une seule application Windows utilisable hors ligne.
+          </p>
+<div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+<a class="btn btn-sphere-primary btn-sphere-gold fs-5 px-5 py-3" href="#specialOffer">
+<i class="bi bi-bag-check-fill"></i> Choisir un ou deux postes — Dès 799 $
+            </a>
+<a class="btn btn-sphere-secondary fs-5 px-4 py-3" href="#videoShowcase">
+<i class="bi bi-play-circle text-info"></i> Voir la démo
+            </a>
+</div>
+<div class="mt-4 text-muted small">
+<i class="bi bi-wifi-off text-info"></i> Utilisable hors ligne  • 
+            <i class="bi bi-credit-card text-info"></i> Paiement unique  • 
+            <i class="bi bi-graph-up-arrow text-success"></i> Recettes, dépenses et bénéfice
+          </div>
+</div>
+</div>
+</section>
+</main>
+<!-- FOOTER -->
+<footer class="footer-sphere">
+<div class="container-xl">
+<div class="row g-4 mb-5">
+<div class="col-lg-4">
+<img alt="DigiSpherEMR V2" class="mb-3" decoding="async" height="56" loading="lazy" src="assets/images/logo_user.png" style="object-fit:contain;"/>
+<p class="text-secondary small pe-lg-4">
+            DigiSpherEMR V2 est une application simple de gestion de cabinet utilisable hors ligne. Elle réunit patients, consultations, ordonnances, rendez-vous, facturation, dépenses, recettes et bénéfice au même endroit.
+          </p>
+<div>
+<a href="https://www.producthunt.com/products/digicareemr?embed=true&amp;utm_source=badge-featured&amp;utm_medium=badge&amp;utm_campaign=badge-digispheremr-v2" rel="noopener noreferrer" target="_blank"><img alt="DigiSpherEMR V2 — Gestion de cabinet simple | Product Hunt" height="54" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1258502&amp;theme=dark&amp;t=1790103758184" width="250"/></a>
+<br/>
+<a href="https://launchstag.com/p/digispheremr-v2" rel="noopener" target="_blank">
+<img alt="Présenté sur Launchstag" height="62" src="https://launchstag.com/badge-dark.svg" width="198">
+</img></a>
+<a href="https://tools.cafe/p/digispheremr-v2" rel="noopener" target="_blank"><img alt="Référencé sur tools.cafe" height="54" src="https://tools.cafe/b/light.svg" width="180"/></a>
+</div>
+<div class="d-flex align-items-center gap-3 text-info fs-5 mt-2">
+<a aria-label="Assistance par e-mail" class="text-secondary text-decoration-none" href="mailto:digispher25@gmail.com" title="digispher25@gmail.com"><i class="bi bi-envelope-fill text-info"></i></a>
+<a aria-label="Assistance par WhatsApp" class="text-secondary text-decoration-none" href="https://wa.me/21623400174" rel="noopener noreferrer" target="_blank" title="WhatsApp: +216 23 400 174"><i class="bi bi-whatsapp text-success"></i></a>
+<a aria-label="Page Facebook" class="text-secondary text-decoration-none" href="https://www.facebook.com/profile.php?id=61579736908309" rel="noopener noreferrer" target="_blank" title="Facebook: Digi Spher"><i class="bi bi-facebook text-primary"></i></a>
+<a aria-label="Page LinkedIn de l’entreprise" class="text-secondary text-decoration-none" href="https://linkedin.com/company/digispher" rel="noopener noreferrer" target="_blank" title="LinkedIn: DigiSpher"><i class="bi bi-linkedin text-info"></i></a>
+<span aria-label="Application native Windows" class="text-secondary ms-2"><i class="bi bi-windows"></i></span>
+<span aria-label="Base de données SQLite locale" class="text-secondary"><i class="bi bi-database-check"></i></span>
+</div>
+</div>
+<div class="col-6 col-lg-2">
+<h5 class="text-white fw-bold mb-3 small text-uppercase">Produit</h5>
+<ul class="list-unstyled small">
+<li class="mb-2"><a class="footer-link" href="#featureModules">Fonctionnalités</a></li>
+<li class="mb-2"><a class="footer-link" href="#offlineBenefits">Les avantages du hors ligne</a></li>
+<li class="mb-2"><a class="footer-link" href="#targetAudience">Pour qui ?</a></li>
+<li class="mb-2"><a class="footer-link" href="#techSpecs">Configuration requise</a></li>
+</ul>
+</div>
+<div class="col-6 col-lg-2">
+<h5 class="text-white fw-bold mb-3 small text-uppercase">Parcours</h5>
+<ul class="list-unstyled small">
+<li class="mb-2"><a class="footer-link" href="#featureModules">Dossiers patients</a></li>
+<li class="mb-2"><a class="footer-link" href="#featureModules">Notes SOAP</a></li>
+<li class="mb-2"><a class="footer-link" href="#featureModules">Ordonnances</a></li>
+<li class="mb-2"><a class="footer-link" href="#featureModules">Rendez-vous</a></li>
+<li class="mb-2"><a class="footer-link" href="#featureModules">Facturation et finances</a></li>
+<li class="mb-2"><a class="footer-link" href="#inventory">Gestion des stocks</a></li>
+</ul>
+</div>
+<div class="col-6 col-lg-2">
+<h5 class="text-white fw-bold mb-3 small text-uppercase">Données</h5>
+<ul class="list-unstyled small">
+<li class="mb-2"><a class="footer-link" href="#offlineBenefits">Base de données locale</a></li>
+<li class="mb-2"><a class="footer-link" href="#offlineBenefits">Sauvegardes glissantes</a></li>
+<li class="mb-2"><a class="footer-link" href="#faq">Questions sur les données</a></li>
+<li class="mb-2"><a class="footer-link" href="#quickStart">Premiers pas</a></li>
+</ul>
+</div>
+<div class="col-6 col-lg-2">
+<h5 class="text-white fw-bold mb-3 small text-uppercase">Assistance et mentions légales</h5>
+<ul class="list-unstyled small">
+<li class="mb-2"><a class="footer-link" href="#faq">Questions fréquentes</a></li>
+<li class="mb-2"><a class="footer-link" href="#specialOffer">Tarifs</a></li>
+<li class="mb-2"><a class="footer-link" href="#requestQuote">Demander un devis</a></li>
+<li class="mb-2"><a class="footer-link" data-bs-target="#helpCenterModal" data-bs-toggle="modal" href="#">Centre d'aide</a></li>
+<li class="mb-2"><a class="footer-link" data-bs-target="#termsModal" data-bs-toggle="modal" href="#">Conditions d'utilisation</a></li>
+<li class="mb-2"><a class="footer-link" data-bs-target="#privacyModal" data-bs-toggle="modal" href="#">Politique de confidentialité</a></li>
+<li class="mb-2"><a class="footer-link" href="mailto:digispher25@gmail.com"><i class="bi bi-envelope me-1 text-info"></i> digispher25@gmail.com</a></li>
+<li class="mb-2"><a class="footer-link" href="https://wa.me/21623400174" rel="noopener noreferrer" target="_blank"><i class="bi bi-whatsapp me-1 text-success"></i> +216 23 400 174</a></li>
+</ul>
+</div>
+</div>
+<div class="border-top border-secondary border-opacity-25 pt-4 d-flex flex-column flex-md-row justify-content-between align-items-center text-muted small">
+<p class="mb-2 mb-md-0">
+          © 2026 DigiSpher Health Systems. Tous droits réservés. DigiSpherEMR V2.
+        </p>
+<div class="d-flex flex-wrap gap-3 justify-content-center">
+<a class="text-secondary text-decoration-none hover-white" data-bs-target="#termsModal" data-bs-toggle="modal" href="#">Conditions d'utilisation</a>
+<span>•</span>
+<a class="text-secondary text-decoration-none hover-white" data-bs-target="#privacyModal" data-bs-toggle="modal" href="#">Politique de confidentialité</a>
+<span>•</span>
+<a class="text-secondary text-decoration-none hover-white" data-bs-target="#helpCenterModal" data-bs-toggle="modal" href="#">Centre d'aide</a>
+<span>•</span>
+<span>Maîtrise totale des données hors ligne</span>
+</div>
+</div>
+</div>
+</footer>
+<!-- HELP CENTER MODAL -->
+<div aria-hidden="true" aria-labelledby="helpCenterTitle" class="modal fade" id="helpCenterModal" tabindex="-1">
+<div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+<div class="modal-content border border-info border-opacity-25" style="background: #06122d; color: #cbd5e1;">
+<div class="modal-header border-bottom border-secondary border-opacity-25">
+<h4 class="modal-title text-white fw-bold h5" id="helpCenterTitle">
+<i class="bi bi-question-square-fill text-info me-2"></i> Centre d'aide et ressources DigiSpherEMR
+          </h4>
+<button aria-label="Fermer" class="btn-close btn-close-white" data-bs-dismiss="modal" type="button"></button>
+</div>
+<div class="modal-body p-4">
+<div class="row g-4">
+<div class="col-md-6">
+<div class="p-3 rounded bg-dark bg-opacity-50 border border-secondary border-opacity-25 h-100">
+<h5 class="text-white fw-bold h6 mb-2"><i class="bi bi-rocket-takeoff text-info me-1"></i> Démarrage rapide et configuration</h5>
+<p class="small text-secondary mb-0">Téléchargez l'exécutable Windows autonome, lancez `DigiSpherEMR.exe` et configurez le profil de votre clinique en deux minutes.</p>
+</div>
+</div>
+<div class="col-md-6">
+<div class="p-3 rounded bg-dark bg-opacity-50 border border-secondary border-opacity-25 h-100">
+<h5 class="text-white fw-bold h6 mb-2"><i class="bi bi-printer text-info me-1"></i> Ordonnances et impression A5</h5>
+<p class="small text-secondary mb-0">Configurez les dimensions du papier A5, ajoutez une image de signature du médecin et personnalisez l'en-tête dans les paramètres.</p>
+</div>
+</div>
+<div class="col-md-6">
+<div class="p-3 rounded bg-dark bg-opacity-50 border border-secondary border-opacity-25 h-100">
+<h5 class="text-white fw-bold h6 mb-2"><i class="bi bi-database-check text-info me-1"></i> Sauvegarde et migration des données</h5>
+<p class="small text-secondary mb-0">DigiSpherEMR crée automatiquement, à la fermeture, des sauvegardes glissantes sur sept jours dans le dossier local de l'application. Restaurez-les à tout moment depuis les paramètres.</p>
+</div>
+</div>
+<div class="col-md-6">
+<div class="p-3 rounded bg-dark bg-opacity-50 border border-secondary border-opacity-25 h-100">
+<h5 class="text-white fw-bold h6 mb-2"><i class="bi bi-headset text-info me-1"></i> Assistance prioritaire</h5>
+<p class="small text-secondary mb-0">Besoin d'une assistance technique ? Écrivez-nous à <a class="text-info fw-bold" href="mailto:digispher25@gmail.com">digispher25@gmail.com</a> ou contactez-nous sur WhatsApp au
+                  <a class="text-success fw-bold" href="https://wa.me/21623400174" rel="noopener noreferrer" target="_blank">+216 23 400 174</a> pour une réponse rapide.
+                </p>
+</div>
+</div>
+</div>
+</div>
+<div class="modal-footer border-top border-secondary border-opacity-25 justify-content-between">
+<small class="text-muted"><i class="bi bi-shield-check text-success"></i> Assistance pour l'application Windows autonome</small>
+<button class="btn btn-sphere-secondary btn-sm px-4" data-bs-dismiss="modal" type="button">Fermer</button>
+</div>
+</div>
+</div>
+</div>
+<!-- TERMS OF SERVICE MODAL -->
+<div aria-hidden="true" aria-labelledby="termsTitle" class="modal fade" id="termsModal" tabindex="-1">
+<div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+<div class="modal-content border border-info border-opacity-25" style="background: #06122d; color: #cbd5e1;">
+<div class="modal-header border-bottom border-secondary border-opacity-25">
+<h4 class="modal-title text-white fw-bold h5" id="termsTitle">
+<i class="bi bi-file-earmark-text-fill text-info me-2"></i> Conditions d'utilisation
+          </h4>
+<button aria-label="Fermer" class="btn-close btn-close-white" data-bs-dismiss="modal" type="button"></button>
+</div>
+<div class="modal-body p-4 small">
+<h5 class="text-white fw-bold h6 mb-2">1. Octroi de licence et propriété du logiciel</h5>
+<p class="mb-3">Après l'achat de DigiSpherEMR V2, DigiSpher Health Systems accorde au titulaire une licence perpétuelle, non exclusive et non transférable pour installer et utiliser le logiciel afin de gérer un cabinet privé sur le nombre de PC Windows récents prévu par la licence achetée : un ou deux.</p>
+<h5 class="text-white fw-bold h6 mb-2">2. Données locales et responsabilités</h5>
+<p class="mb-3">DigiSpherEMR fonctionne entièrement hors ligne et stocke les données localement dans une base SQLite. Le titulaire reste pleinement propriétaire de tous les dossiers patients et est responsable de la sécurité locale, des sauvegardes matérielles et des identifiants d'accès.</p>
+<h5 class="text-white fw-bold h6 mb-2">3. Exclusion de responsabilité médicale et clinique</h5>
+<p class="mb-3">DigiSpherEMR est conçu uniquement comme un outil administratif, de tenue des dossiers et de facturation. Le logiciel ne fournit ni diagnostic médical, ni décision thérapeutique, ni évaluation clinique autonome. Les décisions médicales relèvent exclusivement de la responsabilité professionnelle du médecin habilité.
+          </p>
+<h5 class="text-white fw-bold h6 mb-2">4. Modalités de paiement et garantie</h5>
+<p class="mb-0">La licence à vie s'achète en un seul paiement, sans frais d'abonnement récurrents obligatoires. Tous les achats bénéficient de notre garantie de remboursement de 30 jours.</p>
+</div>
+<div class="modal-footer border-top border-secondary border-opacity-25 justify-content-between">
+<small class="text-muted"><i class="bi bi-check-circle-fill text-success"></i> Contrat de licence de DigiSpher Health Systems</small>
+<button class="btn btn-sphere-secondary btn-sm px-4" data-bs-dismiss="modal" type="button">Fermer</button>
+</div>
+</div>
+</div>
+</div>
+<!-- PRIVACY POLICY MODAL -->
+<div aria-hidden="true" aria-labelledby="privacyTitle" class="modal fade" id="privacyModal" tabindex="-1">
+<div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+<div class="modal-content border border-info border-opacity-25" style="background: #06122d; color: #cbd5e1;">
+<div class="modal-header border-bottom border-secondary border-opacity-25">
+<h4 class="modal-title text-white fw-bold h5" id="privacyTitle">
+<i class="bi bi-shield-lock-fill text-info me-2"></i> Politique de confidentialité et sécurité des données
+          </h4>
+<button aria-label="Fermer" class="btn-close btn-close-white" data-bs-dismiss="modal" type="button"></button>
+</div>
+<div class="modal-body p-4 small">
+<h5 class="text-white fw-bold h6 mb-2">1. Aucune transmission de données vers le cloud</h5>
+<p class="mb-3">DigiSpherEMR est conçu pour fonctionner en priorité hors ligne. Les données de santé des patients, les notes SOAP, les ordonnances, les rendez-vous et les données financières du cabinet restent sur votre disque local et ne sont jamais envoyés vers des serveurs cloud.</p>
+<h5 class="text-white fw-bold h6 mb-2">2. Aucun suivi d'utilisation</h5>
+<p class="mb-3">Nous ne suivons, ne collectons, ne vendons et n'analysons ni vos données cliniques, ni le nombre de vos patients, ni vos recettes, ni votre utilisation de l'application. Les activités de votre cabinet restent entièrement confidentielles et sous votre contrôle.</p>
+<h5 class="text-white fw-bold h6 mb-2">3. Mode confidentialité du médecin</h5>
+<p class="mb-3">DigiSpherEMR intègre un bouton de confidentialité qui masque instantanément les noms de famille des patients et les données identifiantes lors d'un partage d'écran ou d'une consultation en présence d'un patient.</p>
+<h5 class="text-white fw-bold h6 mb-2">4. Communications avec l'assistance</h5>
+<p class="mb-0">Lorsque vous contactez l'assistance par e-mail, les informations de diagnostic transmises servent uniquement à résoudre votre problème et ne sont jamais partagées avec des tiers.</p>
+</div>
+<div class="modal-footer border-top border-secondary border-opacity-25 justify-content-between">
+<small class="text-muted"><i class="bi bi-shield-shaded text-success"></i> Garantie de maîtrise totale des données</small>
+<button class="btn btn-sphere-secondary btn-sm px-4" data-bs-dismiss="modal" type="button">Fermer</button>
+</div>
+</div>
+</div>
+</div>
+<!-- SCREENSHOT LIGHTBOX -->
+<div aria-hidden="true" aria-labelledby="modalScreenshotTitle" class="modal fade screenshot-modal" id="screenshotModal" tabindex="-1">
+<div class="modal-dialog modal-xl modal-dialog-centered">
+<div class="modal-content">
+<div class="modal-header d-flex justify-content-between align-items-center">
+<div>
+<h4 class="modal-title text-white fw-bold h5 mb-1" id="modalScreenshotTitle">Aperçu de l'écran DigiSpherEMR
+            </h4>
+<div class="small text-info" id="modalScreenshotDesc">Aperçu haute résolution de l'interface native</div>
+</div>
+<button aria-label="Fermer" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+</div>
+<div class="modal-body p-2 p-md-3 text-center bg-black">
+<img alt="Capture haute résolution de DigiSpherEMR" class="img-fluid rounded-2 shadow-lg" id="modalScreenshotImg" src="" style="max-height: 82vh; width: auto;"/>
+</div>
+<div class="modal-footer justify-content-between border-top border-info border-opacity-25 py-2 px-3">
+<small class="text-muted"><i class="bi bi-info-circle text-info"></i> Capture authentique de DigiSpherEMR V2 sur Windows</small>
+<button class="btn btn-sm btn-sphere-secondary py-1 px-3" data-bs-dismiss="modal" type="button">Fermer l'aperçu</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Bootstrap 5.3.3 Bundle with Popper -->
+<script crossorigin="anonymous" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Custom DigiSphere Application Logic -->
+<script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -12,9 +12,9 @@
   </title>
   <meta name="title" content="DigiSpherEMR V2 | Simple Offline-First Practice Management for Doctors">
   <meta name="description"
-    content="DigiSpherEMR V2 brings patients, consultations, prescriptions, appointments, billing, expenses, revenue, and profit together in one simple offline-first Windows application for doctors.">
+    content="DigiSpherEMR V2 brings patient records, appointments, prescriptions, billing, and finances together in one offline-first Windows application. The two PC license adds inventory management.">
   <meta name="keywords"
-    content="DigiSpher EMR, offline EMR software, practice management software for solo doctors, windows medical record system, SOAP notes software, offline prescription generator, medical billing software, private clinic EMR, medical data sovereignty, no monthly fee EMR">
+    content="DigiSpher EMR, offline EMR software, practice management software for solo doctors, medical inventory management, clinic stock tracking, windows medical record system, SOAP notes software, offline prescription generator, medical billing software, private clinic EMR, medical data sovereignty, no monthly fee EMR">
   <meta name="author" content="DigiSpher Health Systems">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://ds-emr.digispher.online/">
@@ -25,7 +25,7 @@
   <meta property="og:url" content="https://ds-emr.digispher.online/">
   <meta property="og:title" content="DigiSpherEMR V2 - Run your practice. Not your software.">
   <meta property="og:description"
-    content="Simple practice management for doctors: patients, consultations, prescriptions, appointments, billing, expenses, revenue, and profit in one offline-first application.">
+    content="Patient records, appointments, billing, and finances in one offline-first application. The two PC lifetime license also includes inventory management.">
   <meta property="og:image" content="assets/images/screen_dashboard_kpi.png">
 
   <!-- Twitter Meta Tags -->
@@ -33,7 +33,7 @@
   <meta property="twitter:url" content="https://ds-emr.digispher.online/">
   <meta property="twitter:title" content="DigiSpherEMR V2 - Simple Practice Management for Doctors">
   <meta property="twitter:description"
-    content="Run your practice from one simple offline-first Windows application with no monthly software subscription.">
+    content="Run your practice with patient records and billing in one offline-first Windows application. The two PC license also includes inventory.">
   <meta property="twitter:image" content="assets/images/screen_dashboard_kpi.png">
 
   <!-- Favicon — all sizes using DS EMR logo -->
@@ -73,15 +73,29 @@
     "operatingSystem": "Windows 10, Windows 11 (64-bit)",
     "applicationCategory": "MedicalBusinessApplication",
     "softwareVersion": "2.0",
-    "description": "Simple offline-first practice management application for doctors, combining patients, consultations, prescriptions, appointments, billing, expenses, revenue, and profit tracking in one Windows workflow.",
-    "offers": {
-      "@type": "Offer",
-      "price": "899.00",
-      "priceCurrency": "USD",
-      "availability": "https://schema.org/InStock",
-      "url": "https://digispher.lemonsqueezy.com/checkout/buy/ea88e483-a889-4620-937e-963874151f57?discount=0",
-      "priceValidUntil": "2027-12-31"
-    },
+    "description": "Offline-first Windows practice management for doctors, combining patient records, appointments, billing, and finances. The two PC lifetime license also includes inventory management.",
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "One PC lifetime license",
+        "description": "Core clinical and practice management for one PC; inventory module not included.",
+        "price": "799.00",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://digispher.lemonsqueezy.com/checkout/buy/ea88e483-a889-4620-937e-963874151f57?discount=0",
+        "priceValidUntil": "2027-12-31"
+      },
+      {
+        "@type": "Offer",
+        "name": "Two PC lifetime license",
+        "description": "Practice management for two PCs, including inventory management.",
+        "price": "1198.00",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://digispher.lemonsqueezy.com/checkout/buy/ac033608-9cff-414c-8169-d2197bc35cad?media=0&desc=0&quantity=2",
+        "priceValidUntil": "2027-12-31"
+      }
+    ],
     "featureList": [
       "Patient management",
       "Consultations",
@@ -89,7 +103,10 @@
       "Prescriptions and A5 prescription printing",
       "Appointments",
       "Invoices and revenue tracking",
+      "Multi-currency billing support",
+      "Insurance handling",
       "Expense tracking",
+      "Inventory management and stock movements (two PC license)",
       "Profit tracking and financial reports",
       "PDF generation",
       "Backup and restore",
@@ -133,6 +150,7 @@
             <li class="nav-item"><a class="nav-link nav-link-sphere" href="#videoShowcase">Demo</a></li>
             <li class="nav-item"><a class="nav-link nav-link-sphere" href="#offlineBenefits">Why DigiSpher</a></li>
             <li class="nav-item"><a class="nav-link nav-link-sphere" href="#featureModules">Features</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-sphere" href="#inventory">Inventory</a></li>
             <li class="nav-item"><a class="nav-link nav-link-sphere" href="#specialOffer">Pricing</a></li>
             <li class="nav-item"><a class="nav-link nav-link-sphere" href="#requestQuote">Request Quote</a></li>
             <li class="nav-item"><a class="nav-link nav-link-sphere" href="blogs/blogs-list.html">Blog</a></li>
@@ -140,9 +158,8 @@
           </ul>
 
           <div class="d-flex align-items-center gap-3 mt-3 mt-lg-0">
-            <a href="https://digispher.lemonsqueezy.com/checkout/buy/ea88e483-a889-4620-937e-963874151f57?discount=0"
-              target="_blank" rel="noopener noreferrer" class="btn btn-sphere-primary btn-sm px-4 py-2">
-              <i class="bi bi-bag-check-fill"></i> Get DigiSpherEMR
+            <a href="#specialOffer" class="btn btn-sphere-primary btn-sm px-4 py-2">
+              <i class="bi bi-bag-check-fill"></i> Choose Your License
             </a>
           </div>
         </div>
@@ -165,21 +182,21 @@
             <p class="lead lead-hero mx-auto mb-4 text-secondary">
               <strong class="text-white">DigiSpherEMR combines medical records and practice management</strong> in one
               simple, fast application, so you can manage patients, consultations, prescriptions, appointments, billing,
-              expenses, revenue, and profit without juggling multiple systems. <strong class="text-white">Less
+              expenses, revenue, and profit without juggling multiple systems. The two PC license also adds inventory management. <strong class="text-white">Less
                 complexity. Less administration. More time for patients.</strong>
             </p>
 
             <div class="d-flex flex-column align-items-center gap-2 mb-4">
-              <div class="h2 text-white fw-bold mb-0">$899 &mdash; Lifetime License</div>
+              <div class="h2 text-white fw-bold mb-0">From $799 &mdash; One or Two PC Lifetime License</div>
               <span class="badge-sphere">
-                <i class="bi bi-check2-circle"></i> EMR + Practice Management &middot; Lifetime License &middot; No
+                <i class="bi bi-check2-circle"></i> EMR + Practice Management &middot; Inventory with Two PC License &middot; No
                 Monthly Subscription
               </span>
             </div>
 
             <div class="d-flex flex-column flex-sm-row justify-content-center align-items-center gap-3">
               <a href="#specialOffer" class="btn btn-sphere-primary">
-                <i class="bi bi-bag-check-fill fs-5"></i> Get DigiSpherEMR
+                <i class="bi bi-bag-check-fill fs-5"></i> Compare Licenses
               </a>
               <a href="#videoShowcase" class="btn btn-sphere-secondary">
                 <i class="bi bi-play-circle-fill fs-5 text-info"></i> Watch Demo
@@ -709,6 +726,8 @@
             </p>
             <ul class="feature-check-list">
               <li><strong>Patient Invoices:</strong> Create itemized billing records and receipts.</li>
+              <li><strong>Multi-Currency Support:</strong> Manage billing in multiple currencies.</li>
+              <li><strong>Insurance Handling:</strong> Keep insurance information in the billing workflow.</li>
               <li><strong>Expense Tracking:</strong> Record practice overhead such as rent, supplies, utilities,
                 equipment, staff, and software.</li>
               <li><strong>Financial Reporting:</strong> Review revenue, expenses, pending balances, and profit
@@ -719,6 +738,80 @@
           </div>
         </div>
 
+      </div>
+    </section>
+
+    <!-- INVENTORY -->
+    <section class="feature-showcase-section" id="inventory" aria-labelledby="inventoryHeading">
+      <div class="container-xl">
+        <div class="text-center mb-5">
+          <span class="badge-sphere mb-2"><i class="bi bi-box-seam-fill"></i> Inventory Management</span>
+          <h2 id="inventoryHeading" class="section-title">Know What Is in Stock, What Is Running Low, and What Was Used</h2>
+          <p class="section-subtitle">Included with the two PC license: track medical supplies and medications alongside the rest of your practice, from incoming batches to every stock movement.</p>
+        </div>
+
+        <div class="row align-items-center g-5 mb-5 pb-4">
+          <div class="col-lg-6 order-lg-2">
+            <div class="app-screen-frame" data-zoom-screen="assets/images/screen_inventory_items.png"
+              data-zoom-title="Inventory Items" data-zoom-desc="View items, stock quantities, minimum levels, and low-stock alerts.">
+              <img src="assets/images/screen_inventory_items.png" alt="DigiSpherEMR inventory items with stock totals and low-stock alerts"
+                class="app-screen-img" loading="lazy" decoding="async">
+              <div class="screen-zoom-hint"><i class="bi bi-arrows-fullscreen"></i> Click to Zoom Screen</div>
+            </div>
+          </div>
+          <div class="col-lg-6 order-lg-1 reveal-on-scroll">
+            <span class="badge-sphere mb-2"><i class="bi bi-boxes"></i> Items &amp; Stock Levels</span>
+            <h3 class="h2 text-white fw-bold mb-3">Spot shortages before they disrupt care</h3>
+            <p class="text-secondary">See total items, low-stock counts, and products nearing expiry in one inventory workspace.</p>
+            <ul class="feature-check-list">
+              <li><strong>Clear stock view:</strong> Review quantities, categories, minimum levels, and status.</li>
+              <li><strong>Daily actions:</strong> Receive, adjust, write off, dispense, and use stock from the item view.</li>
+              <li><strong>Reorder visibility:</strong> Find items that need attention without checking a separate spreadsheet.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row align-items-center g-5 mb-5 pb-4">
+          <div class="col-lg-6">
+            <div class="app-screen-frame" data-zoom-screen="assets/images/screen_inventory_batches.png"
+              data-zoom-title="Inventory Batches" data-zoom-desc="Review item batches, quantities, expiry dates, suppliers, and receipt dates.">
+              <img src="assets/images/screen_inventory_batches.png" alt="DigiSpherEMR inventory batches with quantities, expiry dates, and suppliers"
+                class="app-screen-img" loading="lazy" decoding="async">
+              <div class="screen-zoom-hint"><i class="bi bi-arrows-fullscreen"></i> Click to Zoom Screen</div>
+            </div>
+          </div>
+          <div class="col-lg-6 reveal-on-scroll">
+            <span class="badge-sphere mb-2"><i class="bi bi-calendar-check"></i> Batches &amp; Expiry</span>
+            <h3 class="h2 text-white fw-bold mb-3">Keep batch details close at hand</h3>
+            <p class="text-secondary">Track the batch behind each item so your team can review quantities, expiry dates, suppliers, and receipt information together.</p>
+            <ul class="feature-check-list">
+              <li><strong>Batch records:</strong> See the quantity and expiry date for each batch.</li>
+              <li><strong>Supplier context:</strong> Keep supplier and receipt details with the stock record.</li>
+              <li><strong>Fast filtering:</strong> Narrow the batch list to the item you need.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6 order-lg-2">
+            <div class="app-screen-frame" data-zoom-screen="assets/images/screen_inventory_movements.png"
+              data-zoom-title="Inventory Movements" data-zoom-desc="Follow stock going in and out with quantities, references, users, and notes.">
+              <img src="assets/images/screen_inventory_movements.png" alt="DigiSpherEMR inventory movement history showing stock in and out"
+                class="app-screen-img" loading="lazy" decoding="async">
+              <div class="screen-zoom-hint"><i class="bi bi-arrows-fullscreen"></i> Click to Zoom Screen</div>
+            </div>
+          </div>
+          <div class="col-lg-6 order-lg-1 reveal-on-scroll">
+            <span class="badge-sphere mb-2"><i class="bi bi-arrow-left-right"></i> Movement History</span>
+            <h3 class="h2 text-white fw-bold mb-3">Know where every stock change came from</h3>
+            <p class="text-secondary">Review incoming and outgoing movements with previous and new quantities, references, users, and notes.</p>
+            <ul class="feature-check-list">
+              <li><strong>Traceable changes:</strong> Follow receipts, dispensing, and adjustments in one history.</li>
+              <li><strong>Useful filters:</strong> Search movements by type, date, or item.</li>
+              <li><strong>Better handovers:</strong> Give your team a shared view of recent stock activity.</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -870,77 +963,52 @@
         <div class="text-center mb-5">
           <span class="badge-sphere mb-2"><i class="bi bi-credit-card-2-front-fill"></i> No Monthly Subscription</span>
           <h2 id="offerHeading" class="section-title">One Payment. Your Practice Management System.</h2>
-          <p class="section-subtitle">Buy the lifetime license once and keep using DigiSpherEMR for your practice.</p>
+          <p class="section-subtitle">Choose one PC for a solo doctor, or two PCs with inventory management for a doctor and secretary. Both are one-time lifetime licenses.</p>
         </div>
 
         <div class="row g-4 justify-content-center align-items-stretch">
-          <div class="col-lg-9 col-xl-8">
+          <div class="col-lg-6">
             <div class="offer-card-master reveal-on-scroll text-center h-100">
 
               <div class="offer-floating-tag">
-                <i class="bi bi-stars"></i> Lifetime License
+                <i class="bi bi-person-fill"></i> Solo doctor
               </div>
 
               <span class="badge-sphere mb-2">
                 <i class="bi bi-award-fill"></i> DigiSpherEMR V2
               </span>
 
-              <h3 class="h1 text-white fw-bold mb-2">Everything You Need to Manage Your Practice</h3>
+              <h3 class="h1 text-white fw-bold mb-2">One PC License</h3>
+              <p class="text-secondary">Core clinical and practice management for a doctor working on one computer.</p>
 
               <div class="offer-price-stack">
-                <span class="offer-price-current">$899</span>
+                <span class="offer-price-current">$799</span>
                 <span class="offer-price-period">One-Time Payment</span>
               </div>
 
               <p class="text-success fw-bold small mb-4">
-                <i class="bi bi-check-circle-fill"></i> Pay once. Keep using it.
+                <i class="bi bi-check-circle-fill"></i> One licensed PC. No monthly software subscription.
               </p>
 
-              <div class="row text-start g-3 mb-4 mx-auto" style="max-width: 650px;">
-                <div class="col-sm-6">
-                  <div class="d-flex align-items-center gap-2 text-white small"><i
-                      class="bi bi-check-circle-fill text-info fs-5"></i><span>Patient management</span></div>
-                </div>
-                <div class="col-sm-6">
-                  <div class="d-flex align-items-center gap-2 text-white small"><i
-                      class="bi bi-check-circle-fill text-info fs-5"></i><span>Consultations</span></div>
-                </div>
-                <div class="col-sm-6">
-                  <div class="d-flex align-items-center gap-2 text-white small"><i
-                      class="bi bi-check-circle-fill text-info fs-5"></i><span>Medical records</span></div>
-                </div>
-                <div class="col-sm-6">
-                  <div class="d-flex align-items-center gap-2 text-white small"><i
-                      class="bi bi-check-circle-fill text-info fs-5"></i><span>Prescriptions and A5 printing</span>
-                  </div>
-                </div>
-                <div class="col-sm-6">
-                  <div class="d-flex align-items-center gap-2 text-white small"><i
-                      class="bi bi-check-circle-fill text-info fs-5"></i><span>Appointments</span></div>
-                </div>
-                <div class="col-sm-6">
-                  <div class="d-flex align-items-center gap-2 text-white small"><i
-                      class="bi bi-check-circle-fill text-info fs-5"></i><span>Invoices and revenue tracking</span>
-                  </div>
-                </div>
-                <div class="col-sm-6">
-                  <div class="d-flex align-items-center gap-2 text-white small"><i
-                      class="bi bi-check-circle-fill text-info fs-5"></i><span>Expense and profit tracking</span></div>
-                </div>
-                <div class="col-sm-6">
-                  <div class="d-flex align-items-center gap-2 text-white small"><i
-                      class="bi bi-check-circle-fill text-info fs-5"></i><span>PDF generation and backups</span></div>
-                </div>
-              </div>
+              <ul class="offer-feature-list text-start mb-4">
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Patient management</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Consultations</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Medical records</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Prescriptions and A5 printing</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Appointments</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Invoices and revenue tracking</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Multi-currency support</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Insurance handling</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Expense and profit tracking</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> PDF generation and backups</li>
+              </ul>
+              <p class="text-secondary small mb-4"><i class="bi bi-info-circle" aria-hidden="true"></i> Inventory module is not included in the one PC license.</p>
 
               <div class="mb-3 d-flex flex-column flex-sm-row justify-content-center gap-3 align-items-center">
                 <a href="https://digispher.lemonsqueezy.com/checkout/buy/ea88e483-a889-4620-937e-963874151f57?discount=0"
                   target="_blank" rel="noopener noreferrer"
                   class="btn btn-sphere-primary btn-sphere-gold py-3 px-5 fs-5">
-                  <i class="bi bi-bag-check-fill"></i> Get DigiSpherEMR
-                </a>
-                <a href="#requestQuote" class="btn btn-sphere-secondary py-3 px-4 fs-5">
-                  <i class="bi bi-file-earmark-text text-info"></i> Request Custom Quote
+                  <i class="bi bi-bag-check-fill"></i> Buy One PC License
                 </a>
               </div>
 
@@ -955,7 +1023,47 @@
 
             </div>
           </div>
+          <div class="col-lg-6">
+            <div class="offer-card-master reveal-on-scroll text-center h-100">
+              <div class="offer-floating-tag"><i class="bi bi-people-fill"></i> Doctor + secretary</div>
+              <span class="badge-sphere mb-2"><i class="bi bi-pc-display-horizontal"></i> DigiSpherEMR V2</span>
+              <h3 class="h1 text-white fw-bold mb-2">Two PC License</h3>
+              <p class="text-secondary">One licensed computer for the doctor and one for the secretary, with inventory management included.</p>
+              <div class="offer-price-stack">
+                <span class="offer-price-current">$1,198</span>
+                <span class="offer-price-period">One-Time Payment</span>
+              </div>
+              <p class="text-success fw-bold small mb-4"><i class="bi bi-check-circle-fill"></i> Two licensed PCs. One practice workflow.</p>
+              <ul class="offer-feature-list text-start mb-4">
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Patient management</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Consultations</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Medical records</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Prescriptions and A5 printing</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Appointments</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Invoices and revenue tracking</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Multi-currency support</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Insurance handling</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Expense and profit tracking</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> PDF generation and backups</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Inventory, batches, and stock movements</li>
+              </ul>
+              <div class="mb-3 d-flex justify-content-center">
+                <a href="https://digispher.lemonsqueezy.com/checkout/buy/ac033608-9cff-414c-8169-d2197bc35cad?media=0&amp;desc=0&amp;quantity=2"
+                  target="_blank" rel="noopener noreferrer" class="btn btn-sphere-primary btn-sphere-gold py-3 px-5 fs-5">
+                  <i class="bi bi-bag-check-fill"></i> Buy Two PC License
+                </a>
+              </div>
+              <div class="guarantee-badge-box">
+                <i class="bi bi-wifi-off text-success fs-2"></i>
+                <div class="text-start">
+                  <div class="fw-bold text-white">No monthly software subscription</div>
+                  <div class="small text-secondary">Choose the number of licensed computers that fits your team.</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+        <p class="text-center text-secondary small mt-4 mb-0">Need more than two PCs or custom work? <a href="#requestQuote" class="text-info">Request a custom quote</a>.</p>
       </div>
     </section>
 
@@ -1391,7 +1499,7 @@
                 </div>
                 <div class="spec-box">
                   <div class="spec-label"><i class="bi bi-credit-card text-info"></i> License</div>
-                  <div class="spec-val">One-time lifetime license</div>
+                  <div class="spec-val">One or two PC lifetime license; one-time payment</div>
                 </div>
               </div>
             </div>
@@ -1478,8 +1586,7 @@
                 <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
                   data-bs-parent="#faqAccordion">
                   <div class="accordion-body">
-                    No. The lifetime license is a one-time purchase. The current price shown on this page is
-                    <strong>$899</strong>.
+                    No. Each lifetime license is a one-time purchase. One PC is <strong>$799</strong>; two PCs are <strong>$1,198</strong>.
                   </div>
                 </div>
               </div>
@@ -1561,6 +1668,21 @@
                 </div>
               </div>
 
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="headingTen">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                    Which license should I choose?
+                  </button>
+                </h3>
+                <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen"
+                  data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Choose the one PC license if you work alone on one computer and do not need inventory. Choose the two PC license if you and your secretary need separate computers and inventory management. The inventory module is included only with the two PC license.
+                  </div>
+                </div>
+              </div>
+
             </div>
 
           </div>
@@ -1582,9 +1704,8 @@
             offline-first Windows application.
           </p>
           <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
-            <a href="https://digispher.lemonsqueezy.com/checkout/buy/ea88e483-a889-4620-937e-963874151f57?discount=0"
-              target="_blank" rel="noopener noreferrer" class="btn btn-sphere-primary btn-sphere-gold fs-5 px-5 py-3">
-              <i class="bi bi-bag-check-fill"></i> Get DigiSpherEMR - $899
+            <a href="#specialOffer" class="btn btn-sphere-primary btn-sphere-gold fs-5 px-5 py-3">
+              <i class="bi bi-bag-check-fill"></i> Choose One or Two PCs — From $799
             </a>
             <a href="#videoShowcase" class="btn btn-sphere-secondary fs-5 px-4 py-3">
               <i class="bi bi-play-circle text-info"></i> Watch Demo
@@ -1660,6 +1781,7 @@
             <li class="mb-2"><a href="#featureModules" class="footer-link">Prescriptions</a></li>
             <li class="mb-2"><a href="#featureModules" class="footer-link">Appointments</a></li>
             <li class="mb-2"><a href="#featureModules" class="footer-link">Billing &amp; Finances</a></li>
+            <li class="mb-2"><a href="#inventory" class="footer-link">Inventory</a></li>
           </ul>
         </div>
 
@@ -1787,7 +1909,7 @@
           <h5 class="text-white fw-bold h6 mb-2">1. License Grant & Software Ownership</h5>
           <p class="mb-3">Upon purchase of DigiSpherEMR V2, DigiSpher Health Systems grants the licensee a perpetual,
             non-exclusive, non-transferable lifetime license to install and operate the software for private practice
-            management on modern Windows PCs.</p>
+            management on the number of modern Windows PCs included in the purchased license: one or two.</p>
 
           <h5 class="text-white fw-bold h6 mb-2">2. Local Data Sovereignty & Responsibility</h5>
           <p class="mb-3">DigiSpherEMR operates as a 100% offline application storing data locally in a SQLite database.
