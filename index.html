@@ -5,53 +5,71 @@
   <!-- Character Encoding & Mobile Viewport -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
   <!-- SEO Primary Meta Tags -->
   <title>DigiSpherEMR V2 | Simple Offline-First Practice Management for Doctors
   </title>
-  <meta name="title" content="DigiSpherEMR V2 | Simple Offline-First Practice Management for Doctors">
   <meta name="description"
-    content="DigiSpherEMR V2 brings patient records, appointments, prescriptions, billing, and finances together in one offline-first Windows application. The two PC license adds inventory management.">
-  <meta name="keywords"
-    content="DigiSpher EMR, offline EMR software, practice management software for solo doctors, medical inventory management, clinic stock tracking, windows medical record system, SOAP notes software, offline prescription generator, medical billing software, private clinic EMR, medical data sovereignty, no monthly fee EMR">
+    content="DigiSpherEMR V2 is offline-first Windows practice management for independent doctors. One PC is $239. Two PCs are $359 and include inventory. No monthly subscription.">
   <meta name="author" content="DigiSpher Health Systems">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://ds-emr.digispher.online/">
-  <meta name="theme-color" content="#050d22">
+  <link rel="alternate" hreflang="en" href="https://ds-emr.digispher.online/">
+  <link rel="alternate" hreflang="fr" href="https://ds-emr.digispher.online/fr.html">
+  <link rel="alternate" hreflang="x-default" href="https://ds-emr.digispher.online/">
+  <meta name="theme-color" content="#ffffff">
+  <script>
+    (function () {
+      var key = "ds-theme";
+      var choice = "auto";
+      try { choice = localStorage.getItem(key) || "auto"; } catch (e) {}
+      var fromQuery = new URLSearchParams(window.location.search).get("theme");
+      if (fromQuery === "light" || fromQuery === "dark" || fromQuery === "auto") choice = fromQuery;
+      var theme = choice;
+      if (choice !== "light" && choice !== "dark") {
+        theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        choice = "auto";
+      }
+      document.documentElement.setAttribute("data-theme", theme);
+      document.documentElement.setAttribute("data-theme-choice", choice);
+      var tile = document.querySelector('meta[name="theme-color"]');
+      if (tile) tile.setAttribute("content", theme === "dark" ? "#0d1b28" : "#ffffff");
+    })();
+  </script>
 
   <!-- Open Graph / Facebook / LinkedIn Meta Tags -->
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="DigiSpherEMR">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="fr_FR">
   <meta property="og:url" content="https://ds-emr.digispher.online/">
-  <meta property="og:title" content="DigiSpherEMR V2 - Run your practice. Not your software.">
+  <meta property="og:title" content="DigiSpherEMR V2 - Offline practice management from $239">
   <meta property="og:description"
-    content="Patient records, appointments, billing, and finances in one offline-first application. The two PC lifetime license also includes inventory management.">
-  <meta property="og:image" content="assets/images/screen_dashboard_kpi.png">
+    content="Patient records, appointments, prescriptions, billing, and finances in one offline-first Windows application. One PC is $239. Two PCs are $359 and include inventory.">
+  <meta property="og:image" content="https://ds-emr.digispher.online/assets/images/hero-exam-room.jpg">
+  <meta property="og:image:alt" content="Male physician reviewing a tablet in a bright clinic hallway">
 
   <!-- Twitter Meta Tags -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://ds-emr.digispher.online/">
-  <meta property="twitter:title" content="DigiSpherEMR V2 - Simple Practice Management for Doctors">
-  <meta property="twitter:description"
-    content="Run your practice with patient records and billing in one offline-first Windows application. The two PC license also includes inventory.">
-  <meta property="twitter:image" content="assets/images/screen_dashboard_kpi.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://ds-emr.digispher.online/">
+  <meta name="twitter:title" content="DigiSpherEMR V2 - Simple Practice Management for Doctors">
+  <meta name="twitter:description"
+    content="Offline-first Windows practice management. One PC is $239. Two PCs are $359 and include inventory. No monthly subscription.">
+  <meta name="twitter:image" content="https://ds-emr.digispher.online/assets/images/hero-exam-room.jpg">
 
-  <!-- Favicon — all sizes using DS EMR logo -->
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/logo_user.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/logo_user.png">
-  <link rel="icon" type="image/png" href="assets/images/logo_user.png">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
-  <link rel="shortcut icon" href="assets/images/logo_user.png">
-  <meta name="msapplication-TileImage" content="assets/images/logo_user.png">
-  <meta name="msapplication-TileColor" content="#050d22">
+  <meta name="msapplication-TileImage" content="assets/images/favicon-32.png">
+  <meta name="msapplication-TileColor" content="#ffffff">
   <!-- LLMs.txt for AI discovery -->
   <link rel="llms" href="https://ds-emr.digispher.online/llms.txt" type="text/plain">
 
-  <!-- Google Fonts: Plus Jakarta Sans & Outfit for Big, Modern Display Typography -->
+  <!-- Newsreader for titles, Source Sans 3 for the interface -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
     rel="stylesheet">
 
   <!-- Bootstrap 5.3.3 CSS -->
@@ -79,7 +97,7 @@
         "@type": "Offer",
         "name": "One PC lifetime license",
         "description": "Core clinical and practice management for one PC; inventory module not included.",
-        "price": "799.00",
+        "price": "239.00",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock",
         "url": "https://digispher.lemonsqueezy.com/checkout/buy/ea88e483-a889-4620-937e-963874151f57?discount=0",
@@ -89,7 +107,7 @@
         "@type": "Offer",
         "name": "Two PC lifetime license",
         "description": "Practice management for two PCs, including inventory management.",
-        "price": "1198.00",
+        "price": "359.00",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock",
         "url": "https://digispher.lemonsqueezy.com/checkout/buy/ac033608-9cff-414c-8169-d2197bc35cad?media=0&desc=0&quantity=2",
@@ -115,211 +133,366 @@
     ],
     "author": {
       "@type": "Organization",
-      "name": "DigiSpher Health Systems"
+      "name": "DigiSpher Health Systems",
+      "url": "https://ds-emr.digispher.online/",
+      "email": "digispher25@gmail.com",
+      "telephone": "+216-23-400-174"
     }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://ds-emr.digispher.online/#organization",
+        "name": "DigiSpher Health Systems",
+        "url": "https://ds-emr.digispher.online/",
+        "email": "digispher25@gmail.com",
+        "telephone": "+216-23-400-174",
+        "sameAs": [
+          "https://www.facebook.com/profile.php?id=61579736908309",
+          "https://linkedin.com/company/digispher"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://ds-emr.digispher.online/#website",
+        "url": "https://ds-emr.digispher.online/",
+        "name": "DigiSpherEMR",
+        "inLanguage": ["en", "fr"],
+        "publisher": { "@id": "https://ds-emr.digispher.online/#organization" }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://ds-emr.digispher.online/#faq",
+        "url": "https://ds-emr.digispher.online/#faq",
+        "isPartOf": { "@id": "https://ds-emr.digispher.online/#website" },
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is DigiSpherEMR?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "DigiSpherEMR is a practice management application that combines medical records and everyday practice management in one system."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is it only an EMR?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. DigiSpherEMR combines clinical management with practice management, including appointments, billing, expenses, revenue, and profit tracking."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does it require an internet connection?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The core application is designed with an offline-first workflow, so everyday practice management does not depend on an internet connection."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is there a monthly subscription?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Each lifetime license is a one-time purchase. One PC is $239; two PCs are $359."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I manage expenses and see profit?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. You can record practice expenses and use revenue and expense information to understand practice profit without building a separate spreadsheet yourself."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I print prescriptions?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. DigiSpherEMR generates professional A5 prescription PDFs suitable for printing."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I create invoices?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Billing and invoice management are included so the visit can be recorded financially."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I backup my data?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. DigiSpherEMR includes backup and restore functionality for your local practice data."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Who is DigiSpherEMR designed for?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It is designed primarily for independent doctors, private practices, and small clinics looking for a simple practice management solution."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which license should I choose?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Choose the one PC license if you work alone on one computer and do not need inventory. Choose the two PC license if you and your secretary need separate computers and inventory management. The inventory module is included only with the two PC license."
+            }
+          }
+        ]
+      }
+    ]
   }
   </script>
 </head>
 
-<body>
+<body class="home-praxis">
+  <a class="px-skip" href="#main">Skip to content</a>
 
-  <div class="sphere-canvas-bg" aria-hidden="true">
-    <div class="sphere-orb sphere-orb-1"></div>
-    <div class="sphere-orb sphere-orb-2"></div>
-    <div class="sphere-orb sphere-orb-3"></div>
-    <div class="sphere-grid-overlay"></div>
-  </div>
-
-  <header>
+  <header class="px-header">
     <nav class="navbar navbar-expand-lg navbar-sphere" id="mainNavbar">
       <div class="container-xl">
         <a class="navbar-brand d-flex align-items-center gap-2" href="#hero" aria-label="DigiSpherEMR Home">
-          <img src="assets/images/logo_user.png" alt="DigiSpherEMR V2 Logo" height="56" style="object-fit:contain;"
+          <img src="assets/images/logo_user.png" alt="DigiSpherEMR V2 Logo" width="600" height="600"
             decoding="async" fetchpriority="high">
           <span class="navbar-wordmark">DS EMR</span>
         </a>
 
-        <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="collapse"
-          data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false"
-          aria-label="Toggle navigation">
-          <i class="bi bi-list fs-2 text-info"></i>
-        </button>
+        <div class="d-flex align-items-center order-lg-last gap-2 ms-auto">
+          <a href="#requestDemo" class="px-btn px-header-cta">Get a Demo</a>
+          <button class="px-menu" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span></span>
+          </button>
+        </div>
 
         <div class="collapse navbar-collapse" id="navbarContent">
-          <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-1">
-            <li class="nav-item"><a class="nav-link nav-link-sphere" href="#videoShowcase">Demo</a></li>
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
             <li class="nav-item"><a class="nav-link nav-link-sphere" href="#offlineBenefits">Why DigiSpher</a></li>
-            <li class="nav-item"><a class="nav-link nav-link-sphere" href="#featureModules">Features</a></li>
+            <li class="nav-item dropdown">
+              <button type="button" class="nav-link nav-link-sphere dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Features</button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#featureDashboard">Dashboard</a></li>
+                <li><a class="dropdown-item" href="#featurePatients">Patients</a></li>
+                <li><a class="dropdown-item" href="#featureSoap">SOAP Notes</a></li>
+                <li><a class="dropdown-item" href="#featureRx">Prescriptions</a></li>
+                <li><a class="dropdown-item" href="#featureAppointments">Appointments</a></li>
+                <li><a class="dropdown-item" href="#featureBilling">Billing</a></li>
+              </ul>
+            </li>
             <li class="nav-item"><a class="nav-link nav-link-sphere" href="#inventory">Inventory</a></li>
             <li class="nav-item"><a class="nav-link nav-link-sphere" href="#specialOffer">Pricing</a></li>
-            <li class="nav-item"><a class="nav-link nav-link-sphere" href="#requestQuote">Request Quote</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-sphere" href="#requestQuote">Quote</a></li>
             <li class="nav-item"><a class="nav-link nav-link-sphere" href="blogs/blogs-list.html">Blog</a></li>
             <li class="nav-item"><a class="nav-link nav-link-sphere" href="#faq">FAQ</a></li>
           </ul>
-
-          <div class="d-flex align-items-center gap-3 mt-3 mt-lg-0">
-            <a href="#specialOffer" class="btn btn-sphere-primary btn-sm px-4 py-2">
-              <i class="bi bi-bag-check-fill"></i> Choose Your License
-            </a>
-          </div>
         </div>
       </div>
     </nav>
   </header>
 
-  <main>
+  <main id="main">
 
-    <!-- HERO -->
-    <section class="hero-section" id="hero">
+    <section class="px-hero" id="hero">
       <div class="container-xl">
-        <div class="row justify-content-center text-center">
-          <div class="col-lg-10 col-xl-9">
-
-            <h1 class="display-hero-title">
-              Fast, Effortless Practice Management. Zero Complexity.
-            </h1>
-
-            <p class="lead lead-hero mx-auto mb-4 text-secondary">
-              <strong class="text-white">DigiSpherEMR combines medical records and practice management</strong> in one
-              simple, fast application, so you can manage patients, consultations, prescriptions, appointments, billing,
-              expenses, revenue, and profit without juggling multiple systems. The two PC license also adds inventory management. <strong class="text-white">Less
-                complexity. Less administration. More time for patients.</strong>
-            </p>
-
-            <div class="d-flex flex-column align-items-center gap-2 mb-4">
-              <div class="h2 text-white fw-bold mb-0">From $799 &mdash; One or Two PC Lifetime License</div>
-              <span class="badge-sphere">
-                <i class="bi bi-check2-circle"></i> EMR + Practice Management &middot; Inventory with Two PC License &middot; No
-                Monthly Subscription
-              </span>
-            </div>
-
-            <div class="d-flex flex-column flex-sm-row justify-content-center align-items-center gap-3">
-              <a href="#specialOffer" class="btn btn-sphere-primary">
-                <i class="bi bi-bag-check-fill fs-5"></i> Compare Licenses
-              </a>
-              <a href="#videoShowcase" class="btn btn-sphere-secondary">
-                <i class="bi bi-play-circle-fill fs-5 text-info"></i> Watch Demo
-              </a>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- WORKFLOW -->
-    <section class="py-5" aria-labelledby="workflowHeading">
-      <div class="container-xl">
-        <div class="text-center mb-4">
-          <span class="badge-sphere mb-2"><i class="bi bi-diagram-3-fill"></i> Integrated Practice Workflow</span>
-          <h2 id="workflowHeading" class="section-title">From Patient to Profit &mdash; One Workflow.</h2>
-          <p class="section-subtitle">
-            Patient &rarr; Consultation &rarr; Prescription &rarr; Invoice &rarr; Expenses &rarr; Profit
-          </p>
-        </div>
-
-        <div class="row g-3 justify-content-center">
-          <div class="col-6 col-md-4 col-lg">
-            <div class="step-card h-100 reveal-on-scroll">
-              <div class="step-number-bubble">1</div>
-              <h4 class="h5 text-white fw-bold mb-2">Patient</h4>
-              <p class="text-secondary small mb-0">Find the record and review the history.</p>
+        <div class="row align-items-center g-4 g-lg-5">
+          <div class="col-lg-6 order-2 order-lg-1">
+            <div class="px-hero-media">
+              <img src="assets/images/hero-exam-room.jpg" width="1280" height="720" alt="Male physician reviewing a tablet in a bright clinic hallway" fetchpriority="high">
             </div>
           </div>
-          <div class="col-6 col-md-4 col-lg">
-            <div class="step-card h-100 reveal-on-scroll">
-              <div class="step-number-bubble">2</div>
-              <h4 class="h5 text-white fw-bold mb-2">Consultation</h4>
-              <p class="text-secondary small mb-0">Document notes, vitals, allergies, and details.</p>
-            </div>
-          </div>
-          <div class="col-6 col-md-4 col-lg">
-            <div class="step-card h-100 reveal-on-scroll">
-              <div class="step-number-bubble">3</div>
-              <h4 class="h5 text-white fw-bold mb-2">Prescription</h4>
-              <p class="text-secondary small mb-0">Create a professional prescription quickly.</p>
-            </div>
-          </div>
-          <div class="col-6 col-md-4 col-lg">
-            <div class="step-card h-100 reveal-on-scroll">
-              <div class="step-number-bubble">4</div>
-              <h4 class="h5 text-white fw-bold mb-2">Invoice</h4>
-              <p class="text-secondary small mb-0">Connect billing to the visit.</p>
-            </div>
-          </div>
-          <div class="col-6 col-md-4 col-lg">
-            <div class="step-card h-100 reveal-on-scroll">
-              <div class="step-number-bubble">5</div>
-              <h4 class="h5 text-white fw-bold mb-2">Profit</h4>
-              <p class="text-secondary small mb-0">See revenue, expenses, and profit clearly.</p>
+          <div class="col-lg-6 order-1 order-lg-2 px-hero-copy">
+            <h1>Fast practice management that stays simple the more you use it.</h1>
+            <h2 class="mt-3">Offline-first EMR and practice management for independent doctors. One payment. No monthly subscription.</h2>
+            <div class="d-flex flex-column flex-sm-row gap-3 mt-4">
+              <a href="#requestDemo" class="px-btn">Get a Demo</a>
+              <a href="#workflow" class="px-btn-soft">See how it works</a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- VIDEO -->
-    <section class="video-showcase-section" id="videoShowcase" aria-labelledby="videoSectionTitle">
+    <section class="px-section px-section-soft" id="offlineBenefits" aria-labelledby="offlineHeading">
       <div class="container-xl">
-        <div class="text-center mb-4">
-          <span class="badge-sphere mb-2"><i class="bi bi-camera-video-fill"></i> Product Demonstration</span>
-          <h2 id="videoSectionTitle" class="section-title">See the Complete Workflow Before You Buy</h2>
-          <p class="section-subtitle">
-            Follow a typical practice workflow from the patient record and consultation to prescription, appointments,
-            billing, and practice finances.
-          </p>
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <h2 id="offlineHeading" class="px-title">One application. One workflow. One place to manage your practice.</h2>
+            <p class="px-lead">DigiSpherEMR connects patient care, appointments, billing, expenses, revenue, and profit so the work of running the practice stays together. The two PC license also adds inventory.</p>
+            <a href="#requestDemo" class="px-btn mt-2">Get a Demo</a>
+          </div>
+          <div class="col-lg-6">
+            <div class="px-point-list">
+              <article class="px-card">
+                <div class="px-icon" aria-hidden="true"><i class="bi bi-wifi-off"></i></div>
+                <h3 class="h5">Offline-first</h3>
+                <p class="mb-0">Patients, notes, prescriptions, and billing do not wait on a connection.</p>
+              </article>
+              <article class="px-card">
+                <div class="px-icon" aria-hidden="true"><i class="bi bi-pc-display"></i></div>
+                <h3 class="h5">One Windows application</h3>
+                <p class="mb-0">The clinical day and the practice numbers stay in the same place.</p>
+              </article>
+              <article class="px-card">
+                <div class="px-icon" aria-hidden="true"><i class="bi bi-hdd"></i></div>
+                <h3 class="h5">Local records</h3>
+                <p class="mb-0">Everyday practice data stays on the computers in the practice.</p>
+              </article>
+            </div>
+          </div>
         </div>
+      </div>
+    </section>
 
-        <div class="video-cinema-frame reveal-on-scroll">
-          <div class="video-cinema-header">
-            <div class="video-window-dots">
-              <span></span><span></span><span></span>
-            </div>
-            <div class="d-flex align-items-center gap-2">
-              <i class="bi bi-record-circle-fill text-danger fs-6"></i>
-              <span class="text-white fw-bold small">DigiSpherEMR V2 - Product Tour</span>
-            </div>
-            <div class="video-placeholder-hint">
-              <i class="bi bi-play-circle-fill text-info"></i> Watch Demo
-            </div>
-          </div>
+    <section class="px-band-photo">
+      <div class="px-band-overlay"></div>
+      <div class="container-xl position-relative">
+        <div class="col-lg-8">
+          <h2 class="px-title">Your records stay in the practice.</h2>
+          <p class="fs-4 mb-4">The workflow does not wait on the internet.</p>
+          <a href="#requestDemo" class="px-btn">Get a Demo</a>
+        </div>
+      </div>
+    </section>
 
-          <div class="video-aspect-container" id="videoContainer"
-            data-video-url="https://www.youtube.com/embed/v8MsU-AODOk?autoplay=1&rel=0">
-            <div class="video-poster-overlay" id="videoPosterOverlay">
-              <button type="button" class="video-play-orb border-0" id="playVideoBtn"
-                aria-label="Play DigiSpherEMR product demo">
-                <i class="bi bi-play-fill"></i>
-              </button>
-              <h3 class="h4 text-white fw-bold mb-1">Watch the DigiSpherEMR V2 Demo</h3>
-              <p class="text-info small mb-0"><i class="bi bi-clock-history"></i> See the core workflow in action</p>
-            </div>
+    <section class="px-section px-section-band" id="workflow" aria-labelledby="workflowHeading">
+      <div class="container-xl">
+        <div class="mb-5">
+          <h2 id="workflowHeading" class="px-title">From patient to profit, one workflow.</h2>
+          <p class="px-lead">Patient, consultation, prescription, invoice, then a clear view of profit. The same offline application carries each step.</p>
+          <a class="px-text-link" href="#featureModules">See the features</a>
+        </div>
+        <div class="row g-3">
+          <div class="col-6 col-lg">
+            <div class="px-card"><div class="px-num">1</div><h3 class="h5">Patient</h3><p class="mb-0">Find the record and review the history.</p></div>
           </div>
+          <div class="col-6 col-lg">
+            <div class="px-card"><div class="px-num">2</div><h3 class="h5">Consultation</h3><p class="mb-0">Document notes, vitals, allergies, and details.</p></div>
+          </div>
+          <div class="col-6 col-lg">
+            <div class="px-card"><div class="px-num">3</div><h3 class="h5">Prescription</h3><p class="mb-0">Create a professional prescription quickly.</p></div>
+          </div>
+          <div class="col-6 col-lg">
+            <div class="px-card"><div class="px-num">4</div><h3 class="h5">Invoice</h3><p class="mb-0">Connect billing to the visit.</p></div>
+          </div>
+          <div class="col-6 col-lg">
+            <div class="px-card"><div class="px-num">5</div><h3 class="h5">Profit</h3><p class="mb-0">See revenue, expenses, and profit clearly.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-          <div
-            class="p-3 px-4 d-flex flex-wrap align-items-center justify-content-between bg-dark bg-opacity-75 border-top border-info border-opacity-25 small text-secondary">
-            <div class="d-flex align-items-center gap-3">
-              <span><i class="bi bi-check2-circle text-info"></i> Real application workflow</span>
-              <span><i class="bi bi-volume-up text-info"></i> Full audio commentary</span>
-            </div>
-            <div class="text-info small">
-              <i class="bi bi-youtube text-danger"></i> Official DigiSpherEMR Demonstration
-            </div>
-          </div>
+    <section class="px-section" id="requestDemo" aria-labelledby="demoHeading">
+      <div class="container-xl">
+        <div class="px-demo-intro">
+          <span class="px-kicker mb-3">See it on your workflow</span>
+          <h2 id="demoHeading" class="px-title">Get a demo</h2>
+          <p class="px-lead">Tell us about the practice. We will walk through patients, notes, prescriptions, appointments, and billing. Do not include patient information.</p>
+        </div>
+        <div class="px-demo-form px-card">
+              <form name="demo-request" method="POST" novalidate data-netlify="true" netlify-honeypot="bot-field" id="demoForm">
+                <input type="hidden" name="form-name" value="demo-request">
+                <p class="d-none" aria-hidden="true"><label>Don’t fill this out if you’re human: <input name="bot-field" tabindex="-1"></label></p>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label class="px-label" for="demoName">Name <span class="text-danger">*</span></label>
+                    <input class="form-control px-field" id="demoName" name="name" autocomplete="name" required placeholder="Alex Morgan">
+                    <div class="invalid-feedback">Enter your name.</div>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="px-label" for="demoEmail">Work email <span class="text-danger">*</span></label>
+                    <input class="form-control px-field" id="demoEmail" name="email" type="email" autocomplete="email" required placeholder="doctor@clinic.com">
+                    <div class="invalid-feedback">Enter a work email.</div>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="px-label" for="demoPhone">Phone <span class="fw-normal">(optional)</span></label>
+                    <input class="form-control px-field" id="demoPhone" name="phone" type="tel" autocomplete="tel" placeholder="+216 …">
+                  </div>
+                  <div class="col-md-6">
+                    <label class="px-label" for="demoSize">Practice size <span class="text-danger">*</span></label>
+                    <select class="form-select px-field" id="demoSize" name="practice_size" required>
+                      <option value="" selected disabled>Select practice size</option>
+                      <option>Solo physician</option>
+                      <option>2–5 clinicians</option>
+                      <option>6–15 clinicians</option>
+                      <option>16 or more</option>
+                    </select>
+                    <div class="invalid-feedback">Select a practice size.</div>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="px-label" for="demoSpecialty">Specialty <span class="text-danger">*</span></label>
+                    <select class="form-select px-field" id="demoSpecialty" name="specialty" required>
+                      <option value="" selected disabled>Select specialty</option>
+                      <option>General Practice / Family Medicine</option>
+                      <option>Pediatrics</option>
+                      <option>Internal Medicine</option>
+                      <option>Cardiology</option>
+                      <option>Obstetrics &amp; Gynecology</option>
+                      <option>Dermatology</option>
+                      <option>Orthopedics</option>
+                      <option>ENT (Otolaryngology)</option>
+                      <option>General Surgery</option>
+                      <option>Dental / Oral Surgery</option>
+                      <option>Multi-Specialty Clinic</option>
+                      <option>Other / Custom Specialty</option>
+                    </select>
+                    <div class="invalid-feedback">Select a specialty.</div>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="px-label" for="demoEhr">EHR currently used <span class="text-danger">*</span></label>
+                    <select class="form-select px-field" id="demoEhr" name="current_ehr" required>
+                      <option value="" selected disabled>Select current records</option>
+                      <option>Paper charts</option>
+                      <option>Spreadsheets</option>
+                      <option>Another EMR</option>
+                      <option>None yet</option>
+                      <option>Other</option>
+                    </select>
+                    <div class="invalid-feedback">Tell us what you use today.</div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="demoConsent" name="consent" value="yes" required>
+                      <label class="form-check-label" for="demoConsent">I agree to be contacted about this demo.</label>
+                      <div class="invalid-feedback">Consent is required before we can reply.</div>
+                      <a class="px-text-link" href="#" data-bs-toggle="modal" data-bs-target="#privacyModal">Privacy policy</a>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <button type="submit" class="px-btn px-5 py-3">Get a Demo</button>
+                  </div>
+                </div>
+              </form>
+              <div id="demoFormSuccess" class="d-none" tabindex="-1" role="alert">
+                <i class="bi bi-check-circle-fill fs-2 px-success"></i>
+                <h3 class="h5 mt-2">Demo request received</h3>
+                <p class="mb-0">We reply within one business day.</p>
+              </div>
         </div>
       </div>
     </section>
 
     <!-- CORE BENEFITS -->
-    <section class="offline-section" id="offlineBenefits" aria-labelledby="offlineHeading">
+    <section class="px-section px-section-soft" id="practiceNeeds" aria-labelledby="practiceHeading">
       <div class="container-xl">
 
-        <div class="text-center mb-5">
-          <span class="badge-sphere badge-offline mb-2">
+        <div class="mb-5">
+          <span class="px-eyebrow badge-offline mb-2">
             <i class="bi bi-shield-check"></i> Simple Practice Management
           </span>
-          <h2 id="offlineHeading" class="section-title">Everything Your Practice Needs. Without the Complexity.</h2>
+          <h2 id="practiceHeading" class="section-title">Everything Your Practice Needs. Without the Complexity.</h2>
           <p class="section-subtitle">
             Your practice already has enough to manage. DigiSpherEMR brings the clinical work and the business work
             into one clear workflow, so you do not need several apps, spreadsheets, and disconnected systems.
@@ -329,84 +502,84 @@
         <div class="row g-4 mb-5">
 
           <div class="col-md-6 col-lg-4">
-            <div class="glass-card reveal-on-scroll">
+            <div class="px-card">
               <div class="feature-icon-orb"><i class="bi bi-people-fill"></i></div>
-              <h3 class="h4 text-white fw-bold mb-3">Patients in One Place</h3>
-              <p class="text-secondary">
+              <h3 class="h4 fw-bold mb-3">Patients in One Place</h3>
+              <p >
                 Find the patient, open the record, review the history, and continue the visit without unnecessary
                 navigation.
               </p>
-              <div class="d-flex align-items-center gap-2 text-info small fw-bold mt-3">
+              <div class="d-flex align-items-center gap-2 small fw-bold mt-3">
                 <i class="bi bi-check2"></i> Less searching between tasks
               </div>
             </div>
           </div>
 
           <div class="col-md-6 col-lg-4">
-            <div class="glass-card reveal-on-scroll">
+            <div class="px-card">
               <div class="feature-icon-orb"><i class="bi bi-clipboard2-pulse-fill"></i></div>
-              <h3 class="h4 text-white fw-bold mb-3">Consultations Stay Connected</h3>
-              <p class="text-secondary">
+              <h3 class="h4 fw-bold mb-3">Consultations Stay Connected</h3>
+              <p >
                 Record notes, vitals, allergies, medical history, and consultation details in the same workspace as the
                 patient record.
               </p>
-              <div class="d-flex align-items-center gap-2 text-info small fw-bold mt-3">
+              <div class="d-flex align-items-center gap-2 small fw-bold mt-3">
                 <i class="bi bi-check2"></i> Patient to consultation flow
               </div>
             </div>
           </div>
 
           <div class="col-md-6 col-lg-4">
-            <div class="glass-card reveal-on-scroll">
+            <div class="px-card">
               <div class="feature-icon-orb"><i class="bi bi-prescription2"></i></div>
-              <h3 class="h4 text-white fw-bold mb-3">Prescriptions Without Fuss</h3>
-              <p class="text-secondary">
+              <h3 class="h4 fw-bold mb-3">Prescriptions Without Fuss</h3>
+              <p >
                 Add medications, dosage instructions, and generate a professional prescription without digging through
                 complicated menus.
               </p>
-              <div class="d-flex align-items-center gap-2 text-info small fw-bold mt-3">
+              <div class="d-flex align-items-center gap-2 small fw-bold mt-3">
                 <i class="bi bi-check2"></i> Ready-to-print prescriptions
               </div>
             </div>
           </div>
 
           <div class="col-md-6 col-lg-4">
-            <div class="glass-card reveal-on-scroll">
+            <div class="px-card">
               <div class="feature-icon-orb"><i class="bi bi-receipt-cutoff"></i></div>
-              <h3 class="h4 text-white fw-bold mb-3">Billing Follows the Visit</h3>
-              <p class="text-secondary">
+              <h3 class="h4 fw-bold mb-3">Billing Follows the Visit</h3>
+              <p >
                 Create the invoice and keep the financial record connected to the care you delivered, instead of
                 managing billing somewhere else.
               </p>
-              <div class="d-flex align-items-center gap-2 text-info small fw-bold mt-3">
+              <div class="d-flex align-items-center gap-2 small fw-bold mt-3">
                 <i class="bi bi-check2"></i> Clinical work plus billing
               </div>
             </div>
           </div>
 
           <div class="col-md-6 col-lg-4">
-            <div class="glass-card reveal-on-scroll">
+            <div class="px-card">
               <div class="feature-icon-orb"><i class="bi bi-wallet2"></i></div>
-              <h3 class="h4 text-white fw-bold mb-3">Expenses Are Visible</h3>
-              <p class="text-secondary">
+              <h3 class="h4 fw-bold mb-3">Expenses Are Visible</h3>
+              <p >
                 Record practice expenses and understand where money is going without maintaining a separate spreadsheet
                 for every cost.
               </p>
-              <div class="d-flex align-items-center gap-2 text-info small fw-bold mt-3">
+              <div class="d-flex align-items-center gap-2 small fw-bold mt-3">
                 <i class="bi bi-check2"></i> Costs belong beside revenue
               </div>
             </div>
           </div>
 
           <div class="col-md-6 col-lg-4">
-            <div class="glass-card reveal-on-scroll">
+            <div class="px-card">
               <div class="feature-icon-orb"><i class="bi bi-graph-up-arrow"></i></div>
-              <h3 class="h4 text-white fw-bold mb-3">Profit Becomes Clear</h3>
-              <p class="text-secondary">
+              <h3 class="h4 fw-bold mb-3">Profit Becomes Clear</h3>
+              <p >
                 Track revenue, expenses, and profit with simple reports that help you understand the health of the
                 practice you are running.
               </p>
-              <div class="d-flex align-items-center gap-2 text-info small fw-bold mt-3">
+              <div class="d-flex align-items-center gap-2 small fw-bold mt-3">
                 <i class="bi bi-check2"></i> Revenue minus expenses
               </div>
             </div>
@@ -414,19 +587,19 @@
 
         </div>
 
-        <div class="pillar-banner-card reveal-on-scroll">
+        <div class="px-card px-card--panel">
           <div class="row align-items-center">
             <div class="col-lg-8">
-              <span class="badge-sphere badge-offline mb-2">The Core Idea</span>
-              <h3 class="h2 text-white fw-bold mb-3">One Application. One Workflow. One Place to Manage Your Practice.
+              <span class="px-eyebrow badge-offline mb-2">The Core Idea</span>
+              <h3 class="h2 fw-bold mb-3">One Application. One Workflow. One Place to Manage Your Practice.
               </h3>
-              <p class="text-secondary mb-0">
+              <p class="mb-0">
                 DigiSpherEMR connects patient care, appointment organization, billing, expenses, revenue, and profit so
                 the work of running the practice stays together.
               </p>
             </div>
             <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
-              <a href="#specialOffer" class="btn btn-sphere-primary">
+              <a href="#specialOffer" class="px-btn">
                 <i class="bi bi-bag-check"></i> Get DigiSpherEMR
               </a>
             </div>
@@ -440,8 +613,8 @@
     <section class="feature-showcase-section" id="featureModules" aria-labelledby="featuresHeading">
       <div class="container-xl">
 
-        <div class="text-center mb-5">
-          <span class="badge-sphere mb-2"><i class="bi bi-grid-1x2-fill"></i> Complete Practice Suite</span>
+        <div class="mb-5">
+          <span class="px-eyebrow mb-2"><i class="bi bi-grid-1x2-fill"></i> Complete Practice Suite</span>
           <h2 id="featuresHeading" class="section-title">Everything You Need for the Daily Workflow</h2>
           <p class="section-subtitle">
             The product is designed around the tasks independent practitioners repeat every day — with the clinical and
@@ -451,18 +624,15 @@
 
         <div class="row align-items-center g-5 mb-5 pb-4">
           <div class="col-lg-6 order-lg-2">
-            <div class="app-screen-frame" data-zoom-screen="assets/images/screen_dashboard_kpi.png"
-              data-zoom-title="DigiSpher EMR Dashboard"
-              data-zoom-desc="Practice dashboard showing key clinical, scheduling, and financial information.">
-              <img src="assets/images/screen_dashboard_kpi.png" alt="DigiSpher EMR practice dashboard"
-                class="app-screen-img" loading="lazy" decoding="async">
-              <div class="screen-zoom-hint"><i class="bi bi-arrows-fullscreen"></i> Click to Zoom Screen</div>
+            <div class="px-capability">
+              <span class="px-capability-mark" aria-hidden="true"><i class="bi bi-speedometer2"></i></span>
+              <p>Daily overview</p>
             </div>
           </div>
-          <div class="col-lg-6 order-lg-1 reveal-on-scroll">
-            <span class="badge-sphere mb-2"><i class="bi bi-speedometer"></i> Dashboard</span>
-            <h3 class="h2 text-white fw-bold mb-3">See the Practice at a Glance</h3>
-            <p class="text-secondary">
+          <div class="col-lg-6 order-lg-1">
+            <span class="px-eyebrow mb-2"><i class="bi bi-speedometer"></i> Dashboard</span>
+            <h3 id="featureDashboard" class="h2 fw-bold mb-3">See the Practice at a Glance</h3>
+            <p >
               Start your day with a practical overview of the information you need most.
             </p>
             <ul class="feature-check-list">
@@ -478,18 +648,15 @@
 
         <div class="row align-items-center g-5 mb-5 pb-4">
           <div class="col-lg-6">
-            <div class="app-screen-frame" data-zoom-screen="assets/images/screen_dashboard_dock.png"
-              data-zoom-title="Practice Quick Actions"
-              data-zoom-desc="Quick actions for new patients, visits, clinical notes, prescriptions, invoices, and finances.">
-              <img src="assets/images/screen_dashboard_dock.png" alt="DigiSpher EMR quick actions dashboard"
-                class="app-screen-img" loading="lazy" decoding="async">
-              <div class="screen-zoom-hint"><i class="bi bi-arrows-fullscreen"></i> Click to Zoom Screen</div>
+            <div class="px-capability">
+              <span class="px-capability-mark" aria-hidden="true"><i class="bi bi-lightning-charge"></i></span>
+              <p>Frequent tasks</p>
             </div>
           </div>
-          <div class="col-lg-6 reveal-on-scroll">
-            <span class="badge-sphere mb-2"><i class="bi bi-lightning-fill"></i> Quick Actions</span>
-            <h3 class="h2 text-white fw-bold mb-3">Put Frequent Tasks One Click Away</h3>
-            <p class="text-secondary">
+          <div class="col-lg-6">
+            <span class="px-eyebrow mb-2"><i class="bi bi-lightning-fill"></i> Quick Actions</span>
+            <h3 id="featureActions" class="h2 fw-bold mb-3">Put Frequent Tasks One Click Away</h3>
+            <p >
               The command dock keeps the most common clinical and administrative actions close at hand.
             </p>
             <ul class="feature-check-list">
@@ -506,18 +673,15 @@
 
         <div class="row align-items-center g-5 mb-5 pb-4">
           <div class="col-lg-6 order-lg-2">
-            <div class="app-screen-frame" data-zoom-screen="assets/images/screen_patient360_soap.png"
-              data-zoom-title="Patient 360 Record"
-              data-zoom-desc="Patient record with allergy information, vitals, consultations, and longitudinal history.">
-              <img src="assets/images/screen_patient360_soap.png" alt="DigiSpher EMR patient 360 medical record"
-                class="app-screen-img" loading="lazy" decoding="async">
-              <div class="screen-zoom-hint"><i class="bi bi-arrows-fullscreen"></i> Click to Zoom Screen</div>
+            <div class="px-capability">
+              <span class="px-capability-mark" aria-hidden="true"><i class="bi bi-person-vcard"></i></span>
+              <p>Patient records</p>
             </div>
           </div>
-          <div class="col-lg-6 order-lg-1 reveal-on-scroll">
-            <span class="badge-sphere mb-2"><i class="bi bi-person-lines-fill"></i> Patient Records</span>
-            <h3 class="h2 text-white fw-bold mb-3">Keep the Patient's Story in One Place</h3>
-            <p class="text-secondary">
+          <div class="col-lg-6 order-lg-1">
+            <span class="px-eyebrow mb-2"><i class="bi bi-person-lines-fill"></i> Patient Records</span>
+            <h3 id="featurePatients" class="h2 fw-bold mb-3">Keep the Patient's Story in One Place</h3>
+            <p >
               Bring the information you need for a consultation together in a single patient view.
             </p>
             <ul class="feature-check-list">
@@ -534,18 +698,15 @@
 
         <div class="row align-items-center g-5 mb-5 pb-4">
           <div class="col-lg-6">
-            <div class="app-screen-frame" data-zoom-screen="assets/images/screen_patient_directory.png"
-              data-zoom-title="Patient Directory"
-              data-zoom-desc="Searchable patient directory for fast access to existing records.">
-              <img src="assets/images/screen_patient_directory.png" alt="DigiSpher EMR patient directory"
-                class="app-screen-img" loading="lazy" decoding="async">
-              <div class="screen-zoom-hint"><i class="bi bi-arrows-fullscreen"></i> Click to Zoom Screen</div>
+            <div class="px-capability">
+              <span class="px-capability-mark" aria-hidden="true"><i class="bi bi-journal-medical"></i></span>
+              <p>Clinical notes</p>
             </div>
           </div>
-          <div class="col-lg-6 reveal-on-scroll">
-            <span class="badge-sphere mb-2"><i class="bi bi-file-medical-fill"></i> Clinical Documentation</span>
-            <h3 class="h2 text-white fw-bold mb-3">Structured SOAP Notes Without the Extra Complexity</h3>
-            <p class="text-secondary">
+          <div class="col-lg-6">
+            <span class="px-eyebrow mb-2"><i class="bi bi-file-medical-fill"></i> Clinical Documentation</span>
+            <h3 id="featureSoap" class="h2 fw-bold mb-3">Structured SOAP Notes Without the Extra Complexity</h3>
+            <p >
               Document consultations using a familiar clinical structure while keeping previous notes easy to find.
             </p>
             <ul class="feature-check-list">
@@ -561,72 +722,16 @@
 
         <div class="row align-items-center g-5 mb-5 pb-4">
           <div class="col-lg-6 order-lg-2">
-            <div class="glass-card p-4 border-info border-opacity-50 reveal-on-scroll">
-              <div
-                class="d-flex align-items-center justify-content-between pb-3 border-bottom border-secondary border-opacity-25 mb-3">
-                <div class="d-flex align-items-center gap-2">
-                  <i class="bi bi-file-earmark-pdf-fill text-danger fs-3"></i>
-                  <div>
-                    <div class="fw-bold text-white">A5 Prescription Generator</div>
-                    <div class="small text-muted">Print-ready PDF workflow</div>
-                  </div>
-                </div>
-                <span class="badge bg-success px-3 py-2">PDF &amp; Print</span>
-              </div>
-
-              <div class="p-3 rounded-3 bg-white text-dark shadow-sm">
-                <div class="d-flex justify-content-between border-bottom pb-2 mb-2">
-                  <div>
-                    <h6 class="fw-bold mb-0">DigiSpher Clinic</h6>
-                    <small class="text-muted">Doctor &amp; clinic information</small>
-                  </div>
-                  <div class="text-end">
-                    <small class="fw-bold text-uppercase text-secondary">Prescription</small>
-                  </div>
-                </div>
-                <div class="py-2 border-bottom small">
-                  <strong>Patient:</strong> Patient Name &nbsp;|&nbsp; <strong>Date:</strong> Visit Date
-                </div>
-                <div class="table-responsive my-2">
-                  <table class="table table-sm table-borderless small mb-0">
-                    <thead>
-                      <tr class="border-bottom text-muted">
-                        <th>Medication</th>
-                        <th>Dosage</th>
-                        <th>Frequency</th>
-                        <th>Duration</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td class="fw-bold">Medication</td>
-                        <td>Dosage</td>
-                        <td>Frequency</td>
-                        <td>Duration</td>
-                      </tr>
-                      <tr>
-                        <td class="fw-bold">Medication</td>
-                        <td>Dosage</td>
-                        <td>Frequency</td>
-                        <td>Duration</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <div class="border-top pt-2 d-flex justify-content-between align-items-end">
-                  <small class="text-muted fst-italic">Generated by DigiSpher EMR</small>
-                  <div class="text-center" style="width: 120px; border-top: 1px solid #94a3b8;">
-                    <small class="text-muted">Doctor Signature</small>
-                  </div>
-                </div>
-              </div>
+            <div class="px-capability">
+              <span class="px-capability-mark" aria-hidden="true"><i class="bi bi-prescription2"></i></span>
+              <p>Prescriptions</p>
             </div>
           </div>
 
-          <div class="col-lg-6 order-lg-1 reveal-on-scroll">
-            <span class="badge-sphere mb-2"><i class="bi bi-prescription2"></i> Prescriptions</span>
-            <h3 class="h2 text-white fw-bold mb-3">Create Professional A5 Prescriptions in Seconds</h3>
-            <p class="text-secondary">
+          <div class="col-lg-6 order-lg-1">
+            <span class="px-eyebrow mb-2"><i class="bi bi-prescription2"></i> Prescriptions</span>
+            <h3 id="featureRx" class="h2 fw-bold mb-3">Create Professional A5 Prescriptions in Seconds</h3>
+            <p >
               Build prescriptions directly from the clinical workflow and generate clean, print-ready A5 documents.
             </p>
             <ul class="feature-check-list">
@@ -641,18 +746,15 @@
 
         <div class="row align-items-center g-5 mb-5 pb-4">
           <div class="col-lg-6">
-            <div class="app-screen-frame" data-zoom-screen="assets/images/screen_appointment_calendar.png"
-              data-zoom-title="Appointments Calendar"
-              data-zoom-desc="Appointment calendar with visit details and statuses.">
-              <img src="assets/images/screen_appointment_calendar.png" alt="DigiSpher EMR appointment calendar"
-                class="app-screen-img" loading="lazy" decoding="async">
-              <div class="screen-zoom-hint"><i class="bi bi-arrows-fullscreen"></i> Click to Zoom Screen</div>
+            <div class="px-capability">
+              <span class="px-capability-mark" aria-hidden="true"><i class="bi bi-calendar3"></i></span>
+              <p>Scheduling</p>
             </div>
           </div>
-          <div class="col-lg-6 reveal-on-scroll">
-            <span class="badge-sphere mb-2"><i class="bi bi-calendar3"></i> Scheduling</span>
-            <h3 class="h2 text-white fw-bold mb-3">Keep Appointments Organized</h3>
-            <p class="text-secondary">
+          <div class="col-lg-6">
+            <span class="px-eyebrow mb-2"><i class="bi bi-calendar3"></i> Scheduling</span>
+            <h3 id="featureAppointments" class="h2 fw-bold mb-3">Keep Appointments Organized</h3>
+            <p >
               Manage scheduled visits directly inside the same application as your patient records.
             </p>
             <ul class="feature-check-list">
@@ -666,62 +768,16 @@
 
         <div class="row align-items-center g-5">
           <div class="col-lg-6 order-lg-2">
-            <div class="glass-card p-4 border-info border-opacity-50 reveal-on-scroll">
-              <div
-                class="d-flex align-items-center justify-content-between pb-3 border-bottom border-secondary border-opacity-25 mb-4">
-                <div class="d-flex align-items-center gap-2">
-                  <i class="bi bi-cash-stack text-success fs-3"></i>
-                  <div>
-                    <div class="fw-bold text-white">Practice Finances</div>
-                    <div class="small text-muted">Revenue, expenses &amp; billing</div>
-                  </div>
-                </div>
-                <span class="badge bg-primary px-3 py-2"><i class="bi bi-filetype-csv"></i> CSV Export</span>
-              </div>
-
-              <div class="row g-3 mb-4 text-center">
-                <div class="col-4">
-                  <div class="p-2 rounded-3 bg-dark bg-opacity-75 border border-success border-opacity-25">
-                    <div class="small text-muted">Revenue</div>
-                    <div class="fw-bold text-success fs-5">$580</div>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <div class="p-2 rounded-3 bg-dark bg-opacity-75 border border-danger border-opacity-25">
-                    <div class="small text-muted">Expenses</div>
-                    <div class="fw-bold text-danger fs-5">$120</div>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <div class="p-2 rounded-3 bg-dark bg-opacity-75 border border-info border-opacity-25">
-                    <div class="small text-muted">Net</div>
-                    <div class="fw-bold text-info fs-5">+$460</div>
-                  </div>
-                </div>
-              </div>
-
-              <div
-                class="p-3 rounded-3 bg-dark bg-opacity-50 border border-secondary border-opacity-25 small text-secondary">
-                <div class="d-flex justify-content-between mb-2">
-                  <span><i class="bi bi-receipt text-info"></i> Patient invoicing</span>
-                  <span class="text-white fw-bold">Built In</span>
-                </div>
-                <div class="d-flex justify-content-between mb-2">
-                  <span><i class="bi bi-tags text-warning"></i> Expense tracking</span>
-                  <span class="text-white fw-bold">Built In</span>
-                </div>
-                <div class="d-flex justify-content-between">
-                  <span><i class="bi bi-download text-success"></i> Accountant CSV export</span>
-                  <span class="text-white fw-bold">1 Click</span>
-                </div>
-              </div>
+            <div class="px-capability">
+              <span class="px-capability-mark" aria-hidden="true"><i class="bi bi-graph-up-arrow"></i></span>
+              <p>Practice finances</p>
             </div>
           </div>
 
-          <div class="col-lg-6 order-lg-1 reveal-on-scroll">
-            <span class="badge-sphere mb-2"><i class="bi bi-graph-up-arrow"></i> Billing &amp; Finances</span>
-            <h3 class="h2 text-white fw-bold mb-3">Understand the Financial Side of Your Practice</h3>
-            <p class="text-secondary">
+          <div class="col-lg-6 order-lg-1">
+            <span class="px-eyebrow mb-2"><i class="bi bi-graph-up-arrow"></i> Billing &amp; Finances</span>
+            <h3 id="featureBilling" class="h2 fw-bold mb-3">Understand the Financial Side of Your Practice</h3>
+            <p >
               Keep patient billing, expenses, revenue, and practice reporting alongside the clinical workflow.
             </p>
             <ul class="feature-check-list">
@@ -744,91 +800,52 @@
     <!-- INVENTORY -->
     <section class="feature-showcase-section" id="inventory" aria-labelledby="inventoryHeading">
       <div class="container-xl">
-        <div class="text-center mb-5">
-          <span class="badge-sphere mb-2"><i class="bi bi-box-seam-fill"></i> Inventory Management</span>
+        <div class="mb-5">
+          <span class="px-eyebrow mb-2"><i class="bi bi-box-seam-fill"></i> Inventory Management</span>
           <h2 id="inventoryHeading" class="section-title">Know What Is in Stock, What Is Running Low, and What Was Used</h2>
           <p class="section-subtitle">Included with the two PC license: track medical supplies and medications alongside the rest of your practice, from incoming batches to every stock movement.</p>
         </div>
 
-        <div class="row align-items-center g-5 mb-5 pb-4">
-          <div class="col-lg-6 order-lg-2">
-            <div class="app-screen-frame" data-zoom-screen="assets/images/screen_inventory_items.png"
-              data-zoom-title="Inventory Items" data-zoom-desc="View items, stock quantities, minimum levels, and low-stock alerts.">
-              <img src="assets/images/screen_inventory_items.png" alt="DigiSpherEMR inventory items with stock totals and low-stock alerts"
-                class="app-screen-img" loading="lazy" decoding="async">
-              <div class="screen-zoom-hint"><i class="bi bi-arrows-fullscreen"></i> Click to Zoom Screen</div>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="px-card">
+              <div class="px-icon"><i class="bi bi-boxes"></i></div>
+              <h3 class="h5">Spot shortages before they disrupt care</h3>
+              <p>See quantities, categories, minimum levels, and low-stock items in one inventory workspace. Receive, adjust, write off, dispense, and use stock from the item view.</p>
             </div>
           </div>
-          <div class="col-lg-6 order-lg-1 reveal-on-scroll">
-            <span class="badge-sphere mb-2"><i class="bi bi-boxes"></i> Items &amp; Stock Levels</span>
-            <h3 class="h2 text-white fw-bold mb-3">Spot shortages before they disrupt care</h3>
-            <p class="text-secondary">See total items, low-stock counts, and products nearing expiry in one inventory workspace.</p>
-            <ul class="feature-check-list">
-              <li><strong>Clear stock view:</strong> Review quantities, categories, minimum levels, and status.</li>
-              <li><strong>Daily actions:</strong> Receive, adjust, write off, dispense, and use stock from the item view.</li>
-              <li><strong>Reorder visibility:</strong> Find items that need attention without checking a separate spreadsheet.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row align-items-center g-5 mb-5 pb-4">
-          <div class="col-lg-6">
-            <div class="app-screen-frame" data-zoom-screen="assets/images/screen_inventory_batches.png"
-              data-zoom-title="Inventory Batches" data-zoom-desc="Review item batches, quantities, expiry dates, suppliers, and receipt dates.">
-              <img src="assets/images/screen_inventory_batches.png" alt="DigiSpherEMR inventory batches with quantities, expiry dates, and suppliers"
-                class="app-screen-img" loading="lazy" decoding="async">
-              <div class="screen-zoom-hint"><i class="bi bi-arrows-fullscreen"></i> Click to Zoom Screen</div>
+          <div class="col-md-4">
+            <div class="px-card">
+              <div class="px-icon"><i class="bi bi-calendar-check"></i></div>
+              <h3 class="h5">Keep batch details close at hand</h3>
+              <p>Review quantity, expiry, supplier, and receipt information for each batch, and filter the list to the item you need.</p>
             </div>
           </div>
-          <div class="col-lg-6 reveal-on-scroll">
-            <span class="badge-sphere mb-2"><i class="bi bi-calendar-check"></i> Batches &amp; Expiry</span>
-            <h3 class="h2 text-white fw-bold mb-3">Keep batch details close at hand</h3>
-            <p class="text-secondary">Track the batch behind each item so your team can review quantities, expiry dates, suppliers, and receipt information together.</p>
-            <ul class="feature-check-list">
-              <li><strong>Batch records:</strong> See the quantity and expiry date for each batch.</li>
-              <li><strong>Supplier context:</strong> Keep supplier and receipt details with the stock record.</li>
-              <li><strong>Fast filtering:</strong> Narrow the batch list to the item you need.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row align-items-center g-5">
-          <div class="col-lg-6 order-lg-2">
-            <div class="app-screen-frame" data-zoom-screen="assets/images/screen_inventory_movements.png"
-              data-zoom-title="Inventory Movements" data-zoom-desc="Follow stock going in and out with quantities, references, users, and notes.">
-              <img src="assets/images/screen_inventory_movements.png" alt="DigiSpherEMR inventory movement history showing stock in and out"
-                class="app-screen-img" loading="lazy" decoding="async">
-              <div class="screen-zoom-hint"><i class="bi bi-arrows-fullscreen"></i> Click to Zoom Screen</div>
+          <div class="col-md-4">
+            <div class="px-card">
+              <div class="px-icon"><i class="bi bi-arrow-left-right"></i></div>
+              <h3 class="h5">Know where every stock change came from</h3>
+              <p>Follow receipts, dispensing, and adjustments with previous and new quantities, references, users, and notes. Filter by type, date, or item.</p>
             </div>
-          </div>
-          <div class="col-lg-6 order-lg-1 reveal-on-scroll">
-            <span class="badge-sphere mb-2"><i class="bi bi-arrow-left-right"></i> Movement History</span>
-            <h3 class="h2 text-white fw-bold mb-3">Know where every stock change came from</h3>
-            <p class="text-secondary">Review incoming and outgoing movements with previous and new quantities, references, users, and notes.</p>
-            <ul class="feature-check-list">
-              <li><strong>Traceable changes:</strong> Follow receipts, dispensing, and adjustments in one history.</li>
-              <li><strong>Useful filters:</strong> Search movements by type, date, or item.</li>
-              <li><strong>Better handovers:</strong> Give your team a shared view of recent stock activity.</li>
-            </ul>
           </div>
         </div>
       </div>
     </section>
 
     <!-- DATA / BACKUP -->
-    <section class="py-5" aria-labelledby="dataControlHeading">
+    <section class="py-5" id="dataControl" aria-labelledby="dataControlHeading">
       <div class="container-xl">
-        <div class="pillar-banner-card reveal-on-scroll">
+        <div class="px-card px-card--panel">
           <div class="row align-items-center g-5">
             <div class="col-lg-6">
-              <span class="badge-sphere badge-offline mb-2"><i class="bi bi-wifi-off"></i> Offline-First Practice
+              <span class="px-eyebrow badge-offline mb-2"><i class="bi bi-wifi-off"></i> Offline-First Practice
                 Management</span>
               <h2 id="dataControlHeading" class="section-title mb-3">Your Data. Your Practice. Your Control.</h2>
-              <p class="text-secondary">
+              <p >
                 DigiSpherEMR is designed so your core practice workflow does not depend on an internet connection. You
                 can manage your practice locally and keep control of the day-to-day data environment.
               </p>
-              <p class="text-secondary mb-0">
+              <p class="mb-0">
                 Medical and financial information deserves careful handling. A local-first workflow keeps your working
                 patient and practice records inside your practice environment instead of making everyday use depend on a
                 remote cloud service.
@@ -838,27 +855,27 @@
             <div class="col-lg-6">
               <div class="row g-3">
                 <div class="col-sm-6">
-                  <div class="command-dock-card h-100">
-                    <div class="fw-bold text-white mb-1"><i class="bi bi-wifi-off text-info"></i> Work Offline</div>
+                  <div class="px-card h-100">
+                    <div class="fw-bold mb-1"><i class="bi bi-wifi-off"></i> Work Offline</div>
                     <div class="card-desc">Your everyday workflow does not require constant internet access.</div>
                   </div>
                 </div>
                 <div class="col-sm-6">
-                  <div class="command-dock-card h-100">
-                    <div class="fw-bold text-white mb-1"><i class="bi bi-hdd text-success"></i> Keep Data Local</div>
+                  <div class="px-card h-100">
+                    <div class="fw-bold mb-1"><i class="bi bi-hdd text-success"></i> Keep Data Local</div>
                     <div class="card-desc">Practice data is stored locally on your computer.</div>
                   </div>
                 </div>
                 <div class="col-sm-6">
-                  <div class="command-dock-card h-100">
-                    <div class="fw-bold text-white mb-1"><i class="bi bi-arrow-repeat text-warning"></i> Backup &amp;
+                  <div class="px-card h-100">
+                    <div class="fw-bold mb-1"><i class="bi bi-arrow-repeat text-warning"></i> Backup &amp;
                       Restore</div>
                     <div class="card-desc">Create backups and restore your practice data when needed.</div>
                   </div>
                 </div>
                 <div class="col-sm-6">
-                  <div class="command-dock-card h-100">
-                    <div class="fw-bold text-white mb-1"><i class="bi bi-credit-card text-primary"></i> No Forced Cloud
+                  <div class="px-card h-100">
+                    <div class="fw-bold mb-1"><i class="bi bi-credit-card text-primary"></i> No Forced Cloud
                       Fee</div>
                     <div class="card-desc">Your practice should not stop working because the internet does.</div>
                   </div>
@@ -871,25 +888,49 @@
       </div>
     </section>
 
-    <!-- AUDIENCE -->
-    <section class="py-5" id="targetAudience" aria-labelledby="audienceHeading">
+    <section class="px-section" id="contrast" aria-labelledby="contrastHeading">
       <div class="container-xl">
-        <div class="text-center mb-5">
-          <span class="badge-sphere mb-2"><i class="bi bi-people-fill"></i> Built for Independent Doctors</span>
+        <div class="mb-5">
+          <h2 id="contrastHeading" class="px-title">Still stitching the practice together by hand?</h2>
+          <p class="px-lead">DigiSpherEMR keeps the daily work in one Windows application, with a one-time license.</p>
+        </div>
+        <div class="row g-3">
+          <div class="col-md-6 col-xl-4"><div class="px-card px-warn"><h3 class="h5">Monthly subscriptions</h3><p>A lifetime license is one payment. The software does not add a monthly fee to keep the practice open.</p><span class="px-source">Source: DigiSpherEMR license description on this page.</span></div></div>
+          <div class="col-md-6 col-xl-4"><div class="px-card px-warn"><h3 class="h5">Cloud outages</h3><p>Everyday records, notes, and billing are designed to work without a constant internet connection.</p><span class="px-source">Source: DigiSpherEMR product description on this page.</span></div></div>
+          <div class="col-md-6 col-xl-4"><div class="px-card px-warn"><h3 class="h5">Billing in a spreadsheet</h3><p>Invoices, expenses, revenue, and profit sit beside the visit instead of in a second workbook.</p><span class="px-source">Source: DigiSpherEMR product description on this page.</span></div></div>
+          <div class="col-md-6 col-xl-4"><div class="px-card px-warn"><h3 class="h5">Stock tracked elsewhere</h3><p>The two PC license includes inventory, batches, and stock movements in the same application.</p><span class="px-source">Source: DigiSpherEMR two PC license description on this page.</span></div></div>
+          <div class="col-md-6 col-xl-4"><div class="px-card px-warn"><h3 class="h5">Paper charts</h3><p>Patient details, SOAP notes, and prescriptions stay in one record you can search and print.</p><span class="px-source">Source: DigiSpherEMR product description on this page.</span></div></div>
+          <div class="col-md-6 col-xl-4"><div class="px-card px-warn"><h3 class="h5">Hospital-sized software</h3><p>The screens follow a private-practice day: find the patient, write the note, prescribe, invoice, and move on.</p><span class="px-source">Source: DigiSpherEMR product description on this page.</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AUDIENCE -->
+    <section class="px-section px-section-band" id="targetAudience" aria-labelledby="audienceHeading">
+      <div class="container-xl">
+        <div class="mb-5">
+          <span class="px-eyebrow mb-2"><i class="bi bi-people-fill"></i> Built for Independent Doctors</span>
           <h2 id="audienceHeading" class="section-title">Practical Software for Private Practice</h2>
           <p class="section-subtitle">
             DigiSpherEMR is for doctors who want a useful system without the complexity of large hospital software.
           </p>
+          <div class="mt-3">
+            <a class="px-pill" href="#featurePatients">Patients</a>
+            <a class="px-pill" href="#featureSoap">SOAP</a>
+            <a class="px-pill" href="#featureAppointments">Appointments</a>
+            <a class="px-pill" href="#featureBilling">Billing</a>
+            <a class="px-pill" href="#inventory">Inventory</a>
+          </div>
         </div>
 
         <div class="row g-4">
           <div class="col-md-6 col-lg-3 d-flex">
-            <div class="audience-card w-100 reveal-on-scroll">
+            <div class="px-card w-100">
               <div class="d-flex align-items-center gap-3 mb-3">
                 <div class="audience-icon-orb flex-shrink-0"><i class="bi bi-person-badge-fill"></i></div>
                 <div>
-                  <h4 class="h5 text-white fw-bold mb-0">Independent Doctors</h4>
-                  <span class="badge-audience-spec">Complete Daily Workflow</span>
+                  <h3 class="h5 fw-bold mb-0">Independent Doctors</h3>
+                  <span class="px-eyebrow">Complete Daily Workflow</span>
                 </div>
               </div>
               <div class="audience-card-body">
@@ -900,12 +941,12 @@
           </div>
 
           <div class="col-md-6 col-lg-3 d-flex">
-            <div class="audience-card w-100 reveal-on-scroll">
+            <div class="px-card w-100">
               <div class="d-flex align-items-center gap-3 mb-3">
                 <div class="audience-icon-orb flex-shrink-0"><i class="bi bi-hospital-fill"></i></div>
                 <div>
-                  <h4 class="h5 text-white fw-bold mb-0">Private Practices</h4>
-                  <span class="badge-audience-spec">Clinical + Financial</span>
+                  <h3 class="h5 fw-bold mb-0">Private Practices</h3>
+                  <span class="px-eyebrow">Clinical + Financial</span>
                 </div>
               </div>
               <div class="audience-card-body">
@@ -916,12 +957,12 @@
           </div>
 
           <div class="col-md-6 col-lg-3 d-flex">
-            <div class="audience-card w-100 reveal-on-scroll">
+            <div class="px-card w-100">
               <div class="d-flex align-items-center gap-3 mb-3">
                 <div class="audience-icon-orb flex-shrink-0"><i class="bi bi-building-fill-check"></i></div>
                 <div>
-                  <h4 class="h5 text-white fw-bold mb-0">Small Clinics</h4>
-                  <span class="badge-audience-spec">Simple Administration</span>
+                  <h3 class="h5 fw-bold mb-0">Small Clinics</h3>
+                  <span class="px-eyebrow">Simple Administration</span>
                 </div>
               </div>
               <div class="audience-card-body">
@@ -932,12 +973,12 @@
           </div>
 
           <div class="col-md-6 col-lg-3 d-flex">
-            <div class="audience-card w-100 reveal-on-scroll">
+            <div class="px-card w-100">
               <div class="d-flex align-items-center gap-3 mb-3">
                 <div class="audience-icon-orb flex-shrink-0"><i class="bi bi-journal-medical"></i></div>
                 <div>
-                  <h4 class="h5 text-white fw-bold mb-0">Moving From Paper</h4>
-                  <span class="badge-audience-spec">Easy Digital Start</span>
+                  <h3 class="h5 fw-bold mb-0">Moving From Paper</h3>
+                  <span class="px-eyebrow">Easy Digital Start</span>
                 </div>
               </div>
               <div class="audience-card-body">
@@ -948,9 +989,9 @@
           </div>
         </div>
 
-        <div class="text-center mt-5">
-          <p class="text-secondary small mb-2">
-            <i class="bi bi-info-circle text-info"></i>
+        <div class="mt-5">
+          <p class="small mb-2">
+            <i class="bi bi-info-circle"></i>
             More features are not always better. DigiSpherEMR focuses on making the important things easy.
           </p>
         </div>
@@ -961,28 +1002,28 @@
     <section class="offers-section" id="specialOffer" aria-labelledby="offerHeading">
       <div class="container-xl">
         <div class="text-center mb-5">
-          <span class="badge-sphere mb-2"><i class="bi bi-credit-card-2-front-fill"></i> No Monthly Subscription</span>
+          <span class="px-eyebrow mb-2"><i class="bi bi-credit-card-2-front-fill"></i> No Monthly Subscription</span>
           <h2 id="offerHeading" class="section-title">One Payment. Your Practice Management System.</h2>
           <p class="section-subtitle">Choose one PC for a solo doctor, or two PCs with inventory management for a doctor and secretary. Both are one-time lifetime licenses.</p>
         </div>
 
         <div class="row g-4 justify-content-center align-items-stretch">
           <div class="col-lg-6">
-            <div class="offer-card-master reveal-on-scroll text-center h-100">
+            <div class="px-card px-card--offer text-center h-100">
 
-              <div class="offer-floating-tag">
+              <div class="px-eyebrow">
                 <i class="bi bi-person-fill"></i> Solo doctor
               </div>
 
-              <span class="badge-sphere mb-2">
+              <span class="px-eyebrow mb-2">
                 <i class="bi bi-award-fill"></i> DigiSpherEMR V2
               </span>
 
-              <h3 class="h1 text-white fw-bold mb-2">One PC License</h3>
-              <p class="text-secondary">Core clinical and practice management for a doctor working on one computer.</p>
+              <h3 class="h1 fw-bold mb-2">One PC License</h3>
+              <p >Core clinical and practice management for a doctor working on one computer.</p>
 
               <div class="offer-price-stack">
-                <span class="offer-price-current">$799</span>
+                <span class="offer-price-current">$239</span>
                 <span class="offer-price-period">One-Time Payment</span>
               </div>
 
@@ -1002,12 +1043,12 @@
                 <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Expense and profit tracking</li>
                 <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> PDF generation and backups</li>
               </ul>
-              <p class="text-secondary small mb-4"><i class="bi bi-info-circle" aria-hidden="true"></i> Inventory module is not included in the one PC license.</p>
+              <p class="small mb-4"><i class="bi bi-info-circle" aria-hidden="true"></i> Inventory module is not included in the one PC license.</p>
 
               <div class="mb-3 d-flex flex-column flex-sm-row justify-content-center gap-3 align-items-center">
                 <a href="https://digispher.lemonsqueezy.com/checkout/buy/ea88e483-a889-4620-937e-963874151f57?discount=0"
                   target="_blank" rel="noopener noreferrer"
-                  class="btn btn-sphere-primary btn-sphere-gold py-3 px-5 fs-5">
+                  class="px-btn py-3 px-5 fs-5">
                   <i class="bi bi-bag-check-fill"></i> Buy One PC License
                 </a>
               </div>
@@ -1015,8 +1056,8 @@
               <div class="guarantee-badge-box">
                 <i class="bi bi-wifi-off text-success fs-2"></i>
                 <div class="text-start">
-                  <div class="fw-bold text-white">Offline-First Workflow</div>
-                  <div class="small text-secondary">No monthly software subscription is required for the purchased
+                  <div class="fw-bold">Offline-First Workflow</div>
+                  <div class="small">No monthly software subscription is required for the purchased
                     lifetime license.</div>
                 </div>
               </div>
@@ -1024,13 +1065,13 @@
             </div>
           </div>
           <div class="col-lg-6">
-            <div class="offer-card-master reveal-on-scroll text-center h-100">
-              <div class="offer-floating-tag"><i class="bi bi-people-fill"></i> Doctor + secretary</div>
-              <span class="badge-sphere mb-2"><i class="bi bi-pc-display-horizontal"></i> DigiSpherEMR V2</span>
-              <h3 class="h1 text-white fw-bold mb-2">Two PC License</h3>
-              <p class="text-secondary">One licensed computer for the doctor and one for the secretary, with inventory management included.</p>
+            <div class="px-card px-card--offer text-center h-100">
+              <div class="px-eyebrow"><i class="bi bi-people-fill"></i> Doctor + secretary</div>
+              <span class="px-eyebrow mb-2"><i class="bi bi-pc-display-horizontal"></i> DigiSpherEMR V2</span>
+              <h3 class="h1 fw-bold mb-2">Two PC License</h3>
+              <p >One licensed computer for the doctor and one for the secretary, with inventory management included.</p>
               <div class="offer-price-stack">
-                <span class="offer-price-current">$1,198</span>
+                <span class="offer-price-current">$359</span>
                 <span class="offer-price-period">One-Time Payment</span>
               </div>
               <p class="text-success fw-bold small mb-4"><i class="bi bi-check-circle-fill"></i> Two licensed PCs. One practice workflow.</p>
@@ -1049,29 +1090,29 @@
               </ul>
               <div class="mb-3 d-flex justify-content-center">
                 <a href="https://digispher.lemonsqueezy.com/checkout/buy/ac033608-9cff-414c-8169-d2197bc35cad?media=0&amp;desc=0&amp;quantity=2"
-                  target="_blank" rel="noopener noreferrer" class="btn btn-sphere-primary btn-sphere-gold py-3 px-5 fs-5">
+                  target="_blank" rel="noopener noreferrer" class="px-btn py-3 px-5 fs-5">
                   <i class="bi bi-bag-check-fill"></i> Buy Two PC License
                 </a>
               </div>
               <div class="guarantee-badge-box">
                 <i class="bi bi-wifi-off text-success fs-2"></i>
                 <div class="text-start">
-                  <div class="fw-bold text-white">No monthly software subscription</div>
-                  <div class="small text-secondary">Choose the number of licensed computers that fits your team.</div>
+                  <div class="fw-bold">No monthly software subscription</div>
+                  <div class="small">Choose the number of licensed computers that fits your team.</div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <p class="text-center text-secondary small mt-4 mb-0">Need more than two PCs or custom work? <a href="#requestQuote" class="text-info">Request a custom quote</a>.</p>
+        <p class="text-center small mt-4 mb-0">Need more than two PCs or custom work? <a href="#requestQuote" >Request a custom quote</a>.</p>
       </div>
     </section>
 
     <!-- REQUEST A QUOTE SECTION -->
     <section class="quote-section py-5" id="requestQuote" aria-labelledby="quoteHeading">
       <div class="container-xl">
-        <div class="text-center mb-5">
-          <span class="badge-sphere mb-2"><i class="bi bi-file-earmark-text-fill"></i> Customization & Special
+        <div class="mb-5">
+          <span class="px-eyebrow mb-2"><i class="bi bi-file-earmark-text-fill"></i> Customization & Special
             Pricing</span>
           <h2 id="quoteHeading" class="section-title">Request a Custom Quote</h2>
           <p class="section-subtitle">
@@ -1082,9 +1123,9 @@
 
         <div class="row justify-content-center">
           <div class="col-lg-10 col-xl-8">
-            <div class="glass-card reveal-on-scroll p-4 p-md-5">
+            <div class="px-card p-4 p-md-5">
 
-              <form name="quote-request" method="POST" data-netlify="true" netlify-honeypot="bot-field"
+              <form name="quote-request" method="POST" novalidate data-netlify="true" netlify-honeypot="bot-field"
                 class="needs-validation" id="quoteForm">
                 <!-- Hidden netlify form-name field -->
                 <input type="hidden" name="form-name" value="quote-request" />
@@ -1097,43 +1138,46 @@
                 <div class="row g-4">
                   <!-- Doctor Name -->
                   <div class="col-md-6">
-                    <label for="doctorName" class="form-label text-white fw-semibold small">Doctor Name <span
+                    <label for="doctorName" class="form-label fw-semibold small">Doctor Name <span
                         class="text-danger">*</span></label>
                     <div class="input-group input-group-sphere">
-                      <span class="input-group-text"><i class="bi bi-person-badge text-info"></i></span>
+                      <span class="input-group-text"><i class="bi bi-person-badge"></i></span>
                       <input type="text" class="form-control form-control-sphere" id="doctorName" name="doctor_name"
                         placeholder="Dr. Alex Morgan" required>
                     </div>
+<div class="invalid-feedback">Enter the doctor's name.</div>
                   </div>
 
                   <!-- Email Address -->
                   <div class="col-md-6">
-                    <label for="quoteEmail" class="form-label text-white fw-semibold small">Email Address <span
+                    <label for="quoteEmail" class="form-label fw-semibold small">Email Address <span
                         class="text-danger">*</span></label>
                     <div class="input-group input-group-sphere">
-                      <span class="input-group-text"><i class="bi bi-envelope-at text-info"></i></span>
+                      <span class="input-group-text"><i class="bi bi-envelope-at"></i></span>
                       <input type="email" class="form-control form-control-sphere" id="quoteEmail" name="email"
                         placeholder="doctor@clinic.com" required>
                     </div>
+<div class="invalid-feedback">Enter an email address.</div>
                   </div>
 
                   <!-- Clinic Name -->
                   <div class="col-md-6">
-                    <label for="clinicName" class="form-label text-white fw-semibold small">Clinic / Practice Name <span
+                    <label for="clinicName" class="form-label fw-semibold small">Clinic / Practice Name <span
                         class="text-danger">*</span></label>
                     <div class="input-group input-group-sphere">
-                      <span class="input-group-text"><i class="bi bi-building text-info"></i></span>
+                      <span class="input-group-text"><i class="bi bi-building"></i></span>
                       <input type="text" class="form-control form-control-sphere" id="clinicName" name="clinic_name"
                         placeholder="Apex Medical Center" required>
                     </div>
+<div class="invalid-feedback">Enter the clinic name.</div>
                   </div>
 
                   <!-- Medical Specialty Dropdown -->
                   <div class="col-md-6">
-                    <label for="medicalSpecialty" class="form-label text-white fw-semibold small">Medical Specialty
+                    <label for="medicalSpecialty" class="form-label fw-semibold small">Medical Specialty
                       <span class="text-danger">*</span></label>
                     <div class="input-group input-group-sphere">
-                      <span class="input-group-text"><i class="bi bi-heart-pulse text-info"></i></span>
+                      <span class="input-group-text"><i class="bi bi-heart-pulse"></i></span>
                       <select class="form-select form-control-sphere" id="medicalSpecialty" name="medical_specialty"
                         required>
                         <option value="" selected disabled>Select Medical Specialty...</option>
@@ -1155,147 +1199,125 @@
                         <option value="Other / Custom Specialty">Other / Custom Specialty</option>
                       </select>
                     </div>
+<div class="invalid-feedback">Select a specialty.</div>
                   </div>
 
                   <!-- Custom Searchable Country Dropdown Component -->
                   <div class="col-md-6">
-                    <label for="countryCountyInput" class="form-label text-white fw-semibold small">Country / Region
+                    <label for="countryCountyInput" class="form-label fw-semibold small">Country / Region
                       <span class="text-danger">*</span></label>
-                    <div class="custom-select-wrapper position-relative" id="countrySelectWrapper">
-                      <div class="input-group input-group-sphere cursor-pointer" id="countrySelectTrigger">
-                        <span class="input-group-text"><i class="bi bi-geo-alt text-info"></i></span>
-                        <input type="text" class="form-control form-control-sphere cursor-pointer"
-                          id="countryCountyInput" name="country_county" placeholder="Select or search country..."
-                          required readonly autocomplete="off">
-                        <span class="input-group-text pe-3"><i class="bi bi-chevron-down text-info small"
-                            id="countrySelectChevron"></i></span>
-                      </div>
-
-                      <!-- Searchable Dropdown Popup Panel -->
-                      <div class="custom-select-menu p-2 shadow-lg d-none" id="countrySelectMenu">
-                        <div class="input-group input-group-sm mb-2">
-                          <span class="input-group-text bg-dark border-secondary text-info"><i
-                              class="bi bi-search"></i></span>
-                          <input type="text" class="form-control bg-dark text-white border-secondary small"
-                            id="countrySearchFilter" placeholder="Type to search country..." autocomplete="off">
-                        </div>
-                        <ul class="list-unstyled mb-0 custom-select-list" id="countryOptionsList">
-                          <li class="custom-option-item" data-value="United States"><i
-                              class="bi bi-geo-alt-fill me-2 text-info"></i>United States</li>
-                          <li class="custom-option-item" data-value="United Kingdom"><i
-                              class="bi bi-geo-alt-fill me-2 text-info"></i>United Kingdom</li>
-                          <li class="custom-option-item" data-value="Canada"><i
-                              class="bi bi-geo-alt-fill me-2 text-info"></i>Canada</li>
-                          <li class="custom-option-item" data-value="Australia"><i
-                              class="bi bi-geo-alt-fill me-2 text-info"></i>Australia</li>
-                          <li class="custom-option-item" data-value="Afghanistan">Afghanistan</li>
-                          <li class="custom-option-item" data-value="Albania">Albania</li>
-                          <li class="custom-option-item" data-value="Algeria">Algeria</li>
-                          <li class="custom-option-item" data-value="Argentina">Argentina</li>
-                          <li class="custom-option-item" data-value="Austria">Austria</li>
-                          <li class="custom-option-item" data-value="Bahrain">Bahrain</li>
-                          <li class="custom-option-item" data-value="Bangladesh">Bangladesh</li>
-                          <li class="custom-option-item" data-value="Belgium">Belgium</li>
-                          <li class="custom-option-item" data-value="Bolivia">Bolivia</li>
-                          <li class="custom-option-item" data-value="Brazil">Brazil</li>
-                          <li class="custom-option-item" data-value="Bulgaria">Bulgaria</li>
-                          <li class="custom-option-item" data-value="Cameroon">Cameroon</li>
-                          <li class="custom-option-item" data-value="Chile">Chile</li>
-                          <li class="custom-option-item" data-value="China">China</li>
-                          <li class="custom-option-item" data-value="Colombia">Colombia</li>
-                          <li class="custom-option-item" data-value="Costa Rica">Costa Rica</li>
-                          <li class="custom-option-item" data-value="Croatia">Croatia</li>
-                          <li class="custom-option-item" data-value="Cyprus">Cyprus</li>
-                          <li class="custom-option-item" data-value="Czech Republic">Czech Republic</li>
-                          <li class="custom-option-item" data-value="Denmark">Denmark</li>
-                          <li class="custom-option-item" data-value="Dominican Republic">Dominican Republic</li>
-                          <li class="custom-option-item" data-value="Ecuador">Ecuador</li>
-                          <li class="custom-option-item" data-value="Egypt">Egypt</li>
-                          <li class="custom-option-item" data-value="Estonia">Estonia</li>
-                          <li class="custom-option-item" data-value="Ethiopia">Ethiopia</li>
-                          <li class="custom-option-item" data-value="Finland">Finland</li>
-                          <li class="custom-option-item" data-value="France">France</li>
-                          <li class="custom-option-item" data-value="Germany">Germany</li>
-                          <li class="custom-option-item" data-value="Ghana">Ghana</li>
-                          <li class="custom-option-item" data-value="Greece">Greece</li>
-                          <li class="custom-option-item" data-value="Guatemala">Guatemala</li>
-                          <li class="custom-option-item" data-value="Hong Kong">Hong Kong</li>
-                          <li class="custom-option-item" data-value="Hungary">Hungary</li>
-                          <li class="custom-option-item" data-value="Iceland">Iceland</li>
-                          <li class="custom-option-item" data-value="India">India</li>
-                          <li class="custom-option-item" data-value="Indonesia">Indonesia</li>
-                          <li class="custom-option-item" data-value="Iran">Iran</li>
-                          <li class="custom-option-item" data-value="Iraq">Iraq</li>
-                          <li class="custom-option-item" data-value="Ireland">Ireland</li>
-                          <li class="custom-option-item" data-value="Israel">Israel</li>
-                          <li class="custom-option-item" data-value="Italy">Italy</li>
-                          <li class="custom-option-item" data-value="Ivory Coast">Ivory Coast</li>
-                          <li class="custom-option-item" data-value="Jamaica">Jamaica</li>
-                          <li class="custom-option-item" data-value="Japan">Japan</li>
-                          <li class="custom-option-item" data-value="Jordan">Jordan</li>
-                          <li class="custom-option-item" data-value="Kazakhstan">Kazakhstan</li>
-                          <li class="custom-option-item" data-value="Kenya">Kenya</li>
-                          <li class="custom-option-item" data-value="Kuwait">Kuwait</li>
-                          <li class="custom-option-item" data-value="Lebanon">Lebanon</li>
-                          <li class="custom-option-item" data-value="Libya">Libya</li>
-                          <li class="custom-option-item" data-value="Luxembourg">Luxembourg</li>
-                          <li class="custom-option-item" data-value="Malaysia">Malaysia</li>
-                          <li class="custom-option-item" data-value="Malta">Malta</li>
-                          <li class="custom-option-item" data-value="Mexico">Mexico</li>
-                          <li class="custom-option-item" data-value="Morocco">Morocco</li>
-                          <li class="custom-option-item" data-value="Netherlands">Netherlands</li>
-                          <li class="custom-option-item" data-value="New Zealand">New Zealand</li>
-                          <li class="custom-option-item" data-value="Nigeria">Nigeria</li>
-                          <li class="custom-option-item" data-value="Norway">Norway</li>
-                          <li class="custom-option-item" data-value="Oman">Oman</li>
-                          <li class="custom-option-item" data-value="Pakistan">Pakistan</li>
-                          <li class="custom-option-item" data-value="Palestine">Palestine</li>
-                          <li class="custom-option-item" data-value="Panama">Panama</li>
-                          <li class="custom-option-item" data-value="Peru">Peru</li>
-                          <li class="custom-option-item" data-value="Philippines">Philippines</li>
-                          <li class="custom-option-item" data-value="Poland">Poland</li>
-                          <li class="custom-option-item" data-value="Portugal">Portugal</li>
-                          <li class="custom-option-item" data-value="Qatar">Qatar</li>
-                          <li class="custom-option-item" data-value="Romania">Romania</li>
-                          <li class="custom-option-item" data-value="Saudi Arabia">Saudi Arabia</li>
-                          <li class="custom-option-item" data-value="Senegal">Senegal</li>
-                          <li class="custom-option-item" data-value="Serbia">Serbia</li>
-                          <li class="custom-option-item" data-value="Singapore">Singapore</li>
-                          <li class="custom-option-item" data-value="Slovakia">Slovakia</li>
-                          <li class="custom-option-item" data-value="South Africa">South Africa</li>
-                          <li class="custom-option-item" data-value="South Korea">South Korea</li>
-                          <li class="custom-option-item" data-value="Spain">Spain</li>
-                          <li class="custom-option-item" data-value="Sri Lanka">Sri Lanka</li>
-                          <li class="custom-option-item" data-value="Sudan">Sudan</li>
-                          <li class="custom-option-item" data-value="Sweden">Sweden</li>
-                          <li class="custom-option-item" data-value="Switzerland">Switzerland</li>
-                          <li class="custom-option-item" data-value="Taiwan">Taiwan</li>
-                          <li class="custom-option-item" data-value="Tanzania">Tanzania</li>
-                          <li class="custom-option-item" data-value="Thailand">Thailand</li>
-                          <li class="custom-option-item" data-value="Tunisia">Tunisia</li>
-                          <li class="custom-option-item" data-value="Turkey">Turkey</li>
-                          <li class="custom-option-item" data-value="Uganda">Uganda</li>
-                          <li class="custom-option-item" data-value="Ukraine">Ukraine</li>
-                          <li class="custom-option-item" data-value="United Arab Emirates">United Arab Emirates</li>
-                          <li class="custom-option-item" data-value="Uruguay">Uruguay</li>
-                          <li class="custom-option-item" data-value="Uzbekistan">Uzbekistan</li>
-                          <li class="custom-option-item" data-value="Venezuela">Venezuela</li>
-                          <li class="custom-option-item" data-value="Vietnam">Vietnam</li>
-                          <li class="custom-option-item" data-value="Zambia">Zambia</li>
-                          <li class="custom-option-item" data-value="Zimbabwe">Zimbabwe</li>
-                          <li class="custom-option-item" data-value="Other / Country Not Listed">Other / Country Not
-                            Listed</li>
-                        </ul>
-                      </div>
-                    </div>
+                    <select class="form-select px-field" id="countryCountyInput" name="country_county" required autocomplete="country">
+    <option value="" selected disabled>Select a country</option>
+    <option value="United States">United States</option>
+    <option value="United Kingdom">United Kingdom</option>
+    <option value="Canada">Canada</option>
+    <option value="Australia">Australia</option>
+    <option value="Afghanistan">Afghanistan</option>
+    <option value="Albania">Albania</option>
+    <option value="Algeria">Algeria</option>
+    <option value="Argentina">Argentina</option>
+    <option value="Austria">Austria</option>
+    <option value="Bahrain">Bahrain</option>
+    <option value="Bangladesh">Bangladesh</option>
+    <option value="Belgium">Belgium</option>
+    <option value="Bolivia">Bolivia</option>
+    <option value="Brazil">Brazil</option>
+    <option value="Bulgaria">Bulgaria</option>
+    <option value="Cameroon">Cameroon</option>
+    <option value="Chile">Chile</option>
+    <option value="China">China</option>
+    <option value="Colombia">Colombia</option>
+    <option value="Costa Rica">Costa Rica</option>
+    <option value="Croatia">Croatia</option>
+    <option value="Cyprus">Cyprus</option>
+    <option value="Czech Republic">Czech Republic</option>
+    <option value="Denmark">Denmark</option>
+    <option value="Dominican Republic">Dominican Republic</option>
+    <option value="Ecuador">Ecuador</option>
+    <option value="Egypt">Egypt</option>
+    <option value="Estonia">Estonia</option>
+    <option value="Ethiopia">Ethiopia</option>
+    <option value="Finland">Finland</option>
+    <option value="France">France</option>
+    <option value="Germany">Germany</option>
+    <option value="Ghana">Ghana</option>
+    <option value="Greece">Greece</option>
+    <option value="Guatemala">Guatemala</option>
+    <option value="Hong Kong">Hong Kong</option>
+    <option value="Hungary">Hungary</option>
+    <option value="Iceland">Iceland</option>
+    <option value="India">India</option>
+    <option value="Indonesia">Indonesia</option>
+    <option value="Iran">Iran</option>
+    <option value="Iraq">Iraq</option>
+    <option value="Ireland">Ireland</option>
+    <option value="Israel">Israel</option>
+    <option value="Italy">Italy</option>
+    <option value="Ivory Coast">Ivory Coast</option>
+    <option value="Jamaica">Jamaica</option>
+    <option value="Japan">Japan</option>
+    <option value="Jordan">Jordan</option>
+    <option value="Kazakhstan">Kazakhstan</option>
+    <option value="Kenya">Kenya</option>
+    <option value="Kuwait">Kuwait</option>
+    <option value="Lebanon">Lebanon</option>
+    <option value="Libya">Libya</option>
+    <option value="Luxembourg">Luxembourg</option>
+    <option value="Malaysia">Malaysia</option>
+    <option value="Malta">Malta</option>
+    <option value="Mexico">Mexico</option>
+    <option value="Morocco">Morocco</option>
+    <option value="Netherlands">Netherlands</option>
+    <option value="New Zealand">New Zealand</option>
+    <option value="Nigeria">Nigeria</option>
+    <option value="Norway">Norway</option>
+    <option value="Oman">Oman</option>
+    <option value="Pakistan">Pakistan</option>
+    <option value="Palestine">Palestine</option>
+    <option value="Panama">Panama</option>
+    <option value="Peru">Peru</option>
+    <option value="Philippines">Philippines</option>
+    <option value="Poland">Poland</option>
+    <option value="Portugal">Portugal</option>
+    <option value="Qatar">Qatar</option>
+    <option value="Romania">Romania</option>
+    <option value="Saudi Arabia">Saudi Arabia</option>
+    <option value="Senegal">Senegal</option>
+    <option value="Serbia">Serbia</option>
+    <option value="Singapore">Singapore</option>
+    <option value="Slovakia">Slovakia</option>
+    <option value="South Africa">South Africa</option>
+    <option value="South Korea">South Korea</option>
+    <option value="Spain">Spain</option>
+    <option value="Sri Lanka">Sri Lanka</option>
+    <option value="Sudan">Sudan</option>
+    <option value="Sweden">Sweden</option>
+    <option value="Switzerland">Switzerland</option>
+    <option value="Taiwan">Taiwan</option>
+    <option value="Tanzania">Tanzania</option>
+    <option value="Thailand">Thailand</option>
+    <option value="Tunisia">Tunisia</option>
+    <option value="Turkey">Turkey</option>
+    <option value="Uganda">Uganda</option>
+    <option value="Ukraine">Ukraine</option>
+    <option value="United Arab Emirates">United Arab Emirates</option>
+    <option value="Uruguay">Uruguay</option>
+    <option value="Uzbekistan">Uzbekistan</option>
+    <option value="Venezuela">Venezuela</option>
+    <option value="Vietnam">Vietnam</option>
+    <option value="Zambia">Zambia</option>
+    <option value="Zimbabwe">Zimbabwe</option>
+    <option value="Other / Country Not Listed">Other / Country Not Listed</option>
+  </select>
+  <div class="invalid-feedback">Select a country.</div>
                   </div>
 
                   <!-- Preferred Interface Language -->
                   <div class="col-md-6">
-                    <label for="preferredLanguage" class="form-label text-white fw-semibold small">Preferred Language /
+                    <label for="preferredLanguage" class="form-label fw-semibold small">Preferred Language /
                       Localization</label>
                     <div class="input-group input-group-sphere">
-                      <span class="input-group-text"><i class="bi bi-translate text-info"></i></span>
+                      <span class="input-group-text"><i class="bi bi-translate"></i></span>
                       <input type="text" class="form-control form-control-sphere" id="preferredLanguage"
                         name="preferred_language" placeholder="English, French, Arabic, Spanish, etc.">
                     </div>
@@ -1303,59 +1325,59 @@
 
                   <!-- Customization Categories (Checkboxes) -->
                   <div class="col-12">
-                    <label class="form-label text-white fw-semibold small d-block mb-2">Customization Types Needed
+                    <label class="form-label fw-semibold small d-block mb-2">Customization Types Needed
                       (Select all that apply)</label>
                     <div class="row g-3">
                       <div class="col-sm-6 col-md-4">
-                        <div class="custom-checkbox-sphere p-2.5 px-3 rounded d-flex align-items-center h-100">
+                        <div class="px-check p-2 px-3 rounded d-flex align-items-center h-100">
                           <input class="form-check-input flex-shrink-0 me-2 mt-0 cursor-pointer" type="checkbox"
                             name="customization_types[]" value="Language Translation" id="customLang">
-                          <label class="form-check-label text-secondary small cursor-pointer mb-0 lh-sm"
-                            for="customLang"><i class="bi bi-translate text-info me-1"></i> Language Translation</label>
+                          <label class="form-check-label small cursor-pointer mb-0 lh-sm"
+                            for="customLang"><i class="bi bi-translate me-1"></i> Language Translation</label>
                         </div>
                       </div>
                       <div class="col-sm-6 col-md-4">
-                        <div class="custom-checkbox-sphere p-2.5 px-3 rounded d-flex align-items-center h-100">
+                        <div class="px-check p-2 px-3 rounded d-flex align-items-center h-100">
                           <input class="form-check-input flex-shrink-0 me-2 mt-0 cursor-pointer" type="checkbox"
                             name="customization_types[]" value="Custom Prescription / Invoice" id="customPdf">
-                          <label class="form-check-label text-secondary small cursor-pointer mb-0 lh-sm"
-                            for="customPdf"><i class="bi bi-file-earmark-pdf text-info me-1"></i> Custom PDF
+                          <label class="form-check-label small cursor-pointer mb-0 lh-sm"
+                            for="customPdf"><i class="bi bi-file-earmark-pdf me-1"></i> Custom PDF
                             Templates</label>
                         </div>
                       </div>
                       <div class="col-sm-6 col-md-4">
-                        <div class="custom-checkbox-sphere p-2.5 px-3 rounded d-flex align-items-center h-100">
+                        <div class="px-check p-2 px-3 rounded d-flex align-items-center h-100">
                           <input class="form-check-input flex-shrink-0 me-2 mt-0 cursor-pointer" type="checkbox"
                             name="customization_types[]" value="Branding & Logo" id="customBrand">
-                          <label class="form-check-label text-secondary small cursor-pointer mb-0 lh-sm"
-                            for="customBrand"><i class="bi bi-palette text-info me-1"></i> Branding & Clinic
+                          <label class="form-check-label small cursor-pointer mb-0 lh-sm"
+                            for="customBrand"><i class="bi bi-palette me-1"></i> Branding & Clinic
                             Logo</label>
                         </div>
                       </div>
                       <div class="col-sm-6 col-md-4">
-                        <div class="custom-checkbox-sphere p-2.5 px-3 rounded d-flex align-items-center h-100">
+                        <div class="px-check p-2 px-3 rounded d-flex align-items-center h-100">
                           <input class="form-check-input flex-shrink-0 me-2 mt-0 cursor-pointer" type="checkbox"
                             name="customization_types[]" value="Regional Currency & Tax" id="customCurrency">
-                          <label class="form-check-label text-secondary small cursor-pointer mb-0 lh-sm"
-                            for="customCurrency"><i class="bi bi-cash-coin text-info me-1"></i> Regional Currency &
+                          <label class="form-check-label small cursor-pointer mb-0 lh-sm"
+                            for="customCurrency"><i class="bi bi-cash-coin me-1"></i> Regional Currency &
                             Tax</label>
                         </div>
                       </div>
                       <div class="col-sm-6 col-md-4">
-                        <div class="custom-checkbox-sphere p-2.5 px-3 rounded d-flex align-items-center h-100">
+                        <div class="px-check p-2 px-3 rounded d-flex align-items-center h-100">
                           <input class="form-check-input flex-shrink-0 me-2 mt-0 cursor-pointer" type="checkbox"
                             name="customization_types[]" value="Custom Workflow / Fields" id="customWorkflow">
-                          <label class="form-check-label text-secondary small cursor-pointer mb-0 lh-sm"
-                            for="customWorkflow"><i class="bi bi-gear-wide-connected text-info me-1"></i> Custom
+                          <label class="form-check-label small cursor-pointer mb-0 lh-sm"
+                            for="customWorkflow"><i class="bi bi-gear-wide-connected me-1"></i> Custom
                             Workflow / Fields</label>
                         </div>
                       </div>
                       <div class="col-sm-6 col-md-4">
-                        <div class="custom-checkbox-sphere p-2.5 px-3 rounded d-flex align-items-center h-100">
+                        <div class="px-check p-2 px-3 rounded d-flex align-items-center h-100">
                           <input class="form-check-input flex-shrink-0 me-2 mt-0 cursor-pointer" type="checkbox"
                             name="customization_types[]" value="Multi-Clinic Licensing" id="customMulti">
-                          <label class="form-check-label text-secondary small cursor-pointer mb-0 lh-sm"
-                            for="customMulti"><i class="bi bi-buildings text-info me-1"></i> Multi-Clinic
+                          <label class="form-check-label small cursor-pointer mb-0 lh-sm"
+                            for="customMulti"><i class="bi bi-buildings me-1"></i> Multi-Clinic
                             Licensing</label>
                         </div>
                       </div>
@@ -1364,24 +1386,25 @@
 
                   <!-- Quote Details & Requested Changes -->
                   <div class="col-12">
-                    <label for="quoteDetails" class="form-label text-white fw-semibold small">Quote Details & Specific
+                    <label for="quoteDetails" class="form-label fw-semibold small">Quote Details & Specific
                       Customization Requirements <span class="text-danger">*</span></label>
                     <div class="input-group input-group-sphere">
                       <span class="input-group-text align-items-start pt-3"><i
-                          class="bi bi-pencil-square text-info"></i></span>
+                          class="bi bi-pencil-square"></i></span>
                       <textarea class="form-control form-control-sphere" id="quoteDetails" name="requested_changes"
                         rows="4"
                         placeholder="Specify your exact customization needs (e.g. Translate interface to French/Arabic, add custom header logo to A5 prescriptions, configure local VAT tax rules, add custom specialty examination fields, or volume license discount)..."
                         required></textarea>
                     </div>
+<div class="invalid-feedback">Describe the request.</div>
                   </div>
 
                   <!-- Submission Button -->
-                  <div class="col-12 text-center mt-4">
-                    <button type="submit" class="btn btn-sphere-primary btn-sphere-gold py-3 px-5 fs-5 w-100 w-sm-auto">
+                  <div class="col-12 mt-4">
+                    <button type="submit" class="px-btn py-3 px-5 fs-5 w-100 w-sm-auto">
                       <i class="bi bi-send-fill me-2"></i> Submit Quote Request
                     </button>
-                    <div class="small text-muted mt-3">
+                    <div class="small mt-3">
                       <i class="bi bi-shield-check text-success"></i> Your contact information is kept strictly private.
                     </div>
                   </div>
@@ -1389,10 +1412,10 @@
               </form>
 
               <!-- Form Submission Success Alert Container -->
-              <div id="quoteFormSuccess" class="alert alert-sphere-success text-center mt-4 d-none" role="alert">
+              <div id="quoteFormSuccess" class="alert-sphere-success d-none" tabindex="-1" role="alert">
                 <i class="bi bi-check-circle-fill text-success fs-2 d-block mb-2"></i>
-                <h4 class="h5 text-white fw-bold mb-1">Quote Request Submitted!</h4>
-                <p class="mb-0 text-secondary small">Thank you, Doctor. We have received your custom quote request and
+                <h3 class="h5 fw-bold mb-1">Quote Request Submitted!</h3>
+                <p class="mb-0 small">Thank you, Doctor. We have received your custom quote request and
                   will get back to you shortly.</p>
               </div>
 
@@ -1405,8 +1428,8 @@
     <!-- QUICK START -->
     <section class="quickstart-section" id="quickStart" aria-labelledby="quickStartHeading">
       <div class="container-xl">
-        <div class="text-center mb-5">
-          <span class="badge-sphere mb-2"><i class="bi bi-lightning-charge-fill"></i> One Workflow. Fewer Clicks.</span>
+        <div class="mb-5">
+          <span class="px-eyebrow mb-2"><i class="bi bi-lightning-charge-fill"></i> One Workflow. Fewer Clicks.</span>
           <h2 id="quickStartHeading" class="section-title">Simple Enough to Learn Quickly</h2>
           <p class="section-subtitle">
             You should not need to become an IT specialist to manage your practice. DigiSpherEMR keeps the important
@@ -1417,42 +1440,42 @@
         <div class="row g-4">
 
           <div class="col-md-6 col-lg">
-            <div class="step-card reveal-on-scroll">
+            <div class="px-card">
               <div class="step-number-bubble">1</div>
-              <h4 class="h5 text-white fw-bold mb-2">Find Patient</h4>
-              <p class="text-secondary small mb-0">Search the name and open the patient record.</p>
+              <h3 class="h5 fw-bold mb-2">Find Patient</h3>
+              <p class="small mb-0">Search the name and open the patient record.</p>
             </div>
           </div>
 
           <div class="col-md-6 col-lg">
-            <div class="step-card reveal-on-scroll">
+            <div class="px-card">
               <div class="step-number-bubble">2</div>
-              <h4 class="h5 text-white fw-bold mb-2">Start Visit</h4>
-              <p class="text-secondary small mb-0">Review the history and start the consultation quickly.</p>
+              <h3 class="h5 fw-bold mb-2">Start Visit</h3>
+              <p class="small mb-0">Review the history and start the consultation quickly.</p>
             </div>
           </div>
 
           <div class="col-md-6 col-lg">
-            <div class="step-card reveal-on-scroll">
+            <div class="px-card">
               <div class="step-number-bubble">3</div>
-              <h4 class="h5 text-white fw-bold mb-2">Write Prescription</h4>
-              <p class="text-secondary small mb-0">Add medications and generate the prescription.</p>
+              <h3 class="h5 fw-bold mb-2">Write Prescription</h3>
+              <p class="small mb-0">Add medications and generate the prescription.</p>
             </div>
           </div>
 
           <div class="col-md-6 col-lg">
-            <div class="step-card reveal-on-scroll">
+            <div class="px-card">
               <div class="step-number-bubble">4</div>
-              <h4 class="h5 text-white fw-bold mb-2">Create Invoice</h4>
-              <p class="text-secondary small mb-0">Record the visit financially before moving on.</p>
+              <h3 class="h5 fw-bold mb-2">Create Invoice</h3>
+              <p class="small mb-0">Record the visit financially before moving on.</p>
             </div>
           </div>
 
           <div class="col-md-6 col-lg">
-            <div class="step-card reveal-on-scroll">
+            <div class="px-card">
               <div class="step-number-bubble">5</div>
-              <h4 class="h5 text-white fw-bold mb-2">Next Patient</h4>
-              <p class="text-secondary small mb-0">Simple, fast, and repeatable for everyday practice.</p>
+              <h3 class="h5 fw-bold mb-2">Next Patient</h3>
+              <p class="small mb-0">Simple, fast, and repeatable for everyday practice.</p>
             </div>
           </div>
 
@@ -1463,13 +1486,13 @@
     <!-- SYSTEM REQUIREMENTS -->
     <section class="py-5" id="techSpecs" aria-labelledby="specsHeading">
       <div class="container-xl">
-        <div class="glass-card reveal-on-scroll p-4 p-lg-5">
+        <div class="px-card p-4 p-lg-5">
           <div class="row align-items-center g-4">
 
             <div class="col-lg-4">
-              <span class="badge-sphere mb-2"><i class="bi bi-motherboard-fill"></i> Windows Workspace</span>
-              <h3 id="specsHeading" class="h2 text-white fw-bold mb-3">Work Locally on a Modern Windows PC</h3>
-              <p class="text-secondary mb-0">
+              <span class="px-eyebrow mb-2"><i class="bi bi-motherboard-fill"></i> Windows Workspace</span>
+              <h3 id="specsHeading" class="h2 fw-bold mb-3">Work Locally on a Modern Windows PC</h3>
+              <p class="mb-0">
                 DigiSpherEMR is designed as a standalone Windows application for doctors who want a practical local
                 workflow without a required cloud subscription.
               </p>
@@ -1478,27 +1501,27 @@
             <div class="col-lg-8">
               <div class="specs-badge-grid">
                 <div class="spec-box">
-                  <div class="spec-label"><i class="bi bi-windows text-info"></i> Operating System</div>
+                  <div class="spec-label"><i class="bi bi-windows"></i> Operating System</div>
                   <div class="spec-val">Windows 10 / 11 (64-bit)</div>
                 </div>
                 <div class="spec-box">
-                  <div class="spec-label"><i class="bi bi-wifi-off text-info"></i> Workflow</div>
+                  <div class="spec-label"><i class="bi bi-wifi-off"></i> Workflow</div>
                   <div class="spec-val">Offline-first core use</div>
                 </div>
                 <div class="spec-box">
-                  <div class="spec-label"><i class="bi bi-hdd text-info"></i> Data</div>
+                  <div class="spec-label"><i class="bi bi-hdd"></i> Data</div>
                   <div class="spec-val">Local practice database</div>
                 </div>
                 <div class="spec-box">
-                  <div class="spec-label"><i class="bi bi-arrow-repeat text-info"></i> Backup</div>
+                  <div class="spec-label"><i class="bi bi-arrow-repeat"></i> Backup</div>
                   <div class="spec-val">Backup and restore support</div>
                 </div>
                 <div class="spec-box">
-                  <div class="spec-label"><i class="bi bi-printer text-info"></i> Documents</div>
+                  <div class="spec-label"><i class="bi bi-printer"></i> Documents</div>
                   <div class="spec-val">PDF and A5 prescription printing</div>
                 </div>
                 <div class="spec-box">
-                  <div class="spec-label"><i class="bi bi-credit-card text-info"></i> License</div>
+                  <div class="spec-label"><i class="bi bi-credit-card"></i> License</div>
                   <div class="spec-val">One or two PC lifetime license; one-time payment</div>
                 </div>
               </div>
@@ -1513,8 +1536,8 @@
     <section class="faq-section" id="faq" aria-labelledby="faqHeading">
       <div class="container-xl">
 
-        <div class="text-center mb-5">
-          <span class="badge-sphere mb-2"><i class="bi bi-question-circle-fill"></i> Frequently Asked Questions</span>
+        <div class="mb-5">
+          <span class="px-eyebrow mb-2"><i class="bi bi-question-circle-fill"></i> Frequently Asked Questions</span>
           <h2 id="faqHeading" class="section-title">Clear Answers Before You Start</h2>
           <p class="section-subtitle">
             Practical answers about what DigiSpherEMR does, how it works offline, and who it is designed for.
@@ -1586,7 +1609,7 @@
                 <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
                   data-bs-parent="#faqAccordion">
                   <div class="accordion-body">
-                    No. Each lifetime license is a one-time purchase. One PC is <strong>$799</strong>; two PCs are <strong>$1,198</strong>.
+                    No. Each lifetime license is a one-time purchase. One PC is <strong>$239</strong>; two PCs are <strong>$359</strong>.
                   </div>
                 </div>
               </div>
@@ -1691,31 +1714,110 @@
       </div>
     </section>
 
-    <!-- FINAL CTA -->
-    <section class="py-5">
+    <section class="px-section" id="newsroom" aria-labelledby="newsHeading">
       <div class="container-xl">
-        <div class="pillar-banner-card text-center reveal-on-scroll">
-          <span class="badge-sphere badge-offer-hot mb-3">DigiSpherEMR V2</span>
-          <h2 class="display-hero-title mb-3">
-            Everything You Need to Run Your Practice. Nothing You Do Not.
-          </h2>
-          <p class="lead-hero mx-auto mb-4 text-secondary">
-            Simple. Fast. Focused. Manage patients, run your practice, and understand your numbers from one
-            offline-first Windows application.
-          </p>
-          <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
-            <a href="#specialOffer" class="btn btn-sphere-primary btn-sphere-gold fs-5 px-5 py-3">
-              <i class="bi bi-bag-check-fill"></i> Choose One or Two PCs — From $799
-            </a>
-            <a href="#videoShowcase" class="btn btn-sphere-secondary fs-5 px-4 py-3">
-              <i class="bi bi-play-circle text-info"></i> Watch Demo
+        <div class="mb-5">
+          <h2 id="newsHeading" class="px-title">From the clinic guides</h2>
+          <p class="px-lead">Three published guides for doctors setting up a small practice.</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <a class="px-card px-news-card" href="blogs/affordable-emr-without-monthly-fees.html">
+              <h3 class="h5">Affordable EMR without monthly fees</h3>
+              <p class="mb-0">One-time payment software for solo doctors and small clinics.</p>
             </a>
           </div>
-          <div class="mt-4 text-muted small">
-            <i class="bi bi-wifi-off text-info"></i> Offline-first &nbsp;&bull;&nbsp;
-            <i class="bi bi-credit-card text-info"></i> One payment &nbsp;&bull;&nbsp;
-            <i class="bi bi-graph-up-arrow text-success"></i> Revenue, expenses, and profit
+          <div class="col-md-4">
+            <a class="px-card px-news-card" href="blogs/best-offline-emr-for-solo-doctors.html">
+              <h3 class="h5">Offline EMR for solo doctors</h3>
+              <p class="mb-0">What a small clinic needs for records, billing, and scheduling without a live connection.</p>
+            </a>
           </div>
+          <div class="col-md-4">
+            <a class="px-card px-news-card" href="blogs/emr-checklist-for-new-clinic-setup.html">
+              <h3 class="h5">EMR checklist for a new clinic</h3>
+              <p class="mb-0">Compare patient records, billing, appointments, and offline access before you set up.</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="px-section" id="startHere" aria-labelledby="startHeading">
+      <div class="container-xl">
+        <h2 id="startHeading" class="px-title">Start with a demo, or buy the license.</h2>
+        <p class="px-lead">DigiSpherEMR is a one-time Windows license for independent doctors. See the workflow first, or choose one PC or two PCs when the practice is ready.</p>
+        <div class="row g-4 mt-1">
+          <div class="col-md-4">
+            <article class="px-card h-100">
+              <h3 class="h5">Get a demo</h3>
+              <p>Tell us about the practice. The walkthrough covers patients, notes, prescriptions, appointments, and billing. Do not include patient information.</p>
+              <a class="px-text-link" href="#requestDemo">Request a demo</a>
+            </article>
+          </div>
+          <div class="col-md-4">
+            <article class="px-card h-100">
+              <h3 class="h5">Pay once</h3>
+              <p>One PC is $239. Two PCs are $359 and include inventory. Neither lifetime license adds a monthly software subscription.</p>
+              <a class="px-text-link" href="#specialOffer">See pricing</a>
+            </article>
+          </div>
+          <div class="col-md-4">
+            <article class="px-card h-100">
+              <h3 class="h5">Ask for a larger setup</h3>
+              <p>More than two PCs, another language, or a custom prescription goes through a quote. Send the practice details and we reply with the scope.</p>
+              <a class="px-text-link" href="#requestQuote">Request a quote</a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="px-section" id="decisionGuides" aria-labelledby="guidesHeading">
+      <div class="container-xl">
+        <h2 id="guidesHeading" class="px-title">Plain answers before you compare software.</h2>
+        <p class="px-lead">DigiSpherEMR is offline-first practice management from DigiSpher Health Systems. It is software for a doctor’s own Windows PCs, not a clinic listing and not a hospital system.</p>
+        <div class="row g-4 mt-1">
+          <div class="col-md-6">
+            <article class="px-card h-100">
+              <h3 class="h5">Offline EMR for a solo doctor</h3>
+              <p>DigiSpherEMR runs on Windows 10 or Windows 11. Everyday records, notes, appointments, and billing are designed to work without a constant internet connection. The practice data stays in a local database on the computer you license.</p>
+              <a class="px-text-link" href="blogs/best-offline-emr-for-solo-doctors.html">Read the offline EMR guide</a>
+            </article>
+          </div>
+          <div class="col-md-6">
+            <article class="px-card h-100">
+              <h3 class="h5">EMR without a monthly fee</h3>
+              <p>The license is one payment: $239 for one PC, or $359 for two PCs. The software does not add a monthly fee to keep the practice open.</p>
+              <a class="px-text-link" href="blogs/affordable-emr-without-monthly-fees.html">Read the one-time payment guide</a>
+            </article>
+          </div>
+          <div class="col-md-6">
+            <article class="px-card h-100">
+              <h3 class="h5">Billing and appointments in the same record</h3>
+              <p>Find the patient, write the note, print an A5 prescription, book the visit, and create the invoice in one application.</p>
+              <a class="px-text-link" href="blogs/emr-with-billing-and-appointment-management.html">Read the billing and appointments guide</a>
+            </article>
+          </div>
+          <div class="col-md-6">
+            <article class="px-card h-100">
+              <h3 class="h5">A private clinic with a secretary</h3>
+              <p>The two PC license is the one that includes inventory, batches, and stock movements, for a doctor and a secretary on separate computers.</p>
+              <a class="px-text-link" href="blogs/practice-management-software-for-solo-practitioners.html">Read the private-practice guide</a>
+            </article>
+          </div>
+        </div>
+        <p class="mt-4 mb-0">The same product is described in French on <a href="fr.html">the French page</a>. Questions go to <a href="mailto:digispher25@gmail.com">digispher25@gmail.com</a> or WhatsApp <a href="https://wa.me/21623400174">+216 23 400 174</a>.</p>
+      </div>
+    </section>
+
+    <section class="px-band-brand text-center">
+      <div class="container-xl">
+        <h2 class="px-title mb-3">Ready to run the practice from one Windows application?</h2>
+        <p class="fs-5 mb-4">Offline-first. One payment. Revenue, expenses, and profit in the same place.</p>
+        <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+          <a href="#requestDemo" class="px-btn-light px-4 py-3">Get a Demo</a>
+          <a href="#specialOffer" class="px-btn-line px-4 py-3">Choose one or two PCs — from $239</a>
         </div>
       </div>
     </section>
@@ -1723,115 +1825,72 @@
   </main>
 
   <!-- FOOTER -->
-  <footer class="footer-sphere">
+  <footer class="px-footer" id="siteFooter">
     <div class="container-xl">
-      <div class="row g-4 mb-5">
-
-        <div class="col-lg-4">
-          <img src="assets/images/logo_user.png" alt="DigiSpherEMR V2" height="56" class="mb-3"
-            style="object-fit:contain;" decoding="async" loading="lazy">
-          <p class="text-secondary small pe-lg-4">
-            DigiSpherEMR V2 is a simple offline-first practice management application for doctors who want patients,
-            consultations, prescriptions, appointments, billing, expenses, revenue, and profit in one place.
-          </p>
-          <div>
-          <a href="https://www.producthunt.com/products/digicareemr?embed=true&amp;utm_source=badge-featured&amp;utm_medium=badge&amp;utm_campaign=badge-digispheremr-v2"
-            target="_blank" rel="noopener noreferrer"><img
-              alt="DigiSpherEMR V2 - Fast, Effortless Practice Management. Zero Complexity.. | Product Hunt" width="250"
-              height="54"
-              src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1258502&amp;theme=dark&amp;t=1790103758184"></a>
-          <br>
-          <a href="https://launchstag.com/p/digispheremr-v2" target="_blank" rel="noopener">
-            <img src="https://launchstag.com/badge-dark.svg" alt="Featured on Launchstag" width="198" height="62" />
+      <div class="px-footer-grid">
+        <div class="px-footer-brand">
+          <a href="#hero" class="px-footer-lockup">
+            <img src="assets/images/logo_user.png" alt="" height="40" width="40" decoding="async" loading="lazy">
+            <span>DS EMR</span>
           </a>
-          <a href="https://tools.cafe/p/digispheremr-v2" target="_blank" rel="noopener"><img src="https://tools.cafe/b/light.svg" alt="Listed on tools.cafe" width="180" height="54" /></a>
-          </div>
-          <div class="d-flex align-items-center gap-3 text-info fs-5 mt-2">
-            <a href="mailto:digispher25@gmail.com" class="text-secondary text-decoration-none"
-              aria-label="Email Support" title="digispher25@gmail.com"><i class="bi bi-envelope-fill text-info"></i></a>
-            <a href="https://wa.me/21623400174" target="_blank" rel="noopener noreferrer"
-              class="text-secondary text-decoration-none" aria-label="WhatsApp Support"
-              title="WhatsApp: +216 23 400 174"><i class="bi bi-whatsapp text-success"></i></a>
-            <a href="https://www.facebook.com/profile.php?id=61579736908309" target="_blank" rel="noopener noreferrer"
-              class="text-secondary text-decoration-none" aria-label="Facebook Page" title="Facebook: Digi Spher"><i
-                class="bi bi-facebook text-primary"></i></a>
-            <a href="https://linkedin.com/company/digispher" target="_blank" rel="noopener noreferrer"
-              class="text-secondary text-decoration-none" aria-label="LinkedIn Company" title="LinkedIn: DigiSpher"><i
-                class="bi bi-linkedin text-info"></i></a>
-            <span class="text-secondary ms-2" aria-label="Windows Native"><i class="bi bi-windows"></i></span>
-            <span class="text-secondary" aria-label="Local SQLite Database"><i class="bi bi-database-check"></i></span>
+          <p>Offline-first practice management for independent doctors. Patients, notes, prescriptions, appointments, and billing stay in one Windows application.</p>
+          <ul class="px-footer-contact">
+            <li><a href="mailto:digispher25@gmail.com"><i class="bi bi-envelope" aria-hidden="true"></i> digispher25@gmail.com</a></li>
+            <li><a href="https://wa.me/21623400174" target="_blank" rel="noopener noreferrer"><i class="bi bi-whatsapp" aria-hidden="true"></i> +216 23 400 174</a></li>
+          </ul>
+          <div class="px-footer-social">
+            <a href="https://www.facebook.com/profile.php?id=61579736908309" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://linkedin.com/company/digispher" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
           </div>
         </div>
-
-        <div class="col-6 col-lg-2">
-          <h5 class="text-white fw-bold mb-3 small text-uppercase">Product</h5>
-          <ul class="list-unstyled small">
-            <li class="mb-2"><a href="#featureModules" class="footer-link">Features</a></li>
-            <li class="mb-2"><a href="#offlineBenefits" class="footer-link">Offline Advantage</a></li>
-            <li class="mb-2"><a href="#targetAudience" class="footer-link">Who It's For</a></li>
-            <li class="mb-2"><a href="#techSpecs" class="footer-link">System Requirements</a></li>
+        <div>
+          <h2>Product</h2>
+          <ul class="list-unstyled">
+            <li><a class="footer-link" href="#featureModules">Features</a></li>
+            <li><a class="footer-link" href="#offlineBenefits">Offline use</a></li>
+            <li><a class="footer-link" href="#specialOffer">Pricing</a></li>
+            <li><a class="footer-link" href="#startHere">How to start</a></li>
+            <li><a class="footer-link" href="#inventory">Inventory</a></li>
+            <li><a class="footer-link" href="#techSpecs">System requirements</a></li>
           </ul>
         </div>
-
-        <div class="col-6 col-lg-2">
-          <h5 class="text-white fw-bold mb-3 small text-uppercase">Workflow</h5>
-          <ul class="list-unstyled small">
-            <li class="mb-2"><a href="#featureModules" class="footer-link">Patient Records</a></li>
-            <li class="mb-2"><a href="#featureModules" class="footer-link">SOAP Notes</a></li>
-            <li class="mb-2"><a href="#featureModules" class="footer-link">Prescriptions</a></li>
-            <li class="mb-2"><a href="#featureModules" class="footer-link">Appointments</a></li>
-            <li class="mb-2"><a href="#featureModules" class="footer-link">Billing &amp; Finances</a></li>
-            <li class="mb-2"><a href="#inventory" class="footer-link">Inventory</a></li>
+        <div>
+          <h2>In the practice</h2>
+          <ul class="list-unstyled">
+            <li><a class="footer-link" href="#featurePatients">Patient records</a></li>
+            <li><a class="footer-link" href="#featureSoap">SOAP notes</a></li>
+            <li><a class="footer-link" href="#featureRx">Prescriptions</a></li>
+            <li><a class="footer-link" href="#featureAppointments">Appointments</a></li>
+            <li><a class="footer-link" href="#featureBilling">Billing and finances</a></li>
+            <li><a class="footer-link" href="#targetAudience">Who it is for</a></li>
           </ul>
         </div>
-
-        <div class="col-6 col-lg-2">
-          <h5 class="text-white fw-bold mb-3 small text-uppercase">Data</h5>
-          <ul class="list-unstyled small">
-            <li class="mb-2"><a href="#offlineBenefits" class="footer-link">Local Database</a></li>
-            <li class="mb-2"><a href="#offlineBenefits" class="footer-link">Rolling Backups</a></li>
-            <li class="mb-2"><a href="#faq" class="footer-link">Data FAQ</a></li>
-            <li class="mb-2"><a href="#quickStart" class="footer-link">Getting Started</a></li>
+        <div>
+          <h2>Help</h2>
+          <ul class="list-unstyled">
+            <li><a class="footer-link" href="#faq">FAQ</a></li>
+            <li><a class="footer-link" href="#decisionGuides">Buying guides</a></li>
+            <li><a class="footer-link" href="#quickStart">Getting started</a></li>
+            <li><a class="footer-link" href="#requestQuote">Request a quote</a></li>
+            <li><a class="footer-link" href="#" data-bs-toggle="modal" data-bs-target="#helpCenterModal">Help center</a></li>
+            <li><a class="footer-link" href="#" data-bs-toggle="modal" data-bs-target="#termsModal">Terms of service</a></li>
+            <li><a class="footer-link" href="#" data-bs-toggle="modal" data-bs-target="#privacyModal">Privacy policy</a></li>
           </ul>
         </div>
-
-        <div class="col-6 col-lg-2">
-          <h5 class="text-white fw-bold mb-3 small text-uppercase">Support & Legal</h5>
-          <ul class="list-unstyled small">
-            <li class="mb-2"><a href="#faq" class="footer-link">FAQ</a></li>
-            <li class="mb-2"><a href="#specialOffer" class="footer-link">Pricing</a></li>
-            <li class="mb-2"><a href="#requestQuote" class="footer-link">Request Quote</a></li>
-            <li class="mb-2"><a href="#" data-bs-toggle="modal" data-bs-target="#helpCenterModal"
-                class="footer-link">Help Center</a></li>
-            <li class="mb-2"><a href="#" data-bs-toggle="modal" data-bs-target="#termsModal" class="footer-link">Terms
-                of Service</a></li>
-            <li class="mb-2"><a href="#" data-bs-toggle="modal" data-bs-target="#privacyModal"
-                class="footer-link">Privacy Policy</a></li>
-            <li class="mb-2"><a href="mailto:digispher25@gmail.com" class="footer-link"><i
-                  class="bi bi-envelope me-1 text-info"></i> digispher25@gmail.com</a></li>
-            <li class="mb-2"><a href="https://wa.me/21623400174" target="_blank" rel="noopener noreferrer"
-                class="footer-link"><i class="bi bi-whatsapp me-1 text-success"></i> +216 23 400 174</a></li>
-          </ul>
-        </div>
-
       </div>
 
-      <div
-        class="border-top border-secondary border-opacity-25 pt-4 d-flex flex-column flex-md-row justify-content-between align-items-center text-muted small">
-        <p class="mb-2 mb-md-0">
-          &copy; 2026 DigiSpher Health Systems. All rights reserved. DigiSpherEMR V2.
-        </p>
-        <div class="d-flex flex-wrap gap-3 justify-content-center">
-          <a href="#" data-bs-toggle="modal" data-bs-target="#termsModal"
-            class="text-secondary text-decoration-none hover-white">Terms of Service</a>
-          <span>&bull;</span>
-          <a href="#" data-bs-toggle="modal" data-bs-target="#privacyModal"
-            class="text-secondary text-decoration-none hover-white">Privacy Policy</a>
-          <span>&bull;</span>
-          <a href="#" data-bs-toggle="modal" data-bs-target="#helpCenterModal"
-            class="text-secondary text-decoration-none hover-white">Help Center</a>
-          <span>&bull;</span>
-          <span>100% Offline Data Sovereignty</span>
+      <div class="px-footer-badges">
+        <a href="https://www.producthunt.com/products/digicareemr?embed=true&amp;utm_source=badge-featured&amp;utm_medium=badge&amp;utm_campaign=badge-digispheremr-v2" target="_blank" rel="noopener noreferrer"><img alt="DigiSpherEMR V2 on Product Hunt" width="200" height="43" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1258502&amp;theme=light&amp;t=1790103758184"></a>
+        <a href="https://launchstag.com/p/digispheremr-v2" target="_blank" rel="noopener noreferrer"><img src="https://launchstag.com/badge-dark.svg" alt="Featured on Launchstag" width="160" height="40"></a>
+        <a href="https://tools.cafe/p/digispheremr-v2" target="_blank" rel="noopener noreferrer"><img src="https://tools.cafe/b/light.svg" alt="Listed on tools.cafe" width="150" height="40"></a>
+      </div>
+
+      <div class="px-footer-base">
+        <p class="mb-0">&copy; 2026 DigiSpher Health Systems. DigiSpherEMR V2.</p>
+        <div class="px-theme" role="group" aria-label="Color theme">
+          <button type="button" data-theme-choice="light" aria-pressed="false">Light</button>
+          <button type="button" data-theme-choice="dark" aria-pressed="false">Dark</button>
+          <button type="button" data-theme-choice="auto" aria-pressed="false">Auto</button>
         </div>
       </div>
     </div>
@@ -1840,45 +1899,45 @@
   <!-- HELP CENTER MODAL -->
   <div class="modal fade" id="helpCenterModal" tabindex="-1" aria-labelledby="helpCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
-      <div class="modal-content border border-info border-opacity-25" style="background: #06122d; color: #cbd5e1;">
-        <div class="modal-header border-bottom border-secondary border-opacity-25">
-          <h4 class="modal-title text-white fw-bold h5" id="helpCenterTitle">
-            <i class="bi bi-question-square-fill text-info me-2"></i> DigiSpherEMR Help Center & Resources
-          </h4>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      <div class="modal-content border border-info" >
+        <div class="modal-header border-bottom">
+          <h2 class="modal-title fw-bold h5" id="helpCenterTitle">
+            <i class="bi bi-question-square-fill me-2"></i> DigiSpherEMR Help Center & Resources
+          </h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body p-4">
           <div class="row g-4">
             <div class="col-md-6">
-              <div class="p-3 rounded bg-dark bg-opacity-50 border border-secondary border-opacity-25 h-100">
-                <h5 class="text-white fw-bold h6 mb-2"><i class="bi bi-rocket-takeoff text-info me-1"></i> Quick Start &
+              <div class="px-note h-100">
+                <h5 class="fw-bold h6 mb-2"><i class="bi bi-rocket-takeoff me-1"></i> Quick Start &
                   Setup</h5>
-                <p class="small text-secondary mb-0">Download the standalone Windows executable, launch
+                <p class="small mb-0">Download the standalone Windows executable, launch
                   `DigiSpherEMR.exe`, and complete the 2-minute clinic profile setup.</p>
               </div>
             </div>
             <div class="col-md-6">
-              <div class="p-3 rounded bg-dark bg-opacity-50 border border-secondary border-opacity-25 h-100">
-                <h5 class="text-white fw-bold h6 mb-2"><i class="bi bi-printer text-info me-1"></i> Prescription & A5
+              <div class="px-note h-100">
+                <h5 class="fw-bold h6 mb-2"><i class="bi bi-printer me-1"></i> Prescription & A5
                   Printing</h5>
-                <p class="small text-secondary mb-0">Configure A5 prescription paper dimensions, add doctor signature
+                <p class="small mb-0">Configure A5 prescription paper dimensions, add doctor signature
                   images, and customize header details in Settings.</p>
               </div>
             </div>
             <div class="col-md-6">
-              <div class="p-3 rounded bg-dark bg-opacity-50 border border-secondary border-opacity-25 h-100">
-                <h5 class="text-white fw-bold h6 mb-2"><i class="bi bi-database-check text-info me-1"></i> Backup & Data
+              <div class="px-note h-100">
+                <h5 class="fw-bold h6 mb-2"><i class="bi bi-database-check me-1"></i> Backup & Data
                   Migration</h5>
-                <p class="small text-secondary mb-0">DigiSpherEMR creates automatic 7-day rolling backups in your local
+                <p class="small mb-0">DigiSpherEMR creates automatic 7-day rolling backups in your local
                   application folder upon exit. Use Settings to restore anytime.</p>
               </div>
             </div>
             <div class="col-md-6">
-              <div class="p-3 rounded bg-dark bg-opacity-50 border border-secondary border-opacity-25 h-100">
-                <h5 class="text-white fw-bold h6 mb-2"><i class="bi bi-headset text-info me-1"></i> Priority Support
+              <div class="px-note h-100">
+                <h5 class="fw-bold h6 mb-2"><i class="bi bi-headset me-1"></i> Priority Support
                   Desk</h5>
-                <p class="small text-secondary mb-0">Need technical assistance? Email us at <a
-                    href="mailto:digispher25@gmail.com" class="text-info fw-bold">digispher25@gmail.com</a> or WhatsApp
+                <p class="small mb-0">Need technical assistance? Email us at <a
+                    href="mailto:digispher25@gmail.com" class="fw-bold">digispher25@gmail.com</a> or WhatsApp
                   <a href="https://wa.me/21623400174" target="_blank" rel="noopener noreferrer"
                     class="text-success fw-bold">+216 23 400 174</a> for fast response.
                 </p>
@@ -1886,10 +1945,10 @@
             </div>
           </div>
         </div>
-        <div class="modal-footer border-top border-secondary border-opacity-25 justify-content-between">
-          <small class="text-muted"><i class="bi bi-shield-check text-success"></i> Standalone Windows Support
+        <div class="modal-footer border-top justify-content-between">
+          <small ><i class="bi bi-shield-check text-success"></i> Standalone Windows Support
             Desk</small>
-          <button type="button" class="btn btn-sphere-secondary btn-sm px-4" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="px-btn-soft btn-sm px-4" data-bs-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
@@ -1898,38 +1957,38 @@
   <!-- TERMS OF SERVICE MODAL -->
   <div class="modal fade" id="termsModal" tabindex="-1" aria-labelledby="termsTitle" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
-      <div class="modal-content border border-info border-opacity-25" style="background: #06122d; color: #cbd5e1;">
-        <div class="modal-header border-bottom border-secondary border-opacity-25">
-          <h4 class="modal-title text-white fw-bold h5" id="termsTitle">
-            <i class="bi bi-file-earmark-text-fill text-info me-2"></i> Terms of Service
-          </h4>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      <div class="modal-content border border-info" >
+        <div class="modal-header border-bottom">
+          <h2 class="modal-title fw-bold h5" id="termsTitle">
+            <i class="bi bi-file-earmark-text-fill me-2"></i> Terms of Service
+          </h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body p-4 small">
-          <h5 class="text-white fw-bold h6 mb-2">1. License Grant & Software Ownership</h5>
+          <h5 class="fw-bold h6 mb-2">1. License Grant & Software Ownership</h5>
           <p class="mb-3">Upon purchase of DigiSpherEMR V2, DigiSpher Health Systems grants the licensee a perpetual,
             non-exclusive, non-transferable lifetime license to install and operate the software for private practice
             management on the number of modern Windows PCs included in the purchased license: one or two.</p>
 
-          <h5 class="text-white fw-bold h6 mb-2">2. Local Data Sovereignty & Responsibility</h5>
+          <h5 class="fw-bold h6 mb-2">2. Local Data Sovereignty & Responsibility</h5>
           <p class="mb-3">DigiSpherEMR operates as a 100% offline application storing data locally in a SQLite database.
             The licensee maintains full, unencumbered ownership of all patient records and is responsible for
             maintaining local security, hardware backups, and access credentials.</p>
 
-          <h5 class="text-white fw-bold h6 mb-2">3. Medical Practice & Clinical Liability Disclaimer</h5>
+          <h5 class="fw-bold h6 mb-2">3. Medical Practice & Clinical Liability Disclaimer</h5>
           <p class="mb-3">DigiSpherEMR is designed exclusively as an administrative workflow, record-keeping, and
             billing tool. The software does not provide medical diagnoses, treatment decisions, or autonomous clinical
             evaluations. All medical judgments remain solely the professional responsibility of the licensed physician.
           </p>
 
-          <h5 class="text-white fw-bold h6 mb-2">4. Payment Terms & Guarantee</h5>
+          <h5 class="fw-bold h6 mb-2">4. Payment Terms & Guarantee</h5>
           <p class="mb-0">The lifetime license is a one-time purchase with zero mandatory recurring subscription fees.
             All purchases are backed by our 30-Day Money-Back Guarantee.</p>
         </div>
-        <div class="modal-footer border-top border-secondary border-opacity-25 justify-content-between">
-          <small class="text-muted"><i class="bi bi-check-circle-fill text-success"></i> DigiSpher Health Systems
+        <div class="modal-footer border-top justify-content-between">
+          <small ><i class="bi bi-check-circle-fill text-success"></i> DigiSpher Health Systems
             License Agreement</small>
-          <button type="button" class="btn btn-sphere-secondary btn-sm px-4" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="px-btn-soft btn-sm px-4" data-bs-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
@@ -1938,62 +1997,35 @@
   <!-- PRIVACY POLICY MODAL -->
   <div class="modal fade" id="privacyModal" tabindex="-1" aria-labelledby="privacyTitle" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
-      <div class="modal-content border border-info border-opacity-25" style="background: #06122d; color: #cbd5e1;">
-        <div class="modal-header border-bottom border-secondary border-opacity-25">
-          <h4 class="modal-title text-white fw-bold h5" id="privacyTitle">
-            <i class="bi bi-shield-lock-fill text-info me-2"></i> Privacy Policy & Data Security
-          </h4>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      <div class="modal-content border border-info" >
+        <div class="modal-header border-bottom">
+          <h2 class="modal-title fw-bold h5" id="privacyTitle">
+            <i class="bi bi-shield-lock-fill me-2"></i> Privacy Policy & Data Security
+          </h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body p-4 small">
-          <h5 class="text-white fw-bold h6 mb-2">1. Zero Cloud Data Transmission</h5>
+          <h5 class="fw-bold h6 mb-2">1. Zero Cloud Data Transmission</h5>
           <p class="mb-3">DigiSpherEMR is engineered on a strict offline-first architecture. All patient health
             information (PHI), clinical SOAP notes, prescriptions, appointments, and practice financial records remain
             on your local hard drive and are never uploaded to cloud servers.</p>
 
-          <h5 class="text-white fw-bold h6 mb-2">2. No Telemetry or Usage Tracking</h5>
+          <h5 class="fw-bold h6 mb-2">2. No Telemetry or Usage Tracking</h5>
           <p class="mb-3">We do not track, collect, sell, or analyze your clinical data, patient counts, financial
             revenue, or application usage. Your practice operations remain completely confidential and sovereign.</p>
 
-          <h5 class="text-white fw-bold h6 mb-2">3. Doctor Privacy Switch</h5>
+          <h5 class="fw-bold h6 mb-2">3. Doctor Privacy Switch</h5>
           <p class="mb-3">DigiSpherEMR includes a built-in 1-click Privacy Switch that instantly masks patient surnames
             and identifying details during screen sharing or patient-facing consultations.</p>
 
-          <h5 class="text-white fw-bold h6 mb-2">4. Support Communications</h5>
+          <h5 class="fw-bold h6 mb-2">4. Support Communications</h5>
           <p class="mb-0">When contacting technical support via email, any provided diagnostic information is used
             strictly to resolve your issue and is never shared with third parties.</p>
         </div>
-        <div class="modal-footer border-top border-secondary border-opacity-25 justify-content-between">
-          <small class="text-muted"><i class="bi bi-shield-shaded text-success"></i> 100% Sovereign Data
+        <div class="modal-footer border-top justify-content-between">
+          <small ><i class="bi bi-shield-shaded text-success"></i> 100% Sovereign Data
             Guarantee</small>
-          <button type="button" class="btn btn-sphere-secondary btn-sm px-4" data-bs-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- SCREENSHOT LIGHTBOX -->
-  <div class="modal fade screenshot-modal" id="screenshotModal" tabindex="-1" aria-labelledby="modalScreenshotTitle"
-    aria-hidden="true">
-    <div class="modal-dialog modal-xl modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header d-flex justify-content-between align-items-center">
-          <div>
-            <h4 class="modal-title text-white fw-bold h5 mb-1" id="modalScreenshotTitle">DigiSpherEMR Screen Preview
-            </h4>
-            <div class="small text-info" id="modalScreenshotDesc">High-resolution native interface preview</div>
-          </div>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body p-2 p-md-3 text-center bg-black">
-          <img id="modalScreenshotImg" src="" alt="High resolution DigiSpherEMR screenshot"
-            class="img-fluid rounded-2 shadow-lg" style="max-height: 82vh; width: auto;">
-        </div>
-        <div class="modal-footer justify-content-between border-top border-info border-opacity-25 py-2 px-3">
-          <small class="text-muted"><i class="bi bi-info-circle text-info"></i> Genuine screenshot from DigiSpherEMR V2
-            on Windows</small>
-          <button type="button" class="btn btn-sm btn-sphere-secondary py-1 px-3" data-bs-dismiss="modal">Close
-            Preview</button>
+          <button type="button" class="px-btn-soft btn-sm px-4" data-bs-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
@@ -2006,6 +2038,19 @@
 
   <!-- Custom DigiSphere Application Logic -->
   <script src="assets/js/main.js"></script>
+  <!--Start of Tawk.to Script-->
+  <script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/6aeb8c59f9eca33c2b2193d8/1k6k1ofn6';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
+  <!--End of Tawk.to Script-->
 
 </body>
 

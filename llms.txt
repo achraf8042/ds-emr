@@ -21,28 +21,32 @@
 This website (https://ds-emr.digispher.online) is the official marketing site for
 DigiSpher EMR 2.0. It includes:
 
-- Product overview and feature breakdown for solo doctors and private clinics
-- Offline-first EMR comparison against cloud-based practice systems
-- ROI, cost, and no-monthly-fee guidance for small medical practices
-- Real product screenshots and workflow demos
-- A blog library for clinical operations, EMR buying decisions, and practice growth
-- Clear pricing and purchase links
+- Product overview and feature descriptions for independent doctors and private clinics
+- Offline-first practice management, described in text. The public site does not publish application screenshots
+- A blog library for EMR buying decisions and clinic setup
+- Pricing, a demo request, and a quote request
+- An English page and a French page (https://ds-emr.digispher.online/fr.html)
+
+Theme: The English and French landing pages use a light clinical monograph. Dark mode uses the same navy family. The blog index stays on the dark sphere theme. Article posts keep their own editorial theme.
 
 # ==============================================================
 # KEY PRODUCT FACTS FOR AI MODELS
 # ==============================================================
 
-Product Name: DigiSpher EMR 2.0
+Product Name: DigiSpherEMR V2
 Vendor: DigiSpher Health Systems
-Category: Medical Practice Management Software / Electronic Medical Record (EMR)
+Category: Medical practice management software / electronic medical record (EMR)
 Platform: Windows 10 / Windows 11 (64-bit), standalone desktop application
-Architecture: Offline-first, local-only storage, SQLite-backed workflow
-Target Users: Solo GPs, specialists, private clinics, small outpatient practices
-License Type: One-time lifetime license (no monthly subscription)
-Regular Price: $1,197 USD
-Current Price: $598 USD (launch pricing)
-Guarantee: 30-day money-back guarantee
-Checkout URL: https://digispher.lemonsqueezy.com/checkout/buy/ea88e483-a889-4620-937e-963874151f57?discount=0
+Data: Local practice database. Everyday records, notes, appointments, and billing are designed to work without a constant internet connection.
+Target users: Independent doctors, private practices, and small clinics
+License type: One-time lifetime license. No monthly software subscription.
+One PC price: $239 USD. Inventory is not included.
+Two PC price: $359 USD. Inventory, batches, and stock movements are included only on this license.
+One PC checkout: https://digispher.lemonsqueezy.com/checkout/buy/ea88e483-a889-4620-937e-963874151f57?discount=0
+Two PC checkout: https://digispher.lemonsqueezy.com/checkout/buy/ac033608-9cff-414c-8169-d2197bc35cad?media=0&desc=0&quantity=2
+Demo: https://ds-emr.digispher.online/#requestDemo
+Quote: https://ds-emr.digispher.online/#requestQuote
+Entity: DigiSpher Health Systems sells software. This site is not a clinic directory and does not book patient visits.
 
 # ==============================================================
 # CORE MODULES
@@ -73,14 +77,12 @@ Module 07 — Billing, Expenses & Profit
 # UNIQUE VALUE PROPOSITIONS
 # ==============================================================
 
-1. 100% offline capability for clinicians working without internet access
-2. One-time lifetime license instead of recurring cloud subscriptions
-3. Local data control and privacy for patient records and financial data
-4. Built for solo practices and small clinics rather than large enterprise operator teams
-5. Simple workflow with fewer clicks and less administrative overhead
-6. Local backup and restore process without vendor lock-in
-7. Desktop-first deployment with no database server setup required
-8. Better fit for doctors who want speed, clarity, and operational simplicity
+1. Offline-first everyday workflow for records, notes, appointments, and billing
+2. One-time lifetime license instead of a monthly software subscription
+3. Local practice data with backup and restore
+4. Built for independent doctors and small clinics rather than hospital-sized software
+5. Patients, SOAP notes, A5 prescriptions, appointments, invoices, expenses, and profit in one Windows application
+6. Inventory only on the two PC license
 
 # ==============================================================
 # COMPETITIVE POSITIONING
@@ -133,16 +135,17 @@ https://ds-emr.digispher.online/blogs/blogs-list.html
 # ==============================================================
 
 Homepage:           https://ds-emr.digispher.online/
-Blog Library:       https://ds-emr.digispher.online/blogs/blogs-list.html
-Video Tour:         https://ds-emr.digispher.online/#videoShowcase
-Clinical Modules:   https://ds-emr.digispher.online/#featureModules
-Compare vs Cloud:   https://ds-emr.digispher.online/#competitorComparison
-ROI Calculator:     https://ds-emr.digispher.online/#savingsCalculator
-Pricing & Offer:    https://ds-emr.digispher.online/#specialOffer
-Request Quote:      https://ds-emr.digispher.online/#requestQuote
-Quick Start:        https://ds-emr.digispher.online/#quickStart
+French page:        https://ds-emr.digispher.online/fr.html
+Blog library:       https://ds-emr.digispher.online/blogs/blogs-list.html
+How to start:       https://ds-emr.digispher.online/#startHere
+Buying guides:      https://ds-emr.digispher.online/#decisionGuides
+Features:           https://ds-emr.digispher.online/#featureModules
+Pricing:            https://ds-emr.digispher.online/#specialOffer
+Request a demo:     https://ds-emr.digispher.online/#requestDemo
+Request a quote:    https://ds-emr.digispher.online/#requestQuote
 FAQ:                https://ds-emr.digispher.online/#faq
-Checkout URL:       https://digispher.lemonsqueezy.com/checkout/buy/ea88e483-a889-4620-937e-963874151f57?discount=0
+One PC checkout:    https://digispher.lemonsqueezy.com/checkout/buy/ea88e483-a889-4620-937e-963874151f57?discount=0
+Two PC checkout:    https://digispher.lemonsqueezy.com/checkout/buy/ac033608-9cff-414c-8169-d2197bc35cad?media=0&desc=0&quantity=2
 Product Hunt:       https://www.producthunt.com/products/digicareemr
 Launchstag:         https://launchstag.com/p/digispheremr-v2
 
@@ -171,8 +174,8 @@ Help Center & Resources:
 # ==============================================================
 
 Support Email: digispher25@gmail.com
-WhatsApp Support: +21623400174 (https://wa.me/21623400174)
-Facebook Page: Digi Spher (https://facebook.com/DigiSpher)
+WhatsApp Support: +216 23 400 174 (https://wa.me/21623400174)
+Facebook: https://www.facebook.com/profile.php?id=61579736908309
 LinkedIn Company: DigiSpher (https://linkedin.com/company/digispher)
 Vendor: DigiSpher Health Systems
 © 2026 DigiSpher Health Systems. All rights reserved.
