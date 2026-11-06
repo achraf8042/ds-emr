@@ -13,8 +13,9 @@ Disallow: /assets/js/
 Disallow: /assets/css/
 
 # Allow CSS & JS for proper rendering (Google needs these)
-Allow: /assets/css/style.css
-Allow: /assets/js/main.js
+Allow: /assets/css/style.min.css
+Allow: /assets/css/theme-sphere.min.css
+Allow: /assets/js/main.min.js
 
 # Block any future admin or private paths
 Disallow: /admin/

@@ -196,6 +196,27 @@ button.nav-link-sphere:focus,
   box-shadow: none;
 }
 .px-header-cta { white-space: nowrap; padding: 0.45rem 0.95rem; }
+body.home-praxis a.px-lang {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0 0.55rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--ink);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+}
+body.home-praxis a.px-lang:hover,
+body.home-praxis a.px-lang:focus-visible {
+  color: var(--brand);
+  border-color: var(--brand);
+}
 body.home-praxis a.px-btn,
 body.home-praxis button.px-btn { background: var(--brand); color: #fff; }
 html[data-theme="dark"] body.home-praxis a.px-btn,
@@ -343,9 +364,9 @@ body.home-praxis a.px-news-card h3 { color: var(--ink); }
   object-position: center 22%;
 }
 .px-hero-copy h1 {
-  font-size: clamp(2.7rem, 4.6vw, 4rem);
-  line-height: 1.02;
-  max-width: 16ch;
+  font-size: clamp(2.15rem, 3.3vw, 3.05rem);
+  line-height: 1.08;
+  max-width: 15em;
 }
 .px-hero-copy h1::after {
   content: "";
@@ -358,10 +379,30 @@ body.home-praxis a.px-news-card h3 { color: var(--ink); }
 .px-hero-copy h2 {
   font-family: var(--font-sans);
   font-size: 1.2rem;
-  font-weight: 400;
-  line-height: 1.55;
+  font-weight: 600;
+  line-height: 1.45;
+  max-width: 36rem;
+  color: var(--ink);
+}
+.px-hero-lead {
+  margin: 1rem 0 0;
   max-width: 38rem;
+  font-size: 1.15rem;
+  line-height: 1.55;
   color: var(--muted);
+}
+.px-hero-nos,
+.px-hero-own {
+  margin: 1.1rem 0 0;
+  max-width: 38rem;
+  color: var(--ink);
+  font-size: 1.08rem;
+  line-height: 1.55;
+  font-weight: 600;
+}
+.px-hero-own {
+  margin-top: 0.85rem;
+  font-weight: 700;
 }
 
 .px-band-photo {

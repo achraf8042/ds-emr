@@ -13,6 +13,10 @@
 > specialists, and private clinics. It runs as a native Windows desktop app,
 > stores all medical and financial data locally, and does not require a cloud
 > subscription to operate.
+>
+> The public site leads with three solo-practice problems: EMR products built
+> for large clinics, monthly subscription fees, and separate applications for
+> the record, billing, and inventory. Inventory remains on the two-PC license only.
 
 # ==============================================================
 # WEBSITE PURPOSE

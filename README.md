@@ -1,8 +1,8 @@
 # DigiSpherEMR landing page
 
-The English page is `index.html` and the French page is `fr.html`. Both use `assets/css/style.css` and `assets/js/main.js`. The landing theme is the light clinical monograph on `body.home-praxis`. Dark mode uses the same navy family. The blog index (`blogs/blogs-list.html`) stays on the dark sphere theme in `assets/css/theme-sphere.css`. Articles use `blogs/blog-post-themes.css`.
+The English page is `index.html` and the French page is `fr.html`. Both load `assets/css/style.min.css` and `assets/js/main.min.js`. Edit the readable sources `style.css` and `main.js`, then regenerate the minified files. The landing theme is the light clinical monograph on `body.home-praxis`. Dark mode uses the same navy family. The blog index (`blogs/blogs-list.html`) loads `assets/css/theme-sphere.min.css`. Articles load `blogs/blog-post-themes.min.css`. The toolkit page loads `blogs/lead-magnet.min.css`.
 
-Open `index.html` in a browser. No build step.
+Open `index.html` in a browser. Minify with esbuild, for example `npx esbuild assets/css/style.css --minify --outfile=assets/css/style.min.css`.
 
 ## Edit the demo path
 
