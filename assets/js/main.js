@@ -5,6 +5,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   initTheme();
   initQuoteForm();
+  initMotion();
 });
 
 function initTheme() {
@@ -93,4 +94,70 @@ function bindNetlifyForm(formId, successId) {
 function initQuoteForm() {
   bindNetlifyForm('quoteForm', 'quoteFormSuccess');
   bindNetlifyForm('demoForm', 'demoFormSuccess');
+}
+
+function initMotion() {
+  const root = document.documentElement;
+  if (!root.classList.contains('px-motion')) return;
+  root.classList.add('px-motion-ready');
+
+  const header = document.querySelector('.px-header');
+  if (header) {
+    const onScroll = () => header.classList.toggle('is-scrolled', window.scrollY > 8);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+  }
+
+  const selector = [
+    '#main .px-title',
+    '#main .px-lead',
+    '#main .section-title',
+    '#main .section-subtitle',
+    '#main .px-kicker',
+    '#main .px-eyebrow',
+    '#main .px-card',
+    '#featureModules .row.align-items-center > .col-lg-6',
+    '.px-band-photo .col-lg-8 > *',
+    '.px-band-brand .container-xl > *',
+    '#main .accordion-item',
+    '#main .spec-box',
+    '#techSpecs .col-lg-4',
+    '.px-footer-grid > *'
+  ].join(',');
+  const targets = Array.from(document.querySelectorAll(selector));
+
+  const reveal = (el) => el.classList.add('is-in');
+  if (!('IntersectionObserver' in window)) {
+    targets.forEach(reveal);
+    return;
+  }
+
+  const groups = new Map();
+  targets.forEach((el) => {
+    const group = el.closest('section, footer') || document.body;
+    const list = groups.get(group) || [];
+    list.push(el);
+    groups.set(group, list);
+  });
+  targets.forEach((el) => {
+    const group = el.closest('section, footer') || document.body;
+    const index = groups.get(group).indexOf(el);
+    el.style.setProperty('--px-delay', (Math.min(index, 5) * 90) + 'ms');
+  });
+
+  document.addEventListener('focusin', (event) => {
+    targets.forEach((el) => {
+      if (el.contains(event.target)) reveal(el);
+    });
+  });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      reveal(entry.target);
+      observer.unobserve(entry.target);
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -32px 0px' });
+
+  targets.forEach((el) => observer.observe(el));
 }

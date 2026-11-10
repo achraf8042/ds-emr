@@ -353,15 +353,19 @@ body.home-praxis a.px-news-card h3 { color: var(--ink); }
 #faq,
 #startHere { background: var(--soft); }
 
-.px-hero { padding: 2.75rem 0 3.5rem; background: var(--soft); }
+.px-hero { padding: 3.25rem 0 4.25rem; background: var(--soft); }
 .px-hero-media { border-radius: 2px; overflow: hidden; }
 .px-hero-media img {
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 4 / 5;
   object-fit: cover;
-  object-position: center 22%;
+  object-position: center 18%;
+  transform-origin: center 30%;
+  animation:
+    px-hero-photo 1.45s cubic-bezier(0.22, 1, 0.36, 1) both,
+    px-hero-drift 12s ease-in-out 1.45s infinite alternate;
 }
 .px-hero-copy h1 {
   font-size: clamp(2.15rem, 3.3vw, 3.05rem);
@@ -375,6 +379,7 @@ body.home-praxis a.px-news-card h3 { color: var(--ink); }
   height: 3px;
   margin-top: 1.15rem;
   background: var(--brand);
+  animation: px-hero-rule 0.7s 0.28s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 .px-hero-copy h2 {
   font-family: var(--font-sans);
@@ -391,18 +396,79 @@ body.home-praxis a.px-news-card h3 { color: var(--ink); }
   line-height: 1.55;
   color: var(--muted);
 }
-.px-hero-nos,
+.px-hero-nos {
+  list-style: none;
+  margin: 1.25rem 0 0;
+  padding: 0;
+  max-width: 38rem;
+}
+.px-hero-nos li {
+  position: relative;
+  margin-top: 0.45rem;
+  padding-left: 1.05rem;
+  color: var(--ink);
+  font-size: 1.08rem;
+  line-height: 1.45;
+  font-weight: 600;
+}
+.px-hero-nos li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 0.45rem;
+  height: 2px;
+  background: var(--brand);
+  transform-origin: left center;
+  animation: px-hero-dash 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
 .px-hero-own {
-  margin: 1.1rem 0 0;
+  margin: 1rem 0 0;
   max-width: 38rem;
   color: var(--ink);
   font-size: 1.08rem;
-  line-height: 1.55;
-  font-weight: 600;
-}
-.px-hero-own {
-  margin-top: 0.85rem;
+  line-height: 1.45;
   font-weight: 700;
+}
+.px-hero-actions { margin-top: 1.5rem; }
+.px-hero .px-btn,
+.px-hero .px-btn-soft {
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+.px-hero-copy > *:not(.px-hero-nos),
+.px-hero-nos li {
+  animation: px-hero-rise 1.05s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.px-hero-copy h1 { animation-delay: 0.05s; }
+.px-hero-copy h2 { animation-delay: 0.22s; }
+.px-hero-lead { animation-delay: 0.38s; }
+.px-hero-nos li:nth-child(1) { animation-delay: 0.54s; }
+.px-hero-nos li:nth-child(2) { animation-delay: 0.68s; }
+.px-hero-nos li:nth-child(3) { animation-delay: 0.82s; }
+.px-hero-nos li:nth-child(1)::before { animation-delay: 0.7s; }
+.px-hero-nos li:nth-child(2)::before { animation-delay: 0.84s; }
+.px-hero-nos li:nth-child(3)::before { animation-delay: 0.98s; }
+.px-hero-own { animation-delay: 0.98s; }
+.px-hero-actions { animation-delay: 1.14s; }
+@keyframes px-hero-rise {
+  from { opacity: 0; transform: translateY(46px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes px-hero-photo {
+  from { transform: scale(1.14); }
+  to { transform: scale(1); }
+}
+@keyframes px-hero-drift {
+  from { transform: scale(1) translate3d(0, 0, 0); }
+  to { transform: scale(1.08) translate3d(0, -2.5%, 0); }
+}
+@keyframes px-hero-rule {
+  from { width: 0; }
+  to { width: 3.25rem; }
+}
+@keyframes px-hero-dash {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
 }
 
 .px-band-photo {
@@ -858,6 +924,7 @@ html[data-theme="dark"] body.home-praxis .px-theme button[aria-pressed="true"] {
     text-align: left;
   }
   .px-hero { padding: 1.25rem 0 2.75rem; }
+  .px-hero-media img { aspect-ratio: 16 / 9; }
   .px-hero-copy h1,
   .px-hero-copy h2 { overflow-wrap: break-word; }
   .px-section,
@@ -880,6 +947,57 @@ html[data-theme="dark"] body.home-praxis .px-theme button[aria-pressed="true"] {
 @media (max-width: 380px) {
   .navbar-wordmark { display: none; }
 }
+html.px-motion .px-header { transition: box-shadow 0.35s ease; }
+.px-header.is-scrolled { box-shadow: 0 8px 28px rgba(13, 27, 40, 0.12); }
+html[data-theme="dark"] .px-header.is-scrolled { box-shadow: 0 8px 28px rgba(0, 0, 0, 0.4); }
+
+html.px-motion .px-band-photo {
+  background-size: 120%;
+  animation: px-band-drift 18s ease-in-out infinite alternate;
+}
+@keyframes px-band-drift {
+  from { background-position: center 20%; }
+  to { background-position: center 80%; }
+}
+
+html.px-motion #main :is(.px-title, .px-lead, .section-title, .section-subtitle, .px-kicker, .px-eyebrow),
+html.px-motion #main .px-card,
+html.px-motion #featureModules .row.align-items-center > .col-lg-6,
+html.px-motion .px-band-photo .col-lg-8 > *,
+html.px-motion .px-band-brand .container-xl > *,
+html.px-motion #main .accordion-item,
+html.px-motion #main .spec-box,
+html.px-motion #techSpecs .col-lg-4,
+html.px-motion .px-footer-grid > * {
+  opacity: 0;
+  transform: translateY(48px);
+  transition:
+    opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: var(--px-delay, 0s);
+}
+html.px-motion #main :is(.px-title, .px-lead, .section-title, .section-subtitle, .px-kicker, .px-eyebrow).is-in,
+html.px-motion #main .px-card.is-in,
+html.px-motion #featureModules .row.align-items-center > .col-lg-6.is-in,
+html.px-motion .px-band-photo .col-lg-8 > .is-in,
+html.px-motion .px-band-brand .container-xl > .is-in,
+html.px-motion #main .accordion-item.is-in,
+html.px-motion #main .spec-box.is-in,
+html.px-motion #techSpecs .col-lg-4.is-in,
+html.px-motion .px-footer-grid > .is-in {
+  opacity: 1;
+  transform: none;
+}
+html.px-motion #main .px-card.is-in:not(.px-card--panel):not(:has(form)):hover {
+  transform: translateY(-6px);
+}
+html.px-motion body.home-praxis :is(a.px-btn, button.px-btn, a.px-btn-soft, button.px-btn-soft, a.px-btn-light, button.px-btn-light, a.px-btn-line, button.px-btn-line) {
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+}
+html.px-motion body.home-praxis :is(a.px-btn, button.px-btn, a.px-btn-soft, button.px-btn-soft, a.px-btn-light, button.px-btn-light, a.px-btn-line, button.px-btn-line):hover {
+  transform: translateY(-2px);
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -887,5 +1005,26 @@ html[data-theme="dark"] body.home-praxis .px-theme button[aria-pressed="true"] {
     animation: none;
     transition: none;
     scroll-behavior: auto;
+  }
+  .px-hero-media img,
+  .px-hero-copy h1::after,
+  .px-hero-copy > *:not(.px-hero-nos),
+  .px-hero-nos li,
+  .px-hero-nos li::before,
+  html.px-motion .px-band-photo {
+    animation: none;
+  }
+  html.px-motion #main :is(.px-title, .px-lead, .section-title, .section-subtitle, .px-kicker, .px-eyebrow),
+  html.px-motion #main .px-card,
+  html.px-motion #featureModules .row.align-items-center > .col-lg-6,
+  html.px-motion .px-band-photo .col-lg-8 > *,
+  html.px-motion .px-band-brand .container-xl > *,
+  html.px-motion #main .accordion-item,
+  html.px-motion #main .spec-box,
+  html.px-motion #techSpecs .col-lg-4,
+  html.px-motion .px-footer-grid > * {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 }

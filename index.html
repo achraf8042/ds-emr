@@ -34,6 +34,14 @@
       document.documentElement.setAttribute("data-theme-choice", choice);
       var tile = document.querySelector('meta[name="theme-color"]');
       if (tile) tile.setAttribute("content", theme === "dark" ? "#0d1b28" : "#ffffff");
+      if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        document.documentElement.classList.add("px-motion");
+        window.setTimeout(function () {
+          if (!document.documentElement.classList.contains("px-motion-ready")) {
+            document.documentElement.classList.remove("px-motion");
+          }
+        }, 3000);
+      }
     })();
   </script>
 
@@ -318,9 +326,13 @@
             <h1>You run a medical practice.<br>You don't need a hospital&nbsp;system.</h1>
             <h2 class="mt-3">See patients. Write clinical notes. Prescribe. Manage invoices.</h2>
             <p class="px-hero-lead">DigiSpherEMR brings your everyday practice workflow into one simple Windows application.</p>
-            <p class="px-hero-nos">No complicated hospital menus.<br>No unnecessary features.<br>No monthly fees.</p>
+            <ul class="px-hero-nos">
+              <li>No complicated hospital menus.</li>
+              <li>No unnecessary features.</li>
+              <li>No monthly fees.</li>
+            </ul>
             <p class="px-hero-own">Pay once. Use forever.</p>
-            <div class="d-flex flex-column flex-sm-row gap-3 mt-4">
+            <div class="px-hero-actions d-flex flex-column flex-sm-row gap-3">
               <a href="#requestDemo" class="px-btn">Get a Demo</a>
               <a href="#workflow" class="px-btn-soft">See how it works</a>
             </div>

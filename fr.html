@@ -34,6 +34,14 @@
       document.documentElement.setAttribute("data-theme-choice", choice);
       var tile = document.querySelector('meta[name="theme-color"]');
       if (tile) tile.setAttribute("content", theme === "dark" ? "#0d1b28" : "#ffffff");
+      if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        document.documentElement.classList.add("px-motion");
+        window.setTimeout(function () {
+          if (!document.documentElement.classList.contains("px-motion-ready")) {
+            document.documentElement.classList.remove("px-motion");
+          }
+        }, 3000);
+      }
     })();
   </script>
 
@@ -319,9 +327,13 @@
             <h1>Vous dirigez un cabinet&nbsp;médical.<br>Vous n'avez pas besoin d'un système&nbsp;hospitalier.</h1>
             <h2 class="mt-3">Voyez les patients. Rédigez les notes cliniques. Prescrivez. Gérez les factures.</h2>
             <p class="px-hero-lead">DigiSpherEMR réunit le travail quotidien de votre cabinet dans une seule application Windows simple.</p>
-            <p class="px-hero-nos">Pas de menus hospitaliers compliqués.<br>Pas de fonctionnalités inutiles.<br>Pas de frais mensuels.</p>
+            <ul class="px-hero-nos">
+              <li>Pas de menus hospitaliers compliqués.</li>
+              <li>Pas de fonctionnalités inutiles.</li>
+              <li>Pas de frais mensuels.</li>
+            </ul>
             <p class="px-hero-own">Payez une fois. Utilisez-le pour toujours.</p>
-            <div class="d-flex flex-column flex-sm-row gap-3 mt-4">
+            <div class="px-hero-actions d-flex flex-column flex-sm-row gap-3">
               <a href="#requestDemo" class="px-btn">Demander une démo</a>
               <a href="#workflow" class="px-btn-soft">Voir le parcours</a>
             </div>
